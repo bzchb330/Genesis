@@ -14,7 +14,8 @@ def test_scripted_allegro_contact_force_and_separation():
     assert not any(_finger_contacts(model, data, cfg).values())
 
     # Script the configured diagnostic closed pose, then put the configured object at a fingertip.
-    indices=resolve_hand_indices(model,cfg.hand); fractions=np.asarray([cfg.diagnostic.closed_joint_fractions[name] for name in cfg.hand.actuator_names]); ranges=model.jnt_range[indices.joint_ids]
+    profile=cfg.diagnostic.profiles[cfg.diagnostic.active_profile]
+    indices=resolve_hand_indices(model,cfg.hand); fractions=np.asarray([profile.closed_joint_fractions[name] for name in cfg.hand.actuator_names]); ranges=model.jnt_range[indices.joint_ids]
     data.qpos[indices.qpos_addresses]=ranges[:,0]+fractions*(ranges[:,1]-ranges[:,0])
     mujoco.mj_forward(model, data)
     finger = next(iter(cfg.hand.finger_geom_mapping)); tip_name=cfg.hand.finger_geom_mapping[finger][0]
@@ -38,7 +39,7 @@ def test_scripted_allegro_contact_force_and_separation():
     np.testing.assert_allclose(record.normal,frame[0])
 
     data.qpos[object_qpos:object_qpos + 3] = np.array([1.0, 1.0, 1.0])
-    open_fractions=np.asarray([cfg.diagnostic.open_joint_fractions[name] for name in cfg.hand.actuator_names])
+    open_fractions=np.asarray([profile.open_joint_fractions[name] for name in cfg.hand.actuator_names])
     data.qpos[indices.qpos_addresses]=ranges[:,0]+open_fractions*(ranges[:,1]-ranges[:,0])
     mujoco.mj_forward(model, data)
     assert not any(_finger_contacts(model, data, cfg).values())
