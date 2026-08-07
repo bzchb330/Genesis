@@ -23,6 +23,7 @@
 - Scripted object-A pregrasp/closing/contact/release/hold probe.
 - Multi-seed raw-measurement runner, plots, optional MP4, and placement renderer.
 - Explicit support-release samples, descriptive 10-seed statistics, and aggregate figures.
+- Reproducible engineering-only grasp-posture search, top-candidate profiles, object-specific contact mechanics, and 20-seed descriptive validation.
 - These values and outputs are not success criteria or scientific thresholds.
 
 ## D. Blocked by TODO(PI)

@@ -13,7 +13,7 @@ def test_scripted_diagnostic_is_deterministic_and_writes_raw_outputs(tmp_path):
     assert first.metadata["support_release_event"] is not None; assert np.any(first.arrays["support_active"]==0); assert first.arrays["joint_limits"].shape[1:]==(cfg.hand.dof_count,2)
     assert (tmp_path/"first"/"timesteps.csv").is_file(); assert (tmp_path/"first"/"timesteps.npz").is_file(); assert (tmp_path/"first"/"resource_state.npz").is_file(); assert json.loads((tmp_path/"first"/"metadata.json").read_text())["scientific_success_assigned"] is False
     with np.load(tmp_path/"first"/"resource_state.npz") as resource:
-        assert {"active_fingers","active_finger_count","contact_count","active_contact_count","finger_contact_count"}<=set(resource.files)
+        assert {"active_fingers","active_finger_count","active_object_fingers","inactive_object_fingers","contact_count","active_contact_count","finger_contact_count","finger_object_contact_distance_m"}<=set(resource.files)
     expected={"object_a_height.png","object_a_vertical_velocity.png","object_a_displacement.png","object_a_orientation_change.png","total_contact_force.png","normal_force_per_finger.png","binary_finger_contact.png","active_finger_count.png","number_of_contacts.png","actuator_commands.png","joint_positions.png","episode_phase.png"}
     assert {p.name for p in (tmp_path/"first"/"plots").glob("*.png")}==expected
 

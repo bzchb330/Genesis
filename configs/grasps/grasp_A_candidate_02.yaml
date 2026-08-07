@@ -1,0 +1,99 @@
+engineering_search_only: true
+candidate_id: candidate_0077
+engineering_retention_score: 5.249204519428713
+scientific_success_assigned: false
+diagnostic_profile:
+  object_fixture_pos:
+  - 0.07
+  - 0.02
+  - 0.165
+  object_fixture_quat:
+  - 1.0
+  - 0.0
+  - 0.0
+  - 0.0
+  stage_durations_seconds:
+    open_pregrasp: 0.2
+    close: 0.6548400446419317
+    establish_contact: 0.2757770104088558
+    retention_attempt: 0.5
+    hold: 0.5
+  kinematic_fixture_stages:
+  - open_pregrasp
+  - close
+  - establish_contact
+  support_release_stage: retention_attempt
+  episode_phase_by_stage:
+    open_pregrasp: 0
+    close: 1
+    establish_contact: 1
+    retention_attempt: 1
+    hold: 1
+  open_joint_fractions:
+    ffa0: 0.5
+    ffa1: 0.11
+    ffa2: 0.09
+    ffa3: 0.12
+    mfa0: 0.5
+    mfa1: 0.11
+    mfa2: 0.09
+    mfa3: 0.12
+    rfa0: 0.5
+    rfa1: 0.11
+    rfa2: 0.09
+    rfa3: 0.12
+    tha0: 0.02
+    tha1: 0.02
+    tha2: 0.02
+    tha3: 0.02
+  closed_joint_fractions:
+    ffa0: 0.5239991700521701
+    ffa1: 0.8274038478519654
+    ffa2: 0.5947337595592337
+    ffa3: 0.5474189608446532
+    mfa0: 0.6668301744492455
+    mfa1: 0.6449051039692393
+    mfa2: 0.5854953415732129
+    mfa3: 0.8557642033331128
+    rfa0: 0.9423031589674221
+    rfa1: 0.7710214749996529
+    rfa2: 0.6478582356518736
+    rfa3: 0.7216947707359269
+    tha0: 0.5782807479145635
+    tha1: 0.5364930658646201
+    tha2: 0.6230973350372293
+    tha3: 0.8675619022065281
+  hold_joint_fractions:
+    ffa0: 0.560655562139798
+    ffa1: 0.8640602399395934
+    ffa2: 0.6313901516468616
+    ffa3: 0.5840753529322811
+    mfa0: 0.6495897107969603
+    mfa1: 0.627664640316954
+    mfa2: 0.5682548779209277
+    mfa3: 0.8385237396808275
+    rfa0: 0.8555728006460082
+    rfa1: 0.6842911166782389
+    rfa2: 0.5611278773304597
+    rfa3: 0.634964412414513
+    tha0: 0.565351603303946
+    tha1: 0.5235639212540025
+    tha2: 0.6101681904266117
+    tha3: 0.8546327575959105
+  actuator_close_delay_seconds:
+    ffa0: 0.03880297382995482
+    ffa1: 0.03880297382995482
+    ffa2: 0.03880297382995482
+    ffa3: 0.03880297382995482
+    mfa0: 0.11535177634313865
+    mfa1: 0.11535177634313865
+    mfa2: 0.11535177634313865
+    mfa3: 0.11535177634313865
+    rfa0: 0.03370516924840504
+    rfa1: 0.03370516924840504
+    rfa2: 0.03370516924840504
+    rfa3: 0.03370516924840504
+    tha0: 0.13277414688188577
+    tha1: 0.13277414688188577
+    tha2: 0.13277414688188577
+    tha3: 0.13277414688188577

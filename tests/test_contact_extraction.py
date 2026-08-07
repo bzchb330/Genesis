@@ -37,6 +37,7 @@ def test_scripted_allegro_contact_force_and_separation():
     np.testing.assert_allclose(record.force_world,frame.T@raw[:3])
     np.testing.assert_allclose(record.torque_world,frame.T@raw[3:])
     np.testing.assert_allclose(record.normal,frame[0])
+    assert np.isclose(record.distance,data.contact[contact_index].dist)
 
     data.qpos[object_qpos:object_qpos + 3] = np.array([1.0, 1.0, 1.0])
     open_fractions=np.asarray([profile.open_joint_fractions[name] for name in cfg.hand.actuator_names])
