@@ -13,7 +13,8 @@ observations:
   palm_pose: true
   phase_one_hot: true
   privileged_target_position: false
-tactile_normalization: 1.0
+# TODO(PI): choose a tactile normalization scale if needed. null preserves raw N.
+tactile_normalization: null
 # TODO(PI): define dimensions and physics for any additional tactile features.
 extra_tactile_feature_dim: 0
 # TODO(PI): define phase transitions; null disables automatic transitions.
@@ -23,4 +24,3 @@ hold_steps_threshold: null
 drop_height_threshold: null
 # TODO(PI): scientific reward weights remain zero.
 reward_weights: {retention: 0.0, progress: 0.0, resource_j: 0.0, regularization: 0.0, failure: 0.0}
-
