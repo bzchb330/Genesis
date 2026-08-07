@@ -1,36 +1,40 @@
-# Engineering diagnostic trajectory only. These values are not scientific
-# grasp criteria, evaluation thresholds, optimized gains, or policy parameters.
+# Engineering diagnostic only. Profiles are not a grasp taxonomy and their
+# values are not scientific criteria, optimized gains, or policy parameters.
 diagnostic_only: true
 seed: 7
 object_name: object_a
-object_fixture_pos: [0.070, 0.020, 0.165]
-object_fixture_quat: [1.0, 0.0, 0.0, 0.0]
 fixture_jitter_xy: 0.002
-stage_durations_seconds:
-  open_pregrasp: 0.20
-  close: 0.50
-  establish_contact: 0.20
-  retention_attempt: 0.50
-  hold: 0.50
-kinematic_fixture_stages: [open_pregrasp, close, establish_contact]
-episode_phase_by_stage:
-  open_pregrasp: 0
-  close: 1
-  establish_contact: 1
-  retention_attempt: 1
-  hold: 1
-# Fractions interpolate configured joint ranges and are keyed by configured
-# actuator names. Update this diagnostic-only map when swapping hands.
-open_joint_fractions:
-  {ffa0: 0.50, ffa1: 0.11, ffa2: 0.09, ffa3: 0.12,
-   mfa0: 0.50, mfa1: 0.11, mfa2: 0.09, mfa3: 0.12,
-   rfa0: 0.50, rfa1: 0.11, rfa2: 0.09, rfa3: 0.12,
-   tha0: 0.00, tha1: 0.00, tha2: 0.00, tha3: 0.00}
-closed_joint_fractions:
-  {ffa0: 0.80, ffa1: 0.80, ffa2: 0.80, ffa3: 0.80,
-   mfa0: 0.80, mfa1: 0.80, mfa2: 0.80, mfa3: 0.80,
-   rfa0: 0.80, rfa1: 0.80, rfa2: 0.80, rfa3: 0.80,
-   tha0: 0.80, tha1: 0.80, tha2: 0.80, tha3: 0.80}
+active_profile: grasp_A_01
+profiles:
+  grasp_A_01:
+    object_fixture_pos: [0.070, 0.020, 0.165]
+    object_fixture_quat: [1.0, 0.0, 0.0, 0.0]
+    stage_durations_seconds:
+      open_pregrasp: 0.20
+      close: 0.50
+      establish_contact: 0.20
+      retention_attempt: 0.50
+      hold: 0.50
+    kinematic_fixture_stages: [open_pregrasp, close, establish_contact]
+    support_release_stage: retention_attempt
+    episode_phase_by_stage:
+      open_pregrasp: 0
+      close: 1
+      establish_contact: 1
+      retention_attempt: 1
+      hold: 1
+    # Fractions interpolate configured joint ranges and are keyed by configured
+    # actuator names. Update this diagnostic-only map when swapping hands.
+    open_joint_fractions:
+      {ffa0: 0.50, ffa1: 0.11, ffa2: 0.09, ffa3: 0.12,
+       mfa0: 0.50, mfa1: 0.11, mfa2: 0.09, mfa3: 0.12,
+       rfa0: 0.50, rfa1: 0.11, rfa2: 0.09, rfa3: 0.12,
+       tha0: 0.00, tha1: 0.00, tha2: 0.00, tha3: 0.00}
+    closed_joint_fractions:
+      {ffa0: 0.80, ffa1: 0.80, ffa2: 0.80, ffa3: 0.80,
+       mfa0: 0.80, mfa1: 0.80, mfa2: 0.80, mfa3: 0.80,
+       rfa0: 0.80, rfa1: 0.80, rfa2: 0.80, rfa3: 0.80,
+       tha0: 0.80, tha1: 0.80, tha2: 0.80, tha3: 0.80}
 output_dir: outputs/scripted_grasp_a
 save_csv: true
 save_npz: true
@@ -39,4 +43,4 @@ render_video: false
 video_filename: scripted_grasp_a.mp4
 video_fps: 50
 render_stride: 10
-num_seeds: 3
+num_seeds: 10

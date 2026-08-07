@@ -16,3 +16,6 @@ This register enumerates every active `TODO(PI)`. Diagnostic defaults are engine
 | `seqgrasp/env/termination.py:11` | `update_phase` | Returns current phase and no reason | Scientific phase transition rules | Sequential phase advancement | Yes |
 | `seqgrasp/env/termination.py:18` | `failure_reason` retained-object branch | Workspace exits work; drop branch disabled | Loss/drop criterion for a held object | Early termination, drop metrics | Yes |
 | `scripts/evaluate.py:12` | evaluation aggregation | No inferred threshold | Success and drop evaluation criteria | Scientific benchmark reporting | Yes; neutral diagnostics work |
+| `seqgrasp/env/grasp_criteria.py:16` | `is_grasp_acquired` | Returns `None` | Acquisition evidence, combination, and persistence | Grasp-state transition and evaluation | Yes |
+| `seqgrasp/env/grasp_criteria.py:20` | `is_object_retained` | Returns `None` | Unsupported retention definition | Persistent-retention reporting and sequential task | Yes |
+| `seqgrasp/env/grasp_criteria.py:24` | `is_object_lost` | Returns `None` | Loss/drop definition beyond workspace exit | Early termination and evaluation | Yes |

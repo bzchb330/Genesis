@@ -14,6 +14,7 @@
 - Reward breakdown and YAML weights with zero scientific terms.
 - `RetentionController` protocol with a zero-output implementation.
 - `ResourceState` and undefined `compute_resource_metric` hook.
+- Separate nullable acquisition, unsupported-retention, and loss criterion interfaces.
 - Optional Stable-Baselines3 PPO entry points; integration is present but untrained.
 
 ## C. Diagnostic-only
@@ -21,6 +22,7 @@
 - `diagnostic_grasp_a.yaml` time schedule, joint-range fractions, kinematic object fixture, and fixture jitter.
 - Scripted object-A pregrasp/closing/contact/release/hold probe.
 - Multi-seed raw-measurement runner, plots, optional MP4, and placement renderer.
+- Explicit support-release samples, descriptive 10-seed statistics, and aggregate figures.
 - These values and outputs are not success criteria or scientific thresholds.
 
 ## D. Blocked by TODO(PI)

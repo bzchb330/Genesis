@@ -39,12 +39,16 @@ class TrainConfig:
     log_dir: str; checkpoint_dir: str
 
 @dataclass(frozen=True)
-class DiagnosticConfig:
-    diagnostic_only: bool; seed: int; object_name: str
+class DiagnosticProfile:
     object_fixture_pos: list[float]; object_fixture_quat: list[float]
-    fixture_jitter_xy: float; stage_durations_seconds: dict[str, float]
-    kinematic_fixture_stages: list[str]; episode_phase_by_stage: dict[str, int]
+    stage_durations_seconds: dict[str, float]; kinematic_fixture_stages: list[str]
+    support_release_stage: str; episode_phase_by_stage: dict[str, int]
     open_joint_fractions: dict[str, float]; closed_joint_fractions: dict[str, float]
+
+@dataclass(frozen=True)
+class DiagnosticConfig:
+    diagnostic_only: bool; seed: int; object_name: str; fixture_jitter_xy: float
+    active_profile: str; profiles: dict[str, DiagnosticProfile]
     output_dir: str; save_csv: bool; save_npz: bool; save_plots: bool
     render_video: bool; video_filename: str; video_fps: int; render_stride: int
     num_seeds: int
@@ -61,7 +65,10 @@ def load_configs(config_dir: str | Path | None = None) -> ConfigBundle:
     d = Path(config_dir) if config_dir else ROOT / "configs"
     h, s, t, tr, diag = (_read(d / n) for n in ("hand_allegro.yaml", "scene_two_object.yaml", "task_sequential.yaml", "train_ppo.yaml", "diagnostic_grasp_a.yaml"))
     s["objects"] = [ObjectConfig(**x) for x in s["objects"]]
+    diag["profiles"]={name:DiagnosticProfile(**profile) for name,profile in diag["profiles"].items()}
     diagnostic = DiagnosticConfig(**diag)
     if not diagnostic.diagnostic_only:
         raise ValueError("diagnostic_grasp_a.yaml must remain diagnostic_only")
+    if diagnostic.active_profile not in diagnostic.profiles:
+        raise ValueError("active diagnostic profile is missing")
     return ConfigBundle(HandConfig(**h), SceneConfig(**s), TaskConfig(**t), TrainConfig(**tr), diagnostic)

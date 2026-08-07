@@ -20,13 +20,14 @@ The random-policy smoke test uses seeded actions and completes 1000 environment 
 ```bash
 python scripts/scripted_grasp_a.py
 python scripts/scripted_grasp_a.py --seed 7 --video
-python scripts/run_grasp_diagnostics.py --num-seeds 3
+python scripts/scripted_grasp_a.py --profile grasp_A_01
+python scripts/run_grasp_diagnostics.py --num-seeds 10
 python scripts/check_scene_placements.py --seed 0 --render outputs/placements.png
 ```
 
-The diagnostic logs CSV, compressed NPZ, JSON metadata, and separate plots under ignored `outputs/`. It records raw joint, command, object, contact, tactile, palm, phase, and termination signals. Video uses official `mujoco.Renderer`; rendering/encoding failures warn but do not invalidate physical logging.
+The diagnostic logs CSV, compressed timestep and resource-state NPZ files, JSON metadata, and separate per-run and aggregate plots under ignored `outputs/`. It records raw joint, command, object, contact, tactile, palm, phase, support-state, and termination signals. The support-release event is explicit in the logs and figures. Video uses official `mujoco.Renderer`; rendering/encoding failures warn but do not invalidate physical logging.
 
-`configs/diagnostic_grasp_a.yaml` is explicitly `diagnostic_only: true`. Its time schedule, fixture pose, joint-range fractions, and jitter are engineering probes—not scientific grasp thresholds, optimized control values, or evaluation criteria. The temporary kinematic fixture adapts the probe to a fixed-base hand; it is released for the retention-attempt trace.
+`configs/diagnostic_grasp_a.yaml` is explicitly `diagnostic_only: true` and contains the named reference profile `grasp_A_01`. Its time schedule, fixture pose, joint-range fractions, and jitter are engineering probes—not scientific grasp thresholds, optimized control values, or evaluation criteria. The temporary kinematic fixture adapts the probe to a fixed-base hand; it is released for the unsupported retention-attempt trace. See `docs/SINGLE_GRASP_CHARACTERIZATION.md` for the 10-seed descriptive results and `docs/SINGLE_GRASP_PI_DECISION.md` for the unresolved PI decision worksheet.
 
 ## Rendering platforms
 
