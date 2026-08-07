@@ -1,0 +1,26 @@
+control_mode: residual
+episode_steps: 1000
+impedance_stiffness: 1.0
+impedance_damping: 0.1
+torque_limit: 1.0
+residual_scale: 0.2
+residual_limit: 0.2
+observations:
+  joint_positions: true
+  joint_velocities: true
+  tactile_contact_flags: true
+  tactile_normal_forces: true
+  palm_pose: true
+  phase_one_hot: true
+  privileged_target_position: false
+tactile_normalization: 1.0
+# TODO(PI): define dimensions and physics for any additional tactile features.
+extra_tactile_feature_dim: 0
+# TODO(PI): define phase transitions; null disables automatic transitions.
+grasp_contact_force_threshold: null
+hold_steps_threshold: null
+# TODO(PI): define when a retained object counts as dropped; null disables this test.
+drop_height_threshold: null
+# TODO(PI): scientific reward weights remain zero.
+reward_weights: {retention: 0.0, progress: 0.0, resource_j: 0.0, regularization: 0.0, failure: 0.0}
+

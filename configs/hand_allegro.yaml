@@ -1,0 +1,13 @@
+model_path: assets/hands/allegro/right_hand.xml
+dof_count: 16
+actuator_names: [ffa0, ffa1, ffa2, ffa3, mfa0, mfa1, mfa2, mfa3, rfa0, rfa1, rfa2, rfa3, tha0, tha1, tha2, tha3]
+joint_names: [ffj0, ffj1, ffj2, ffj3, mfj0, mfj1, mfj2, mfj3, rfj0, rfj1, rfj2, rfj3, thj0, thj1, thj2, thj3]
+fingertip_bodies: [ff_tip, mf_tip, rf_tip, th_tip]
+palm_body: palm
+finger_geom_mapping:
+  index: [ff_tip_collision]
+  middle: [mf_tip_collision]
+  ring: [rf_tip_collision]
+  thumb: [th_tip_collision]
+mount_pos: [0.0, 0.0, 0.18]
+mount_quat: [1.0, 0.0, 0.0, 0.0]

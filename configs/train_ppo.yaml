@@ -1,0 +1,7 @@
+total_timesteps: 100000
+n_envs: 1
+seed: 0
+checkpoint_freq: 10000
+log_dir: runs
+checkpoint_dir: checkpoints
+
