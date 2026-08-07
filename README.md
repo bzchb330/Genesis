@@ -1,29 +1,50 @@
 # SeqGrasp
 
-Research-code infrastructure for a fixed-base Allegro Hand to retain object A while grasping object B. It uses Python 3.10+, MuJoCo 3 official bindings, Gymnasium, typed YAML configuration, structured contact records, inspectable observations, and intentionally unchosen scientific placeholders.
+SeqGrasp is a Python 3.10+/MuJoCo 3/Gymnasium research scaffold for retaining object A while reaching for object B with a fixed-base dexterous hand. It provides engineering infrastructure and diagnostics without defining PI-owned scientific criteria.
 
-The Allegro Hand V3 files in `assets/hands/allegro` are vendored from `google-deepmind/mujoco_menagerie/wonik_allegro` (retrieved 2026-08-07). Their upstream BSD-2-Clause `LICENSE` and `README.md` are preserved. Model path, actuators, joint/DoF metadata, fingertip bodies, and finger geom mappings live in `configs/hand_allegro.yaml`.
+The architecture separates typed YAML configuration, MJCF composition, Gymnasium environment logic, contact/tactile sensing, torque controllers, reward/termination placeholders, diagnostics, visualization, and training adapters. The Allegro Hand V3 in `assets/hands/allegro` is vendored from MuJoCo Menagerie with its BSD-2-Clause license and provenance.
 
-## Install and check
+## Installation and validation
 
 ```bash
 pip install -e .
 python scripts/check_install.py
 python scripts/run_random_policy.py
-pytest
+pytest -v
 ```
 
-Headless Linux rendering is selected before Python starts:
+The random-policy smoke test uses seeded actions and completes 1000 environment steps. PPO integration is optional via `pip install -e .[train]`. **No PPO policy has been trained.**
+
+## Scripted object-A diagnostic
 
 ```bash
-MUJOCO_GL=egl python scripts/check_install.py
-MUJOCO_GL=osmesa python scripts/check_install.py
+python scripts/scripted_grasp_a.py
+python scripts/scripted_grasp_a.py --seed 7 --video
+python scripts/run_grasp_diagnostics.py --num-seeds 3
+python scripts/check_scene_placements.py --seed 0 --render outputs/placements.png
 ```
 
-EGL requires a working GPU/EGL driver; OSMesa requires its system library. `render_episode.py` writes ignored MP4s under `outputs/`. Install `.[train]` for the thin Stable-Baselines3 PPO entry points. All YAML paths are repository-relative; no working-directory assumption is made.
+The diagnostic logs CSV, compressed NPZ, JSON metadata, and separate plots under ignored `outputs/`. It records raw joint, command, object, contact, tactile, palm, phase, and termination signals. Video uses official `mujoco.Renderer`; rendering/encoding failures warn but do not invalidate physical logging.
 
-Observation layout is available as `env.observation_metadata`: each component has a stable name, dimension, and unit. Privileged target position is independently toggleable. Phases are integer values 0–4. Null PI thresholds disable the corresponding transition/drop rule while retaining workspace failure handling.
+`configs/diagnostic_grasp_a.yaml` is explicitly `diagnostic_only: true`. Its time schedule, fixture pose, joint-range fractions, and jitter are engineering probes—not scientific grasp thresholds, optimized control values, or evaluation criteria. The temporary kinematic fixture adapts the probe to a fixed-base hand; it is released for the retention-attempt trace.
+
+## Rendering platforms
+
+Windows uses the normal MuJoCo OpenGL backend. On Linux/headless systems select a backend before Python starts:
+
+```bash
+MUJOCO_GL=egl python scripts/scripted_grasp_a.py --video
+MUJOCO_GL=osmesa python scripts/scripted_grasp_a.py --video
+```
+
+EGL requires a working GPU/EGL driver; OSMesa requires its system library. Videos and results are gitignored.
+
+## Configuration and observation contract
+
+All model, scene, task, diagnostic, and training settings live in typed YAML. Observation components expose stable name, dimension, unit, source, privileged status, and enabled state; see `docs/OBSERVATION_CONTRACT.md` and `docs/observation_spec.json`. Privileged target position is independently disabled by default.
+
+To replace Allegro, update configured MJCF path, actuator/joint order, palm/fingertip bodies, geom mapping, DoF, mount, and diagnostic-only trajectory mapping. See `docs/HAND_SWAP_CHECKLIST.md`.
 
 ## Scientific boundary
 
-Every unresolved scientific choice is explicitly marked for PI input. Reward weights default to zero. Only per-finger binary contact and summed normal force are implemented tactile features; no taxel model exists. Evaluation does not invent thresholds.
+Only binary contact and total normal force per finger are implemented tactile features. Raw newtons are preserved unless the PI later chooses a normalization. Reward terms and weights, metric J, retention law, phase/drop/success criteria, additional tactile physics, and RL protocol remain unresolved. See `docs/PI_DECISIONS.md` and `docs/NEXT_PI_ACTIONS.md`.

@@ -1,0 +1,58 @@
+[
+  {
+    "name": "joint_positions",
+    "dimension": 16,
+    "unit": "rad",
+    "source": "joint encoders",
+    "privileged": false,
+    "enabled": true
+  },
+  {
+    "name": "joint_velocities",
+    "dimension": 16,
+    "unit": "rad/s",
+    "source": "joint encoders",
+    "privileged": false,
+    "enabled": true
+  },
+  {
+    "name": "tactile_contact_flags",
+    "dimension": 4,
+    "unit": "1",
+    "source": "reference tactile contact records",
+    "privileged": false,
+    "enabled": true
+  },
+  {
+    "name": "tactile_normal_forces",
+    "dimension": 4,
+    "unit": "N",
+    "source": "reference tactile contact records",
+    "privileged": false,
+    "enabled": true
+  },
+  {
+    "name": "palm_pose",
+    "dimension": 7,
+    "unit": "m, quaternion",
+    "source": "robot state estimator",
+    "privileged": false,
+    "enabled": true
+  },
+  {
+    "name": "phase_one_hot",
+    "dimension": 5,
+    "unit": "1",
+    "source": "task state machine",
+    "privileged": false,
+    "enabled": true
+  },
+  {
+    "name": "privileged_target_position",
+    "dimension": 3,
+    "unit": "m",
+    "source": "MuJoCo body pose",
+    "privileged": true,
+    "enabled": false
+  }
+]

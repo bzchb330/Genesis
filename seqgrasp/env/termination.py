@@ -10,12 +10,13 @@ def object_positions(model, data, scene_cfg):
 def update_phase(phase, tactile, cfg):
     # TODO(PI): define phase-transition conditions and use the config-backed
     # threshold placeholders. Until then, automatic transitions are disabled.
-    return phase
+    return phase, None
 
 def failure_reason(model, data, cfg, phase):
     for name, pos in object_positions(model, data, cfg.scene).items():
         if np.any(pos < cfg.scene.workspace_low) or np.any(pos > cfg.scene.workspace_high): return f"{name}_left_workspace"
     # TODO(PI): loss/drop semantics are disabled until drop_height_threshold is chosen.
     if cfg.task.drop_height_threshold is not None and phase >= Phase.APPROACH_B:
-        if object_positions(model, data, cfg.scene)[cfg.scene.objects[0].name][2] < cfg.task.drop_height_threshold: return "object_a_dropped"
+        held_name=cfg.scene.objects[0].name
+        if object_positions(model, data, cfg.scene)[held_name][2] < cfg.task.drop_height_threshold: return f"{held_name}_dropped"
     return None
