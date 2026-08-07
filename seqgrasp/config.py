@@ -44,6 +44,8 @@ class DiagnosticProfile:
     stage_durations_seconds: dict[str, float]; kinematic_fixture_stages: list[str]
     support_release_stage: str; episode_phase_by_stage: dict[str, int]
     open_joint_fractions: dict[str, float]; closed_joint_fractions: dict[str, float]
+    hold_joint_fractions: dict[str, float] | None = None
+    actuator_close_delay_seconds: dict[str, float] | None = None
 
 @dataclass(frozen=True)
 class DiagnosticConfig:

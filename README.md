@@ -40,6 +40,10 @@ MUJOCO_GL=osmesa python scripts/scripted_grasp_a.py --video
 
 EGL requires a working GPU/EGL driver; OSMesa requires its system library. Videos and results are gitignored.
 
+## Engineering-only grasp search
+
+`python scripts/search_grasp_a.py --num-candidates 128 --validation-seeds 20 --video` runs the reproducible, YAML-driven object-A posture search. Its `engineering_retention_score` ranks raw finite-window behavior only; it is not a scientific success metric or resource metric J. See `docs/GRASP_A_FAILURE_ANALYSIS.md` and `docs/GRASP_A_RETENTION_SEARCH.md`.
+
 ## Configuration and observation contract
 
 All model, scene, task, diagnostic, and training settings live in typed YAML. Observation components expose stable name, dimension, unit, source, privileged status, and enabled state; see `docs/OBSERVATION_CONTRACT.md` and `docs/observation_spec.json`. Privileged target position is independently disabled by default.

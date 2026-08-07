@@ -29,12 +29,16 @@ profiles:
       {ffa0: 0.50, ffa1: 0.11, ffa2: 0.09, ffa3: 0.12,
        mfa0: 0.50, mfa1: 0.11, mfa2: 0.09, mfa3: 0.12,
        rfa0: 0.50, rfa1: 0.11, rfa2: 0.09, rfa3: 0.12,
-       tha0: 0.00, tha1: 0.00, tha2: 0.00, tha3: 0.00}
+       tha0: 0.02, tha1: 0.02, tha2: 0.02, tha3: 0.02}
     closed_joint_fractions:
       {ffa0: 0.80, ffa1: 0.80, ffa2: 0.80, ffa3: 0.80,
        mfa0: 0.80, mfa1: 0.80, mfa2: 0.80, mfa3: 0.80,
        rfa0: 0.80, rfa1: 0.80, rfa2: 0.80, rfa3: 0.80,
        tha0: 0.80, tha1: 0.80, tha2: 0.80, tha3: 0.80}
+    # Optional engineering trajectory fields. The reference keeps the same
+    # target through release and closes all configured actuators together.
+    hold_joint_fractions: null
+    actuator_close_delay_seconds: null
 output_dir: outputs/scripted_grasp_a
 save_csv: true
 save_npz: true

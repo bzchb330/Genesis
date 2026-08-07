@@ -1,0 +1,57 @@
+# Reproducible feasibility search over raw physical behavior. This is not a
+# publication-level grasp criterion, reward, resource metric J, or policy.
+engineering_search_only: true
+method: latin_hypercube
+search_seed: 20260807
+candidate_count: 128
+screening_seed: 0
+top_candidate_count: 5
+validation_seed_count: 20
+minimum_distinct_fraction_l2: 0.20
+output_dir: outputs/grasp_a_retention_search
+candidate_config_dir: configs/grasps
+
+# Group membership is configuration-owned so reusable search code does not
+# infer Allegro naming conventions.
+finger_groups:
+  index: [ffa0, ffa1, ffa2, ffa3]
+  middle: [mfa0, mfa1, mfa2, mfa3]
+  ring: [rfa0, rfa1, rfa2, rfa3]
+  thumb: [tha0, tha1, tha2, tha3]
+
+joint_fraction_bounds:
+  ffa0: [0.35, 1.00]
+  ffa1: [0.45, 1.00]
+  ffa2: [0.45, 1.00]
+  ffa3: [0.45, 1.00]
+  mfa0: [0.35, 1.00]
+  mfa1: [0.45, 1.00]
+  mfa2: [0.45, 1.00]
+  mfa3: [0.45, 1.00]
+  rfa0: [0.35, 1.00]
+  rfa1: [0.45, 1.00]
+  rfa2: [0.45, 1.00]
+  rfa3: [0.45, 1.00]
+  tha0: [0.35, 1.00]
+  tha1: [0.35, 1.00]
+  tha2: [0.35, 1.00]
+  tha3: [0.35, 1.00]
+
+hold_fraction_delta_bounds: [-0.10, 0.10]
+close_delay_bounds_seconds: [0.00, 0.18]
+close_duration_bounds_seconds: [0.35, 0.80]
+establish_contact_duration_bounds_seconds: [0.12, 0.40]
+
+# Dimensionless engineering ranking formula. Each term is computed from raw
+# post-release behavior and is documented in GRASP_A_RETENTION_SEARCH.md.
+score_weights:
+  terminal_height_retention: 2.0
+  mean_height_retention: 1.0
+  clear_time_fraction: 1.0
+  fingertip_contact_fraction: 1.0
+  active_finger_fraction: 1.0
+  normalized_translation_penalty: 1.0
+  normalized_rotation_penalty: 0.5
+  actuator_saturation_penalty: 1.0
+object_characteristic_length_m: 0.05
+joint_limit_tolerance_rad: 0.000001
