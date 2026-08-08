@@ -1,0 +1,14 @@
+engineering_only: true
+source_candidates: [grasp_A_candidate_01.yaml, grasp_A_candidate_02.yaml, grasp_A_candidate_03.yaml, grasp_A_candidate_05.yaml]
+local_variants_per_candidate: 24
+local_search_seed: 20260808
+validation_seed_count: 20
+selected_grasp_count: 3
+joint_fraction_perturbation: [-0.04, 0.02]
+timing_scale_bounds: [0.92, 1.08]
+delay_perturbation_seconds: [-0.02, 0.02]
+penetration_penalty_weight: 3.0
+resource_sample_stride: 10
+reachability_samples_per_finger: 32
+reachability_fraction_amplitude: 0.12
+output_dir: outputs/multi_grasp_resource_probing

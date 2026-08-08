@@ -1,0 +1,104 @@
+engineering_only: true
+name: resource_grasp_A_01
+source: grasp_A_candidate_01
+scientific_success_assigned: false
+selection_metadata:
+  source_grasp: grasp_A_candidate_01
+  variant_id: grasp_A_candidate_01_local_015
+  retained_all_20_engineering_windows: true
+  engineering_only: true
+diagnostic_profile:
+  object_fixture_pos:
+  - 0.07
+  - 0.02
+  - 0.165
+  object_fixture_quat:
+  - 1.0
+  - 0.0
+  - 0.0
+  - 0.0
+  stage_durations_seconds:
+    open_pregrasp: 0.2
+    close: 0.7277282657322527
+    establish_contact: 0.3431650608479297
+    retention_attempt: 0.5
+    hold: 0.5
+  kinematic_fixture_stages:
+  - open_pregrasp
+  - close
+  - establish_contact
+  support_release_stage: retention_attempt
+  episode_phase_by_stage:
+    open_pregrasp: 0
+    close: 1
+    establish_contact: 1
+    retention_attempt: 1
+    hold: 1
+  open_joint_fractions:
+    ffa0: 0.5
+    ffa1: 0.11
+    ffa2: 0.09
+    ffa3: 0.12
+    mfa0: 0.5
+    mfa1: 0.11
+    mfa2: 0.09
+    mfa3: 0.12
+    rfa0: 0.5
+    rfa1: 0.11
+    rfa2: 0.09
+    rfa3: 0.12
+    tha0: 0.02
+    tha1: 0.02
+    tha2: 0.02
+    tha3: 0.02
+  closed_joint_fractions:
+    ffa0: 0.38299576237004407
+    ffa1: 0.9211653741325213
+    ffa2: 0.7390472340631867
+    ffa3: 0.738618813909207
+    mfa0: 0.601353011373778
+    mfa1: 0.905560585660089
+    mfa2: 0.8322903641371835
+    mfa3: 0.991906898680206
+    rfa0: 0.7460238134777163
+    rfa1: 0.6636969100156674
+    rfa2: 0.8035690230137063
+    rfa3: 0.6048054845956751
+    tha0: 0.7026868831107873
+    tha1: 0.7375064431015826
+    tha2: 0.7017837424243828
+    tha3: 0.8127803664911629
+  hold_joint_fractions:
+    ffa0: 0.3726062292647021
+    ffa1: 0.8915359170289778
+    ffa2: 0.7492180571429334
+    ffa3: 0.6916677726828819
+    mfa0: 0.5481593338483691
+    mfa1: 0.8032114265675038
+    mfa2: 0.7625678580415727
+    mfa3: 0.918060366982512
+    rfa0: 0.7110311826952785
+    rfa1: 0.6554158019905552
+    rfa2: 0.768433247910788
+    rfa3: 0.6084017789828423
+    tha0: 0.6773459547620935
+    tha1: 0.73834999278498
+    tha2: 0.7193507945990094
+    tha3: 0.83593175414049
+  actuator_close_delay_seconds:
+    ffa0: 0.13498394559094157
+    ffa1: 0.1265511158433139
+    ffa2: 0.1285976339866187
+    ffa3: 0.16451153828991052
+    mfa0: 0.16416932348776533
+    mfa1: 0.16948269734086258
+    mfa2: 0.1827679163875661
+    mfa3: 0.1656822121336944
+    rfa0: 0.060827500277114754
+    rfa1: 0.08413408985973017
+    rfa2: 0.09079503077391855
+    rfa3: 0.06690272627226405
+    tha0: 0.14299483605031738
+    tha1: 0.12955851295397333
+    tha2: 0.1279776556689453
+    tha3: 0.13272646913908456

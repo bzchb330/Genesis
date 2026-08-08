@@ -13,7 +13,7 @@
 - Five-phase state machine with explicit phase/reason instrumentation but no PI transition rules.
 - Reward breakdown and YAML weights with zero scientific terms.
 - `RetentionController` protocol with a zero-output implementation.
-- `ResourceState` and undefined `compute_resource_metric` hook.
+- Expanded raw `ResourceState`, deterministic reachability/contact probes, and undefined `compute_resource_metric` hook.
 - Separate nullable acquisition, unsupported-retention, and loss criterion interfaces.
 - Optional Stable-Baselines3 PPO entry points; integration is present but untrained.
 
@@ -24,6 +24,7 @@
 - Multi-seed raw-measurement runner, plots, optional MP4, and placement renderer.
 - Explicit support-release samples, descriptive 10-seed statistics, and aggregate figures.
 - Reproducible engineering-only grasp-posture search, top-candidate profiles, object-specific contact mechanics, and 20-seed descriptive validation.
+- Fixed-physics penetration refinement, three source-distinct resource profiles, 3,000 raw post-release samples, 384 reachability samples, and 240 independent single-finger B probes.
 - These values and outputs are not success criteria or scientific thresholds.
 
 ## D. Blocked by TODO(PI)

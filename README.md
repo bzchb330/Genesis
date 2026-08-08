@@ -44,6 +44,10 @@ EGL requires a working GPU/EGL driver; OSMesa requires its system library. Video
 
 `python scripts/search_grasp_a.py --num-candidates 128 --validation-seeds 20 --video` runs the reproducible, YAML-driven object-A posture search. Its `engineering_retention_score` ranks raw finite-window behavior only; it is not a scientific success metric or resource metric J. See `docs/GRASP_A_FAILURE_ANALYSIS.md` and `docs/GRASP_A_RETENTION_SEARCH.md`.
 
+## Multi-grasp raw resource characterization
+
+`python scripts/run_multi_grasp_resource_probes.py` reproduces the fixed-physics contact-penetration refinement, raw resource-state sampling, per-finger reachability clouds, and independent single-finger object-B probes. It writes generated data and figures under ignored `outputs/multi_grasp_resource_probing/`. The study found no B contact for the configured placements and reports that as a reachability observation, not a success decision. See `docs/MULTI_GRASP_RESOURCE_CHARACTERIZATION.md`, `docs/RESOURCE_RAW_FEATURES.md`, and `docs/RESOURCE_METRIC_PI_DECISION.md`.
+
 ## Configuration and observation contract
 
 All model, scene, task, diagnostic, and training settings live in typed YAML. Observation components expose stable name, dimension, unit, source, privileged status, and enabled state; see `docs/OBSERVATION_CONTRACT.md` and `docs/observation_spec.json`. Privileged target position is independently disabled by default.
