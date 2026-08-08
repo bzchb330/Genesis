@@ -39,3 +39,12 @@ def test_incremental_store_serializes_parallel_appends(tmp_path):
     assert all(written)
     persisted = _store(path).records()
     assert {record["trial_id"] for record in persisted} == {record["trial_id"] for record in records}
+
+
+def test_incremental_store_batch_append_is_durable_and_deduplicated(tmp_path):
+    path = tmp_path / "batch.jsonl"
+    records = [{"trial_id": stable_trial_id("batch", index), "index": index} for index in range(4)]
+    store = _store(path)
+    assert store.append_many(records) == 4
+    assert store.append_many([records[0], {"trial_id": stable_trial_id("batch", 4), "index": 4}]) == 1
+    assert [row["index"] for row in store.records()] == [0, 1, 2, 3, 4]

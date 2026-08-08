@@ -7,21 +7,29 @@ validation:
   long_hold_steps: 1000
   expected_force_order_N: 1.0
   force_order_factor: 10.0
-  penetration_tolerance_m: null  # TODO(PI): maximum valid contact penetration.
-  maximum_vertical_drift_m: null  # TODO(PI): stable-hold vertical drift gate.
-  maximum_translational_drift_m: null  # TODO(PI): stable-hold translation gate.
-  maximum_orientation_drift_rad: null  # TODO(PI): stable-hold rotation gate.
-  minimum_active_object_contacts: null  # TODO(PI): required retained contact count.
-  allow_table_recontact: null  # TODO(PI): whether any table re-contact can pass.
-  allow_complete_contact_loss: null  # TODO(PI): whether temporary total contact loss can pass.
+  penetration_tolerance_m: 0.003
+  maximum_vertical_drift_m: 0.002
+  maximum_translational_drift_m: 0.005
+  maximum_orientation_drift_rad: 0.20
+  minimum_active_object_contacts: 3
+  allow_table_recontact: false
+  allow_complete_contact_loss: false
 
 sweep:
-  # TODO(PI): provide the exact ranges and the geoms to which they apply.
-  target_geom_names: null
-  friction_vectors: null
-  solref_values: null
-  solimp_values: null
-  timestep_values_s: null
+  target_geom_names: [object_a_geom, ff_tip_collision, mf_tip_collision, rf_tip_collision, th_tip_collision]
+  friction_vectors:
+    - [0.6, 0.005, 0.0005]
+    - [0.8, 0.010, 0.0010]
+    - [1.0, 0.020, 0.0020]
+  solref_values:
+    - [0.010, 1.0]
+    - [0.020, 1.0]
+    - [0.040, 1.0]
+  solimp_values:
+    - [0.85, 0.90, 0.0020, 0.5, 2.0]
+    - [0.90, 0.95, 0.0010, 0.5, 2.0]
+    - [0.95, 0.99, 0.0005, 0.5, 2.0]
+  timestep_values_s: [0.001, 0.002, 0.004]
 
 persistence:
   output_dir: outputs/phase2
@@ -29,20 +37,100 @@ persistence:
   lock_poll_seconds: 0.05
 
 required_for_later_parts:
-  occupied_finger_force_threshold_N: null  # TODO(PI)
-  tactile_binary_force_threshold_N: null  # TODO(PI)
-  short_hold_drift_tolerance_m: null  # TODO(PI)
-  grasp_acquisition_threshold: null  # TODO(PI)
-  retained_object_threshold: null  # TODO(PI)
-  object_loss_drop_threshold: null  # TODO(PI)
-  invalid_penetration_threshold_m: null  # TODO(PI)
-  B_placement_low_m: null  # TODO(PI)
-  B_placement_high_m: null  # TODO(PI)
-  workspace_monte_carlo_samples: null  # TODO(PI): select after convergence study.
-  workspace_voxel_size_m: null  # TODO(PI)
-  workspace_collision_tolerance_m: null  # TODO(PI)
-  free_palm_box_low_m: null  # TODO(PI)
-  free_palm_box_high_m: null  # TODO(PI)
-  free_palm_voxel_size_m: null  # TODO(PI)
-  second_grasp_trials_per_grasp: null  # TODO(PI)
+  occupied_finger_force_threshold_N: 0.20
+  tactile_binary_force_threshold_N: 0.05
+  short_hold_drift_tolerance_m: 0.005
+  grasp_acquisition_threshold: 0.20
+  retained_object_threshold: 0.20
+  object_loss_drop_threshold: 0.20
+  invalid_penetration_threshold_m: 0.003
+  B_placement_low_m: [-0.020, -0.070]
+  B_placement_high_m: [0.050, 0.070]
+  workspace_monte_carlo_samples: 10000
+  workspace_voxel_size_m: 0.005
+  workspace_collision_tolerance_m: 0.001
+  free_palm_box_low_m: [-0.070, -0.080, -0.130]
+  free_palm_box_high_m: [0.070, 0.080, 0.030]
+  free_palm_voxel_size_m: 0.005
+  second_grasp_trials_per_grasp: 20
   accepted_grasp_target: 200
+
+dataset:
+  seed: 20260808
+  maximum_candidate_attempts: 20000
+  maximum_workers: 8
+  short_hold_steps: 500
+  palm_translation_bounds_m:
+    x: [-0.020, 0.020]
+    y: [-0.020, 0.020]
+    z: [-0.010, 0.010]
+  palm_orientation_bounds_deg:
+    roll: [-15.0, 15.0]
+    pitch: [-15.0, 15.0]
+    yaw: [-20.0, 20.0]
+  object_a_jitter_x_m: [-0.015, 0.015]
+  object_a_jitter_y_m: [-0.015, 0.015]
+  object_a_yaw_rad: [0.0, 6.283185307179586]
+  finger_subset_sizes: [2, 3, 4]
+  active_joint_perturbation_rad: 0.25
+  proposal_profile_paths:
+    - configs/grasps/resource_grasp_A_01.yaml
+    - configs/grasps/resource_grasp_A_02.yaml
+    - configs/grasps/resource_grasp_A_03.yaml
+  # Engineering proposal mixture: retain the PI ranges above for exploration,
+  # while sampling narrowly around empirically validated proposal-02 basins.
+  anchor_profile_path: configs/grasps/resource_grasp_A_02.yaml
+  anchor_commanded_subsets:
+    - [middle, ring, thumb]
+    - [index, middle, ring, thumb]
+  anchor_palm_translation_half_width_m: 0.002
+  anchor_palm_orientation_half_width_deg: 2.0
+  anchor_object_jitter_half_width_m: 0.002
+  anchor_active_joint_perturbation_rad: 0.03
+  maximum_penetration_m: 0.003
+  maximum_translation_drift_m: 0.005
+  maximum_orientation_drift_rad: 0.20
+  allow_table_recontact: false
+  allow_complete_contact_loss: false
+  friction_cone_edges: 8
+  convex_hull_tolerance: 1.0e-8
+
+resources:
+  occupied_finger_normal_force_threshold_N: 0.20
+  workspace_convergence_samples: [1000, 2500, 5000, 10000, 20000]
+  workspace_samples: 10000
+  workspace_voxel_size_m: 0.005
+  workspace_collision_tolerance_m: 0.001
+  free_palm_box_lower_m: [-0.070, -0.080, -0.130]
+  free_palm_box_upper_m: [0.070, 0.080, 0.030]
+  free_palm_voxel_size_m: 0.005
+
+tactile:
+  binary_contact_threshold_N: 0.05
+  zero_normal_epsilon_N: 1.0e-12
+
+second_grasp:
+  seed: 20260809
+  B_center_x_bounds_m: [-0.020, 0.050]
+  B_center_y_bounds_m: [-0.070, 0.070]
+  B_yaw_bounds_rad: [0.0, 6.283185307179586]
+  placement_preflight_count: 100
+  trials_per_grasp: 20
+  approach_steps: 500
+  close_steps: 400
+  final_hold_steps: 500
+  minimum_A_finger_contacts: 2
+  minimum_B_finger_contacts: 2
+  minimum_A_normal_force_N: 0.20
+  minimum_B_normal_force_N: 0.20
+  minimum_B_table_clearance_m: 0.002
+  maximum_penetration_m: 0.003
+  maximum_A_translation_m: 0.005
+  maximum_A_orientation_rad: 0.20
+  ik_damping: 0.01
+  ik_step_size: 0.25
+
+analysis:
+  continuous_quantile_bins: 5
+  confidence_level: 0.95
+  greedy_top_fraction: 0.10

@@ -99,15 +99,30 @@ class IncrementalJsonlStore:
         return {str(record["trial_id"]) for record in self.records()}
 
     def append(self, record: dict) -> bool:
-        if "trial_id" not in record:
-            raise ValueError("incremental record must contain trial_id")
+        return self.append_many([record]) == 1
+
+    def append_many(self, records: list[dict]) -> int:
+        """Atomically append a small completed batch with one durable flush."""
+
+        if not records:
+            return 0
+        for record in records:
+            if "trial_id" not in record:
+                raise ValueError("incremental record must contain trial_id")
         with self._lock():
             self._discard_incomplete_tail()
-            if str(record["trial_id"]) in self.completed_ids():
-                return False
-            payload = (_canonical_json(record) + "\n").encode("utf-8")
+            completed = self.completed_ids()
+            unique = []
+            for record in records:
+                trial_id = str(record["trial_id"])
+                if trial_id not in completed:
+                    unique.append(record)
+                    completed.add(trial_id)
+            if not unique:
+                return 0
+            payload = "".join(_canonical_json(record) + "\n" for record in unique).encode("utf-8")
             with self.path.open("ab", buffering=0) as stream:
                 stream.write(payload)
                 stream.flush()
                 os.fsync(stream.fileno())
-            return True
+            return len(unique)

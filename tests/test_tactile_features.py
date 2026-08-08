@@ -2,7 +2,7 @@ from dataclasses import replace
 from types import SimpleNamespace
 import numpy as np
 from seqgrasp import load_configs
-from seqgrasp.sensing.tactile_features import compute_tactile_features
+from seqgrasp.sensing.tactile_features import compute_phase2_tactile_features, compute_tactile_features
 
 def test_reference_tactile_features_order_zero_repeatability_and_normalization():
     cfg=load_configs(); fingers=list(cfg.hand.finger_geom_mapping); empty={f:[] for f in fingers}
@@ -15,3 +15,14 @@ def test_reference_tactile_features_order_zero_repeatability_and_normalization()
     expected_flags=np.zeros(len(fingers)); expected_force=np.zeros(len(fingers)); expected_flags[1]=1; expected_force[1]=4
     np.testing.assert_array_equal(first["contact_flags"],expected_flags); np.testing.assert_array_equal(first["normal_force"],expected_force)
     scaled=replace(cfg,task=replace(cfg.task,tactile_normalization=2.0)); assert compute_tactile_features(contacts,scaled)["normal_force"][1]==2.0
+
+
+def test_phase2_tactile_features_have_exact_threshold_units_and_zero_ratio_convention():
+    fingers = ["index", "middle", "ring", "thumb"]
+    contacts = {finger: [] for finger in fingers}
+    contacts["index"] = [SimpleNamespace(normal_force=0.03, tangential_force=0.01), SimpleNamespace(normal_force=0.03, tangential_force=0.02)]
+    contacts["middle"] = [SimpleNamespace(normal_force=0.05, tangential_force=0.025)]
+    features = compute_phase2_tactile_features(contacts, fingers, 0.05, 1e-12)
+    np.testing.assert_array_equal(features["binary_contact"], [1, 0, 0, 0])
+    np.testing.assert_allclose(features["normal_force_N"], [0.06, 0.05, 0.0, 0.0])
+    np.testing.assert_allclose(features["tangential_to_normal_ratio"], [0.5, 0.5, 0.0, 0.0])

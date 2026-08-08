@@ -22,6 +22,20 @@ class ContactParameterOverride:
     solimp: tuple[float, float, float, float, float] | None = None
     timestep: float | None = None
 
+
+def validate_mujoco_contact_parameters(
+    friction: tuple[float, float, float],
+    solref: tuple[float, float],
+    solimp: tuple[float, float, float, float, float],
+) -> None:
+    """Ask MuJoCo's XML compiler to validate one contact-parameter vector set."""
+
+    xml = (
+        "<mujoco><worldbody><geom type='plane' size='1 1 0.1' "
+        f"friction='{_vec(friction)}' solref='{_vec(solref)}' solimp='{_vec(solimp)}'/></worldbody></mujoco>"
+    )
+    mujoco.MjModel.from_xml_string(xml)
+
 def _vec(xs): return " ".join(str(x) for x in xs)
 
 def build_scene(
