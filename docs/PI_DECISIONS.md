@@ -11,7 +11,7 @@ This register enumerates every active `TODO(PI)`. Diagnostic defaults are engine
 | `configs/task_sequential.yaml:25` | `reward_weights` | Every weight is `0.0` | Reward weights after terms are scientifically defined | RL training | Yes; reward remains zero |
 | `seqgrasp/sensing/tactile_features.py:10` | `compute_tactile_features` extra slot | Correctly shaped zeros | Physics and units for any feature beyond flag and total normal force | Future observation variants | Yes |
 | `seqgrasp/control/retention.py:12` | `ZeroRetentionController.residual` | Zero residual | Closed-loop tactile retention strategy | Persistent retention control | Yes; open-loop diagnostics remain available |
-| `seqgrasp/env/resource.py:21` | `compute_resource_metric` | Returns `None`; raw state remains exposed | Definition and units of resource metric J | Reward resource term, resource evaluation | Yes |
+| `seqgrasp/env/resource.py:30` | `compute_resource_metric` | Returns `None`; expanded raw state remains exposed | Definition, admissible inputs, aggregation, and units of resource metric J | Reward resource term, resource evaluation | Yes |
 | `seqgrasp/env/rewards.py:4` | `compute_reward` | All term bodies return zero | Retention, progress, J, regularization, and failure term definitions | Meaningful RL objective | Yes; APIs/logging work |
 | `seqgrasp/env/termination.py:11` | `update_phase` | Returns current phase and no reason | Scientific phase transition rules | Sequential phase advancement | Yes |
 | `seqgrasp/env/termination.py:18` | `failure_reason` retained-object branch | Workspace exits work; drop branch disabled | Loss/drop criterion for a held object | Early termination, drop metrics | Yes |
