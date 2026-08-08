@@ -1,13 +1,33 @@
 from __future__ import annotations
+from dataclasses import dataclass
 from pathlib import Path
 import xml.etree.ElementTree as ET
 import mujoco
 import numpy as np
 from .config import ConfigBundle, ROOT
 
+
+@dataclass(frozen=True)
+class ContactParameterOverride:
+    """Explicit contact parameters applied to named compiled geoms.
+
+    MuJoCo exposes ``geom_friction`` (ngeom x 3), ``geom_solref``
+    (ngeom x mjNREF), and ``geom_solimp`` (ngeom x mjNIMP) on ``MjModel``.
+    See https://mujoco.readthedocs.io/en/latest/APIreference/APItypes.html.
+    """
+
+    geom_names: tuple[str, ...]
+    friction: tuple[float, float, float] | None = None
+    solref: tuple[float, float] | None = None
+    solimp: tuple[float, float, float, float, float] | None = None
+    timestep: float | None = None
+
 def _vec(xs): return " ".join(str(x) for x in xs)
 
-def build_scene(cfg: ConfigBundle) -> tuple[mujoco.MjModel, mujoco.MjData]:
+def build_scene(
+    cfg: ConfigBundle,
+    contact_override: ContactParameterOverride | None = None,
+) -> tuple[mujoco.MjModel, mujoco.MjData]:
     hand_path = ROOT / cfg.hand.model_path
     hand = ET.parse(hand_path).getroot()
     world = hand.find("worldbody")
@@ -44,6 +64,21 @@ def build_scene(cfg: ConfigBundle) -> tuple[mujoco.MjModel, mujoco.MjData]:
     xml = ET.tostring(hand, encoding="unicode")
     assets = {str(p.relative_to(hand_path.parent)).replace("\\", "/"): p.read_bytes() for p in (hand_path.parent / "assets").rglob("*") if p.is_file()}
     model = mujoco.MjModel.from_xml_string(xml, assets)
+    if contact_override is not None:
+        if contact_override.timestep is not None:
+            if contact_override.timestep <= 0:
+                raise ValueError("contact-parameter timestep must be positive")
+            model.opt.timestep = contact_override.timestep
+        for geom_name in contact_override.geom_names:
+            geom_id = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_GEOM, geom_name)
+            if geom_id < 0:
+                raise ValueError(f"missing contact-parameter target geom {geom_name}")
+            if contact_override.friction is not None:
+                model.geom_friction[geom_id] = contact_override.friction
+            if contact_override.solref is not None:
+                model.geom_solref[geom_id] = contact_override.solref
+            if contact_override.solimp is not None:
+                model.geom_solimp[geom_id] = contact_override.solimp
     if model.nu != cfg.hand.dof_count: raise ValueError(f"configured DoF {cfg.hand.dof_count}, model actuators {model.nu}")
     for name in cfg.hand.actuator_names:
         if mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_ACTUATOR, name) < 0: raise ValueError(f"missing actuator {name}")

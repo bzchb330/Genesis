@@ -1,0 +1,48 @@
+phase2_only: true
+
+validation:
+  seed: 0
+  # Reuses the Phase-1 source-02 refinement; no Part-A optimization is performed.
+  grasp_profile_path: configs/grasps/resource_grasp_A_02.yaml
+  long_hold_steps: 1000
+  expected_force_order_N: 1.0
+  force_order_factor: 10.0
+  penetration_tolerance_m: null  # TODO(PI): maximum valid contact penetration.
+  maximum_vertical_drift_m: null  # TODO(PI): stable-hold vertical drift gate.
+  maximum_translational_drift_m: null  # TODO(PI): stable-hold translation gate.
+  maximum_orientation_drift_rad: null  # TODO(PI): stable-hold rotation gate.
+  minimum_active_object_contacts: null  # TODO(PI): required retained contact count.
+  allow_table_recontact: null  # TODO(PI): whether any table re-contact can pass.
+  allow_complete_contact_loss: null  # TODO(PI): whether temporary total contact loss can pass.
+
+sweep:
+  # TODO(PI): provide the exact ranges and the geoms to which they apply.
+  target_geom_names: null
+  friction_vectors: null
+  solref_values: null
+  solimp_values: null
+  timestep_values_s: null
+
+persistence:
+  output_dir: outputs/phase2
+  lock_timeout_seconds: 30.0
+  lock_poll_seconds: 0.05
+
+required_for_later_parts:
+  occupied_finger_force_threshold_N: null  # TODO(PI)
+  tactile_binary_force_threshold_N: null  # TODO(PI)
+  short_hold_drift_tolerance_m: null  # TODO(PI)
+  grasp_acquisition_threshold: null  # TODO(PI)
+  retained_object_threshold: null  # TODO(PI)
+  object_loss_drop_threshold: null  # TODO(PI)
+  invalid_penetration_threshold_m: null  # TODO(PI)
+  B_placement_low_m: null  # TODO(PI)
+  B_placement_high_m: null  # TODO(PI)
+  workspace_monte_carlo_samples: null  # TODO(PI): select after convergence study.
+  workspace_voxel_size_m: null  # TODO(PI)
+  workspace_collision_tolerance_m: null  # TODO(PI)
+  free_palm_box_low_m: null  # TODO(PI)
+  free_palm_box_high_m: null  # TODO(PI)
+  free_palm_voxel_size_m: null  # TODO(PI)
+  second_grasp_trials_per_grasp: null  # TODO(PI)
+  accepted_grasp_target: 200

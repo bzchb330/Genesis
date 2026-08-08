@@ -48,6 +48,10 @@ EGL requires a working GPU/EGL driver; OSMesa requires its system library. Video
 
 `python scripts/run_multi_grasp_resource_probes.py` reproduces the fixed-physics contact-penetration refinement, raw resource-state sampling, per-finger reachability clouds, and independent single-finger object-B probes. It writes generated data and figures under ignored `outputs/multi_grasp_resource_probing/`. The study found no B contact for the configured placements and reports that as a reachability observation, not a success decision. See `docs/MULTI_GRASP_RESOURCE_CHARACTERIZATION.md`, `docs/RESOURCE_RAW_FEATURES.md`, and `docs/RESOURCE_METRIC_PI_DECISION.md`.
 
+## Phase 2 physics gate
+
+`python scripts/validate_physics.py` runs the fixed-base 1000-step long-hold replay and emits raw force, penetration, drift, contact, and numerical diagnostics. `python scripts/sweep_contact_params.py` is a resumable JSONL parameter-sweep entry point. The gate remains `PI_INPUT_REQUIRED` until the consolidated values in `docs/PHASE2_PI_INPUTS_REQUIRED.md` are supplied; Parts B-F must not execute before it passes.
+
 ## Configuration and observation contract
 
 All model, scene, task, diagnostic, and training settings live in typed YAML. Observation components expose stable name, dimension, unit, source, privileged status, and enabled state; see `docs/OBSERVATION_CONTRACT.md` and `docs/observation_spec.json`. Privileged target position is independently disabled by default.

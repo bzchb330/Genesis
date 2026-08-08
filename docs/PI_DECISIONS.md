@@ -19,3 +19,34 @@ This register enumerates every active `TODO(PI)`. Diagnostic defaults are engine
 | `seqgrasp/env/grasp_criteria.py:16` | `is_grasp_acquired` | Returns `None` | Acquisition evidence, combination, and persistence | Grasp-state transition and evaluation | Yes |
 | `seqgrasp/env/grasp_criteria.py:20` | `is_object_retained` | Returns `None` | Unsupported retention definition | Persistent-retention reporting and sequential task | Yes |
 | `seqgrasp/env/grasp_criteria.py:24` | `is_object_lost` | Returns `None` | Loss/drop definition beyond workspace exit | Early termination and evaluation | Yes |
+
+## Phase 2 hard-gate and later-experiment inputs
+
+These entries are consolidated in `PHASE2_PI_INPUTS_REQUIRED.md`. They remain null and prevent Parts B–F execution.
+
+| File:line | Setting | Current placeholder behavior | Scientific decision required | Downstream dependency | Repository works without it? |
+|---|---|---|---|---|---|
+| `configs/phase2_physics_validation.yaml:10` | `penetration_tolerance_m` | `null`; penetration is reported only | Maximum physically valid penetration | Part A gate, Part D INVALID | Part A reports `PI_INPUT_REQUIRED` |
+| `configs/phase2_physics_validation.yaml:11` | `maximum_vertical_drift_m` | `null`; raw drift is reported | Stable-hold vertical drift limit | Part A/B stability | Same |
+| `configs/phase2_physics_validation.yaml:12` | `maximum_translational_drift_m` | `null`; raw drift is reported | Stable-hold 3-D drift limit | Part A/B stability | Same |
+| `configs/phase2_physics_validation.yaml:13` | `maximum_orientation_drift_rad` | `null`; raw angle is reported | Stable-hold rotation limit | Part A/B stability | Same |
+| `configs/phase2_physics_validation.yaml:14` | `minimum_active_object_contacts` | `null`; raw contact range is reported | Required contact count | Part A gate | Same |
+| `configs/phase2_physics_validation.yaml:15` | `allow_table_recontact` | `null`; event is reported | Table-contact retention policy | Part A/B/D | Same |
+| `configs/phase2_physics_validation.yaml:16` | `allow_complete_contact_loss` | `null`; event is reported | Temporary total-contact-loss policy | Part A/B/D | Same |
+| `configs/phase2_physics_validation.yaml:19` | contact sweep ranges/scope | All five fields are `null`; no sweep trials run | Target geoms and friction, solref, solimp, timestep ranges | Part A sweep and physics selection | Sweep reports `PI_INPUT_REQUIRED` |
+| `configs/phase2_physics_validation.yaml:32` | `occupied_finger_force_threshold_N` | `null` | Load-bearing finger threshold | Part C1 | Blocked after Part A |
+| `configs/phase2_physics_validation.yaml:33` | `tactile_binary_force_threshold_N` | `null` | Binary tactile-contact threshold | Part E1 | Blocked after Part A |
+| `configs/phase2_physics_validation.yaml:34` | `short_hold_drift_tolerance_m` | `null` | Dataset stability tolerance | Part B2 | Blocked after Part A |
+| `configs/phase2_physics_validation.yaml:35` | `grasp_acquisition_threshold` | `null` | Acquisition signals, thresholds, and persistence | Part B/D | Blocked after Part A |
+| `configs/phase2_physics_validation.yaml:36` | `retained_object_threshold` | `null` | End-of-hold retention definition | Part D outcomes | Blocked after Part A |
+| `configs/phase2_physics_validation.yaml:37` | `object_loss_drop_threshold` | `null` | Loss/drop definition | Part D outcomes | Blocked after Part A |
+| `configs/phase2_physics_validation.yaml:38` | `invalid_penetration_threshold_m` | `null` | Penetration causing INVALID | Part D outcomes | Blocked after Part A |
+| `configs/phase2_physics_validation.yaml:39` | `B_placement_low_m` | `null` | Lower bound of reachable Phase 2 B distribution | Part D2 | Blocked after Part A |
+| `configs/phase2_physics_validation.yaml:40` | `B_placement_high_m` | `null` | Upper bound of reachable Phase 2 B distribution | Part D2 | Blocked after Part A |
+| `configs/phase2_physics_validation.yaml:41` | `workspace_monte_carlo_samples` | `null` | Production sample budget after convergence evidence | Part C2 | Blocked after Part A |
+| `configs/phase2_physics_validation.yaml:42` | `workspace_voxel_size_m` | `null` | Reachable-workspace voxel resolution | Part C2 | Blocked after Part A |
+| `configs/phase2_physics_validation.yaml:43` | `workspace_collision_tolerance_m` | `null` | Collision-rejection clearance | Part C2 | Blocked after Part A |
+| `configs/phase2_physics_validation.yaml:44` | `free_palm_box_low_m` | `null` | Palm-frame voxel-box lower bounds | Part C3 | Blocked after Part A |
+| `configs/phase2_physics_validation.yaml:45` | `free_palm_box_high_m` | `null` | Palm-frame voxel-box upper bounds | Part C3 | Blocked after Part A |
+| `configs/phase2_physics_validation.yaml:46` | `free_palm_voxel_size_m` | `null` | Free-palm voxel resolution | Part C3 | Blocked after Part A |
+| `configs/phase2_physics_validation.yaml:47` | `second_grasp_trials_per_grasp` | `null` | B placements per accepted A grasp | Part D4 | Blocked after Part A |
