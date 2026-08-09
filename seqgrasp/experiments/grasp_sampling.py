@@ -286,7 +286,96 @@ def sample_candidate(phase2: Phase2Config, attempt_index: int) -> tuple[ConfigBu
 
 def evaluate_candidate(phase2: Phase2Config, attempt_index: int) -> dict:
     cfg, profile, metadata = sample_candidate(phase2, attempt_index)
-    probe = _run_candidate_probe(cfg, phase2.dataset.seed + attempt_index, phase2.dataset.short_hold_steps)
+    return _evaluate_sampled_candidate(phase2, cfg, profile, metadata, phase2.dataset.seed + attempt_index)
+
+
+def sample_extension_candidate(phase2: Phase2Config, attempt_index: int, anchors: list[dict]):
+    """Target the PI-requested thumb/opposing-finger neighborhoods."""
+
+    if not anchors:
+        raise ValueError("at least one occupied-count-two anchor is required")
+    anchor = anchors[attempt_index % len(anchors)]
+    rng = np.random.default_rng(np.random.SeedSequence([phase2.dataset.seed, 2, attempt_index]))
+    base = load_configs()
+    _, proposal = load_grasp_profile(ROOT / phase2.dataset.anchor_profile_path)
+    translation_width = phase2.dataset.anchor_palm_translation_half_width_m / 10.0
+    translation = rng.uniform(-translation_width, translation_width, 3)
+    translation[2] *= 0.5
+    angle_width = phase2.dataset.anchor_palm_orientation_half_width_deg / 10.0
+    angles_deg = rng.uniform(-angle_width, angle_width, 3)
+    anchor_rotation = Rotation.from_quat(anchor["initial_palm_quaternion"], scalar_first=True)
+    mount_quat = (anchor_rotation * Rotation.from_euler("xyz", np.deg2rad(angles_deg))).as_quat(scalar_first=True)
+    hand = replace(
+        base.hand,
+        mount_pos=(np.asarray(anchor["initial_palm_position_m"]) + translation).tolist(),
+        mount_quat=mount_quat.tolist(),
+    )
+    cfg = replace(base, hand=hand)
+    ranges = _base_joint_ranges()
+    occupied = np.asarray(anchor["occupied_finger_mask"], dtype=bool)
+    opposed_pair = tuple(finger for index, finger in enumerate(FINGERS) if occupied[index])
+    if len(opposed_pair) != 2 or "thumb" not in opposed_pair:
+        raise ValueError("extension anchors must be opposed occupied-count-two grasps including thumb")
+    # Half of all proposals are explicitly two-finger commanded. The other half
+    # explore the same accepted low-occupancy basin with its original command
+    # subset, which permits force closure without fabricating occupied labels.
+    subset = opposed_pair if attempt_index % 2 == 0 else tuple(anchor["commanded_finger_subset"])
+    groups = load_search_config()["finger_groups"]
+    active_names = {name for finger in subset for name in groups[finger]}
+    closed = dict(proposal.open_joint_fractions)
+    hold = dict(proposal.open_joint_fractions)
+    for joint_index, name in enumerate(cfg.hand.actuator_names):
+        if name in active_names:
+            delta = rng.uniform(
+                -phase2.dataset.anchor_active_joint_perturbation_rad / 10.0,
+                phase2.dataset.anchor_active_joint_perturbation_rad / 10.0,
+            ) / (ranges[joint_index, 1] - ranges[joint_index, 0])
+            closed[name] = float(np.clip(anchor["closed_joint_fractions"][name] + delta, 0.0, 1.0))
+            hold[name] = closed[name]
+    object_width = phase2.dataset.anchor_object_jitter_half_width_m / 10.0
+    object_jitter = rng.uniform(
+        -object_width,
+        object_width,
+        2,
+    )
+    fixture_pos = np.asarray(anchor["initial_object_position_m"], dtype=float)
+    fixture_pos[:2] += object_jitter
+    durations = dict(proposal.stage_durations_seconds)
+    durations["hold"] = phase2.dataset.short_hold_steps * cfg.scene.timestep
+    profile = replace(
+        proposal,
+        object_fixture_pos=fixture_pos.tolist(),
+        object_fixture_quat=list(anchor["initial_object_quaternion"]),
+        stage_durations_seconds=durations,
+        closed_joint_fractions=closed,
+        hold_joint_fractions=hold,
+    )
+    metadata = {
+        "attempt_index": attempt_index,
+        "extension_attempt_index": attempt_index,
+        "generation_seed": phase2.dataset.seed,
+        "proposal_profile_path": phase2.dataset.anchor_profile_path,
+        "commanded_finger_subset": list(subset),
+        "sampling_mode": "targeted_two_finger_command" if subset == opposed_pair else "targeted_occupied2_neighborhood",
+        "extension_anchor_grasp_id": anchor["grasp_id"],
+        "palm_translation_perturbation_m": translation.tolist(),
+        "palm_orientation_perturbation_deg": angles_deg.tolist(),
+        "initial_palm_position_m": hand.mount_pos,
+        "initial_palm_quaternion": hand.mount_quat,
+        "object_yaw_rad": float(2.0 * math.atan2(anchor["initial_object_quaternion"][3], anchor["initial_object_quaternion"][0]) % (2.0 * math.pi)),
+        "closed_joint_fractions": closed,
+        "hold_joint_fractions": hold,
+    }
+    return bundle_for_profile(cfg, "phase2_dataset_extension_candidate", profile), profile, metadata
+
+
+def evaluate_extension_candidate(phase2: Phase2Config, attempt_index: int, anchors: list[dict]) -> dict:
+    cfg, profile, metadata = sample_extension_candidate(phase2, attempt_index, anchors)
+    return _evaluate_sampled_candidate(phase2, cfg, profile, metadata, phase2.dataset.seed + 2_000_000 + attempt_index)
+
+
+def _evaluate_sampled_candidate(phase2, cfg, profile, metadata, probe_seed: int) -> dict:
+    probe = _run_candidate_probe(cfg, probe_seed, phase2.dataset.short_hold_steps)
     arrays = probe["arrays"]
     if probe["hold_steps"] < phase2.dataset.short_hold_steps:
         return {**metadata, "accepted": False, "rejection_reason": "short_hold_incomplete"}

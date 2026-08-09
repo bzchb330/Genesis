@@ -114,20 +114,25 @@ class SecondGraspConfig:
     seed: int
     B_center_x_bounds_m: list[float]
     B_center_y_bounds_m: list[float]
+    B_center_z_bounds_m: list[float]
     B_yaw_bounds_rad: list[float]
     placement_preflight_count: int
+    representative_grasp_count: int
+    geometry_workspace_samples: int
     trials_per_grasp: int
     approach_steps: int
     close_steps: int
     final_hold_steps: int
     minimum_A_finger_contacts: int
-    minimum_B_finger_contacts: int
+    minimum_B_free_finger_contacts: int
+    minimum_B_hand_contacts: int
     minimum_A_normal_force_N: float
     minimum_B_normal_force_N: float
-    minimum_B_table_clearance_m: float
     maximum_penetration_m: float
     maximum_A_translation_m: float
     maximum_A_orientation_rad: float
+    maximum_B_translation_m: float
+    maximum_B_orientation_rad: float
     ik_damping: float
     ik_step_size: float
 
@@ -221,5 +226,11 @@ def load_phase2_config(path: str | Path | None = None) -> tuple[Phase2Config, Pa
         raise ValueError("production workspace sample count must remain 10000")
     if cfg.second_grasp.trials_per_grasp != 20:
         raise ValueError("Phase 2 requires K=20 second-grasp trials")
+    if cfg.second_grasp.placement_preflight_count != 200:
+        raise ValueError("the frozen Phase 2 geometry preflight requires 200 B poses")
+    if cfg.second_grasp.representative_grasp_count < 20:
+        raise ValueError("the geometry preflight requires at least 20 representative A grasps")
+    if cfg.second_grasp.minimum_B_free_finger_contacts != 1:
+        raise ValueError("the PI-defined B criterion requires one free-finger contact")
     validate_contact_sweep_shapes(cfg.sweep)
     return cfg, source

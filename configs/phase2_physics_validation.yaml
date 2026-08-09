@@ -111,22 +111,28 @@ tactile:
 
 second_grasp:
   seed: 20260809
-  B_center_x_bounds_m: [-0.020, 0.050]
-  B_center_y_bounds_m: [-0.070, 0.070]
+  # FROZEN from the geometry-only 200-grasp calibration; do not tune from outcomes.
+  B_center_x_bounds_m: [0.055, 0.065]
+  B_center_y_bounds_m: [0.115, 0.125]
+  B_center_z_bounds_m: [0.215, 0.225]
   B_yaw_bounds_rad: [0.0, 6.283185307179586]
-  placement_preflight_count: 100
+  placement_preflight_count: 200
+  representative_grasp_count: 20
+  geometry_workspace_samples: 1000
   trials_per_grasp: 20
   approach_steps: 500
   close_steps: 400
   final_hold_steps: 500
   minimum_A_finger_contacts: 2
-  minimum_B_finger_contacts: 2
+  minimum_B_free_finger_contacts: 1
+  minimum_B_hand_contacts: 1
   minimum_A_normal_force_N: 0.20
   minimum_B_normal_force_N: 0.20
-  minimum_B_table_clearance_m: 0.002
   maximum_penetration_m: 0.003
   maximum_A_translation_m: 0.005
   maximum_A_orientation_rad: 0.20
+  maximum_B_translation_m: 0.005
+  maximum_B_orientation_rad: 0.20
   ik_damping: 0.01
   ik_step_size: 0.25
 

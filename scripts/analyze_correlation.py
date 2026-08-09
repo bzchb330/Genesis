@@ -17,7 +17,7 @@ from statsmodels.stats.proportion import proportion_confint
 
 from seqgrasp.config import ROOT
 from seqgrasp.experiments.resource_components import RESOURCE_METHOD_ID, RESOURCE_RECORDS_FILENAME, reconstruct_grasp
-from seqgrasp.experiments.second_grasp import OUTCOMES
+from seqgrasp.experiments.second_grasp import OUTCOMES, formal_nonpilot_records
 from seqgrasp.phase2_config import load_phase2_config
 
 
@@ -52,18 +52,20 @@ def _wilson(successes: int, count: int, alpha: float) -> tuple[float, float]:
     if count == 0:
         return float("nan"), float("nan")
     low, high = proportion_confint(successes, count, alpha=alpha, method="wilson")
-    return float(low), float(high)
+    rate = successes / count
+    return float(max(0.0, min(rate, low))), float(min(1.0, max(rate, high)))
 
 
 def _binned(df: pd.DataFrame, component: str, bins: int, alpha: float) -> list[dict]:
     if component == "occupied_finger_count":
         categories = df[component].astype(str)
     else:
-        distinct = df[component].nunique()
-        if distinct >= bins:
-            categories = pd.qcut(df[component], q=bins, duplicates="drop")
-        else:
-            categories = df[component].astype(str)
+        per_grasp = df[["grasp_id", component]].drop_duplicates("grasp_id").sort_values(
+            [component, "grasp_id"], kind="stable",
+        )
+        quantile = pd.qcut(np.arange(len(per_grasp)), q=min(bins, len(per_grasp)), labels=False)
+        by_grasp = {grasp_id: f"Q{int(label) + 1}" for grasp_id, label in zip(per_grasp["grasp_id"], quantile)}
+        categories = df["grasp_id"].map(by_grasp)
     result = []
     for category, group in df.groupby(categories, observed=True):
         successes, count = int(group["both_retained"].sum()), len(group)
@@ -148,7 +150,7 @@ def _plot_success(binned: dict, output: Path) -> None:
         rate = np.asarray([row["rate"] for row in rows])
         low = np.asarray([row["wilson_low"] for row in rows])
         high = np.asarray([row["wilson_high"] for row in rows])
-        ax.errorbar(x, rate, yerr=[rate - low, high - rate], fmt="o-", color=PALETTE[0], capsize=3)
+        ax.errorbar(x, rate, yerr=[np.maximum(rate - low, 0.0), np.maximum(high - rate, 0.0)], fmt="o-", color=PALETTE[0], capsize=3)
         if component == "occupied_finger_count":
             ax.set_xticks(x, [row["category"] for row in rows])
         ax.set(xlabel=labels[component], ylabel="BOTH_RETAINED rate", ylim=(0, 1))
@@ -174,6 +176,32 @@ def _plot_failure_modes(df: pd.DataFrame, output: Path, bins: int) -> dict:
     fig.savefig(output / "outcomes_by_resource_component.pdf")
     plt.close(fig)
     return result
+
+
+def _summary_figure(binned: dict, df: pd.DataFrame, output: Path) -> None:
+    fig, axes = plt.subplots(2, 2, figsize=(7.2, 6.0))
+    labels = {
+        "occupied_finger_count": "Occupied finger count",
+        "free_finger_workspace_vol_m3": "Free-finger workspace [m³]",
+        "free_palm_volume_m3": "Free-palm volume [m³]",
+    }
+    for ax, component in zip(axes.flat[:3], COMPONENTS):
+        rows = binned[component]
+        x = np.arange(len(rows)) if component == "occupied_finger_count" else np.asarray([row["x_mean"] for row in rows])
+        rate = np.asarray([row["rate"] for row in rows])
+        low = np.asarray([row["wilson_low"] for row in rows])
+        high = np.asarray([row["wilson_high"] for row in rows])
+        ax.errorbar(x, rate, yerr=[np.maximum(rate - low, 0.0), np.maximum(high - rate, 0.0)], fmt="o-", color=PALETTE[0], capsize=3)
+        if component == "occupied_finger_count":
+            ax.set_xticks(x, [row["category"] for row in rows])
+        ax.set(xlabel=labels[component], ylabel="BOTH_RETAINED rate", ylim=(0, 1))
+    counts = df["outcome"].value_counts().reindex(OUTCOMES, fill_value=0)
+    axes[1, 1].bar(np.arange(len(OUTCOMES)), counts.values, color=PALETTE)
+    axes[1, 1].set(xticks=np.arange(len(OUTCOMES)), xticklabels=OUTCOMES, ylabel="Formal trials")
+    axes[1, 1].tick_params(axis="x", rotation=25)
+    fig.tight_layout()
+    fig.savefig(output / "phase2_correlation_summary.pdf")
+    plt.close(fig)
 
 
 def _plot_resource_histograms(resources: list[dict], output: Path) -> None:
@@ -220,7 +248,9 @@ def main() -> int:
     dataset_dir = _dataset_dir(ROOT / phase2.persistence.output_dir / "grasp_dataset")
     accepted = _jsonl(dataset_dir / "accepted_grasps.jsonl")
     resources = _jsonl(dataset_dir / RESOURCE_RECORDS_FILENAME)
-    trials = _jsonl(dataset_dir / "correlation" / "trials.jsonl")
+    raw_formal_trials = _jsonl(dataset_dir / "correlation" / "formal" / "trials.jsonl")
+    trials = formal_nonpilot_records(raw_formal_trials)
+    pilot_trials = _jsonl(dataset_dir / "correlation" / "pilot" / "trials.jsonl")
     resource_by_id = {row["grasp_id"]: row for row in resources}
     enriched_accepted = [{**row, **resource_by_id.get(row["grasp_id"], {})} for row in accepted if row["grasp_id"] in resource_by_id]
     figures = ROOT / "docs" / "figures" / "phase2"
@@ -233,6 +263,7 @@ def main() -> int:
     if binned:
         _plot_success(binned, figures)
         failure_modes = _plot_failure_modes(df, figures, phase2.analysis.continuous_quantile_bins)
+        _summary_figure(binned, df, figures)
     else:
         failure_modes = {}
     if resources:
@@ -258,7 +289,7 @@ def main() -> int:
     overall_success = (outcomes.get("BOTH_RETAINED", 0) / len(valid)) if len(valid) else None
     grasp_quality = {}
     if trials:
-        epsilon = pd.Series({row["grasp_id"]: row["ferrari_canny_epsilon"] for row in trials})
+        epsilon = pd.Series({row["grasp_id"]: row["ferrari_canny_epsilon"] for row in accepted})
         cutoff = epsilon.quantile(1 - phase2.analysis.greedy_top_fraction)
         top_ids = set(epsilon[epsilon >= cutoff].index)
         top = valid[valid["grasp_id"].isin(top_ids)]
@@ -275,10 +306,14 @@ def main() -> int:
     baseline = json.loads(baseline_path.read_text(encoding="utf-8")) if baseline_path.exists() else {}
     dataset_summary_path = dataset_dir / "dataset_summary.json"
     dataset_summary = json.loads(dataset_summary_path.read_text(encoding="utf-8")) if dataset_summary_path.exists() else {}
+    extension_summary_path = dataset_dir / "extension_summary.json"
+    extension_summary = json.loads(extension_summary_path.read_text(encoding="utf-8")) if extension_summary_path.exists() else {}
     epsilon_values = np.asarray([row["ferrari_canny_epsilon"] for row in accepted], dtype=float)
     grasp_statistics = {
         "accepted": len(accepted),
-        "candidate_attempts": dataset_summary.get("candidate_attempts"),
+        "original_candidate_attempts": dataset_summary.get("candidate_attempts"),
+        "extension_candidate_attempts": extension_summary.get("additional_candidate_attempts", 0),
+        "total_candidate_attempts": (dataset_summary.get("candidate_attempts") or 0) + extension_summary.get("additional_candidate_attempts", 0),
         "commanded_subset_distribution": dict(Counter("+".join(row["commanded_finger_subset"]) for row in accepted)),
         "occupied_finger_count_distribution": dict(Counter(str(row["occupied_finger_count"]) for row in accepted)),
         "ferrari_canny_epsilon": {
@@ -289,19 +324,39 @@ def main() -> int:
     figure_paths = sorted(path.relative_to(ROOT).as_posix() for path in figures.glob("*.pdf"))
     results = {
         "dataset_dir": dataset_dir.relative_to(ROOT).as_posix(),
-        "planned_trials": phase2.required_for_later_parts.accepted_grasp_target * phase2.second_grasp.trials_per_grasp,
+        "planned_trials": len(accepted) * phase2.second_grasp.trials_per_grasp,
         "completed_trials": len(trials), "valid_trials": len(valid), "invalid_trials": outcomes.get("INVALID", 0),
+        "pilot_trials_present_and_excluded": len(pilot_trials),
         "outcome_counts": outcomes, "BOTH_RETAINED_rate_valid": overall_success,
         "success_bins_with_95_percent_Wilson_intervals": binned,
         "logistic_regression": regression, "failure_modes": failure_modes,
+        "failure_trigger_counts": dict(Counter(str(row.get("first_triggering_condition")) for row in trials if row["outcome"] != "BOTH_RETAINED")),
+        "failure_phase_counts": dict(Counter(str(row.get("first_failure_phase")) for row in trials if row["outcome"] != "BOTH_RETAINED")),
+        "B_criterion_failure_counts_valid_trials": {
+            "no_final_free_finger_contact": sum(row["final_B_state"]["free_finger_contacts"] < phase2.second_grasp.minimum_B_free_finger_contacts for row in trials if row["outcome"] != "INVALID"),
+            "no_final_hand_support": sum(row["final_B_state"]["hand_supporting_contacts"] < phase2.second_grasp.minimum_B_hand_contacts for row in trials if row["outcome"] != "INVALID"),
+            "force_not_above_0.20_N": sum(row["final_B_state"]["normal_force_N"] <= phase2.second_grasp.minimum_B_normal_force_N for row in trials if row["outcome"] != "INVALID"),
+            "table_contact": sum(row["final_B_state"]["table_contact"] for row in trials if row["outcome"] != "INVALID"),
+            "complete_hand_contact_loss": sum(row["final_B_state"]["complete_hand_contact_loss"] for row in trials if row["outcome"] != "INVALID"),
+        },
         "greedy_Ferrari_Canny_baseline": grasp_quality,
         "grasp_dataset_statistics": grasp_statistics,
+        "dataset_extension": extension_summary,
         "B_geometry_preflight": preflight,
         "baseline_physics": baseline,
         "figure_paths": figure_paths,
         "representative_render_status": representative_status,
         "scalar_J": None,
     }
+    standardized = regression.get("standardized_predictors", {}).get("terms", {})
+    associations = {}
+    for component in COMPONENTS:
+        term = standardized.get(component)
+        if not term or term.get("p_value", 1.0) >= 0.05:
+            associations[component] = "weak/no detectable association"
+        else:
+            associations[component] = "positive association" if term["coefficient"] > 0 else "negative association"
+    results["resource_component_associations"] = associations
     (dataset_dir / "correlation" / "analysis_results.json").parent.mkdir(parents=True, exist_ok=True)
     (dataset_dir / "correlation" / "analysis_results.json").write_text(json.dumps(results, indent=2), encoding="utf-8")
     report = ROOT / "docs" / "PHASE2_RESOURCE_CORRELATION_RESULTS.md"
@@ -330,8 +385,9 @@ def main() -> int:
         "Occupied fingers use summed A normal force >0.20 N. Free-finger workspace uses 10,000 Monte Carlo joint samples, actual MuJoCo collision geometry, and 0.005 m voxels. Free-palm volume uses the supplied palm-frame AABB and actual box/capsule collision geometry. The components are not combined.\n\n"
         "The three unnormalised tactile features per finger are: binary contact (>0.05 N), total normal force [N], and tangential/normal force ratio. Ratio zero at zero normal force means no slip-proxy signal, not a physical loaded ratio of zero.\n\n"
         "## Parts D and F\n\n"
-        f"The B centre distribution is x={phase2.second_grasp.B_center_x_bounds_m} m, y={phase2.second_grasp.B_center_y_bounds_m} m, table-resting z from actual cylinder geometry, and uniform yaw={phase2.second_grasp.B_yaw_bounds_rad} rad. Geometry preflight:\n\n```json\n{json.dumps(preflight, indent=2)}\n```\n\n"
-        f"Completed {len(trials)} / {results['planned_trials']} trials. Outcome counts: `{json.dumps(outcomes, sort_keys=True)}`. BOTH_RETAINED rate among valid trials: `{overall_success}`.\n\n"
+        "The earlier table-resting distribution was legal but geometrically unreachable (0/100) for the fixed-base hand, so Part D correctly stopped before outcomes. `docs/PHASE2_B_WORKSPACE_CALIBRATION.md` preserves that negative result and the outcome-free redesign audit.\n\n"
+        f"The frozen fixture-presented B centre distribution is x={phase2.second_grasp.B_center_x_bounds_m} m, y={phase2.second_grasp.B_center_y_bounds_m} m, z={phase2.second_grasp.B_center_z_bounds_m} m, vertical axis, and uniform yaw={phase2.second_grasp.B_yaw_bounds_rad} rad. Fixture release is timestep {phase2.second_grasp.approach_steps + phase2.second_grasp.close_steps}; all final-hold steps are unsupported. Geometry preflight:\n\n```json\n{json.dumps(preflight, indent=2)}\n```\n\n"
+        f"The engineering pilot contributed {len(pilot_trials)} records marked `pilot_only: true`; all are excluded here. Completed {len(trials)} / {results['planned_trials']} formal non-pilot trials. Outcome counts: `{json.dumps(outcomes, sort_keys=True)}`. BOTH_RETAINED rate among valid trials: `{overall_success}`.\n\n"
         "Binned intervals are 95% Wilson binomial intervals. Continuous components use five equal-frequency bins when enough distinct values exist; occupied count uses integer categories. INVALID is reported separately and excluded from the primary logistic model.\n\n"
         f"```json\n{json.dumps(results, indent=2)}\n```\n\n"
         "## Interpretation and limitations\n\n"
