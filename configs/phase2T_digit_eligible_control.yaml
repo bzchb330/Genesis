@@ -1,0 +1,42 @@
+experiment_id: phase2T_eligible_fingertip_vs_palmar
+output_dir: outputs/phase2T
+scene_filename: scene_two_object_half_scale.yaml
+
+state_search:
+  seed: 20260910
+  fingertip_target: 150
+  fingertip_minimum: 50
+  fingertip_attempt_cap: 50000
+  palmar_target: 150
+  palmar_attempt_cap: 30000
+  maximum_workers: 8
+  support_pairs:
+    - [index, middle]
+    - [index, ring]
+    - [index, thumb]
+    - [middle, ring]
+    - [middle, thumb]
+    - [ring, thumb]
+
+matching:
+  target_pairs: 100
+  minimum_pairs: 60
+  calibration_per_group: 20
+  covariates:
+    - ferrari_canny_epsilon
+    - total_A_normal_force_N
+    - A_translation_drift_m
+    - A_rotation_drift_rad
+    - minimum_joint_margin_rad
+
+second_grasp:
+  b_only_seed: 20260911
+  geometry_seed: 20260912
+  calibration_seed: 20260913
+  formal_seed: 20260914
+  b_only_candidate_cap: 4096
+  b_only_success_target: 3
+  b_only_hard_minimum: 1
+  calibration_B_seeds_per_state: 5
+  formal_B_seeds_per_state: 20
+  maximum_controller_candidates: 2048
