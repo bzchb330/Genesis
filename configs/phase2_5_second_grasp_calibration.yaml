@@ -1,0 +1,80 @@
+phase2_5_only: true
+frozen_phase2_config: configs/phase2_physics_validation.yaml
+output_dir: outputs/phase2_5
+maximum_workers: 8
+
+seeds:
+  geometry_positive_control: 20260821
+  b_only_search: 20260822
+  sequential_search: 20260823
+  calibration_split: 20260824
+  calibration_B_namespace: 20261000
+  formal_v2_B_namespace: 20262000
+
+positive_control:
+  B_pose_world_m: [0.060, 0.115, 0.215]
+  B_yaw_rad: 0.0
+  parked_A_position_m: [-0.250, -0.250, 0.040]
+  active_fingers: [index, thumb]
+  # Geometry-only 50k-sample closest-surface configurations. These are proposal
+  # centres, not dynamically selected successes.
+  precontact_anchor_joint_rad:
+    index: [0.46451864, 1.46534799, 0.13393390, -0.14749505]
+    thumb: [0.31631866, 0.06949601, 1.14124619, 0.07836043]
+
+timing:
+  approach_steps: 500
+  precontact_steps: 200
+  close_steps_bounds: [250, 500]
+  fixture_release_delay_steps_bounds: [0, 200]
+  unsupported_hold_steps: 500
+  diagnostic_pre_release_steps: 200
+  diagnostic_post_release_steps: 500
+
+trajectory_search:
+  initial_candidate_count: 512
+  expanded_candidate_count: 2048
+  joint_approach_offset_rad: [-0.15, 0.15]
+  joint_precontact_offset_rad: [-0.10, 0.10]
+  joint_closing_offset_rad: [-0.20, 0.20]
+  joint_hold_offset_rad: [-0.08, 0.08]
+  per_finger_close_delay_steps: [0, 150]
+  maximum_saved_profiles: 10
+  required_B_only_successes: 1
+  preferred_B_only_successes: 10
+
+sequential_search:
+  initial_candidate_count: 1024
+  expanded_candidate_count: 4096
+  stage1_A_grasps: 1
+  expanded_A_grasps: 10
+  calibration_A_grasps: 30
+  calibration_B_placements: 20
+  robustness_A_grasps: 20
+  robustness_B_placements: 10
+  required_distinct_successes: 5
+
+formal_v2:
+  A_grasp_target: 200
+  trials_per_grasp: 20
+
+# Frozen Phase 2 acquisition and retention thresholds; duplicated here for
+# auditability and checked against the authoritative Phase 2 config on load.
+criteria:
+  minimum_A_finger_contacts: 2
+  minimum_A_normal_force_N: 0.20
+  minimum_B_free_finger_contacts: 1
+  minimum_B_hand_contacts: 1
+  minimum_B_normal_force_N: 0.20
+  maximum_penetration_m: 0.003
+  maximum_A_translation_m: 0.005
+  maximum_A_orientation_rad: 0.20
+  maximum_B_translation_m: 0.005
+  maximum_B_orientation_rad: 0.20
+
+frozen_B_distribution:
+  center_x_bounds_m: [0.055, 0.065]
+  center_y_bounds_m: [0.115, 0.125]
+  center_z_bounds_m: [0.215, 0.225]
+  yaw_bounds_rad: [0.0, 6.283185307179586]
+  roll_pitch_rad: [0.0, 0.0]
