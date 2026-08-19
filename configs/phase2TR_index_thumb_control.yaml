@@ -1,0 +1,41 @@
+experiment_id: phase2TR_index_thumb_matched
+output_dir: outputs/phase2TR
+scene_filename: scene_two_object_half_scale.yaml
+
+topology:
+  occupied_fingers: [middle, ring]
+  free_fingers: [index, thumb]
+  load_bearing_threshold_N: 0.20
+
+state_search:
+  seed: 20260921
+  fingertip_target: 100
+  fingertip_minimum: 50
+  fingertip_attempt_cap: 50000
+  palmar_target: 100
+  palmar_minimum: 50
+  palmar_attempt_cap: 30000
+  maximum_workers: 8
+
+matching:
+  target_pairs: 80
+  minimum_pairs: 50
+  calibration_per_group: 20
+  covariates:
+    - ferrari_canny_epsilon
+    - total_A_normal_force_N
+    - A_translation_drift_m
+    - A_rotation_drift_rad
+    - minimum_joint_margin_rad
+
+second_grasp:
+  b_only_seed: 20260922
+  geometry_seed: 20260923
+  calibration_seed: 20260924
+  formal_seed: 20260925
+  b_only_candidate_cap: 4096
+  b_only_success_target: 5
+  b_only_hard_minimum: 3
+  robustness_trials: 100
+  maximum_controller_candidates: 2048
+  formal_B_seeds_per_state: 20

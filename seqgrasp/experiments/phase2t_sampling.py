@@ -18,6 +18,9 @@ from .phase2r import GraspStateType, classify_grasp_state, measure_stable_hold
 from .resource_components import FINGER_ORDER
 
 
+INDEX_THUMB_FREE_SUPPORT = ("middle", "ring")
+
+
 def _object_addresses(model: mujoco.MjModel) -> tuple[int, int]:
     joint = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_JOINT, "object_a_free")
     return int(model.jnt_qposadr[joint]), int(model.jnt_dofadr[joint])
@@ -286,3 +289,149 @@ def evaluate_two_free_palmar_candidate(
         "rejection_reason": rejection,
         "second_grasp_digit_eligible": rejection is None,
     }
+
+
+def evaluate_phase2tr_fingertip_candidate(
+    phase2s: Phase2SConfig,
+    phase2: Phase2Config,
+    source: dict,
+    attempt_index: int,
+    seed: int,
+) -> dict:
+    """Perturb one of the two Phase 2T middle+ring basins without duplicating it."""
+
+    base_cfg = load_configs(scene_filename=phase2s.scene_filename)
+    cfg = replace(base_cfg, hand=replace(
+        base_cfg.hand,
+        mount_pos=list(source["initial_palm_position_m"]),
+        mount_quat=list(source["initial_palm_quaternion"]),
+    ))
+    model, data = build_scene(cfg)
+    indices = resolve_hand_indices(model, cfg.hand)
+    qadr, vadr = _object_addresses(model)
+    groups = {finger: np.arange(i * 4, i * 4 + 4) for i, finger in enumerate(FINGER_ORDER)}
+    active = np.concatenate([groups["middle"], groups["ring"]])
+    free = np.concatenate([groups["index"], groups["thumb"]])
+    limits = model.jnt_range[indices.joint_ids]
+    rng = np.random.default_rng(np.random.SeedSequence([seed, 11, attempt_index]))
+    local = attempt_index % 5 != 0
+    center_target = np.asarray(source["retaining_joint_target_rad"], dtype=float)
+    center_open = np.asarray(source["open_joint_configuration_rad"], dtype=float)
+    target = center_target.copy()
+    target[active] += rng.uniform(-0.004 if local else -0.025, 0.004 if local else 0.025, len(active))
+    target[free] = center_open[free] + rng.uniform(-0.0015 if local else -0.008, 0.0015 if local else 0.008, len(free))
+    target = np.clip(target, limits[:, 0], limits[:, 1])
+    start = np.asarray(source["final_joint_configuration_rad"], dtype=float)
+    start[free] = center_open[free]
+    base_position = np.asarray(source["initial_object_position_m"], dtype=float)
+    position = base_position + rng.uniform(-0.00025 if local else -0.0015, 0.00025 if local else 0.0015, 3)
+    base_rotation = Rotation.from_quat(source["initial_object_quaternion"], scalar_first=True)
+    angle = 0.004 if local else 0.035
+    quaternion = (Rotation.from_rotvec(rng.uniform(-angle, angle, 3)) * base_rotation).as_quat(scalar_first=True)
+    data.qpos[indices.qpos_addresses] = start
+    data.qvel[indices.qvel_addresses] = 0.0
+    data.qpos[qadr:qadr + 3] = position
+    data.qpos[qadr + 3:qadr + 7] = quaternion
+    data.qvel[vadr:vadr + 6] = 0.0
+    mujoco.mj_forward(model, data)
+    controller = JointImpedanceController(cfg.task.impedance_stiffness, cfg.task.impedance_damping, cfg.task.torque_limit)
+    close_steps, contact_steps = phase2s.state.fixture_close_steps, phase2s.state.fixture_contact_steps
+    for step in range(close_steps + contact_steps):
+        alpha = min(1.0, (step + 1) / close_steps)
+        desired = (1.0 - alpha) * start + alpha * target
+        q, qvel = hand_state(data, indices)
+        data.ctrl[indices.actuator_ids] = controller.torque(desired, q, qvel)
+        data.qpos[qadr:qadr + 3] = position
+        data.qpos[qadr + 3:qadr + 7] = quaternion
+        data.qvel[vadr:vadr + 6] = 0.0
+        mujoco.mj_step(model, data)
+    data.qpos[qadr:qadr + 3] = position
+    data.qpos[qadr + 3:qadr + 7] = quaternion
+    data.qvel[vadr:vadr + 6] = 0.0
+    mujoco.mj_forward(model, data)
+    measured = measure_stable_hold(
+        cfg, model, data, indices, target, phase2s.state.stable_hold_steps,
+        phase2.resources, phase2.dataset.friction_cone_edges, phase2.dataset.convex_hull_tolerance,
+    )
+    record = {
+        **source, **measured,
+        "grasp_state_id": f"phase2TR_fingertip_index_thumb_free_{attempt_index:05d}",
+        "grasp_state_subtype": "FINGERTIP_INDEX_THUMB_FREE",
+        "phase2T_proposal_center_id": source["grasp_state_id"],
+        "targeted_attempt_index": int(attempt_index),
+        "sampling_mode": "local_phase2T_positive_basin" if local else "broader_middle_ring_targeted",
+        "support_pair": list(INDEX_THUMB_FREE_SUPPORT),
+        "free_finger_set": ["index", "thumb"],
+        "initial_object_position_m": position.tolist(),
+        "initial_object_quaternion": quaternion.tolist(),
+        "open_joint_configuration_rad": center_open.tolist(),
+        "retaining_joint_target_rad": target.tolist(),
+        "fixture_method": "temporary_free_joint_pose_reset_during_initialization_only",
+        "fixture_release_timestep": close_steps + contact_steps,
+        "revalidated_with_half_scale_geometry": True,
+    }
+    classified = classify_grasp_state(record, GraspStateType.FINGERTIP, phase2s.state, phase2.dataset.convex_hull_tolerance)
+    exact = measured["occupied_finger_mask"] == [False, True, True, False]
+    checks = {**classified["checks"], "exact_middle_ring_support": exact, "exact_index_thumb_free": exact}
+    rejection = next((name for name, passed in checks.items() if not passed), None)
+    return {**classified, "checks": checks, "accepted": rejection is None, "rejection_reason": rejection}
+
+
+def evaluate_phase2tr_palmar_candidate(
+    phase2s: Phase2SConfig,
+    phase2: Phase2Config,
+    source: dict,
+    attempt_index: int,
+    seed: int,
+) -> dict:
+    """Map a validated palmar ring+thumb basin onto middle+ring, then revalidate."""
+
+    cfg = load_configs(scene_filename=phase2s.scene_filename)
+    model, _ = build_scene(cfg)
+    indices = resolve_hand_indices(model, cfg.hand)
+    rng = np.random.default_rng(np.random.SeedSequence([seed, 12, attempt_index]))
+    local = attempt_index % 5 != 0
+    open_joint = np.asarray(source["open_joint_configuration_rad"], dtype=float)
+    source_target = np.asarray(source["retaining_joint_target_rad"], dtype=float)
+    target = open_joint.copy()
+    # Middle and ring share the same four-joint kinematic layout. The ring
+    # target supplies the proposal center for both; this is proposal geometry,
+    # not an analysis-time digit remapping.
+    target[4:8] = source_target[8:12] + rng.uniform(-0.018 if local else -0.08, 0.018 if local else 0.08, 4)
+    target[8:12] = source_target[8:12] + rng.uniform(-0.012 if local else -0.06, 0.012 if local else 0.06, 4)
+    target[:4] = open_joint[:4] + rng.uniform(-0.0015 if local else -0.006, 0.0015 if local else 0.006, 4)
+    target[12:16] = open_joint[12:16] + rng.uniform(-0.0015 if local else -0.006, 0.0015 if local else 0.006, 4)
+    target = np.clip(target, model.jnt_range[indices.joint_ids, 0], model.jnt_range[indices.joint_ids, 1])
+    position = np.asarray(source["initial_object_position_m"], dtype=float) + rng.uniform(
+        -0.0005 if local else -0.002, 0.0005 if local else 0.002, 3,
+    )
+    rotation = Rotation.from_quat(source["initial_object_quaternion"], scalar_first=True)
+    span = 0.008 if local else 0.06
+    quaternion = (Rotation.from_rotvec(rng.uniform(-span, span, 3)) * rotation).as_quat(scalar_first=True)
+    proposal = {
+        "attempt_index": int(attempt_index),
+        "generation_seed": int(seed),
+        "sampling_mode": "local_mapped_palmar_basin" if local else "broader_middle_ring_palmar",
+        "retaining_finger_subset": ["middle", "ring"],
+        "proposal_profile_path": source["proposal_profile_path"],
+        "initial_palm_position_m": list(cfg.hand.mount_pos),
+        "initial_palm_quaternion": list(cfg.hand.mount_quat),
+        "initial_object_position_m": position.tolist(),
+        "initial_object_quaternion": quaternion.tolist(),
+        "open_joint_configuration_rad": open_joint.tolist(),
+        "retaining_joint_target_rad": target.tolist(),
+    }
+    from .palmar_grasp_sampling import evaluate_palmar_proposal
+    result = evaluate_palmar_proposal(phase2s, phase2, proposal, cfg)
+    result.update({
+        "grasp_state_id": f"phase2TR_palmar_index_thumb_free_{attempt_index:05d}",
+        "grasp_state_subtype": "PALMAR_INDEX_THUMB_FREE",
+        "phase2T_proposal_center_id": source["grasp_state_id"],
+        "support_pair": ["middle", "ring"],
+        "free_finger_set": ["index", "thumb"],
+        "revalidated_with_half_scale_geometry": True,
+    })
+    exact = result["occupied_finger_mask"] == [False, True, True, False]
+    checks = {**result["checks"], "exact_middle_ring_support": exact, "exact_index_thumb_free": exact}
+    rejection = next((name for name, passed in checks.items() if not passed), None)
+    return {**result, "checks": checks, "accepted": rejection is None, "rejection_reason": rejection}
