@@ -27,6 +27,8 @@ def free_fingertip_workspace_clouds(record: dict, resources, sample_count: int, 
     """Collision-filtered free-tip Monte Carlo clouds in world coordinates."""
 
     cfg, model, data, indices = reconstruct_grasp(record)
+    retained_q = data.qpos[indices.qpos_addresses].copy()
+    retained_qvel = data.qvel[indices.qvel_addresses].copy()
     occupied = np.asarray(record["occupied_finger_mask"], dtype=bool)
     free = ~occupied
     groups = load_search_config()["finger_groups"]
@@ -73,6 +75,9 @@ def free_fingertip_workspace_clouds(record: dict, resources, sample_count: int, 
             continue
         for finger, body_id in body_ids.items():
             clouds[finger].append(data.xpos[body_id].copy())
+    data.qpos[indices.qpos_addresses] = retained_q
+    data.qvel[indices.qvel_addresses] = retained_qvel
+    mujoco.mj_forward(model, data)
     return cfg, model, data, {
         finger: np.asarray(points, dtype=float).reshape((-1, 3)) for finger, points in clouds.items()
     }, radii
