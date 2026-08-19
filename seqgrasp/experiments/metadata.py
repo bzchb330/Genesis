@@ -14,9 +14,10 @@ def config_hash(paths: list[str | Path]) -> str:
 
 
 def git_commit_sha(cwd: str | Path) -> str:
+    repository = Path(cwd).resolve()
     result = subprocess.run(
-        ["git", "rev-parse", "HEAD"],
-        cwd=Path(cwd),
+        ["git", "-c", f"safe.directory={repository}", "rev-parse", "HEAD"],
+        cwd=repository,
         check=True,
         capture_output=True,
         text=True,
