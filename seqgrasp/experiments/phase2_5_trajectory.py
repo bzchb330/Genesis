@@ -178,11 +178,12 @@ def run_b_acquisition_trajectory(
     render_video_path: str | Path | None = None,
     render_stride: int | None = None,
     video_fps: int | None = None,
+    scene_cfg=None,
 ) -> tuple[dict, dict[str, np.ndarray] | None]:
     """Execute frozen-physics B-only or A-held+B scripted acquisition."""
 
     if A_record is None:
-        cfg = load_configs()
+        cfg = scene_cfg or load_configs()
         model, data = build_scene(cfg)
         indices = resolve_hand_indices(model, cfg.hand)
         _, profile = load_grasp_profile(ROOT / "configs" / "grasps" / "resource_grasp_A_02.yaml")
@@ -195,7 +196,7 @@ def run_b_acquisition_trajectory(
         occupied = np.zeros(4, dtype=bool)
     else:
         from .resource_components import reconstruct_grasp
-        cfg, model, data, indices = reconstruct_grasp(A_record)
+        cfg, model, data, indices = reconstruct_grasp(A_record, scene_cfg)
         open_q = data.qpos[indices.qpos_addresses].copy()
         A_present = True
         occupied = np.asarray(occupied_mask, dtype=bool)

@@ -47,8 +47,10 @@ def _stable_seed(seed: int, grasp_id: str) -> int:
     return int.from_bytes(digest[:8], "little")
 
 
-def reconstruct_grasp(record: dict) -> tuple[ConfigBundle, mujoco.MjModel, mujoco.MjData, object]:
-    cfg = load_configs()
+def reconstruct_grasp(
+    record: dict, base_cfg: ConfigBundle | None = None,
+) -> tuple[ConfigBundle, mujoco.MjModel, mujoco.MjData, object]:
+    cfg = base_cfg or load_configs()
     hand = replace(
         cfg.hand,
         mount_pos=list(record["initial_palm_position_m"]),
@@ -101,10 +103,11 @@ def free_finger_workspace_volume(
     resources: ResourceExperimentConfig,
     sample_count: int,
     seed: int,
+    base_cfg: ConfigBundle | None = None,
 ) -> float:
     """Monte Carlo joint sampling followed by 5-mm fingertip voxel occupancy."""
 
-    cfg, model, data, indices = reconstruct_grasp(record)
+    cfg, model, data, indices = reconstruct_grasp(record, base_cfg)
     occupied = np.asarray(record["occupied_finger_mask"], dtype=bool)
     free = ~occupied
     if not np.any(free):
@@ -163,10 +166,12 @@ def _point_inside_geom(model, data, geom_id: int, points_world: np.ndarray) -> n
     raise ValueError(f"unsupported collision geom type {geom_type}; Phase 2 expects boxes/capsules")
 
 
-def free_palm_volume(record: dict, resources: ResourceExperimentConfig) -> float:
+def free_palm_volume(
+    record: dict, resources: ResourceExperimentConfig, base_cfg: ConfigBundle | None = None,
+) -> float:
     """Count palm-frame voxel centres not occupied by A or finger collision geoms."""
 
-    cfg, model, data, _ = reconstruct_grasp(record)
+    cfg, model, data, _ = reconstruct_grasp(record, base_cfg)
     low = np.asarray(resources.free_palm_box_lower_m, dtype=float)
     high = np.asarray(resources.free_palm_box_upper_m, dtype=float)
     step = resources.free_palm_voxel_size_m
@@ -189,7 +194,12 @@ def free_palm_volume(record: dict, resources: ResourceExperimentConfig) -> float
     return float(np.sum(~occupied) * step ** 3)
 
 
-def compute_resource_components(record: dict, resources: ResourceExperimentConfig, seed: int) -> ResourceComponents:
+def compute_resource_components(
+    record: dict,
+    resources: ResourceExperimentConfig,
+    seed: int,
+    base_cfg: ConfigBundle | None = None,
+) -> ResourceComponents:
     count, mask = occupied_fingers(
         record["mean_per_finger_normal_force_N"],
         resources.occupied_finger_normal_force_threshold_N,
@@ -202,6 +212,8 @@ def compute_resource_components(record: dict, resources: ResourceExperimentConfi
     return ResourceComponents(
         occupied_finger_count=count,
         occupied_finger_mask=tuple(bool(value) for value in mask),
-        free_finger_workspace_vol_m3=free_finger_workspace_volume(enriched, resources, resources.workspace_samples, sample_seed),
-        free_palm_volume_m3=free_palm_volume(enriched, resources),
+        free_finger_workspace_vol_m3=free_finger_workspace_volume(
+            enriched, resources, resources.workspace_samples, sample_seed, base_cfg,
+        ),
+        free_palm_volume_m3=free_palm_volume(enriched, resources, base_cfg),
     )

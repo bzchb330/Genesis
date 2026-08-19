@@ -1,0 +1,14 @@
+timestep: 0.002
+frame_skip: 5
+render_width: 640
+render_height: 480
+table_size: [0.5, 0.5, 0.02]
+table_pos: [0.0, 0.0, -0.02]
+workspace_low: [-0.45, -0.45, -0.05]
+workspace_high: [0.45, 0.45, 0.60]
+placement_jitter_xy: 0.01
+objects:
+  # MuJoCo box size is half-extent; 0.0125 -> 0.025 m physical edge.
+  - {name: object_a, shape: cube, size: [0.0125, 0.0125, 0.0125], mass: 0.08, friction: [0.8, 0.01, 0.001], pos: [0.08, 0.00, 0.0135], rgba: [0.8, 0.2, 0.2, 1.0]}
+  # MuJoCo cylinder size is [radius, half-height].
+  - {name: object_b, shape: cylinder, size: [0.0125, 0.02], mass: 0.08, friction: [0.8, 0.01, 0.001], pos: [-0.08, 0.00, 0.021], rgba: [0.2, 0.3, 0.8, 1.0]}

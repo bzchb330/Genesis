@@ -63,9 +63,13 @@ class ConfigBundle:
 def _read(path: Path) -> dict[str, Any]:
     with path.open(encoding="utf-8") as f: return yaml.safe_load(f)
 
-def load_configs(config_dir: str | Path | None = None) -> ConfigBundle:
+def load_configs(
+    config_dir: str | Path | None = None,
+    *,
+    scene_filename: str = "scene_two_object.yaml",
+) -> ConfigBundle:
     d = Path(config_dir) if config_dir else ROOT / "configs"
-    h, s, t, tr, diag = (_read(d / n) for n in ("hand_allegro.yaml", "scene_two_object.yaml", "task_sequential.yaml", "train_ppo.yaml", "diagnostic_grasp_a.yaml"))
+    h, s, t, tr, diag = (_read(d / n) for n in ("hand_allegro.yaml", scene_filename, "task_sequential.yaml", "train_ppo.yaml", "diagnostic_grasp_a.yaml"))
     s["objects"] = [ObjectConfig(**x) for x in s["objects"]]
     diag["profiles"]={name:DiagnosticProfile(**profile) for name,profile in diag["profiles"].items()}
     diagnostic = DiagnosticConfig(**diag)

@@ -20,10 +20,14 @@ ACQUISITION_PAIR_PRIORITY = (
 )
 
 
-def select_static_acquisition_pair(occupied_mask) -> tuple[str, str] | None:
+def select_static_acquisition_pair(
+    occupied_mask, preferred_pair: tuple[str, str] | None = None,
+) -> tuple[str, str] | None:
     free = {finger for finger, occupied in zip(FINGER_ORDER, occupied_mask) if not occupied}
     if len(free) < 2:
         return None
+    if preferred_pair is not None and set(preferred_pair).issubset(free):
+        return preferred_pair
     return next(pair for pair in ACQUISITION_PAIR_PRIORITY if set(pair).issubset(free))
 
 
@@ -32,12 +36,26 @@ def remap_index_thumb_trajectory(
 ) -> BAcquisitionTrajectory:
     """Map the frozen index/thumb family to a fixed geometry-selected pair."""
 
+    return remap_pair_trajectory(
+        trajectory, ("index", "thumb"), acquisition_pair, baseline_joint_rad,
+    )
+
+
+def remap_pair_trajectory(
+    trajectory: BAcquisitionTrajectory,
+    source_pair: tuple[str, str],
+    acquisition_pair: tuple[str, str],
+    baseline_joint_rad,
+) -> BAcquisitionTrajectory:
+    """Map one fixed source-finger trajectory pair to a static free pair."""
+
     finger_index = {finger: index for index, finger in enumerate(FINGER_ORDER)}
-    if "thumb" in acquisition_pair:
-        first = next(finger for finger in acquisition_pair if finger != "thumb")
-        mappings = ((first, "index"), ("thumb", "thumb"))
+    if "thumb" in source_pair and "thumb" in acquisition_pair:
+        source_non_thumb = next(finger for finger in source_pair if finger != "thumb")
+        destination_non_thumb = next(finger for finger in acquisition_pair if finger != "thumb")
+        mappings = ((destination_non_thumb, source_non_thumb), ("thumb", "thumb"))
     else:
-        mappings = ((acquisition_pair[0], "index"), (acquisition_pair[1], "thumb"))
+        mappings = tuple(zip(acquisition_pair, source_pair))
 
     def mapped(values):
         source = np.asarray(values, dtype=float)
@@ -52,6 +70,39 @@ def remap_index_thumb_trajectory(
     delays = [0, 0, 0, 0]
     for destination, origin in mappings:
         delays[finger_index[destination]] = source_delays[finger_index[origin]]
+    return replace(
+        trajectory,
+        approach_joint_rad=mapped(trajectory.approach_joint_rad),
+        precontact_joint_rad=mapped(trajectory.precontact_joint_rad),
+        closing_joint_rad=mapped(trajectory.closing_joint_rad),
+        hold_joint_rad=mapped(trajectory.hold_joint_rad),
+        per_finger_close_delay_steps=tuple(delays),
+    )
+
+
+def remap_subset_trajectory(
+    trajectory: BAcquisitionTrajectory,
+    source_fingers: tuple[str, ...],
+    destination_fingers: tuple[str, ...],
+    baseline_joint_rad,
+) -> BAcquisitionTrajectory:
+    if len(source_fingers) != len(destination_fingers):
+        raise ValueError("source and destination finger subsets must have equal size")
+    finger_index = {finger: index for index, finger in enumerate(FINGER_ORDER)}
+    mappings = tuple(zip(destination_fingers, source_fingers))
+
+    def mapped(values):
+        source = np.asarray(values, dtype=float)
+        target = np.asarray(baseline_joint_rad, dtype=float).copy()
+        for destination, origin in mappings:
+            d = slice(4 * finger_index[destination], 4 * finger_index[destination] + 4)
+            o = slice(4 * finger_index[origin], 4 * finger_index[origin] + 4)
+            target[d] = source[o]
+        return tuple(float(value) for value in target)
+
+    delays = [0, 0, 0, 0]
+    for destination, origin in mappings:
+        delays[finger_index[destination]] = trajectory.per_finger_close_delay_steps[finger_index[origin]]
     return replace(
         trajectory,
         approach_joint_rad=mapped(trajectory.approach_joint_rad),
@@ -93,10 +144,25 @@ def _A_retained(record: dict, arrays: dict[str, np.ndarray], release_step: int, 
 
 
 def run_phase2r_second_grasp_trial(
-    cfg25, state_cfg, trajectory: BAcquisitionTrajectory, A_record: dict, placement,
+    cfg25, state_cfg, trajectory: BAcquisitionTrajectory, A_record: dict, placement, *,
+    scene_cfg=None, controller_source_pair: tuple[str, str] | None=None,
+    controller_source_fingers: tuple[str, ...] | None=None,
 ) -> dict:
     precheck = digit_precheck_outcome(A_record)
-    pair = select_static_acquisition_pair(A_record["occupied_finger_mask"])
+    free = {
+        finger for finger, occupied in zip(FINGER_ORDER, A_record["occupied_finger_mask"])
+        if not occupied
+    }
+    full_source = tuple(controller_source_fingers or ())
+    if len(full_source) >= 2 and set(full_source).issubset(free):
+        acquisition_subset = full_source
+        remap_source = full_source
+    else:
+        pair = select_static_acquisition_pair(
+            A_record["occupied_finger_mask"], controller_source_pair,
+        )
+        acquisition_subset = pair
+        remap_source = controller_source_pair or ("index", "thumb")
     if precheck is not None:
         return {
             **precheck,
@@ -109,11 +175,13 @@ def run_phase2r_second_grasp_trial(
     baseline = np.asarray(
         A_record.get("retaining_joint_target_rad", A_record["final_joint_configuration_rad"]), dtype=float,
     )
-    adapted = remap_index_thumb_trajectory(trajectory, pair, baseline)
+    adapted = remap_subset_trajectory(
+        trajectory, tuple(remap_source), tuple(acquisition_subset), baseline,
+    )
     summary, arrays = run_b_acquisition_trajectory(
         cfg25, adapted, A_record=A_record,
         occupied_mask=np.asarray(A_record["occupied_finger_mask"], dtype=bool),
-        placement=placement, collect_timeseries=True,
+        placement=placement, collect_timeseries=True, scene_cfg=scene_cfg,
     )
     release_step = int(summary["fixture_release_timestep"])
     a_retained, a_subreason = _A_retained(A_record, arrays, release_step, state_cfg)
@@ -146,7 +214,7 @@ def run_phase2r_second_grasp_trial(
         "B_acquired": b_acquired,
         "BOTH_RETAINED": outcome == "BOTH_RETAINED",
         "dynamic_attempt_executed": True,
-        "acquisition_finger_subset": list(pair),
+        "acquisition_finger_subset": list(acquisition_subset),
         "controller_source_candidate_index": trajectory.candidate_index,
         "A_final_palm_contact_fraction": float(np.mean(arrays["A_palm_contact"][release_step:] > 0)),
         "A_maximum_penetration_m": float(np.max(arrays["A_penetration_m"])),

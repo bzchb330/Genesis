@@ -1,0 +1,44 @@
+experiment_id: phase2S_half_scale_objects
+selection_basis: maximize minimum matched-group geometric access; strict half-scale
+  B-only evidence; zero A overlap; no dynamic formal outcomes
+source_half_scale_region: half_scale_region_08
+source_B_only_profile: phase2S_b_only_08.yaml
+center_bounds_m:
+  x:
+  - 0.1032456153804166
+  - 0.1052456153804166
+  y:
+  - 0.06388611422793093
+  - 0.06588611422793093
+  z:
+  - 0.17787366839456856
+  - 0.17987366839456856
+yaw_bounds_rad:
+- -0.1
+- 0.1
+vertical_cylinder: true
+fixture_behavior: kinematic free-joint pose support until scripted release; unsupported
+  final hold
+geometry_seed_namespace: 20260902
+calibration_seed_namespace: 20260903
+formal_seed_namespace: 20260904
+B_only_robustness_fraction: 0.7142857142857143
+B_only_trials: 21
+B_only_successes: 15
+geometry_access:
+  FINGERTIP:
+    state_placement_pairs: 20000
+    reachable_pairs: 20000
+    access_fraction: 1.0
+    states_with_any_access: 100
+    initial_A_overlap_pairs: 0
+    initial_hand_overlap_pairs: 0
+  PALMAR_SECURED:
+    state_placement_pairs: 20000
+    reachable_pairs: 18922
+    access_fraction: 0.9461
+    states_with_any_access: 95
+    initial_A_overlap_pairs: 0
+    initial_hand_overlap_pairs: 0
+config_hash: e6d88c23bb9e4775011594fef032622d4a7195ffad1f1cc5257c03c863971b6d
+git_commit_sha: d6c20896cd355fa2430017e7e116e597f4d628bb

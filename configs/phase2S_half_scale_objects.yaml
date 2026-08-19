@@ -1,0 +1,85 @@
+experiment_id: phase2S_half_scale_objects
+formal_experiment_id: phase2S_half_scale_formal
+output_dir: outputs/phase2S
+scene_filename: scene_two_object_half_scale.yaml
+object_linear_scale: 0.5
+
+state:
+  seed: 20260830
+  fingertip_target: 200
+  palmar_target: 200
+  minimum_palmar_states: 100
+  maximum_states_per_group: 500
+  maximum_palmar_attempts: 30000
+  maximum_workers: 8
+  fixture_close_steps: 400
+  fixture_contact_steps: 100
+  stable_hold_steps: 500
+  palm_contact_fraction_minimum: 0.80
+  load_bearing_force_threshold_N: 0.20
+  minimum_palmar_load_bearing_fingers: 1
+  maximum_palmar_load_bearing_fingers: 2
+  minimum_fingertip_contact_fingers: 2
+  maximum_penetration_m: 0.003
+  maximum_translation_drift_m: 0.005
+  maximum_orientation_drift_rad: 0.20
+  palm_tangent_y_bounds_m: [-0.055, 0.055]
+  palm_tangent_z_bounds_m: [-0.085, 0.005]
+  palm_surface_offset_bounds_m: [0.000, 0.003]
+  active_closure_scale_bounds: [0.90, 1.60]
+  active_joint_perturbation_rad: 0.14
+  focused_candidate_stride: 5
+  focused_palm_tangent_y_bounds_m: [-0.040, 0.040]
+  focused_palm_tangent_z_bounds_m: [-0.050, 0.000]
+  focused_closure_scale_bounds: [1.05, 1.45]
+  focused_joint_perturbation_rad: 0.08
+  focused_retaining_finger_subsets:
+    - [middle, thumb]
+    - [ring, thumb]
+    - [index, thumb]
+    - [middle]
+    - [thumb]
+    - [ring]
+    - [ring, middle]
+  focused_proposal_profile_paths:
+    - configs/grasps/resource_grasp_A_01.yaml
+    - configs/grasps/resource_grasp_A_02.yaml
+    - configs/grasps/resource_grasp_A_03.yaml
+  retaining_finger_subsets:
+    - [ring]
+    - [middle]
+    - [index]
+    - [thumb]
+    - [ring, middle]
+    - [middle, thumb]
+    - [ring, thumb]
+    - [index, thumb]
+  proposal_profile_paths:
+    - configs/grasps/resource_grasp_A_01.yaml
+    - configs/grasps/resource_grasp_A_02.yaml
+    - configs/grasps/resource_grasp_A_03.yaml
+
+matching:
+  target_pairs: 100
+  calibration_per_group: 20
+  covariates:
+    - ferrari_canny_epsilon
+    - total_A_normal_force_N
+    - A_translation_drift_m
+    - A_rotation_drift_rad
+    - minimum_joint_margin_rad
+
+second_grasp:
+  workspace_seed: 20260831
+  B_only_seed: 20260901
+  geometry_seed: 20260902
+  calibration_seed: 20260903
+  formal_seed: 20260904
+  workspace_candidate_poses: 8192
+  B_only_candidate_cap: 8192
+  B_only_success_target: 10
+  B_only_minimum_successes: 3
+  geometry_placements_per_region: 200
+  calibration_B_seeds_per_state: 5
+  formal_B_seeds_per_state: 20
+  maximum_controller_candidates: 4096

@@ -23,10 +23,12 @@ def _seed(base_seed: int, grasp_id: str) -> int:
     return int.from_bytes(digest[:8], "little")
 
 
-def free_fingertip_workspace_clouds(record: dict, resources, sample_count: int, seed: int):
+def free_fingertip_workspace_clouds(
+    record: dict, resources, sample_count: int, seed: int, base_cfg=None,
+):
     """Collision-filtered free-tip Monte Carlo clouds in world coordinates."""
 
-    cfg, model, data, indices = reconstruct_grasp(record)
+    cfg, model, data, indices = reconstruct_grasp(record, base_cfg)
     retained_q = data.qpos[indices.qpos_addresses].copy()
     retained_qvel = data.qvel[indices.qvel_addresses].copy()
     occupied = np.asarray(record["occupied_finger_mask"], dtype=bool)

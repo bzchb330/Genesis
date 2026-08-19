@@ -1,0 +1,279 @@
+regions:
+- name: half_scale_region_01
+  source_profile: phase2S_b_only_01.yaml
+  source_candidate_index: 4200
+  source_accessible_fingers:
+  - index
+  - middle
+  - ring
+  - thumb
+  demonstrated_contact_topologies:
+    index+middle: 8
+    index: 2
+    middle: 1
+  center_bounds_m:
+    x:
+    - 0.06988198255697625
+    - 0.07188198255697625
+    y:
+    - -0.020721672382165386
+    - -0.018721672382165384
+    z:
+    - 0.21558070259581608
+    - 0.21758070259581608
+  yaw_bounds_rad:
+  - -0.1
+  - 0.1
+  B_only_robustness_fraction: 0.5714285714285714
+  B_only_trials: 21
+  B_only_successes: 12
+  source_nominal_strict_success: true
+  initial_collision_rate: 0.0
+- name: half_scale_region_02
+  source_profile: phase2S_b_only_02.yaml
+  source_candidate_index: 4290
+  source_accessible_fingers:
+  - index
+  - middle
+  - ring
+  - thumb
+  demonstrated_contact_topologies:
+    middle: 18
+  center_bounds_m:
+    x:
+    - 0.06988198255697625
+    - 0.07188198255697625
+    y:
+    - -0.020721672382165386
+    - -0.018721672382165384
+    z:
+    - 0.21558070259581608
+    - 0.21758070259581608
+  yaw_bounds_rad:
+  - -0.1
+  - 0.1
+  B_only_robustness_fraction: 0.9047619047619048
+  B_only_trials: 21
+  B_only_successes: 19
+  source_nominal_strict_success: true
+  initial_collision_rate: 0.0
+- name: half_scale_region_03
+  source_profile: phase2S_b_only_03.yaml
+  source_candidate_index: 3429
+  source_accessible_fingers:
+  - index
+  - middle
+  - ring
+  - thumb
+  demonstrated_contact_topologies:
+    middle: 12
+  center_bounds_m:
+    x:
+    - 0.06988198255697625
+    - 0.07188198255697625
+    y:
+    - -0.020721672382165386
+    - -0.018721672382165384
+    z:
+    - 0.21558070259581608
+    - 0.21758070259581608
+  yaw_bounds_rad:
+  - -0.1
+  - 0.1
+  B_only_robustness_fraction: 0.6190476190476191
+  B_only_trials: 21
+  B_only_successes: 13
+  source_nominal_strict_success: true
+  initial_collision_rate: 0.0
+- name: half_scale_region_04
+  source_profile: phase2S_b_only_04.yaml
+  source_candidate_index: 4100
+  source_accessible_fingers:
+  - index
+  - middle
+  - ring
+  - thumb
+  demonstrated_contact_topologies:
+    index+middle+thumb: 15
+  center_bounds_m:
+    x:
+    - 0.08172884534140785
+    - 0.08372884534140786
+    y:
+    - 0.004221717286378762
+    - 0.006221717286378762
+    z:
+    - 0.15144743329467092
+    - 0.15344743329467092
+  yaw_bounds_rad:
+  - -0.1
+  - 0.1
+  B_only_robustness_fraction: 0.7619047619047619
+  B_only_trials: 21
+  B_only_successes: 16
+  source_nominal_strict_success: true
+  initial_collision_rate: 0.0
+- name: half_scale_region_05
+  source_profile: phase2S_b_only_05.yaml
+  source_candidate_index: 4249
+  source_accessible_fingers:
+  - index
+  - thumb
+  demonstrated_contact_topologies:
+    index+thumb: 7
+  center_bounds_m:
+    x:
+    - 0.011550971453174033
+    - 0.013550971453174035
+    y:
+    - 0.07161796554766557
+    - 0.07361796554766557
+    z:
+    - 0.21193286755834922
+    - 0.21393286755834923
+  yaw_bounds_rad:
+  - -0.1
+  - 0.1
+  B_only_robustness_fraction: 0.38095238095238093
+  B_only_trials: 21
+  B_only_successes: 8
+  source_nominal_strict_success: true
+  initial_collision_rate: 0.0
+- name: half_scale_region_06
+  source_profile: phase2S_b_only_06.yaml
+  source_candidate_index: 4174
+  source_accessible_fingers:
+  - middle
+  - ring
+  - thumb
+  demonstrated_contact_topologies:
+    middle: 4
+    middle+thumb: 2
+  center_bounds_m:
+    x:
+    - 0.06331561683930081
+    - 0.06531561683930082
+    y:
+    - -0.04840736678254238
+    - -0.04640736678254238
+    z:
+    - 0.14928182360258857
+    - 0.15128182360258857
+  yaw_bounds_rad:
+  - -0.1
+  - 0.1
+  B_only_robustness_fraction: 0.3333333333333333
+  B_only_trials: 21
+  B_only_successes: 7
+  source_nominal_strict_success: true
+  initial_collision_rate: 0.0
+- name: half_scale_region_07
+  source_profile: phase2S_b_only_07.yaml
+  source_candidate_index: 4143
+  source_accessible_fingers:
+  - middle
+  - ring
+  - thumb
+  demonstrated_contact_topologies:
+    middle+thumb: 14
+  center_bounds_m:
+    x:
+    - 0.06331561683930081
+    - 0.06531561683930082
+    y:
+    - -0.04840736678254238
+    - -0.04640736678254238
+    z:
+    - 0.14928182360258857
+    - 0.15128182360258857
+  yaw_bounds_rad:
+  - -0.1
+  - 0.1
+  B_only_robustness_fraction: 0.7142857142857143
+  B_only_trials: 21
+  B_only_successes: 15
+  source_nominal_strict_success: true
+  initial_collision_rate: 0.0
+- name: half_scale_region_08
+  source_profile: phase2S_b_only_08.yaml
+  source_candidate_index: 4168
+  source_accessible_fingers:
+  - index
+  - middle
+  - thumb
+  demonstrated_contact_topologies:
+    middle+thumb: 14
+  center_bounds_m:
+    x:
+    - 0.1032456153804166
+    - 0.1052456153804166
+    y:
+    - 0.06388611422793093
+    - 0.06588611422793093
+    z:
+    - 0.17787366839456856
+    - 0.17987366839456856
+  yaw_bounds_rad:
+  - -0.1
+  - 0.1
+  B_only_robustness_fraction: 0.7142857142857143
+  B_only_trials: 21
+  B_only_successes: 15
+  source_nominal_strict_success: true
+  initial_collision_rate: 0.0
+- name: half_scale_region_09
+  source_profile: phase2S_b_only_09.yaml
+  source_candidate_index: 4099
+  source_accessible_fingers:
+  - index
+  - middle
+  - ring
+  - thumb
+  demonstrated_contact_topologies:
+    ring+thumb: 13
+  center_bounds_m:
+    x:
+    - 0.09329765652755219
+    - 0.09529765652755219
+    y:
+    - -0.0287820734733647
+    - -0.026782073473364698
+    z:
+    - 0.1819134682236782
+    - 0.1839134682236782
+  yaw_bounds_rad:
+  - -0.1
+  - 0.1
+  B_only_robustness_fraction: 0.6666666666666666
+  B_only_trials: 21
+  B_only_successes: 14
+  source_nominal_strict_success: true
+  initial_collision_rate: 0.0
+- name: half_scale_region_10
+  source_profile: phase2S_b_only_10.yaml
+  source_candidate_index: 4227
+  source_accessible_fingers:
+  - index
+  - middle
+  - ring
+  - thumb
+  demonstrated_contact_topologies:
+    ring+thumb: 12
+  center_bounds_m:
+    x:
+    - 0.09329765652755219
+    - 0.09529765652755219
+    y:
+    - -0.0287820734733647
+    - -0.026782073473364698
+    z:
+    - 0.1819134682236782
+    - 0.1839134682236782
+  yaw_bounds_rad:
+  - -0.1
+  - 0.1
+  B_only_robustness_fraction: 0.6190476190476191
+  B_only_trials: 21
+  B_only_successes: 13
+  source_nominal_strict_success: true
+  initial_collision_rate: 0.0

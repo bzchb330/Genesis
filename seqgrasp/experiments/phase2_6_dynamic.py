@@ -10,8 +10,15 @@ from .phase2_5_trajectory import BAcquisitionTrajectory
 from .resource_components import FINGER_ORDER
 
 
-def trajectory_from_unit(cfg25, pose: dict, candidate_index: int, unit: np.ndarray) -> BAcquisitionTrajectory:
-    cfg=load_configs(); from ..scene_builder import build_scene
+def trajectory_from_unit(
+    cfg25,
+    pose: dict,
+    candidate_index: int,
+    unit: np.ndarray,
+    *,
+    base_cfg=None,
+) -> BAcquisitionTrajectory:
+    cfg=base_cfg or load_configs(); from ..scene_builder import build_scene
     model,_=build_scene(cfg); indices=resolve_hand_indices(model,cfg.hand)
     _,profile=load_grasp_profile(ROOT/"configs"/"grasps"/"resource_grasp_A_02.yaml"); open_q=_joint_target(model,cfg,indices,profile.open_joint_fractions)
     anchors=open_q.copy()

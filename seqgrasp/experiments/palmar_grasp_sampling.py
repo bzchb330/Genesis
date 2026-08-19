@@ -40,10 +40,12 @@ def _palm_box_front_surface_x(model: mujoco.MjModel, data: mujoco.MjData, cfg: C
     return max(candidates)
 
 
-def sample_palmar_candidate(phase2r: Phase2RConfig, attempt_index: int) -> dict:
+def sample_palmar_candidate(
+    phase2r: Phase2RConfig, attempt_index: int, cfg: ConfigBundle | None = None,
+) -> dict:
     """Create one deterministic engineering proposal without evaluating outcomes."""
 
-    cfg = load_configs()
+    cfg = cfg or load_configs()
     state_cfg = phase2r.state
     rng = np.random.default_rng(np.random.SeedSequence([state_cfg.seed, attempt_index]))
     focused = attempt_index % state_cfg.focused_candidate_stride != 0
@@ -103,9 +105,21 @@ def sample_palmar_candidate(phase2r: Phase2RConfig, attempt_index: int) -> dict:
 
 def evaluate_palmar_candidate(
     phase2r: Phase2RConfig, phase2: Phase2Config, attempt_index: int,
+    cfg: ConfigBundle | None = None,
 ) -> dict:
-    proposal = sample_palmar_candidate(phase2r, attempt_index)
-    cfg = load_configs()
+    cfg = cfg or load_configs()
+    proposal = sample_palmar_candidate(phase2r, attempt_index, cfg)
+    return evaluate_palmar_proposal(phase2r, phase2, proposal, cfg)
+
+
+def evaluate_palmar_proposal(
+    phase2r: Phase2RConfig,
+    phase2: Phase2Config,
+    proposal: dict,
+    cfg: ConfigBundle,
+) -> dict:
+    """Evaluate an explicit proposal; validity begins only after fixture removal."""
+
     model, data = build_scene(cfg)
     indices = resolve_hand_indices(model, cfg.hand)
     qadr, vadr = _object_addresses(model)
@@ -149,7 +163,7 @@ def evaluate_palmar_candidate(
         **measured,
         "fixture_method": "temporary_free_joint_pose_reset_during_initialization_only",
         "fixture_release_timestep": close_steps + contact_steps,
-        "grasp_state_id": f"phase2R_palmar_attempt_{attempt_index:05d}",
+        "grasp_state_id": f"phase2R_palmar_attempt_{int(proposal['attempt_index']):05d}",
     }
     return classify_grasp_state(
         record, GraspStateType.PALMAR_SECURED, phase2r.state,
@@ -159,8 +173,9 @@ def evaluate_palmar_candidate(
 
 def evaluate_existing_fingertip_state(
     phase2r: Phase2RConfig, phase2: Phase2Config, source: dict,
+    cfg: ConfigBundle | None = None,
 ) -> dict:
-    cfg, model, data, indices = reconstruct_grasp(source)
+    cfg, model, data, indices = reconstruct_grasp(source, cfg)
     # The accepted dataset stores both measured q and the torque-producing
     # impedance set point. Reuse the latter, as the formal Phase 2 replay does.
     hold = _joint_target(model, cfg, indices, source["hold_joint_fractions"])
