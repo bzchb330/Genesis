@@ -1,0 +1,50 @@
+phase2_6_only: true
+frozen_phase2_config: configs/phase2_physics_validation.yaml
+frozen_phase2_5_config: configs/phase2_5_second_grasp_calibration.yaml
+output_dir: outputs/phase2_6
+maximum_workers: 8
+
+seeds:
+  workspace: 20261100
+  candidate_poses: 20261110
+  pose_trajectory_search: 20261120
+  perturbations: 20261130
+  calibration_B_namespace: 20261200
+  formal_v3_B_namespace: 20261300
+
+workspace:
+  samples_per_finger: 200000
+  batch_size: 5000
+  plot_samples_per_finger: 10000
+  surface_access_tolerance_m: 0.004
+  palm_support_tolerance_m: 0.010
+  self_collision_tolerance_m: 0.0
+  candidate_pose_count: 10000
+  selected_pose_count: 50
+  opposition_minimum_angle_deg: 120.0
+  minimum_joint_margin_rad: 0.01
+
+object_B:
+  vertical: true
+  yaw_bounds_rad: [0.0, 6.283185307179586]
+  old_center_x_bounds_m: [0.055, 0.065]
+  old_center_y_bounds_m: [0.115, 0.125]
+  old_center_z_bounds_m: [0.215, 0.225]
+
+dynamic_search:
+  initial_candidate_count: 4096
+  expanded_candidate_count: 8192
+  unsupported_hold_steps: 500
+  target_success_count: 20
+  robustness_profiles: 10
+  perturbations_per_profile: 20
+
+sequential:
+  intersection_A_grasps: 60
+  initial_candidate_count: 4096
+  expanded_candidate_count: 8192
+  target_success_count: 10
+  calibration_A_grasps: 30
+  calibration_B_seeds: 20
+  formal_A_grasps: 200
+  formal_B_seeds_per_grasp: 20

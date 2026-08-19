@@ -1,0 +1,7 @@
+source_B_only_candidate_index: 541
+calibration_A_grasps_to_use: 10
+B_poses_per_cycle: 20
+joint_target_delta_rad: [-0.05, 0.05]
+close_steps_delta: [-50, 50]
+per_finger_delay_delta_steps: [-30, 30]
+fixture_release_delay_delta_steps: [-50, 50]

@@ -1,0 +1,4 @@
+position_half_width_m: [0.001, 0.001, 0.001]
+yaw_half_width_rad: 0.10
+profiles_to_validate: 10
+trials_per_profile: 20

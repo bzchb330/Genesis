@@ -1,0 +1,26 @@
+selection_basis: geometry_and_B_only_positive_controls
+regions:
+  - name: index_thumb_region
+    source_candidate_index: 541
+    center_bounds_m:
+      x: [0.04535998713890449, 0.04735998713890449]
+      y: [0.08409904934597246, 0.08609904934597246]
+      z: [0.22399001120990503, 0.22599001120990503]
+    yaw_bounds_rad: [-0.10, 0.10]
+    B_only_robustness_fraction: 0.45
+  - name: index_middle_thumb_region
+    source_candidate_index: 663
+    center_bounds_m:
+      x: [0.08417610401264712, 0.08617610401264712]
+      y: [-0.011479360803623286, -0.009479360803623285]
+      z: [0.19095185659644187, 0.19295185659644187]
+    yaw_bounds_rad: [-0.10, 0.10]
+    B_only_robustness_fraction: 0.80
+  - name: middle_thumb_region
+    source_candidate_index: 2121
+    center_bounds_m:
+      x: [0.09869313014007687, 0.10069313014007687]
+      y: [-0.047155073869370976, -0.045155073869370975]
+      z: [0.14380846953488685, 0.14580846953488685]
+    yaw_bounds_rad: [-0.10, 0.10]
+    B_only_robustness_fraction: 0.45

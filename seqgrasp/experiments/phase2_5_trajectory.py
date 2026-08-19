@@ -199,6 +199,16 @@ def run_b_acquisition_trajectory(
         open_q = data.qpos[indices.qpos_addresses].copy()
         A_present = True
         occupied = np.asarray(occupied_mask, dtype=bool)
+        _, accepted_profile = load_grasp_profile(ROOT / A_record["proposal_profile_path"])
+        a_hold = _joint_target(
+            model,
+            cfg,
+            indices,
+            A_record.get(
+                "hold_joint_fractions",
+                accepted_profile.hold_joint_fractions or accepted_profile.closed_joint_fractions,
+            ),
+        )
     if placement is None:
         yaw = cfg25.positive_control.B_yaw_rad
         placement = BPlacement(
@@ -257,8 +267,6 @@ def run_b_acquisition_trajectory(
             desired = np.asarray(A_record["final_joint_configuration_rad"], dtype=float).copy()
             desired[~np.repeat(occupied, 4)] = proposed[~np.repeat(occupied, 4)]
             # Exact accepted support target for occupied fingers.
-            _, accepted_profile = load_grasp_profile(ROOT / A_record["proposal_profile_path"])
-            a_hold = _joint_target(model, cfg, indices, A_record.get("hold_joint_fractions", accepted_profile.hold_joint_fractions or accepted_profile.closed_joint_fractions))
             desired[np.repeat(occupied, 4)] = a_hold[np.repeat(occupied, 4)]
         else:
             desired = proposed
