@@ -199,16 +199,19 @@ def run_b_acquisition_trajectory(
         open_q = data.qpos[indices.qpos_addresses].copy()
         A_present = True
         occupied = np.asarray(occupied_mask, dtype=bool)
-        _, accepted_profile = load_grasp_profile(ROOT / A_record["proposal_profile_path"])
-        a_hold = _joint_target(
-            model,
-            cfg,
-            indices,
-            A_record.get(
-                "hold_joint_fractions",
-                accepted_profile.hold_joint_fractions or accepted_profile.closed_joint_fractions,
-            ),
-        )
+        if "retaining_joint_target_rad" in A_record:
+            a_hold = np.asarray(A_record["retaining_joint_target_rad"], dtype=float)
+        else:
+            _, accepted_profile = load_grasp_profile(ROOT / A_record["proposal_profile_path"])
+            a_hold = _joint_target(
+                model,
+                cfg,
+                indices,
+                A_record.get(
+                    "hold_joint_fractions",
+                    accepted_profile.hold_joint_fractions or accepted_profile.closed_joint_fractions,
+                ),
+            )
     if placement is None:
         yaw = cfg25.positive_control.B_yaw_rad
         placement = BPlacement(
@@ -299,6 +302,9 @@ def run_b_acquisition_trajectory(
         velocity = np.zeros(6)
         mujoco.mj_objectVelocity(model, data, mujoco.mjtObj.mjOBJ_BODY, b_body, velocity, 0)
         a_counts, _, _, _, a_forces = _finger_object_contact_arrays(grouped, list(FINGER_ORDER), "object_a", data.xpos[a_body])
+        from .phase2r import _object_hand_contacts
+        a_all_contacts = _object_hand_contacts(model, data, cfg, "object_a")
+        a_table_contact = any({row.geom1_name, row.geom2_name} == {"object_a_geom", "table"} for row in contacts)
         rows.append({
             "timestep": step, "phase": phase, "fixture_active": fixture_active,
             "B_position_m": data.xpos[b_body].copy(), "B_quaternion": data.xquat[b_body].copy(),
@@ -319,6 +325,14 @@ def run_b_acquisition_trajectory(
             "A_rotation_rad": _rotation_change(data.xquat[a_body], a_reference_quaternion),
             "A_per_finger_contact_flag": (a_counts > 0).astype(np.int8),
             "A_per_finger_normal_force_N": a_forces,
+            "A_all_link_per_finger_contact_flag": (a_all_contacts["finger_counts"] > 0).astype(np.int8),
+            "A_all_link_per_finger_normal_force_N": a_all_contacts["finger_force_N"],
+            "A_palm_contact": int(a_all_contacts["palm_count"] > 0),
+            "A_palm_contact_count": a_all_contacts["palm_count"],
+            "A_palm_normal_force_N": a_all_contacts["palm_force_N"],
+            "A_hand_contact_count": a_all_contacts["hand_count"],
+            "A_penetration_m": a_all_contacts["maximum_penetration_m"],
+            "A_table_contact": int(a_table_contact),
             "commanded_joint_target_rad": desired.copy(), "actual_joint_rad": q.copy(),
             "joint_velocity_rad_per_s": qdot.copy(), "actuator_controls": controls.copy(),
             "commanded_free_finger_target_rad": desired[np.repeat(free, 4)].copy(),
