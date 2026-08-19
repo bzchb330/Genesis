@@ -72,7 +72,7 @@ def _write_outputs(run,cfg):
                     value=np.asarray(run.arrays[key][i]); row.extend([value.item()] if value.ndim==0 else value.reshape(-1).tolist())
                 writer.writerow(row)
 
-def run_scripted_grasp(cfg:ConfigBundle,seed:int|None=None,output_dir:str|Path|None=None,render_video:bool|None=None,save_outputs:bool=True,profile_name:str|None=None,target_transform=None)->DiagnosticRun:
+def run_scripted_grasp(cfg:ConfigBundle,seed:int|None=None,output_dir:str|Path|None=None,render_video:bool|None=None,save_outputs:bool=True,profile_name:str|None=None,target_transform=None,contact_override=None)->DiagnosticRun:
     """Run a deterministic engineering-only object contact/support-release probe."""
     diag=cfg.diagnostic
     if not diag.diagnostic_only: raise ValueError("scripted trajectory must remain diagnostic_only")
@@ -81,7 +81,7 @@ def run_scripted_grasp(cfg:ConfigBundle,seed:int|None=None,output_dir:str|Path|N
     profile=diag.profiles[profile_name]
     if profile.support_release_stage not in profile.stage_durations_seconds: raise ValueError("support release stage must be present in the diagnostic schedule")
     if profile.support_release_stage in profile.kinematic_fixture_stages: raise ValueError("support release stage cannot remain fixture-held")
-    seed=diag.seed if seed is None else seed; rng=np.random.default_rng(seed); model,data=build_scene(cfg); randomize_objects(model,data,cfg,rng)
+    seed=diag.seed if seed is None else seed; rng=np.random.default_rng(seed); model,data=build_scene(cfg,contact_override=contact_override); randomize_objects(model,data,cfg,rng)
     indices=resolve_hand_indices(model,cfg.hand); joint_limits=model.jnt_range[indices.joint_ids].copy()
     open_q=_joint_target(model,cfg,indices,profile.open_joint_fractions); closed_q=_joint_target(model,cfg,indices,profile.closed_joint_fractions); hold_q=_joint_target(model,cfg,indices,profile.hold_joint_fractions or profile.closed_joint_fractions)
     close_delays=np.asarray([0.0 if profile.actuator_close_delay_seconds is None else profile.actuator_close_delay_seconds.get(name,0.0) for name in cfg.hand.actuator_names])

@@ -25,13 +25,16 @@
 - Explicit support-release samples, descriptive 10-seed statistics, and aggregate figures.
 - Reproducible engineering-only grasp-posture search, top-candidate profiles, object-specific contact mechanics, and 20-seed descriptive validation.
 - Fixed-physics penetration refinement, three source-distinct resource profiles, 3,000 raw post-release samples, 384 reachability samples, and 240 independent single-finger B probes.
+- Phase 2 fixed-base physics replay, 1000-step raw hold report, compiled contact-parameter override interface, and crash-tolerant resumable JSONL infrastructure.
+- Phase 2 81-condition contact sensitivity sweep, resumable 200-grasp sampler, Ferrari–Canny epsilon quality, separated raw resource-component estimators, exact three-feature tactile extraction, geometry preflight, scripted second-grasp harness, and clustered correlation-analysis pipeline.
 - These values and outputs are not success criteria or scientific thresholds.
 
-## D. Blocked by TODO(PI)
+## D. Blocked by PI scientific decisions
 
 - Automatic sequential phase transitions, scientific drop/success decisions, resource metric J.
 - Closed-loop tactile retention law, reward definitions/weights, additional tactile features/normalization.
 - Scientific RL evaluation and training protocol.
+- Scalar resource metric J remains undefined; the Phase 2 study intentionally analyses only raw components.
 
 ## E. Not yet implemented
 
