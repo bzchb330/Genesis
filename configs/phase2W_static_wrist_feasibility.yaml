@@ -1,0 +1,58 @@
+experiment_id: phase2W_static_wrist_matched
+output_dir: outputs/phase2W
+scene_filename: scene_two_object_half_scale.yaml
+
+topology:
+  occupied_fingers: [middle, ring]
+  free_fingers: [index, thumb]
+  load_bearing_threshold_N: 0.20
+
+wrist_search:
+  coarse_roll_deg: [-90, -45, 0, 45, 90]
+  coarse_pitch_deg: [-90, -45, 0, 45, 90]
+  coarse_yaw_deg: [-90, -45, 0, 45, 90]
+  refinement_offsets_deg: [-22.5, 0, 22.5]
+  screening_states_per_group: 20
+  minimum_valid_states_per_group: 10
+  top_coarse_for_refinement: 5
+  top_dynamic_candidates: 10
+  maximum_workers: 8
+
+geometry:
+  workspace_samples_per_group: 1000
+  candidate_B_poses_per_orientation: 5000
+  yaw_bounds_rad: [-0.10, 0.10]
+  minimum_opposition_angle_deg: 120.0
+
+second_grasp:
+  initial_candidates_per_wrist: 512
+  expanded_candidates_per_wrist: 2048
+  global_candidate_cap: 8192
+  hard_minimum_successes: 3
+  preferred_successes: 5
+  robustness_trials_per_configuration: 100
+  robustness_configuration_cap: 3
+
+endpoint_population:
+  target_per_group: 80
+  minimum_per_group: 50
+  additional_attempt_cap_per_group: 20000
+  calibration_states_per_group: 20
+
+calibration:
+  maximum_controller_candidates: 2048
+  formal_B_seeds_per_pair: 20
+  target_matched_pairs: 80
+  minimum_matched_pairs: 50
+
+seeds:
+  screening: 20261001
+  geometry: 20261002
+  B_only: 20261003
+  robustness: 20261004
+  endpoint_replay: 20261005
+  additional_fingertip: 20261006
+  additional_palmar: 20261007
+  calibration: 20261008
+  formal: 20261009
+  bootstrap: 20261010
