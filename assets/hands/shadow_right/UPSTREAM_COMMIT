@@ -1,0 +1,5 @@
+MuJoCo Menagerie repository: https://github.com/google-deepmind/mujoco_menagerie.git
+Vendored path: shadow_hand
+Commit: c1a4eeb85694ae1dffe33ff1797d4e528928a133
+Model: right Shadow Hand E3M5 (right_hand.xml)
+Vendored without changes; runtime semantic geom names are applied in memory.

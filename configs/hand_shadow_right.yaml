@@ -1,0 +1,36 @@
+model_path: assets/hands/shadow_right/right_hand.xml
+source_repository: https://github.com/google-deepmind/mujoco_menagerie.git
+source_commit: c1a4eeb85694ae1dffe33ff1797d4e528928a133
+model_name: right Shadow Hand E3M5
+palm_body: rh_palm
+forearm_body: rh_forearm
+wrist_joints: [rh_WRJ2, rh_WRJ1]
+finger_order: [thumb, index, middle, ring, little]
+finger_bodies:
+  thumb: [rh_thbase, rh_thproximal, rh_thhub, rh_thmiddle, rh_thdistal]
+  index: [rh_ffknuckle, rh_ffproximal, rh_ffmiddle, rh_ffdistal]
+  middle: [rh_mfknuckle, rh_mfproximal, rh_mfmiddle, rh_mfdistal]
+  ring: [rh_rfknuckle, rh_rfproximal, rh_rfmiddle, rh_rfdistal]
+  little: [rh_lfmetacarpal, rh_lfknuckle, rh_lfproximal, rh_lfmiddle, rh_lfdistal]
+finger_joints:
+  thumb: [rh_THJ5, rh_THJ4, rh_THJ3, rh_THJ2, rh_THJ1]
+  index: [rh_FFJ4, rh_FFJ3, rh_FFJ2, rh_FFJ1]
+  middle: [rh_MFJ4, rh_MFJ3, rh_MFJ2, rh_MFJ1]
+  ring: [rh_RFJ4, rh_RFJ3, rh_RFJ2, rh_RFJ1]
+  little: [rh_LFJ5, rh_LFJ4, rh_LFJ3, rh_LFJ2, rh_LFJ1]
+fingertip_bodies:
+  thumb: rh_thdistal
+  index: rh_ffdistal
+  middle: rh_mfdistal
+  ring: rh_rfdistal
+  little: rh_lfdistal
+actuator_groups:
+  wrist: [rh_A_WRJ2, rh_A_WRJ1]
+  thumb: [rh_A_THJ5, rh_A_THJ4, rh_A_THJ3, rh_A_THJ2, rh_A_THJ1]
+  index: [rh_A_FFJ4, rh_A_FFJ3, rh_A_FFJ0]
+  middle: [rh_A_MFJ4, rh_A_MFJ3, rh_A_MFJ0]
+  ring: [rh_A_RFJ4, rh_A_RFJ3, rh_A_RFJ0]
+  little: [rh_A_LFJ5, rh_A_LFJ4, rh_A_LFJ3, rh_A_LFJ0]
+mount_pos: [0.0, 0.0, 0.0]
+# Preserve the official E3M5 right-hand forearm orientation from right_hand.xml.
+mount_quat: [0.0, 1.0, 0.0, 1.0]

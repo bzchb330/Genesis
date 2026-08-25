@@ -1,0 +1,55 @@
+seed: 330
+timestep: 0.002
+frame_skip: 5
+episode_steps: 500
+render_width: 640
+render_height: 480
+object:
+  name: phase3_object
+  shape: ellipsoid
+  size: [0.03, 0.04, 0.02]
+  friction: [0.5, 0.01, 0.003]
+  rgba: [0.5, 0.7, 0.5, 1.0]
+  # Center of the deterministic diagnostic cohort, derived from the compiled
+  # E3M5 thumb/index workspace with the official two-finger keyframe targets.
+  initial_pos: [0.379, -0.040, 0.023]
+  initial_quat: [1.0, 0.0, 0.0, 0.0]
+  fixture_name: phase3_object_fixture
+floor:
+  name: phase3_floor
+  z: -0.10
+diagnostic:
+  reference_penetration_m: 0.003
+  contact_force_n: 0.02
+  approach_steps: 80
+  close_steps: 180
+  settle_steps: 50
+  unsupported_steps: 250
+  handoff_initial_pos: [0.375, -0.036, 0.018]
+  handoff_support_keyframe: three finger pinch
+  handoff_release_fingers: [thumb]
+  cohort_offsets_m:
+    - [-0.004, 0.000, 0.000]
+    - [0.000, 0.000, 0.000]
+    - [0.004, 0.000, 0.000]
+    - [0.000, -0.004, 0.000]
+    - [0.000, 0.004, 0.000]
+    - [0.000, 0.000, -0.004]
+    - [0.000, 0.000, 0.004]
+  # TODO(PI): define final Shadow-Hand acquisition, secure-support, support-transfer,
+  # slip, loss, and meaningful-available-motion thresholds after raw diagnostics.
+control:
+  delta_q_limit: 0.04
+  stiffness_scale_bounds: [0.2, 1.0]
+  fixed_impedance_compatibility: true
+reward_weights:
+  object_progress_to_palm: 0.0  # TODO(PI)
+  valid_support: 0.0  # TODO(PI)
+  palm_contact: 0.0  # TODO(PI)
+  support_transfer: 0.0  # TODO(PI)
+  acquisition_finger_release_after_support: 0.0  # TODO(PI)
+  recovered_resource: 0.0  # TODO(PI)
+  complete_object_loss: 0.0  # TODO(PI)
+  unsafe_penetration: 0.0  # TODO(PI)
+  joint_limit: 0.0  # TODO(PI)
+  violent_action: 0.0  # TODO(PI)
