@@ -179,6 +179,7 @@ def run_b_acquisition_trajectory(
     render_stride: int | None = None,
     video_fps: int | None = None,
     scene_cfg=None,
+    diagnostic_callback=None,
 ) -> tuple[dict, dict[str, np.ndarray] | None]:
     """Execute frozen-physics B-only or A-held+B scripted acquisition."""
 
@@ -342,6 +343,10 @@ def run_b_acquisition_trajectory(
             "free_finger_actuator_controls": controls[np.repeat(free, 4)].copy(),
             "actuator_saturation_count": int(np.sum(np.isclose(np.abs(controls), cfg.task.torque_limit, atol=1e-10))),
         })
+        if diagnostic_callback is not None:
+            # Phase 2H visualization hook. Callbacks are required to be
+            # read-only; the default experiment path never enters this block.
+            diagnostic_callback(step, model, data, rows[-1])
         if (
             renderer is not None
             and release_step - cfg25.timing.diagnostic_pre_release_steps <= step < release_step + cfg25.timing.diagnostic_post_release_steps
