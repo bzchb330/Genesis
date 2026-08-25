@@ -1,0 +1,3310 @@
+{
+  "artifact_count_excluding_this_manifest": 826,
+  "artifacts": [
+    {
+      "path": "configs/phase2CM_contact_model_audit.yaml",
+      "size_bytes": 655
+    },
+    {
+      "path": "docs/PHASE2CM_COMPILED_CONTACT_AUDIT.md",
+      "size_bytes": 2803
+    },
+    {
+      "path": "docs/PHASE2CM_FINGERTIP_GEOMETRY_AUDIT.md",
+      "size_bytes": 968
+    },
+    {
+      "path": "docs/PHASE2CM_PAIRED_TRIAL_FREEZE.md",
+      "size_bytes": 44937
+    },
+    {
+      "path": "docs/PHASE2CM_PENETRATION_GATE_AUDIT.md",
+      "size_bytes": 4922
+    },
+    {
+      "path": "docs/PHASE2CM_RATIONALE.md",
+      "size_bytes": 2371
+    },
+    {
+      "path": "outputs/phase2CM/contact_model_audit/compiled_contact_model.json",
+      "size_bytes": 5086
+    },
+    {
+      "path": "outputs/phase2CM/contact_model_audit/fingertip_geometry.json",
+      "size_bytes": 2086
+    },
+    {
+      "path": "outputs/phase2CM/contact_model_audit/runtime_contacts.jsonl",
+      "size_bytes": 8135047
+    },
+    {
+      "path": "outputs/phase2CM/contact_model_audit/summary.json",
+      "size_bytes": 1718
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/0018a96938210bfdd60d22fc6180295c1a7b1a1ead6b0313cbf78feaf5266eca.npz",
+      "size_bytes": 6360
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/003a887ef798209b5977a76997b086abfdb7c48d28c85656650e1008846cda84.npz",
+      "size_bytes": 6346
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/005a6cea3647ed47e1c4ad880238367e8053015f2a71fc3ddcff2de62b093484.npz",
+      "size_bytes": 6357
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/00b5aeb09b5eb8b28c26270edfa4f0c4f6cec74a9a94a248ae143dd0170c6106.npz",
+      "size_bytes": 6341
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/00b6771d10542c28233a1ba0ac062f882b56098ad1dd24a9391e8aadedf7b0b7.npz",
+      "size_bytes": 6345
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/00bdd0eecba1b55e5364bd76cbb01c8dda6846dad2f5ae507ab4ac3b1d7b27cd.npz",
+      "size_bytes": 6336
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/00da167669541dcc991ceb79dcd125baeddf02ed7045a79ad3764ce5ca1bf69c.npz",
+      "size_bytes": 6326
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/00fbc6cf4cdc6198b927773926cd7056128aa0d47309d036806e1f267d635fa3.npz",
+      "size_bytes": 6347
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/01028cc313fbfd3ee3b46d06fd2be16d4174170a29297255cb24e26d11bcf617.npz",
+      "size_bytes": 6313
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/0109f8b238de2936d0d906e3b1f1cf09fa87f7d40f14214136ef089db12213c6.npz",
+      "size_bytes": 6350
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/010cf117b831c09498bfcb5c6ee8f5d5c1928c5e2d51f41bd50288489d46bace.npz",
+      "size_bytes": 6349
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/014acf4457d52e796762abe207e4c5f7534536eb484a6c1ec04988fb6d4f152b.npz",
+      "size_bytes": 6347
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/01582ccc960371b2141771b991f9ab00c72905ba6cfde5e9871336bf28027e19.npz",
+      "size_bytes": 6352
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/01586fd583eb96f965ff20e7abaf7cf667f8cab5d549b97afcf78a8591b50fb7.npz",
+      "size_bytes": 6323
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/015a2e2bdad76f461a4767ae4fd13de2c5fb7b46bc2dc17572b470e1266c89b8.npz",
+      "size_bytes": 6347
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/017a7dfe4dc29d447e8b35325266d6e3c35f985099e54b4ed93854d9eff76b5c.npz",
+      "size_bytes": 6352
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/01860decbd8c905927982be908254f6d8f066478c9b9ca105eb8114ef19062f4.npz",
+      "size_bytes": 6316
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/0189729bdbbea5710cebc4c9c9c3177c8e5bc5f1cea61de2adba0ede33f79364.npz",
+      "size_bytes": 6351
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/01b44e645392580c9e217423271c7422d5bea7334e6169d85f0ba63fe0b95682.npz",
+      "size_bytes": 6346
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/01d69a03edb1cb93f46bf589f1bf7aead97f65400bec65c4e80a0c18be76e359.npz",
+      "size_bytes": 6348
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/01ecf22a59ec5dd8523da08a2d2b76d3d2773311f59b1c7af89f39cc3573fce6.npz",
+      "size_bytes": 6352
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/020d40792e27803ba513aab96e410dd2957612259731db784d9dd1b5e0c5b570.npz",
+      "size_bytes": 6345
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/02359415831038a9097ff79f733acc0eaed4d13433afb3619fc37405c308866c.npz",
+      "size_bytes": 6351
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/02614804b9995706e8158ea074c8aac34e6957b30453d9775954c92dbe3c8293.npz",
+      "size_bytes": 6360
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/02a467e5a9740db58626eabf6084a12cb00037618f4f3538c54b9fc6c819fb38.npz",
+      "size_bytes": 6354
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/02bb7527391d3fc2b2ee14460b561ead155bb05b9c17bd8f8e2e5509bca63e0c.npz",
+      "size_bytes": 6345
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/031d007baed95a046eafaa6e2fed981edffa641fd94c407ebe6e033e2f5fa6e7.npz",
+      "size_bytes": 6340
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/032e8e2a8e0d86b816ce6ad81a72fdea445c8f841dced559a2f48b23e8edf3b5.npz",
+      "size_bytes": 6343
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/036510bcea008a7c7f801a8e93cf81720fb40c1fa30f7aa89428c97b0cd78baa.npz",
+      "size_bytes": 6346
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/036fd992d44177c99d707a7c213b339c4a87bbb5a71131fa8c0e25d8d0a71521.npz",
+      "size_bytes": 6351
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/03782034e63438a36f3580bf256142c639775dcef009850e562917f176c80fe7.npz",
+      "size_bytes": 6348
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/03ae58beee1702ee57449b04236e8dd64ef2391482eb8ec458f991949b955858.npz",
+      "size_bytes": 6343
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/03b0ffe6000a8610e93490c02af1e421221b65cb2f2cd220f3e70e882415f7c0.npz",
+      "size_bytes": 6360
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/042c0d069fe47b4e59691d8a8613f5e73058ce3a25349d1d2dcfc742f6197aba.npz",
+      "size_bytes": 6360
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/0455dec2e24a29fd915bebab33455df565c0d7278cf62ac05e0c532a33286c69.npz",
+      "size_bytes": 6351
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/0490eae555783b291057034831a22310c6e2f97e060ec4068c2fb9c0e726fcbc.npz",
+      "size_bytes": 6354
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/04b89fa053ed105d412ee3fbcac02264168590c51675be84bbcd028becadceaf.npz",
+      "size_bytes": 6347
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/04b8db21ca5e1fe8dbfdfbec0ba295c390fd78d46cd62a1edfff28da23fa317b.npz",
+      "size_bytes": 6352
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/04c7eecba93ab1abf8d5e25af2bc8106f5a85157f032c3b40add1d5929671f76.npz",
+      "size_bytes": 6321
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/04d6832002423caeaa66c85382dcb9514601f5cf48fbed13c00687bcdf6c98a9.npz",
+      "size_bytes": 6349
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/04dcf59709328be1364abfd4b40cee096ae1316c4bc7b158598975709163dee3.npz",
+      "size_bytes": 6355
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/04ef2736fb46879d9395bcd79c3ccdebd3b804382a05e76c2ce1f719195003c9.npz",
+      "size_bytes": 6344
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/05399c466cba0ca2317adf844ac09c6efcc22adb0cf094dbc4827dcc9b494aae.npz",
+      "size_bytes": 6351
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/0550aed4637bb395cd9cfc2ea34f0beacdf4fd6a488308cc3fbb010cf9ef3d1d.npz",
+      "size_bytes": 6353
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/0559191972b669a1e3279f4ac534b8f8588e42987982b09cb03d2f5dc00f688d.npz",
+      "size_bytes": 6345
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/057f3d39a674319cfc3a507bed4f76921ff98a184798e3541e5ff80c7e9cdce9.npz",
+      "size_bytes": 6347
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/064eb6075a6b4a0ea662390c7d3e1444af0d6d98cdbcecb3aeec500217c5bd9c.npz",
+      "size_bytes": 6321
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/065873747a149c016003fe5e014da98f0513605709d764965f23ecc90309197b.npz",
+      "size_bytes": 6357
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/06632d360278429c3993ec6299d07deb0d2b2e1d71d4de20652c8f4ceed1b1e0.npz",
+      "size_bytes": 6345
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/06bb7cebbc763fafdc3270dfd94e5fddf1eb4d9f657ab78cb45c34f00de878f8.npz",
+      "size_bytes": 6345
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/0706e2a889938ad31833eb8fb8083e1f49fedd37b3910d101550381d324c3355.npz",
+      "size_bytes": 6336
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/07328d24ab8021ce183319c7cc7f2b562afb301b638c76b8a2c90cbceb09ab22.npz",
+      "size_bytes": 6320
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/0742c41b9f9f05e9ae980814aea1889d36fade760189f981bf360a5fdfff0783.npz",
+      "size_bytes": 6342
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/08795770c6b355e164ee5914bd35931e8634360f3e79feff33260d17f540ee4f.npz",
+      "size_bytes": 6355
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/08c2257b8d3c5aa3787ab2e53780e802c08fd40719a59c809730d7d072ecaac2.npz",
+      "size_bytes": 6348
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/090eaf5f2e5fb461578630a358bdc6e1327c0d08b1ae144958d80252ee97def1.npz",
+      "size_bytes": 6349
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/097239473e744e7beaa42286b29d2338bb432817c8c71d1978047ea809a4da43.npz",
+      "size_bytes": 6347
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/09948cf00ae3426b547498a256f15ed1d9be353e5aeba598067e37b6755ede0b.npz",
+      "size_bytes": 6345
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/09bbecbad0939295ec32f29e287055e970f4d7366aeb4ad27309b1c426a4f957.npz",
+      "size_bytes": 6340
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/0a8f984ffedb571e8f46b0aed492dd7a1341986104a1e250ca486794c69a0949.npz",
+      "size_bytes": 6340
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/0aa0f7509fc46293caf9868658833c85a07b702ee54b78b057ef16e589723a26.npz",
+      "size_bytes": 6344
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/0aad8b221246754c4ab90d341aa13838b191b029036dfc54f5455c38a82bec31.npz",
+      "size_bytes": 6347
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/0ad52381f9e553e20d3d1e06caa039dc378f0dfa2667824e861ec06337182230.npz",
+      "size_bytes": 6353
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/0b02af14f27aa3581b1d654595a01c701e9288c759dcf604dca108b05d616c9c.npz",
+      "size_bytes": 6350
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/0b589dad8aa2e19d6bf5c249abf36341497a5727ab5ee07b61f15b1c89451e27.npz",
+      "size_bytes": 6313
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/0bd500174deb788863da44005cdfc2ab6eb220a37f6ac0ef866298cd8057fa07.npz",
+      "size_bytes": 6350
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/0c39672b738b11620802e16399baca351ff37dca53e84cba980836b05ad9125e.npz",
+      "size_bytes": 6348
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/0c3f6b2bf705ca8a0284780fc92d25619bbdbbd8f052c2a5ccb50b6eeb81b97b.npz",
+      "size_bytes": 6349
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/0c75c5021a7150e504dd4731cfec176b101abbc8ea1c3fdf9b53d83d501012b6.npz",
+      "size_bytes": 6339
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/0cdc5c9cfa1d9bc5ffba721c80a917da1ae23714081ba0501733594da3cdeb48.npz",
+      "size_bytes": 6340
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/0f2a1039b6d99549490792a8c604321ad0686cc49faa21909a63e3a60ceccd7a.npz",
+      "size_bytes": 6345
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/0f74929852c7166d64492039d044e78d02fa9e18b67c0090abdcc600b7c83669.npz",
+      "size_bytes": 6349
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/0f7d68ad38ae1c305b68cae8bd3fa05bd3304829835d12c71586f0e361ec3f20.npz",
+      "size_bytes": 6348
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/0f9feacf516df87091ee1f1624a2f98b4d7645c306514d45dd351498eb433b8c.npz",
+      "size_bytes": 6349
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/114ee9aca95e32f150aa9ef0205432d5ad799d3ad5d301e86fcff1f596708dc8.npz",
+      "size_bytes": 6354
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/12117e9a7ab81fb229d03a284be0036180157207837d1113d50d2b5ee95ab3c0.npz",
+      "size_bytes": 6353
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/12fae32da208aa58eb1cee866e352dc2735ea5d5030214349e6b8bb7777c9408.npz",
+      "size_bytes": 6343
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/13090eecb086976f3f3a5d65ff1c8908c4444b997bbec4ddfbd4ce56547904c1.npz",
+      "size_bytes": 6339
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/1361fcdbea63743beb03c76ad9c997c815e2658cc5e7ff140456eed705221921.npz",
+      "size_bytes": 6345
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/137ee6ed384d4dcf8b1a13a59601cf29761c833cd86287e315c225e513db232b.npz",
+      "size_bytes": 6347
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/13a016a3160395292ee8329fa47a76899d37dc507cbf68dd3042616007dd29ed.npz",
+      "size_bytes": 6341
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/14aa7f08fb4774abaf36ba3008355fab853e0daca5b70ccfc9b57087cf7dc7ce.npz",
+      "size_bytes": 6346
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/15a6525240e4fb5bc723a7c946669d972cca397afc0d5d429b51ee41a1d7dac2.npz",
+      "size_bytes": 6341
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/15f7f4ca434b4d8cff0eb9c448a75c1c5ff7a5e5a490e6a399a56af49012f252.npz",
+      "size_bytes": 6349
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/1658179cf3031915caafdeee48a62b7238bf5dcea8ddc811e2ac3c13388fa372.npz",
+      "size_bytes": 6351
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/16677f9f5757670eb4a6a4508f3b6b8308be6cca91d6604a91c97277b446e08e.npz",
+      "size_bytes": 6346
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/169901167bd74d501fd478379a8f97479487696fcd780d866210c554074fd229.npz",
+      "size_bytes": 6344
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/16a95671ee12a7949201ddfc76d603f33ae57ddf9db84024ebe393fa8065a176.npz",
+      "size_bytes": 6352
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/174013d68d65dccd0819cf0fe74b5b53ee36abb3a7187bc239e0a1aa3fdc3dde.npz",
+      "size_bytes": 6348
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/17653aa9c95c18dfa5ac806151b6721f25c4192a520307ad00d22708216247a2.npz",
+      "size_bytes": 6343
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/178431b8ac72eb3432c026f61fc67f8090bb3fe9e71cc5f2e4556aef55414757.npz",
+      "size_bytes": 6350
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/17c5c4f83b27525bce5496a769bd2344c41538c0a8ca1bccda25c967f96959e6.npz",
+      "size_bytes": 6321
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/18b4b9da15022429a0f3524cbb49dfddc5561d8a4146ad6787ae82beb854b2b3.npz",
+      "size_bytes": 6322
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/18fafd0c111d07f9f7a39be95f769eda1ed5ef101838e22b4e0892961ffc87c7.npz",
+      "size_bytes": 6342
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/195cba6c84dee5e4dacc6edbffd269340163ba6c7805556160495626b0b2171e.npz",
+      "size_bytes": 6342
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/1a814fa64cc55cb26e23fb8eb1bf70113896bc61f4c4e4ca657f5805731f1de7.npz",
+      "size_bytes": 6344
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/1b20a1da9bd0e5250b44472f85f603496b0ae18abeae81fd397503bb86ab38d1.npz",
+      "size_bytes": 6316
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/1b87429f8a8b6c884929bd23b3f236cb8aa991ffc301bfcc244c6455b6c60bc5.npz",
+      "size_bytes": 6329
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/1bad713fdcdf933cf8204e4bb708c8afcc27c53751fbb128abc1139d89238bb6.npz",
+      "size_bytes": 6343
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/1ccc30b019209fd6ac1ce4769ffd7815279b4c48b1b896a687d7e40793bba9d7.npz",
+      "size_bytes": 6342
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/1d1cddccbe0f3d7147acf6ce20d6fa2ef0cc6d83478af9aac662202c2ce84125.npz",
+      "size_bytes": 6343
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/1e9a5e984d1a2fbc281e3baa39bc5e6cbce177dc81128891b215ba26d2f8e2c6.npz",
+      "size_bytes": 6338
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/1eb4587359375560ee1eef03c095d34b8040bacc6055e11ba8291d5257a9cdcc.npz",
+      "size_bytes": 6322
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/1f456c3e975f3901bcc220c3f8f6d57ff178d35da482a3ad8d47df3f5754b551.npz",
+      "size_bytes": 6348
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/207a8a780a3647dacc00bb1b0166e6c27097363abe56ff6e924357fe4b713344.npz",
+      "size_bytes": 6319
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/20fb1a58412735f78bced60f73a8c0d033350cb7ef31869a326e817cb7bf7433.npz",
+      "size_bytes": 6319
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/2182556db42bd6f3147675f46cd61152f50091970df02c83bc4e48cc8f18fc3d.npz",
+      "size_bytes": 6350
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/2289b8830b8972241764780315245a9e30dbd063b5ff0d09344549046bad8ef2.npz",
+      "size_bytes": 6342
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/2298946894c277391bcb2c66a6bc0a549850c4470a88e8456f28d2764529fbdd.npz",
+      "size_bytes": 6305
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/230dad7a73b64d926781f0406cd0bdbe9ad734b31cde4d5b71943629a07417bf.npz",
+      "size_bytes": 6344
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/24168f3db32fd8fda7ec178e88d276ce4fbf20a2b3b77839a5f671153b0750a6.npz",
+      "size_bytes": 6344
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/24981b0b008bc881f9006a3343abb88f600a751fcb0987de40f529703343e00e.npz",
+      "size_bytes": 6347
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/24f4954beea97e240b98af1e21c4d83557d9fa343714386044621c57f9e01fb4.npz",
+      "size_bytes": 6318
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/25549c3b738fdebd0b4ae741f149eb2c458b88c51f855f1085d647df2c295c33.npz",
+      "size_bytes": 6320
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/25ae38578249c65075184534b588de095800c187d513893539c4ff7a71a1ebd0.npz",
+      "size_bytes": 6336
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/26bfb2c448736c476a67f583427d7840801c5363e40a125f7d8f917ed8e3ee9d.npz",
+      "size_bytes": 6354
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/285cbb0cb1886cb2cf6a7c67b93cb61173b6c8819ef35dbfcf48266c3a70bf1f.npz",
+      "size_bytes": 6343
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/293506e8b5d98cb8ea835768048834e200c0c738d26fc876b7bcc22329ee6086.npz",
+      "size_bytes": 6318
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/2958ee4ac622ed8fb667199a54dfbd9583e2edbb2987a6ba0ffa220e7a3bc1db.npz",
+      "size_bytes": 6355
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/29b5cc005d2ef82f82b0bcb378cf47605860ea38c27e111ea4b153d588134203.npz",
+      "size_bytes": 6348
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/2a8d0fd0ee7cccb48b953ce679c2d3adfc1e12121c1ec59db685a66d8311e548.npz",
+      "size_bytes": 6337
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/2ad2ff1abc0d5c83a2ca9dc7c98ef9f66e9e95479162d4599247736e7f67e4a7.npz",
+      "size_bytes": 6332
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/2bd017be79070c53b8ef1ec9e0d2d8be536a422de8bb5befaf44cc7fb03ff5c0.npz",
+      "size_bytes": 6345
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/2c7e190a21a78dc367dbfd051dd6aafcd318a1f4dd8210093eaa1f31027dd454.npz",
+      "size_bytes": 6321
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/2cf4cd4b95525bbd069038c3372ab1f687060e0ebd4ee30d0da0be6718f53129.npz",
+      "size_bytes": 6353
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/2d0b03a1cf9f7c3f75a5d66661e40d43d9f84a59227b9f54b35cf1a1ad29f7a3.npz",
+      "size_bytes": 6341
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/2f1a44e692c30ac1f256d6d709afd98cb5f7cff06f53c6f27b7f25ce2b640edf.npz",
+      "size_bytes": 6347
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/2fe5eaa114c12030f48e1c8949f6fd104c0019adff06094034ec8c2bb2074c43.npz",
+      "size_bytes": 6343
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/31535d50d642c9056fc29ac5be8fd27db4072c8ca80cc7593a658f9327b5814d.npz",
+      "size_bytes": 6316
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/3202c7f66a05222948f490cdd8b19071cd8869d0b5b91ceadeab8a2dcddd0675.npz",
+      "size_bytes": 6342
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/336ab4afcb7767251bea9633d9d6e6164692de23d825351ff878d6d678ed26e3.npz",
+      "size_bytes": 6357
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/338313998e89d42b7f9ee9adc91fcd5c4805c3f1e77ec8d7a3e2937f30cb94d3.npz",
+      "size_bytes": 6349
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/33af161aec8a2b9234acbe8765d3a3109d57549e74a3b470170d709104627c2b.npz",
+      "size_bytes": 6318
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/34618909d1d105ac54313a99d105200d1257641a3c12ccd2e7a19cb004c8c6a1.npz",
+      "size_bytes": 6324
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/34b6064ed09d61e1601adb0ece9d4996c66d03834bdb830e482b581980cb2fe7.npz",
+      "size_bytes": 6359
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/35168f2e9d29341748190fe31d0fce1fc107757d4d01ed79f8f0c05fff894630.npz",
+      "size_bytes": 6319
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/357ce5a5b0b67f9904e6cdf8b983452431511ee42e617c4897bff98021db31dd.npz",
+      "size_bytes": 6327
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/35f1b2bca790b89a8077de1b31a5b720d3ae1da6db96632d54f2b3bb3f1801cf.npz",
+      "size_bytes": 6345
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/3693c0f8309a027cce66b6684b6bd8b30500f134b3acaedfd68077a3c9026d31.npz",
+      "size_bytes": 6353
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/385910d01a79ab8eb69ed4cf54aeae649b3a117f0057fb2bc82529001d421f83.npz",
+      "size_bytes": 6326
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/3a0d231d4f3e2bfbd2fa18230e84d516dc5b4065871e0c485b000868f0fcd3d1.npz",
+      "size_bytes": 6311
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/3c1467dc076c0b12c674665a1e9633f485e6f9d020bcdbad973a994ce57c0755.npz",
+      "size_bytes": 6348
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/3c4b049936f4ec9938a79769fcfb97f4a004b4b7615a922801c0630b4152b52f.npz",
+      "size_bytes": 6321
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/3cd39b221491bb8e3176873c503c5f57d65395964fdb29f489b1f347072a544f.npz",
+      "size_bytes": 6328
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/3d80eafd2987dce2b7b70ccaaf4ee31593ed2910d657c3d98ffc816498af1b3f.npz",
+      "size_bytes": 6315
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/41194f4b11bb85bd2ba7386f6ae5bfbdc4f40ae7c71685a30d5b105ce02f1ffa.npz",
+      "size_bytes": 6351
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/42a68e8a994dacccbd876e04d4f1f747c5288e3bebe5904a3b26268db137916d.npz",
+      "size_bytes": 6318
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/42dac1d987dd891512c19516dac7801092116ae155ff32312bd62c638c414404.npz",
+      "size_bytes": 6351
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/43ef812236570cb57f9ca1b9b0d524f57362231357cd554862117564f5d2efa1.npz",
+      "size_bytes": 6358
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/43fefe10be14217c935c8e79054595a3b5061ac8a129a05a4fc7511fe32ef38d.npz",
+      "size_bytes": 6346
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/449a25306e197d5c077b9b6acfffff2dcba1f98d4b3888bce47a836cef328ea6.npz",
+      "size_bytes": 6351
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/45089d4206f37d66cdb328934b7b8f3483322bcbaee45be559ae1b8015f1c240.npz",
+      "size_bytes": 6342
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/4621480b5b73c3ec33b99a9f3a21e22f726ac859963ead0476aae030573b4f1e.npz",
+      "size_bytes": 6350
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/46506a46ffb7b2a7134876a4b57ae7a17aefe689dd8c8d1bfc33d6452d82fea3.npz",
+      "size_bytes": 6319
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/47d2ae8dc2857a4db6ae5dd11880ca93dc2aad94012074b7e7692db8402af2ca.npz",
+      "size_bytes": 6316
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/483dbedffd9ebc97372381d5db1a4bfd32509e17ea7f1db81e539f38036f2718.npz",
+      "size_bytes": 6341
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/48465fc09749e456b4f131759c2b41912ef1839e96972a9df2451add719a52de.npz",
+      "size_bytes": 6349
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/4976de09c494f7cc9fc8e5950195123f75fbbca9ffeab801599f808120390ebc.npz",
+      "size_bytes": 6341
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/4a07340128fba1780e135b084b006b996848071d3989f81656ab2ae431a72fb5.npz",
+      "size_bytes": 6340
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/4a3febb232e807c18ce1b3dae63f9cc2e4983fa6ac2cf87984ec631eda603eb1.npz",
+      "size_bytes": 6316
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/4a5f4b082b0a655cfd10113d134dbb24152a282b60c289e204892bcf0df9a2b3.npz",
+      "size_bytes": 6310
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/4b2e7f0498e2081e116c88942d1710bb08dec8c6aa02522f12ffbb721f92e9fa.npz",
+      "size_bytes": 6318
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/512b70fd3b413510d397a6fa5308f414aac64c7a671e01e27ba782c589e05637.npz",
+      "size_bytes": 6342
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/521dca883ce4b49df38dbd06b37a4d9aeaac81608918f814284df2811fa93d71.npz",
+      "size_bytes": 6317
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/523a01045692434dad22f51b4179606474db08b67563eeb8f128e93810b5f44c.npz",
+      "size_bytes": 6328
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/52e51076fa53356fa87976ae46839a4176ec5fa0c33c9339aa969a9c8bcb6ed1.npz",
+      "size_bytes": 6340
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/53411d3b120a52494e10d600367455a3a19c99e82a1b75f8dbbf79612f2e6e2d.npz",
+      "size_bytes": 6322
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/552700d1213132f20fd5469909534baf0ef93fb984d1925bf579f70092920bc6.npz",
+      "size_bytes": 6320
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/559ef03ad6afb5f3fab03107cc390eb56ed2b398514b276a0dc04a18a25c1b3c.npz",
+      "size_bytes": 6321
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/5c546318db2d13375dbce20e9f58545410343c246936523d8462d48441343d01.npz",
+      "size_bytes": 6314
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/5d69cebcfc88fbf19ff778e250579848a7ad03e2f3fe5d1e6b1b1e9bc66590c8.npz",
+      "size_bytes": 6308
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/5f453cd8515a55cee26ca52a8cb5e736ce22a8e4dfb41d4e49f174695996388f.npz",
+      "size_bytes": 6314
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/63f62455c73113a185ae41da29c73e870bc44d2885c52bf7df11ac96cb3ad923.npz",
+      "size_bytes": 6314
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/6d8b904f3a79595758a2b1c814a305ab0598e2a8fb1016d05d220f990718b066.npz",
+      "size_bytes": 6315
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/6ed93966ff975329ee32ce44df0d80491b6c880114ddee440f15bfa0bf69a851.npz",
+      "size_bytes": 6313
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/70ef688aa78add09e9dc3c5dc76a77148d78d144e713710ae6bacec76e9605fc.npz",
+      "size_bytes": 6314
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/7b2c32c62e1452910ce7e1dcd1d8e177d62d5f814a0aa6bdc44c16a4259f210c.npz",
+      "size_bytes": 6303
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/7be6309ee4fefbd8587380ac81c02de0d2e21a35bd52491a293dd501184fe73a.npz",
+      "size_bytes": 6323
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/7e0196f32202823e7cf575458f540e83b9c38ac3d5ffb70d9c479d75b75176b7.npz",
+      "size_bytes": 6309
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/823c253a9b4602e64d2fd9879fbc73ace9b9ee47d38d43ed51e2f2cfaeb1cd28.npz",
+      "size_bytes": 6326
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/834c52b192e25d389d29564d07e3bd9dd31a6c3d7cd524a661d753838957e7d8.npz",
+      "size_bytes": 6317
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/83f2995e6289b0aabc08b0962e7c35d65d61ae50ac6d4f645ac261906500f01a.npz",
+      "size_bytes": 6322
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/85a3556462cb3f59247ee8862b56f6254ad30e806837f1d1de7eb4d0f7f3b035.npz",
+      "size_bytes": 6317
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/85f67975b8449e5da88c44a923c68e39ec8aebdf2a4725c43ef4e872d0bc92de.npz",
+      "size_bytes": 6320
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/8861f9bee2b2bb59c34499f6b4c86c6581e5209360053d867350e00234289819.npz",
+      "size_bytes": 6312
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/8bf49978d9245d70a3987ea2004be648e52441c9b8743c7125dd7c9dff94536f.npz",
+      "size_bytes": 6321
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/a1acba12f6bb6a99d0bf93385cc81e368f0f50482cd024ef079553935ef781bf.npz",
+      "size_bytes": 6313
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/ad2d5dc55d5f5f37089e66e2ecd33bd022a1f70aec6867229726077672d9a0e8.npz",
+      "size_bytes": 6311
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/b36206f4501574985cef00eace388b8bd26943e1294c8b60976a4bb8989b6d42.npz",
+      "size_bytes": 6311
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/b7a347b448027fad3115fb494c03e652cf16c1cab8f8e9d9292ec0eea7f99405.npz",
+      "size_bytes": 6325
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/c33e722a9b8c94999d3c2925eb1d6599984d67a9f4a4786a1a702d39df15a28b.npz",
+      "size_bytes": 6320
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/cac58199cbf22df8c5f18caece6e0dfe6179f41ad8b8ec7a73fbea5da37090d0.npz",
+      "size_bytes": 6324
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/d0da40f92431a9eb41da31b279fad038771ef65363d4119695b9d5b05e9473ca.npz",
+      "size_bytes": 6320
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/d384e5054fcf87dae1b465ffd7d6eea57b025d3d25fa94fe9f4a1be4b33f9870.npz",
+      "size_bytes": 6315
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/d4c167710d59c8af91ea419d236053f7fa020a56819156896c6f85bd532eabde.npz",
+      "size_bytes": 6315
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/dd24d086a547385acaf26b96c38db1d979f01e41d8dee051c47c42e4f99ec806.npz",
+      "size_bytes": 6327
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/de7707e957332315b22dc5306f9bc259ff28da40e8c7570e7ac0736207626747.npz",
+      "size_bytes": 6315
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/e58dd74c73d6785ec8eb3cc9766c6782b59ace426ece3d731281f7b2677aee6e.npz",
+      "size_bytes": 6314
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/e938152f4eccbe3ee8afe5262701f0c7265bc977638592e649d6709ddba690c6.npz",
+      "size_bytes": 6317
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/f670a0c1e0c700e4746b325f5b64c23d0def27946f95856e9934ce39ac909454.npz",
+      "size_bytes": 6323
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/frozen_trial_ids.json",
+      "size_bytes": 97667
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/state_manifest.jsonl",
+      "size_bytes": 78284
+    },
+    {
+      "path": "outputs/phase2CM/frozen_release_states/state_manifest.jsonl.lock",
+      "size_bytes": 1
+    },
+    {
+      "path": "outputs/phase2CM/model_isolation.json",
+      "size_bytes": 22118
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/candidate_results.jsonl",
+      "size_bytes": 610300
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/candidate_results.jsonl.lock",
+      "size_bytes": 1
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/summary.json",
+      "size_bytes": 17871
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/0018a96938210bfdd60d22fc6180295c1a7b1a1ead6b0313cbf78feaf5266eca.npz",
+      "size_bytes": 32376
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/003a887ef798209b5977a76997b086abfdb7c48d28c85656650e1008846cda84.npz",
+      "size_bytes": 18532
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/005a6cea3647ed47e1c4ad880238367e8053015f2a71fc3ddcff2de62b093484.npz",
+      "size_bytes": 29051
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/00b5aeb09b5eb8b28c26270edfa4f0c4f6cec74a9a94a248ae143dd0170c6106.npz",
+      "size_bytes": 32735
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/00b6771d10542c28233a1ba0ac062f882b56098ad1dd24a9391e8aadedf7b0b7.npz",
+      "size_bytes": 17692
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/00bdd0eecba1b55e5364bd76cbb01c8dda6846dad2f5ae507ab4ac3b1d7b27cd.npz",
+      "size_bytes": 41474
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/00da167669541dcc991ceb79dcd125baeddf02ed7045a79ad3764ce5ca1bf69c.npz",
+      "size_bytes": 36871
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/00fbc6cf4cdc6198b927773926cd7056128aa0d47309d036806e1f267d635fa3.npz",
+      "size_bytes": 41518
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/01028cc313fbfd3ee3b46d06fd2be16d4174170a29297255cb24e26d11bcf617.npz",
+      "size_bytes": 29602
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/0109f8b238de2936d0d906e3b1f1cf09fa87f7d40f14214136ef089db12213c6.npz",
+      "size_bytes": 39992
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/010cf117b831c09498bfcb5c6ee8f5d5c1928c5e2d51f41bd50288489d46bace.npz",
+      "size_bytes": 30387
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/014acf4457d52e796762abe207e4c5f7534536eb484a6c1ec04988fb6d4f152b.npz",
+      "size_bytes": 29487
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/01582ccc960371b2141771b991f9ab00c72905ba6cfde5e9871336bf28027e19.npz",
+      "size_bytes": 41358
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/01586fd583eb96f965ff20e7abaf7cf667f8cab5d549b97afcf78a8591b50fb7.npz",
+      "size_bytes": 28536
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/015a2e2bdad76f461a4767ae4fd13de2c5fb7b46bc2dc17572b470e1266c89b8.npz",
+      "size_bytes": 19440
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/017a7dfe4dc29d447e8b35325266d6e3c35f985099e54b4ed93854d9eff76b5c.npz",
+      "size_bytes": 31738
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/01860decbd8c905927982be908254f6d8f066478c9b9ca105eb8114ef19062f4.npz",
+      "size_bytes": 41720
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/0189729bdbbea5710cebc4c9c9c3177c8e5bc5f1cea61de2adba0ede33f79364.npz",
+      "size_bytes": 19372
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/01b44e645392580c9e217423271c7422d5bea7334e6169d85f0ba63fe0b95682.npz",
+      "size_bytes": 18822
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/01d69a03edb1cb93f46bf589f1bf7aead97f65400bec65c4e80a0c18be76e359.npz",
+      "size_bytes": 18384
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/01ecf22a59ec5dd8523da08a2d2b76d3d2773311f59b1c7af89f39cc3573fce6.npz",
+      "size_bytes": 39801
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/020d40792e27803ba513aab96e410dd2957612259731db784d9dd1b5e0c5b570.npz",
+      "size_bytes": 18819
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/02359415831038a9097ff79f733acc0eaed4d13433afb3619fc37405c308866c.npz",
+      "size_bytes": 39848
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/02614804b9995706e8158ea074c8aac34e6957b30453d9775954c92dbe3c8293.npz",
+      "size_bytes": 29585
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/02a467e5a9740db58626eabf6084a12cb00037618f4f3538c54b9fc6c819fb38.npz",
+      "size_bytes": 40202
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/02bb7527391d3fc2b2ee14460b561ead155bb05b9c17bd8f8e2e5509bca63e0c.npz",
+      "size_bytes": 41786
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/031d007baed95a046eafaa6e2fed981edffa641fd94c407ebe6e033e2f5fa6e7.npz",
+      "size_bytes": 18753
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/032e8e2a8e0d86b816ce6ad81a72fdea445c8f841dced559a2f48b23e8edf3b5.npz",
+      "size_bytes": 29038
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/036510bcea008a7c7f801a8e93cf81720fb40c1fa30f7aa89428c97b0cd78baa.npz",
+      "size_bytes": 28470
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/036fd992d44177c99d707a7c213b339c4a87bbb5a71131fa8c0e25d8d0a71521.npz",
+      "size_bytes": 41231
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/03782034e63438a36f3580bf256142c639775dcef009850e562917f176c80fe7.npz",
+      "size_bytes": 29825
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/03ae58beee1702ee57449b04236e8dd64ef2391482eb8ec458f991949b955858.npz",
+      "size_bytes": 32880
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/03b0ffe6000a8610e93490c02af1e421221b65cb2f2cd220f3e70e882415f7c0.npz",
+      "size_bytes": 38514
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/042c0d069fe47b4e59691d8a8613f5e73058ce3a25349d1d2dcfc742f6197aba.npz",
+      "size_bytes": 41120
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/0455dec2e24a29fd915bebab33455df565c0d7278cf62ac05e0c532a33286c69.npz",
+      "size_bytes": 30863
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/0490eae555783b291057034831a22310c6e2f97e060ec4068c2fb9c0e726fcbc.npz",
+      "size_bytes": 36418
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/04b89fa053ed105d412ee3fbcac02264168590c51675be84bbcd028becadceaf.npz",
+      "size_bytes": 18836
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/04b8db21ca5e1fe8dbfdfbec0ba295c390fd78d46cd62a1edfff28da23fa317b.npz",
+      "size_bytes": 28735
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/04c7eecba93ab1abf8d5e25af2bc8106f5a85157f032c3b40add1d5929671f76.npz",
+      "size_bytes": 34814
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/04d6832002423caeaa66c85382dcb9514601f5cf48fbed13c00687bcdf6c98a9.npz",
+      "size_bytes": 18616
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/04dcf59709328be1364abfd4b40cee096ae1316c4bc7b158598975709163dee3.npz",
+      "size_bytes": 32068
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/04ef2736fb46879d9395bcd79c3ccdebd3b804382a05e76c2ce1f719195003c9.npz",
+      "size_bytes": 30191
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/05399c466cba0ca2317adf844ac09c6efcc22adb0cf094dbc4827dcc9b494aae.npz",
+      "size_bytes": 29331
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/0550aed4637bb395cd9cfc2ea34f0beacdf4fd6a488308cc3fbb010cf9ef3d1d.npz",
+      "size_bytes": 19898
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/0559191972b669a1e3279f4ac534b8f8588e42987982b09cb03d2f5dc00f688d.npz",
+      "size_bytes": 18739
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/057f3d39a674319cfc3a507bed4f76921ff98a184798e3541e5ff80c7e9cdce9.npz",
+      "size_bytes": 29987
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/064eb6075a6b4a0ea662390c7d3e1444af0d6d98cdbcecb3aeec500217c5bd9c.npz",
+      "size_bytes": 19828
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/065873747a149c016003fe5e014da98f0513605709d764965f23ecc90309197b.npz",
+      "size_bytes": 31575
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/06632d360278429c3993ec6299d07deb0d2b2e1d71d4de20652c8f4ceed1b1e0.npz",
+      "size_bytes": 34909
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/06bb7cebbc763fafdc3270dfd94e5fddf1eb4d9f657ab78cb45c34f00de878f8.npz",
+      "size_bytes": 30088
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/0706e2a889938ad31833eb8fb8083e1f49fedd37b3910d101550381d324c3355.npz",
+      "size_bytes": 22501
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/07328d24ab8021ce183319c7cc7f2b562afb301b638c76b8a2c90cbceb09ab22.npz",
+      "size_bytes": 18989
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/0742c41b9f9f05e9ae980814aea1889d36fade760189f981bf360a5fdfff0783.npz",
+      "size_bytes": 30210
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/08795770c6b355e164ee5914bd35931e8634360f3e79feff33260d17f540ee4f.npz",
+      "size_bytes": 20513
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/08c2257b8d3c5aa3787ab2e53780e802c08fd40719a59c809730d7d072ecaac2.npz",
+      "size_bytes": 41903
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/090eaf5f2e5fb461578630a358bdc6e1327c0d08b1ae144958d80252ee97def1.npz",
+      "size_bytes": 19105
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/097239473e744e7beaa42286b29d2338bb432817c8c71d1978047ea809a4da43.npz",
+      "size_bytes": 19154
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/09948cf00ae3426b547498a256f15ed1d9be353e5aeba598067e37b6755ede0b.npz",
+      "size_bytes": 40241
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/09bbecbad0939295ec32f29e287055e970f4d7366aeb4ad27309b1c426a4f957.npz",
+      "size_bytes": 40335
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/0a8f984ffedb571e8f46b0aed492dd7a1341986104a1e250ca486794c69a0949.npz",
+      "size_bytes": 41579
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/0aa0f7509fc46293caf9868658833c85a07b702ee54b78b057ef16e589723a26.npz",
+      "size_bytes": 19173
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/0aad8b221246754c4ab90d341aa13838b191b029036dfc54f5455c38a82bec31.npz",
+      "size_bytes": 40819
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/0ad52381f9e553e20d3d1e06caa039dc378f0dfa2667824e861ec06337182230.npz",
+      "size_bytes": 37316
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/0b02af14f27aa3581b1d654595a01c701e9288c759dcf604dca108b05d616c9c.npz",
+      "size_bytes": 39564
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/0b589dad8aa2e19d6bf5c249abf36341497a5727ab5ee07b61f15b1c89451e27.npz",
+      "size_bytes": 21306
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/0bd500174deb788863da44005cdfc2ab6eb220a37f6ac0ef866298cd8057fa07.npz",
+      "size_bytes": 19547
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/0c39672b738b11620802e16399baca351ff37dca53e84cba980836b05ad9125e.npz",
+      "size_bytes": 33340
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/0c3f6b2bf705ca8a0284780fc92d25619bbdbbd8f052c2a5ccb50b6eeb81b97b.npz",
+      "size_bytes": 37234
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/0c75c5021a7150e504dd4731cfec176b101abbc8ea1c3fdf9b53d83d501012b6.npz",
+      "size_bytes": 18101
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/0cdc5c9cfa1d9bc5ffba721c80a917da1ae23714081ba0501733594da3cdeb48.npz",
+      "size_bytes": 39954
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/0f2a1039b6d99549490792a8c604321ad0686cc49faa21909a63e3a60ceccd7a.npz",
+      "size_bytes": 41430
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/0f74929852c7166d64492039d044e78d02fa9e18b67c0090abdcc600b7c83669.npz",
+      "size_bytes": 35560
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/0f7d68ad38ae1c305b68cae8bd3fa05bd3304829835d12c71586f0e361ec3f20.npz",
+      "size_bytes": 18141
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/0f9feacf516df87091ee1f1624a2f98b4d7645c306514d45dd351498eb433b8c.npz",
+      "size_bytes": 40840
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/114ee9aca95e32f150aa9ef0205432d5ad799d3ad5d301e86fcff1f596708dc8.npz",
+      "size_bytes": 18551
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/12117e9a7ab81fb229d03a284be0036180157207837d1113d50d2b5ee95ab3c0.npz",
+      "size_bytes": 19282
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/12fae32da208aa58eb1cee866e352dc2735ea5d5030214349e6b8bb7777c9408.npz",
+      "size_bytes": 41602
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/13090eecb086976f3f3a5d65ff1c8908c4444b997bbec4ddfbd4ce56547904c1.npz",
+      "size_bytes": 20358
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/1361fcdbea63743beb03c76ad9c997c815e2658cc5e7ff140456eed705221921.npz",
+      "size_bytes": 19216
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/137ee6ed384d4dcf8b1a13a59601cf29761c833cd86287e315c225e513db232b.npz",
+      "size_bytes": 18056
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/13a016a3160395292ee8329fa47a76899d37dc507cbf68dd3042616007dd29ed.npz",
+      "size_bytes": 18486
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/14aa7f08fb4774abaf36ba3008355fab853e0daca5b70ccfc9b57087cf7dc7ce.npz",
+      "size_bytes": 18976
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/15a6525240e4fb5bc723a7c946669d972cca397afc0d5d429b51ee41a1d7dac2.npz",
+      "size_bytes": 18121
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/15f7f4ca434b4d8cff0eb9c448a75c1c5ff7a5e5a490e6a399a56af49012f252.npz",
+      "size_bytes": 28933
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/1658179cf3031915caafdeee48a62b7238bf5dcea8ddc811e2ac3c13388fa372.npz",
+      "size_bytes": 17958
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/16677f9f5757670eb4a6a4508f3b6b8308be6cca91d6604a91c97277b446e08e.npz",
+      "size_bytes": 38732
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/169901167bd74d501fd478379a8f97479487696fcd780d866210c554074fd229.npz",
+      "size_bytes": 27161
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/16a95671ee12a7949201ddfc76d603f33ae57ddf9db84024ebe393fa8065a176.npz",
+      "size_bytes": 18274
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/174013d68d65dccd0819cf0fe74b5b53ee36abb3a7187bc239e0a1aa3fdc3dde.npz",
+      "size_bytes": 18838
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/17653aa9c95c18dfa5ac806151b6721f25c4192a520307ad00d22708216247a2.npz",
+      "size_bytes": 17332
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/178431b8ac72eb3432c026f61fc67f8090bb3fe9e71cc5f2e4556aef55414757.npz",
+      "size_bytes": 41065
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/17c5c4f83b27525bce5496a769bd2344c41538c0a8ca1bccda25c967f96959e6.npz",
+      "size_bytes": 30611
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/18b4b9da15022429a0f3524cbb49dfddc5561d8a4146ad6787ae82beb854b2b3.npz",
+      "size_bytes": 20384
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/18fafd0c111d07f9f7a39be95f769eda1ed5ef101838e22b4e0892961ffc87c7.npz",
+      "size_bytes": 17964
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/195cba6c84dee5e4dacc6edbffd269340163ba6c7805556160495626b0b2171e.npz",
+      "size_bytes": 24691
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/1a814fa64cc55cb26e23fb8eb1bf70113896bc61f4c4e4ca657f5805731f1de7.npz",
+      "size_bytes": 21927
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/1b20a1da9bd0e5250b44472f85f603496b0ae18abeae81fd397503bb86ab38d1.npz",
+      "size_bytes": 30714
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/1b87429f8a8b6c884929bd23b3f236cb8aa991ffc301bfcc244c6455b6c60bc5.npz",
+      "size_bytes": 40271
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/1bad713fdcdf933cf8204e4bb708c8afcc27c53751fbb128abc1139d89238bb6.npz",
+      "size_bytes": 18639
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/1ccc30b019209fd6ac1ce4769ffd7815279b4c48b1b896a687d7e40793bba9d7.npz",
+      "size_bytes": 40814
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/1d1cddccbe0f3d7147acf6ce20d6fa2ef0cc6d83478af9aac662202c2ce84125.npz",
+      "size_bytes": 23510
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/1e9a5e984d1a2fbc281e3baa39bc5e6cbce177dc81128891b215ba26d2f8e2c6.npz",
+      "size_bytes": 19006
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/1eb4587359375560ee1eef03c095d34b8040bacc6055e11ba8291d5257a9cdcc.npz",
+      "size_bytes": 21587
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/1f456c3e975f3901bcc220c3f8f6d57ff178d35da482a3ad8d47df3f5754b551.npz",
+      "size_bytes": 40959
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/207a8a780a3647dacc00bb1b0166e6c27097363abe56ff6e924357fe4b713344.npz",
+      "size_bytes": 25998
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/20fb1a58412735f78bced60f73a8c0d033350cb7ef31869a326e817cb7bf7433.npz",
+      "size_bytes": 22317
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/2182556db42bd6f3147675f46cd61152f50091970df02c83bc4e48cc8f18fc3d.npz",
+      "size_bytes": 38678
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/2289b8830b8972241764780315245a9e30dbd063b5ff0d09344549046bad8ef2.npz",
+      "size_bytes": 29491
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/2298946894c277391bcb2c66a6bc0a549850c4470a88e8456f28d2764529fbdd.npz",
+      "size_bytes": 30933
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/230dad7a73b64d926781f0406cd0bdbe9ad734b31cde4d5b71943629a07417bf.npz",
+      "size_bytes": 33622
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/24168f3db32fd8fda7ec178e88d276ce4fbf20a2b3b77839a5f671153b0750a6.npz",
+      "size_bytes": 19592
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/24981b0b008bc881f9006a3343abb88f600a751fcb0987de40f529703343e00e.npz",
+      "size_bytes": 18622
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/24f4954beea97e240b98af1e21c4d83557d9fa343714386044621c57f9e01fb4.npz",
+      "size_bytes": 41271
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/25549c3b738fdebd0b4ae741f149eb2c458b88c51f855f1085d647df2c295c33.npz",
+      "size_bytes": 33205
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/25ae38578249c65075184534b588de095800c187d513893539c4ff7a71a1ebd0.npz",
+      "size_bytes": 28878
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/26bfb2c448736c476a67f583427d7840801c5363e40a125f7d8f917ed8e3ee9d.npz",
+      "size_bytes": 41133
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/285cbb0cb1886cb2cf6a7c67b93cb61173b6c8819ef35dbfcf48266c3a70bf1f.npz",
+      "size_bytes": 18694
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/293506e8b5d98cb8ea835768048834e200c0c738d26fc876b7bcc22329ee6086.npz",
+      "size_bytes": 21131
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/2958ee4ac622ed8fb667199a54dfbd9583e2edbb2987a6ba0ffa220e7a3bc1db.npz",
+      "size_bytes": 35513
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/29b5cc005d2ef82f82b0bcb378cf47605860ea38c27e111ea4b153d588134203.npz",
+      "size_bytes": 20601
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/2a8d0fd0ee7cccb48b953ce679c2d3adfc1e12121c1ec59db685a66d8311e548.npz",
+      "size_bytes": 18604
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/2ad2ff1abc0d5c83a2ca9dc7c98ef9f66e9e95479162d4599247736e7f67e4a7.npz",
+      "size_bytes": 30085
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/2bd017be79070c53b8ef1ec9e0d2d8be536a422de8bb5befaf44cc7fb03ff5c0.npz",
+      "size_bytes": 19759
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/2c7e190a21a78dc367dbfd051dd6aafcd318a1f4dd8210093eaa1f31027dd454.npz",
+      "size_bytes": 20660
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/2cf4cd4b95525bbd069038c3372ab1f687060e0ebd4ee30d0da0be6718f53129.npz",
+      "size_bytes": 39661
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/2d0b03a1cf9f7c3f75a5d66661e40d43d9f84a59227b9f54b35cf1a1ad29f7a3.npz",
+      "size_bytes": 17686
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/2f1a44e692c30ac1f256d6d709afd98cb5f7cff06f53c6f27b7f25ce2b640edf.npz",
+      "size_bytes": 18223
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/2fe5eaa114c12030f48e1c8949f6fd104c0019adff06094034ec8c2bb2074c43.npz",
+      "size_bytes": 22509
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/31535d50d642c9056fc29ac5be8fd27db4072c8ca80cc7593a658f9327b5814d.npz",
+      "size_bytes": 41333
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/3202c7f66a05222948f490cdd8b19071cd8869d0b5b91ceadeab8a2dcddd0675.npz",
+      "size_bytes": 41269
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/336ab4afcb7767251bea9633d9d6e6164692de23d825351ff878d6d678ed26e3.npz",
+      "size_bytes": 41737
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/338313998e89d42b7f9ee9adc91fcd5c4805c3f1e77ec8d7a3e2937f30cb94d3.npz",
+      "size_bytes": 40880
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/33af161aec8a2b9234acbe8765d3a3109d57549e74a3b470170d709104627c2b.npz",
+      "size_bytes": 29193
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/34618909d1d105ac54313a99d105200d1257641a3c12ccd2e7a19cb004c8c6a1.npz",
+      "size_bytes": 29142
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/34b6064ed09d61e1601adb0ece9d4996c66d03834bdb830e482b581980cb2fe7.npz",
+      "size_bytes": 18680
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/35168f2e9d29341748190fe31d0fce1fc107757d4d01ed79f8f0c05fff894630.npz",
+      "size_bytes": 29069
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/357ce5a5b0b67f9904e6cdf8b983452431511ee42e617c4897bff98021db31dd.npz",
+      "size_bytes": 18914
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/35f1b2bca790b89a8077de1b31a5b720d3ae1da6db96632d54f2b3bb3f1801cf.npz",
+      "size_bytes": 37250
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/3693c0f8309a027cce66b6684b6bd8b30500f134b3acaedfd68077a3c9026d31.npz",
+      "size_bytes": 41357
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/385910d01a79ab8eb69ed4cf54aeae649b3a117f0057fb2bc82529001d421f83.npz",
+      "size_bytes": 18403
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/3a0d231d4f3e2bfbd2fa18230e84d516dc5b4065871e0c485b000868f0fcd3d1.npz",
+      "size_bytes": 41057
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/3c1467dc076c0b12c674665a1e9633f485e6f9d020bcdbad973a994ce57c0755.npz",
+      "size_bytes": 40859
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/3c4b049936f4ec9938a79769fcfb97f4a004b4b7615a922801c0630b4152b52f.npz",
+      "size_bytes": 26932
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/3cd39b221491bb8e3176873c503c5f57d65395964fdb29f489b1f347072a544f.npz",
+      "size_bytes": 18525
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/3d80eafd2987dce2b7b70ccaaf4ee31593ed2910d657c3d98ffc816498af1b3f.npz",
+      "size_bytes": 40912
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/41194f4b11bb85bd2ba7386f6ae5bfbdc4f40ae7c71685a30d5b105ce02f1ffa.npz",
+      "size_bytes": 40790
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/42a68e8a994dacccbd876e04d4f1f747c5288e3bebe5904a3b26268db137916d.npz",
+      "size_bytes": 30035
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/42dac1d987dd891512c19516dac7801092116ae155ff32312bd62c638c414404.npz",
+      "size_bytes": 38746
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/43ef812236570cb57f9ca1b9b0d524f57362231357cd554862117564f5d2efa1.npz",
+      "size_bytes": 22068
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/43fefe10be14217c935c8e79054595a3b5061ac8a129a05a4fc7511fe32ef38d.npz",
+      "size_bytes": 29915
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/449a25306e197d5c077b9b6acfffff2dcba1f98d4b3888bce47a836cef328ea6.npz",
+      "size_bytes": 40267
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/45089d4206f37d66cdb328934b7b8f3483322bcbaee45be559ae1b8015f1c240.npz",
+      "size_bytes": 41015
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/4621480b5b73c3ec33b99a9f3a21e22f726ac859963ead0476aae030573b4f1e.npz",
+      "size_bytes": 40864
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/46506a46ffb7b2a7134876a4b57ae7a17aefe689dd8c8d1bfc33d6452d82fea3.npz",
+      "size_bytes": 40461
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/47d2ae8dc2857a4db6ae5dd11880ca93dc2aad94012074b7e7692db8402af2ca.npz",
+      "size_bytes": 22582
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/483dbedffd9ebc97372381d5db1a4bfd32509e17ea7f1db81e539f38036f2718.npz",
+      "size_bytes": 19509
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/48465fc09749e456b4f131759c2b41912ef1839e96972a9df2451add719a52de.npz",
+      "size_bytes": 41215
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/4976de09c494f7cc9fc8e5950195123f75fbbca9ffeab801599f808120390ebc.npz",
+      "size_bytes": 40702
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/4a07340128fba1780e135b084b006b996848071d3989f81656ab2ae431a72fb5.npz",
+      "size_bytes": 18309
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/4a3febb232e807c18ce1b3dae63f9cc2e4983fa6ac2cf87984ec631eda603eb1.npz",
+      "size_bytes": 31313
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/4a5f4b082b0a655cfd10113d134dbb24152a282b60c289e204892bcf0df9a2b3.npz",
+      "size_bytes": 28125
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/4b2e7f0498e2081e116c88942d1710bb08dec8c6aa02522f12ffbb721f92e9fa.npz",
+      "size_bytes": 18944
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/512b70fd3b413510d397a6fa5308f414aac64c7a671e01e27ba782c589e05637.npz",
+      "size_bytes": 40656
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/521dca883ce4b49df38dbd06b37a4d9aeaac81608918f814284df2811fa93d71.npz",
+      "size_bytes": 18442
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/523a01045692434dad22f51b4179606474db08b67563eeb8f128e93810b5f44c.npz",
+      "size_bytes": 29636
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/52e51076fa53356fa87976ae46839a4176ec5fa0c33c9339aa969a9c8bcb6ed1.npz",
+      "size_bytes": 20682
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/53411d3b120a52494e10d600367455a3a19c99e82a1b75f8dbbf79612f2e6e2d.npz",
+      "size_bytes": 35158
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/552700d1213132f20fd5469909534baf0ef93fb984d1925bf579f70092920bc6.npz",
+      "size_bytes": 30855
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/559ef03ad6afb5f3fab03107cc390eb56ed2b398514b276a0dc04a18a25c1b3c.npz",
+      "size_bytes": 29812
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/5c546318db2d13375dbce20e9f58545410343c246936523d8462d48441343d01.npz",
+      "size_bytes": 21043
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/5d69cebcfc88fbf19ff778e250579848a7ad03e2f3fe5d1e6b1b1e9bc66590c8.npz",
+      "size_bytes": 28697
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/5f453cd8515a55cee26ca52a8cb5e736ce22a8e4dfb41d4e49f174695996388f.npz",
+      "size_bytes": 20024
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/63f62455c73113a185ae41da29c73e870bc44d2885c52bf7df11ac96cb3ad923.npz",
+      "size_bytes": 40990
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/6d8b904f3a79595758a2b1c814a305ab0598e2a8fb1016d05d220f990718b066.npz",
+      "size_bytes": 40669
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/6ed93966ff975329ee32ce44df0d80491b6c880114ddee440f15bfa0bf69a851.npz",
+      "size_bytes": 26831
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/70ef688aa78add09e9dc3c5dc76a77148d78d144e713710ae6bacec76e9605fc.npz",
+      "size_bytes": 29355
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/7b2c32c62e1452910ce7e1dcd1d8e177d62d5f814a0aa6bdc44c16a4259f210c.npz",
+      "size_bytes": 18339
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/7be6309ee4fefbd8587380ac81c02de0d2e21a35bd52491a293dd501184fe73a.npz",
+      "size_bytes": 18775
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/7e0196f32202823e7cf575458f540e83b9c38ac3d5ffb70d9c479d75b75176b7.npz",
+      "size_bytes": 40863
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/823c253a9b4602e64d2fd9879fbc73ace9b9ee47d38d43ed51e2f2cfaeb1cd28.npz",
+      "size_bytes": 41068
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/834c52b192e25d389d29564d07e3bd9dd31a6c3d7cd524a661d753838957e7d8.npz",
+      "size_bytes": 20473
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/83f2995e6289b0aabc08b0962e7c35d65d61ae50ac6d4f645ac261906500f01a.npz",
+      "size_bytes": 40964
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/85a3556462cb3f59247ee8862b56f6254ad30e806837f1d1de7eb4d0f7f3b035.npz",
+      "size_bytes": 32154
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/85f67975b8449e5da88c44a923c68e39ec8aebdf2a4725c43ef4e872d0bc92de.npz",
+      "size_bytes": 28725
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/8861f9bee2b2bb59c34499f6b4c86c6581e5209360053d867350e00234289819.npz",
+      "size_bytes": 40954
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/8bf49978d9245d70a3987ea2004be648e52441c9b8743c7125dd7c9dff94536f.npz",
+      "size_bytes": 29333
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/a1acba12f6bb6a99d0bf93385cc81e368f0f50482cd024ef079553935ef781bf.npz",
+      "size_bytes": 29522
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/ad2d5dc55d5f5f37089e66e2ecd33bd022a1f70aec6867229726077672d9a0e8.npz",
+      "size_bytes": 20489
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/b36206f4501574985cef00eace388b8bd26943e1294c8b60976a4bb8989b6d42.npz",
+      "size_bytes": 18592
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/b7a347b448027fad3115fb494c03e652cf16c1cab8f8e9d9292ec0eea7f99405.npz",
+      "size_bytes": 28918
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/c33e722a9b8c94999d3c2925eb1d6599984d67a9f4a4786a1a702d39df15a28b.npz",
+      "size_bytes": 28804
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/cac58199cbf22df8c5f18caece6e0dfe6179f41ad8b8ec7a73fbea5da37090d0.npz",
+      "size_bytes": 29255
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/d0da40f92431a9eb41da31b279fad038771ef65363d4119695b9d5b05e9473ca.npz",
+      "size_bytes": 28165
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/d384e5054fcf87dae1b465ffd7d6eea57b025d3d25fa94fe9f4a1be4b33f9870.npz",
+      "size_bytes": 29276
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/d4c167710d59c8af91ea419d236053f7fa020a56819156896c6f85bd532eabde.npz",
+      "size_bytes": 21197
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/dd24d086a547385acaf26b96c38db1d979f01e41d8dee051c47c42e4f99ec806.npz",
+      "size_bytes": 21709
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/de7707e957332315b22dc5306f9bc259ff28da40e8c7570e7ac0736207626747.npz",
+      "size_bytes": 22483
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/e58dd74c73d6785ec8eb3cc9766c6782b59ace426ece3d731281f7b2677aee6e.npz",
+      "size_bytes": 20688
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/e938152f4eccbe3ee8afe5262701f0c7265bc977638592e649d6709ddba690c6.npz",
+      "size_bytes": 29124
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM3/f670a0c1e0c700e4746b325f5b64c23d0def27946f95856e9934ce39ac909454.npz",
+      "size_bytes": 41026
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/0018a96938210bfdd60d22fc6180295c1a7b1a1ead6b0313cbf78feaf5266eca.npz",
+      "size_bytes": 39366
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/003a887ef798209b5977a76997b086abfdb7c48d28c85656650e1008846cda84.npz",
+      "size_bytes": 30580
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/005a6cea3647ed47e1c4ad880238367e8053015f2a71fc3ddcff2de62b093484.npz",
+      "size_bytes": 32981
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/00b5aeb09b5eb8b28c26270edfa4f0c4f6cec74a9a94a248ae143dd0170c6106.npz",
+      "size_bytes": 37646
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/00b6771d10542c28233a1ba0ac062f882b56098ad1dd24a9391e8aadedf7b0b7.npz",
+      "size_bytes": 18410
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/00bdd0eecba1b55e5364bd76cbb01c8dda6846dad2f5ae507ab4ac3b1d7b27cd.npz",
+      "size_bytes": 49252
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/00da167669541dcc991ceb79dcd125baeddf02ed7045a79ad3764ce5ca1bf69c.npz",
+      "size_bytes": 44466
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/00fbc6cf4cdc6198b927773926cd7056128aa0d47309d036806e1f267d635fa3.npz",
+      "size_bytes": 48694
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/01028cc313fbfd3ee3b46d06fd2be16d4174170a29297255cb24e26d11bcf617.npz",
+      "size_bytes": 33566
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/0109f8b238de2936d0d906e3b1f1cf09fa87f7d40f14214136ef089db12213c6.npz",
+      "size_bytes": 39412
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/010cf117b831c09498bfcb5c6ee8f5d5c1928c5e2d51f41bd50288489d46bace.npz",
+      "size_bytes": 33949
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/014acf4457d52e796762abe207e4c5f7534536eb484a6c1ec04988fb6d4f152b.npz",
+      "size_bytes": 33429
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/01582ccc960371b2141771b991f9ab00c72905ba6cfde5e9871336bf28027e19.npz",
+      "size_bytes": 49462
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/01586fd583eb96f965ff20e7abaf7cf667f8cab5d549b97afcf78a8591b50fb7.npz",
+      "size_bytes": 19583
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/015a2e2bdad76f461a4767ae4fd13de2c5fb7b46bc2dc17572b470e1266c89b8.npz",
+      "size_bytes": 19217
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/017a7dfe4dc29d447e8b35325266d6e3c35f985099e54b4ed93854d9eff76b5c.npz",
+      "size_bytes": 36632
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/01860decbd8c905927982be908254f6d8f066478c9b9ca105eb8114ef19062f4.npz",
+      "size_bytes": 29086
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/0189729bdbbea5710cebc4c9c9c3177c8e5bc5f1cea61de2adba0ede33f79364.npz",
+      "size_bytes": 19658
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/01b44e645392580c9e217423271c7422d5bea7334e6169d85f0ba63fe0b95682.npz",
+      "size_bytes": 18743
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/01d69a03edb1cb93f46bf589f1bf7aead97f65400bec65c4e80a0c18be76e359.npz",
+      "size_bytes": 18538
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/01ecf22a59ec5dd8523da08a2d2b76d3d2773311f59b1c7af89f39cc3573fce6.npz",
+      "size_bytes": 48192
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/020d40792e27803ba513aab96e410dd2957612259731db784d9dd1b5e0c5b570.npz",
+      "size_bytes": 19075
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/02359415831038a9097ff79f733acc0eaed4d13433afb3619fc37405c308866c.npz",
+      "size_bytes": 33855
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/02614804b9995706e8158ea074c8aac34e6957b30453d9775954c92dbe3c8293.npz",
+      "size_bytes": 32342
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/02a467e5a9740db58626eabf6084a12cb00037618f4f3538c54b9fc6c819fb38.npz",
+      "size_bytes": 44443
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/02bb7527391d3fc2b2ee14460b561ead155bb05b9c17bd8f8e2e5509bca63e0c.npz",
+      "size_bytes": 48988
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/031d007baed95a046eafaa6e2fed981edffa641fd94c407ebe6e033e2f5fa6e7.npz",
+      "size_bytes": 18782
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/032e8e2a8e0d86b816ce6ad81a72fdea445c8f841dced559a2f48b23e8edf3b5.npz",
+      "size_bytes": 33075
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/036510bcea008a7c7f801a8e93cf81720fb40c1fa30f7aa89428c97b0cd78baa.npz",
+      "size_bytes": 31996
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/036fd992d44177c99d707a7c213b339c4a87bbb5a71131fa8c0e25d8d0a71521.npz",
+      "size_bytes": 48641
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/03782034e63438a36f3580bf256142c639775dcef009850e562917f176c80fe7.npz",
+      "size_bytes": 33775
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/03ae58beee1702ee57449b04236e8dd64ef2391482eb8ec458f991949b955858.npz",
+      "size_bytes": 36069
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/03b0ffe6000a8610e93490c02af1e421221b65cb2f2cd220f3e70e882415f7c0.npz",
+      "size_bytes": 44611
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/042c0d069fe47b4e59691d8a8613f5e73058ce3a25349d1d2dcfc742f6197aba.npz",
+      "size_bytes": 49147
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/0455dec2e24a29fd915bebab33455df565c0d7278cf62ac05e0c532a33286c69.npz",
+      "size_bytes": 35111
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/0490eae555783b291057034831a22310c6e2f97e060ec4068c2fb9c0e726fcbc.npz",
+      "size_bytes": 36627
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/04b89fa053ed105d412ee3fbcac02264168590c51675be84bbcd028becadceaf.npz",
+      "size_bytes": 19178
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/04b8db21ca5e1fe8dbfdfbec0ba295c390fd78d46cd62a1edfff28da23fa317b.npz",
+      "size_bytes": 19280
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/04c7eecba93ab1abf8d5e25af2bc8106f5a85157f032c3b40add1d5929671f76.npz",
+      "size_bytes": 48778
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/04d6832002423caeaa66c85382dcb9514601f5cf48fbed13c00687bcdf6c98a9.npz",
+      "size_bytes": 18781
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/04dcf59709328be1364abfd4b40cee096ae1316c4bc7b158598975709163dee3.npz",
+      "size_bytes": 33181
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/04ef2736fb46879d9395bcd79c3ccdebd3b804382a05e76c2ce1f719195003c9.npz",
+      "size_bytes": 34583
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/05399c466cba0ca2317adf844ac09c6efcc22adb0cf094dbc4827dcc9b494aae.npz",
+      "size_bytes": 22149
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/0550aed4637bb395cd9cfc2ea34f0beacdf4fd6a488308cc3fbb010cf9ef3d1d.npz",
+      "size_bytes": 19778
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/0559191972b669a1e3279f4ac534b8f8588e42987982b09cb03d2f5dc00f688d.npz",
+      "size_bytes": 18919
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/057f3d39a674319cfc3a507bed4f76921ff98a184798e3541e5ff80c7e9cdce9.npz",
+      "size_bytes": 33971
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/064eb6075a6b4a0ea662390c7d3e1444af0d6d98cdbcecb3aeec500217c5bd9c.npz",
+      "size_bytes": 21873
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/065873747a149c016003fe5e014da98f0513605709d764965f23ecc90309197b.npz",
+      "size_bytes": 33731
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/06632d360278429c3993ec6299d07deb0d2b2e1d71d4de20652c8f4ceed1b1e0.npz",
+      "size_bytes": 37753
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/06bb7cebbc763fafdc3270dfd94e5fddf1eb4d9f657ab78cb45c34f00de878f8.npz",
+      "size_bytes": 34694
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/0706e2a889938ad31833eb8fb8083e1f49fedd37b3910d101550381d324c3355.npz",
+      "size_bytes": 26560
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/07328d24ab8021ce183319c7cc7f2b562afb301b638c76b8a2c90cbceb09ab22.npz",
+      "size_bytes": 19094
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/0742c41b9f9f05e9ae980814aea1889d36fade760189f981bf360a5fdfff0783.npz",
+      "size_bytes": 17711
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/08795770c6b355e164ee5914bd35931e8634360f3e79feff33260d17f540ee4f.npz",
+      "size_bytes": 21022
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/08c2257b8d3c5aa3787ab2e53780e802c08fd40719a59c809730d7d072ecaac2.npz",
+      "size_bytes": 49432
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/090eaf5f2e5fb461578630a358bdc6e1327c0d08b1ae144958d80252ee97def1.npz",
+      "size_bytes": 18865
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/097239473e744e7beaa42286b29d2338bb432817c8c71d1978047ea809a4da43.npz",
+      "size_bytes": 19502
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/09948cf00ae3426b547498a256f15ed1d9be353e5aeba598067e37b6755ede0b.npz",
+      "size_bytes": 48468
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/09bbecbad0939295ec32f29e287055e970f4d7366aeb4ad27309b1c426a4f957.npz",
+      "size_bytes": 45732
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/0a8f984ffedb571e8f46b0aed492dd7a1341986104a1e250ca486794c69a0949.npz",
+      "size_bytes": 50299
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/0aa0f7509fc46293caf9868658833c85a07b702ee54b78b057ef16e589723a26.npz",
+      "size_bytes": 19541
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/0aad8b221246754c4ab90d341aa13838b191b029036dfc54f5455c38a82bec31.npz",
+      "size_bytes": 48816
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/0ad52381f9e553e20d3d1e06caa039dc378f0dfa2667824e861ec06337182230.npz",
+      "size_bytes": 42855
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/0b02af14f27aa3581b1d654595a01c701e9288c759dcf604dca108b05d616c9c.npz",
+      "size_bytes": 48291
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/0b589dad8aa2e19d6bf5c249abf36341497a5727ab5ee07b61f15b1c89451e27.npz",
+      "size_bytes": 33497
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/0bd500174deb788863da44005cdfc2ab6eb220a37f6ac0ef866298cd8057fa07.npz",
+      "size_bytes": 32399
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/0c39672b738b11620802e16399baca351ff37dca53e84cba980836b05ad9125e.npz",
+      "size_bytes": 48685
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/0c3f6b2bf705ca8a0284780fc92d25619bbdbbd8f052c2a5ccb50b6eeb81b97b.npz",
+      "size_bytes": 49231
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/0c75c5021a7150e504dd4731cfec176b101abbc8ea1c3fdf9b53d83d501012b6.npz",
+      "size_bytes": 18199
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/0cdc5c9cfa1d9bc5ffba721c80a917da1ae23714081ba0501733594da3cdeb48.npz",
+      "size_bytes": 48867
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/0f2a1039b6d99549490792a8c604321ad0686cc49faa21909a63e3a60ceccd7a.npz",
+      "size_bytes": 49032
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/0f74929852c7166d64492039d044e78d02fa9e18b67c0090abdcc600b7c83669.npz",
+      "size_bytes": 44553
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/0f7d68ad38ae1c305b68cae8bd3fa05bd3304829835d12c71586f0e361ec3f20.npz",
+      "size_bytes": 18768
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/0f9feacf516df87091ee1f1624a2f98b4d7645c306514d45dd351498eb433b8c.npz",
+      "size_bytes": 48352
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/114ee9aca95e32f150aa9ef0205432d5ad799d3ad5d301e86fcff1f596708dc8.npz",
+      "size_bytes": 18495
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/12117e9a7ab81fb229d03a284be0036180157207837d1113d50d2b5ee95ab3c0.npz",
+      "size_bytes": 47515
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/12fae32da208aa58eb1cee866e352dc2735ea5d5030214349e6b8bb7777c9408.npz",
+      "size_bytes": 38624
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/13090eecb086976f3f3a5d65ff1c8908c4444b997bbec4ddfbd4ce56547904c1.npz",
+      "size_bytes": 32773
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/1361fcdbea63743beb03c76ad9c997c815e2658cc5e7ff140456eed705221921.npz",
+      "size_bytes": 19518
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/137ee6ed384d4dcf8b1a13a59601cf29761c833cd86287e315c225e513db232b.npz",
+      "size_bytes": 18851
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/13a016a3160395292ee8329fa47a76899d37dc507cbf68dd3042616007dd29ed.npz",
+      "size_bytes": 19506
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/14aa7f08fb4774abaf36ba3008355fab853e0daca5b70ccfc9b57087cf7dc7ce.npz",
+      "size_bytes": 18571
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/15a6525240e4fb5bc723a7c946669d972cca397afc0d5d429b51ee41a1d7dac2.npz",
+      "size_bytes": 18284
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/15f7f4ca434b4d8cff0eb9c448a75c1c5ff7a5e5a490e6a399a56af49012f252.npz",
+      "size_bytes": 46626
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/1658179cf3031915caafdeee48a62b7238bf5dcea8ddc811e2ac3c13388fa372.npz",
+      "size_bytes": 18315
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/16677f9f5757670eb4a6a4508f3b6b8308be6cca91d6604a91c97277b446e08e.npz",
+      "size_bytes": 48002
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/169901167bd74d501fd478379a8f97479487696fcd780d866210c554074fd229.npz",
+      "size_bytes": 39987
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/16a95671ee12a7949201ddfc76d603f33ae57ddf9db84024ebe393fa8065a176.npz",
+      "size_bytes": 18663
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/174013d68d65dccd0819cf0fe74b5b53ee36abb3a7187bc239e0a1aa3fdc3dde.npz",
+      "size_bytes": 18921
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/17653aa9c95c18dfa5ac806151b6721f25c4192a520307ad00d22708216247a2.npz",
+      "size_bytes": 18178
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/178431b8ac72eb3432c026f61fc67f8090bb3fe9e71cc5f2e4556aef55414757.npz",
+      "size_bytes": 48748
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/17c5c4f83b27525bce5496a769bd2344c41538c0a8ca1bccda25c967f96959e6.npz",
+      "size_bytes": 35394
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/18b4b9da15022429a0f3524cbb49dfddc5561d8a4146ad6787ae82beb854b2b3.npz",
+      "size_bytes": 20453
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/18fafd0c111d07f9f7a39be95f769eda1ed5ef101838e22b4e0892961ffc87c7.npz",
+      "size_bytes": 18712
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/195cba6c84dee5e4dacc6edbffd269340163ba6c7805556160495626b0b2171e.npz",
+      "size_bytes": 31004
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/1a814fa64cc55cb26e23fb8eb1bf70113896bc61f4c4e4ca657f5805731f1de7.npz",
+      "size_bytes": 34302
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/1b20a1da9bd0e5250b44472f85f603496b0ae18abeae81fd397503bb86ab38d1.npz",
+      "size_bytes": 36602
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/1b87429f8a8b6c884929bd23b3f236cb8aa991ffc301bfcc244c6455b6c60bc5.npz",
+      "size_bytes": 48600
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/1bad713fdcdf933cf8204e4bb708c8afcc27c53751fbb128abc1139d89238bb6.npz",
+      "size_bytes": 19006
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/1ccc30b019209fd6ac1ce4769ffd7815279b4c48b1b896a687d7e40793bba9d7.npz",
+      "size_bytes": 47750
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/1d1cddccbe0f3d7147acf6ce20d6fa2ef0cc6d83478af9aac662202c2ce84125.npz",
+      "size_bytes": 22886
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/1e9a5e984d1a2fbc281e3baa39bc5e6cbce177dc81128891b215ba26d2f8e2c6.npz",
+      "size_bytes": 19385
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/1eb4587359375560ee1eef03c095d34b8040bacc6055e11ba8291d5257a9cdcc.npz",
+      "size_bytes": 33923
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/1f456c3e975f3901bcc220c3f8f6d57ff178d35da482a3ad8d47df3f5754b551.npz",
+      "size_bytes": 48416
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/207a8a780a3647dacc00bb1b0166e6c27097363abe56ff6e924357fe4b713344.npz",
+      "size_bytes": 32838
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/20fb1a58412735f78bced60f73a8c0d033350cb7ef31869a326e817cb7bf7433.npz",
+      "size_bytes": 31305
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/2182556db42bd6f3147675f46cd61152f50091970df02c83bc4e48cc8f18fc3d.npz",
+      "size_bytes": 48688
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/2289b8830b8972241764780315245a9e30dbd063b5ff0d09344549046bad8ef2.npz",
+      "size_bytes": 36004
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/2298946894c277391bcb2c66a6bc0a549850c4470a88e8456f28d2764529fbdd.npz",
+      "size_bytes": 48543
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/230dad7a73b64d926781f0406cd0bdbe9ad734b31cde4d5b71943629a07417bf.npz",
+      "size_bytes": 48825
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/24168f3db32fd8fda7ec178e88d276ce4fbf20a2b3b77839a5f671153b0750a6.npz",
+      "size_bytes": 34154
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/24981b0b008bc881f9006a3343abb88f600a751fcb0987de40f529703343e00e.npz",
+      "size_bytes": 19263
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/24f4954beea97e240b98af1e21c4d83557d9fa343714386044621c57f9e01fb4.npz",
+      "size_bytes": 48642
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/25549c3b738fdebd0b4ae741f149eb2c458b88c51f855f1085d647df2c295c33.npz",
+      "size_bytes": 37599
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/25ae38578249c65075184534b588de095800c187d513893539c4ff7a71a1ebd0.npz",
+      "size_bytes": 26710
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/26bfb2c448736c476a67f583427d7840801c5363e40a125f7d8f917ed8e3ee9d.npz",
+      "size_bytes": 48645
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/285cbb0cb1886cb2cf6a7c67b93cb61173b6c8819ef35dbfcf48266c3a70bf1f.npz",
+      "size_bytes": 18778
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/293506e8b5d98cb8ea835768048834e200c0c738d26fc876b7bcc22329ee6086.npz",
+      "size_bytes": 24095
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/2958ee4ac622ed8fb667199a54dfbd9583e2edbb2987a6ba0ffa220e7a3bc1db.npz",
+      "size_bytes": 35923
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/29b5cc005d2ef82f82b0bcb378cf47605860ea38c27e111ea4b153d588134203.npz",
+      "size_bytes": 21225
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/2a8d0fd0ee7cccb48b953ce679c2d3adfc1e12121c1ec59db685a66d8311e548.npz",
+      "size_bytes": 19172
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/2ad2ff1abc0d5c83a2ca9dc7c98ef9f66e9e95479162d4599247736e7f67e4a7.npz",
+      "size_bytes": 33239
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/2bd017be79070c53b8ef1ec9e0d2d8be536a422de8bb5befaf44cc7fb03ff5c0.npz",
+      "size_bytes": 20317
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/2c7e190a21a78dc367dbfd051dd6aafcd318a1f4dd8210093eaa1f31027dd454.npz",
+      "size_bytes": 43229
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/2cf4cd4b95525bbd069038c3372ab1f687060e0ebd4ee30d0da0be6718f53129.npz",
+      "size_bytes": 48455
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/2d0b03a1cf9f7c3f75a5d66661e40d43d9f84a59227b9f54b35cf1a1ad29f7a3.npz",
+      "size_bytes": 18241
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/2f1a44e692c30ac1f256d6d709afd98cb5f7cff06f53c6f27b7f25ce2b640edf.npz",
+      "size_bytes": 18455
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/2fe5eaa114c12030f48e1c8949f6fd104c0019adff06094034ec8c2bb2074c43.npz",
+      "size_bytes": 23481
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/31535d50d642c9056fc29ac5be8fd27db4072c8ca80cc7593a658f9327b5814d.npz",
+      "size_bytes": 48672
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/3202c7f66a05222948f490cdd8b19071cd8869d0b5b91ceadeab8a2dcddd0675.npz",
+      "size_bytes": 49031
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/336ab4afcb7767251bea9633d9d6e6164692de23d825351ff878d6d678ed26e3.npz",
+      "size_bytes": 49484
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/338313998e89d42b7f9ee9adc91fcd5c4805c3f1e77ec8d7a3e2937f30cb94d3.npz",
+      "size_bytes": 48417
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/33af161aec8a2b9234acbe8765d3a3109d57549e74a3b470170d709104627c2b.npz",
+      "size_bytes": 33344
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/34618909d1d105ac54313a99d105200d1257641a3c12ccd2e7a19cb004c8c6a1.npz",
+      "size_bytes": 32799
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/34b6064ed09d61e1601adb0ece9d4996c66d03834bdb830e482b581980cb2fe7.npz",
+      "size_bytes": 18416
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/35168f2e9d29341748190fe31d0fce1fc107757d4d01ed79f8f0c05fff894630.npz",
+      "size_bytes": 30470
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/357ce5a5b0b67f9904e6cdf8b983452431511ee42e617c4897bff98021db31dd.npz",
+      "size_bytes": 19233
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/35f1b2bca790b89a8077de1b31a5b720d3ae1da6db96632d54f2b3bb3f1801cf.npz",
+      "size_bytes": 46696
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/3693c0f8309a027cce66b6684b6bd8b30500f134b3acaedfd68077a3c9026d31.npz",
+      "size_bytes": 49111
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/385910d01a79ab8eb69ed4cf54aeae649b3a117f0057fb2bc82529001d421f83.npz",
+      "size_bytes": 18618
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/3a0d231d4f3e2bfbd2fa18230e84d516dc5b4065871e0c485b000868f0fcd3d1.npz",
+      "size_bytes": 48817
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/3c1467dc076c0b12c674665a1e9633f485e6f9d020bcdbad973a994ce57c0755.npz",
+      "size_bytes": 48763
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/3c4b049936f4ec9938a79769fcfb97f4a004b4b7615a922801c0630b4152b52f.npz",
+      "size_bytes": 30116
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/3cd39b221491bb8e3176873c503c5f57d65395964fdb29f489b1f347072a544f.npz",
+      "size_bytes": 18481
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/3d80eafd2987dce2b7b70ccaaf4ee31593ed2910d657c3d98ffc816498af1b3f.npz",
+      "size_bytes": 48951
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/41194f4b11bb85bd2ba7386f6ae5bfbdc4f40ae7c71685a30d5b105ce02f1ffa.npz",
+      "size_bytes": 48925
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/42a68e8a994dacccbd876e04d4f1f747c5288e3bebe5904a3b26268db137916d.npz",
+      "size_bytes": 34239
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/42dac1d987dd891512c19516dac7801092116ae155ff32312bd62c638c414404.npz",
+      "size_bytes": 33834
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/43ef812236570cb57f9ca1b9b0d524f57362231357cd554862117564f5d2efa1.npz",
+      "size_bytes": 23753
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/43fefe10be14217c935c8e79054595a3b5061ac8a129a05a4fc7511fe32ef38d.npz",
+      "size_bytes": 33064
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/449a25306e197d5c077b9b6acfffff2dcba1f98d4b3888bce47a836cef328ea6.npz",
+      "size_bytes": 49289
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/45089d4206f37d66cdb328934b7b8f3483322bcbaee45be559ae1b8015f1c240.npz",
+      "size_bytes": 49401
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/4621480b5b73c3ec33b99a9f3a21e22f726ac859963ead0476aae030573b4f1e.npz",
+      "size_bytes": 47989
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/46506a46ffb7b2a7134876a4b57ae7a17aefe689dd8c8d1bfc33d6452d82fea3.npz",
+      "size_bytes": 48197
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/47d2ae8dc2857a4db6ae5dd11880ca93dc2aad94012074b7e7692db8402af2ca.npz",
+      "size_bytes": 23852
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/483dbedffd9ebc97372381d5db1a4bfd32509e17ea7f1db81e539f38036f2718.npz",
+      "size_bytes": 19598
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/48465fc09749e456b4f131759c2b41912ef1839e96972a9df2451add719a52de.npz",
+      "size_bytes": 49060
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/4976de09c494f7cc9fc8e5950195123f75fbbca9ffeab801599f808120390ebc.npz",
+      "size_bytes": 35985
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/4a07340128fba1780e135b084b006b996848071d3989f81656ab2ae431a72fb5.npz",
+      "size_bytes": 18625
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/4a3febb232e807c18ce1b3dae63f9cc2e4983fa6ac2cf87984ec631eda603eb1.npz",
+      "size_bytes": 48953
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/4a5f4b082b0a655cfd10113d134dbb24152a282b60c289e204892bcf0df9a2b3.npz",
+      "size_bytes": 29751
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/4b2e7f0498e2081e116c88942d1710bb08dec8c6aa02522f12ffbb721f92e9fa.npz",
+      "size_bytes": 18931
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/512b70fd3b413510d397a6fa5308f414aac64c7a671e01e27ba782c589e05637.npz",
+      "size_bytes": 48253
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/521dca883ce4b49df38dbd06b37a4d9aeaac81608918f814284df2811fa93d71.npz",
+      "size_bytes": 19927
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/523a01045692434dad22f51b4179606474db08b67563eeb8f128e93810b5f44c.npz",
+      "size_bytes": 33434
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/52e51076fa53356fa87976ae46839a4176ec5fa0c33c9339aa969a9c8bcb6ed1.npz",
+      "size_bytes": 27141
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/53411d3b120a52494e10d600367455a3a19c99e82a1b75f8dbbf79612f2e6e2d.npz",
+      "size_bytes": 38464
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/552700d1213132f20fd5469909534baf0ef93fb984d1925bf579f70092920bc6.npz",
+      "size_bytes": 35040
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/559ef03ad6afb5f3fab03107cc390eb56ed2b398514b276a0dc04a18a25c1b3c.npz",
+      "size_bytes": 33695
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/5c546318db2d13375dbce20e9f58545410343c246936523d8462d48441343d01.npz",
+      "size_bytes": 33141
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/5d69cebcfc88fbf19ff778e250579848a7ad03e2f3fe5d1e6b1b1e9bc66590c8.npz",
+      "size_bytes": 47627
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/5f453cd8515a55cee26ca52a8cb5e736ce22a8e4dfb41d4e49f174695996388f.npz",
+      "size_bytes": 21893
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/63f62455c73113a185ae41da29c73e870bc44d2885c52bf7df11ac96cb3ad923.npz",
+      "size_bytes": 39326
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/6d8b904f3a79595758a2b1c814a305ab0598e2a8fb1016d05d220f990718b066.npz",
+      "size_bytes": 47112
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/6ed93966ff975329ee32ce44df0d80491b6c880114ddee440f15bfa0bf69a851.npz",
+      "size_bytes": 29823
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/70ef688aa78add09e9dc3c5dc76a77148d78d144e713710ae6bacec76e9605fc.npz",
+      "size_bytes": 32813
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/7b2c32c62e1452910ce7e1dcd1d8e177d62d5f814a0aa6bdc44c16a4259f210c.npz",
+      "size_bytes": 18468
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/7be6309ee4fefbd8587380ac81c02de0d2e21a35bd52491a293dd501184fe73a.npz",
+      "size_bytes": 18240
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/7e0196f32202823e7cf575458f540e83b9c38ac3d5ffb70d9c479d75b75176b7.npz",
+      "size_bytes": 44511
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/823c253a9b4602e64d2fd9879fbc73ace9b9ee47d38d43ed51e2f2cfaeb1cd28.npz",
+      "size_bytes": 49036
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/834c52b192e25d389d29564d07e3bd9dd31a6c3d7cd524a661d753838957e7d8.npz",
+      "size_bytes": 21787
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/83f2995e6289b0aabc08b0962e7c35d65d61ae50ac6d4f645ac261906500f01a.npz",
+      "size_bytes": 48641
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/85a3556462cb3f59247ee8862b56f6254ad30e806837f1d1de7eb4d0f7f3b035.npz",
+      "size_bytes": 36015
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/85f67975b8449e5da88c44a923c68e39ec8aebdf2a4725c43ef4e872d0bc92de.npz",
+      "size_bytes": 32457
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/8861f9bee2b2bb59c34499f6b4c86c6581e5209360053d867350e00234289819.npz",
+      "size_bytes": 48654
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/8bf49978d9245d70a3987ea2004be648e52441c9b8743c7125dd7c9dff94536f.npz",
+      "size_bytes": 33480
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/a1acba12f6bb6a99d0bf93385cc81e368f0f50482cd024ef079553935ef781bf.npz",
+      "size_bytes": 33241
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/ad2d5dc55d5f5f37089e66e2ecd33bd022a1f70aec6867229726077672d9a0e8.npz",
+      "size_bytes": 21753
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/b36206f4501574985cef00eace388b8bd26943e1294c8b60976a4bb8989b6d42.npz",
+      "size_bytes": 18878
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/b7a347b448027fad3115fb494c03e652cf16c1cab8f8e9d9292ec0eea7f99405.npz",
+      "size_bytes": 32139
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/c33e722a9b8c94999d3c2925eb1d6599984d67a9f4a4786a1a702d39df15a28b.npz",
+      "size_bytes": 32806
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/cac58199cbf22df8c5f18caece6e0dfe6179f41ad8b8ec7a73fbea5da37090d0.npz",
+      "size_bytes": 33352
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/d0da40f92431a9eb41da31b279fad038771ef65363d4119695b9d5b05e9473ca.npz",
+      "size_bytes": 25601
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/d384e5054fcf87dae1b465ffd7d6eea57b025d3d25fa94fe9f4a1be4b33f9870.npz",
+      "size_bytes": 32619
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/d4c167710d59c8af91ea419d236053f7fa020a56819156896c6f85bd532eabde.npz",
+      "size_bytes": 25297
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/dd24d086a547385acaf26b96c38db1d979f01e41d8dee051c47c42e4f99ec806.npz",
+      "size_bytes": 33790
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/de7707e957332315b22dc5306f9bc259ff28da40e8c7570e7ac0736207626747.npz",
+      "size_bytes": 32957
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/e58dd74c73d6785ec8eb3cc9766c6782b59ace426ece3d731281f7b2677aee6e.npz",
+      "size_bytes": 19458
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/e938152f4eccbe3ee8afe5262701f0c7265bc977638592e649d6709ddba690c6.npz",
+      "size_bytes": 18207
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM4/f670a0c1e0c700e4746b325f5b64c23d0def27946f95856e9934ce39ac909454.npz",
+      "size_bytes": 35834
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/0018a96938210bfdd60d22fc6180295c1a7b1a1ead6b0313cbf78feaf5266eca.npz",
+      "size_bytes": 49778
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/003a887ef798209b5977a76997b086abfdb7c48d28c85656650e1008846cda84.npz",
+      "size_bytes": 37725
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/005a6cea3647ed47e1c4ad880238367e8053015f2a71fc3ddcff2de62b093484.npz",
+      "size_bytes": 41076
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/00b5aeb09b5eb8b28c26270edfa4f0c4f6cec74a9a94a248ae143dd0170c6106.npz",
+      "size_bytes": 47841
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/00b6771d10542c28233a1ba0ac062f882b56098ad1dd24a9391e8aadedf7b0b7.npz",
+      "size_bytes": 18478
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/00bdd0eecba1b55e5364bd76cbb01c8dda6846dad2f5ae507ab4ac3b1d7b27cd.npz",
+      "size_bytes": 65097
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/00da167669541dcc991ceb79dcd125baeddf02ed7045a79ad3764ce5ca1bf69c.npz",
+      "size_bytes": 56543
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/00fbc6cf4cdc6198b927773926cd7056128aa0d47309d036806e1f267d635fa3.npz",
+      "size_bytes": 64484
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/01028cc313fbfd3ee3b46d06fd2be16d4174170a29297255cb24e26d11bcf617.npz",
+      "size_bytes": 41548
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/0109f8b238de2936d0d906e3b1f1cf09fa87f7d40f14214136ef089db12213c6.npz",
+      "size_bytes": 59770
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/010cf117b831c09498bfcb5c6ee8f5d5c1928c5e2d51f41bd50288489d46bace.npz",
+      "size_bytes": 42155
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/014acf4457d52e796762abe207e4c5f7534536eb484a6c1ec04988fb6d4f152b.npz",
+      "size_bytes": 41388
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/01582ccc960371b2141771b991f9ab00c72905ba6cfde5e9871336bf28027e19.npz",
+      "size_bytes": 65462
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/01586fd583eb96f965ff20e7abaf7cf667f8cab5d549b97afcf78a8591b50fb7.npz",
+      "size_bytes": 19306
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/015a2e2bdad76f461a4767ae4fd13de2c5fb7b46bc2dc17572b470e1266c89b8.npz",
+      "size_bytes": 19658
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/017a7dfe4dc29d447e8b35325266d6e3c35f985099e54b4ed93854d9eff76b5c.npz",
+      "size_bytes": 46529
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/01860decbd8c905927982be908254f6d8f066478c9b9ca105eb8114ef19062f4.npz",
+      "size_bytes": 30333
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/0189729bdbbea5710cebc4c9c9c3177c8e5bc5f1cea61de2adba0ede33f79364.npz",
+      "size_bytes": 20087
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/01b44e645392580c9e217423271c7422d5bea7334e6169d85f0ba63fe0b95682.npz",
+      "size_bytes": 19020
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/01d69a03edb1cb93f46bf589f1bf7aead97f65400bec65c4e80a0c18be76e359.npz",
+      "size_bytes": 18887
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/01ecf22a59ec5dd8523da08a2d2b76d3d2773311f59b1c7af89f39cc3573fce6.npz",
+      "size_bytes": 63991
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/020d40792e27803ba513aab96e410dd2957612259731db784d9dd1b5e0c5b570.npz",
+      "size_bytes": 19550
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/02359415831038a9097ff79f733acc0eaed4d13433afb3619fc37405c308866c.npz",
+      "size_bytes": 42172
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/02614804b9995706e8158ea074c8aac34e6957b30453d9775954c92dbe3c8293.npz",
+      "size_bytes": 40372
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/02a467e5a9740db58626eabf6084a12cb00037618f4f3538c54b9fc6c819fb38.npz",
+      "size_bytes": 56827
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/02bb7527391d3fc2b2ee14460b561ead155bb05b9c17bd8f8e2e5509bca63e0c.npz",
+      "size_bytes": 64679
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/031d007baed95a046eafaa6e2fed981edffa641fd94c407ebe6e033e2f5fa6e7.npz",
+      "size_bytes": 19640
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/032e8e2a8e0d86b816ce6ad81a72fdea445c8f841dced559a2f48b23e8edf3b5.npz",
+      "size_bytes": 41262
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/036510bcea008a7c7f801a8e93cf81720fb40c1fa30f7aa89428c97b0cd78baa.npz",
+      "size_bytes": 39497
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/036fd992d44177c99d707a7c213b339c4a87bbb5a71131fa8c0e25d8d0a71521.npz",
+      "size_bytes": 65009
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/03782034e63438a36f3580bf256142c639775dcef009850e562917f176c80fe7.npz",
+      "size_bytes": 42207
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/03ae58beee1702ee57449b04236e8dd64ef2391482eb8ec458f991949b955858.npz",
+      "size_bytes": 45779
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/03b0ffe6000a8610e93490c02af1e421221b65cb2f2cd220f3e70e882415f7c0.npz",
+      "size_bytes": 58254
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/042c0d069fe47b4e59691d8a8613f5e73058ce3a25349d1d2dcfc742f6197aba.npz",
+      "size_bytes": 65038
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/0455dec2e24a29fd915bebab33455df565c0d7278cf62ac05e0c532a33286c69.npz",
+      "size_bytes": 43709
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/0490eae555783b291057034831a22310c6e2f97e060ec4068c2fb9c0e726fcbc.npz",
+      "size_bytes": 45947
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/04b89fa053ed105d412ee3fbcac02264168590c51675be84bbcd028becadceaf.npz",
+      "size_bytes": 19573
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/04b8db21ca5e1fe8dbfdfbec0ba295c390fd78d46cd62a1edfff28da23fa317b.npz",
+      "size_bytes": 20271
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/04c7eecba93ab1abf8d5e25af2bc8106f5a85157f032c3b40add1d5929671f76.npz",
+      "size_bytes": 64403
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/04d6832002423caeaa66c85382dcb9514601f5cf48fbed13c00687bcdf6c98a9.npz",
+      "size_bytes": 19158
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/04dcf59709328be1364abfd4b40cee096ae1316c4bc7b158598975709163dee3.npz",
+      "size_bytes": 41541
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/04ef2736fb46879d9395bcd79c3ccdebd3b804382a05e76c2ce1f719195003c9.npz",
+      "size_bytes": 42898
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/05399c466cba0ca2317adf844ac09c6efcc22adb0cf094dbc4827dcc9b494aae.npz",
+      "size_bytes": 24711
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/0550aed4637bb395cd9cfc2ea34f0beacdf4fd6a488308cc3fbb010cf9ef3d1d.npz",
+      "size_bytes": 20664
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/0559191972b669a1e3279f4ac534b8f8588e42987982b09cb03d2f5dc00f688d.npz",
+      "size_bytes": 19210
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/057f3d39a674319cfc3a507bed4f76921ff98a184798e3541e5ff80c7e9cdce9.npz",
+      "size_bytes": 42112
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/064eb6075a6b4a0ea662390c7d3e1444af0d6d98cdbcecb3aeec500217c5bd9c.npz",
+      "size_bytes": 22182
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/065873747a149c016003fe5e014da98f0513605709d764965f23ecc90309197b.npz",
+      "size_bytes": 42096
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/06632d360278429c3993ec6299d07deb0d2b2e1d71d4de20652c8f4ceed1b1e0.npz",
+      "size_bytes": 49614
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/06bb7cebbc763fafdc3270dfd94e5fddf1eb4d9f657ab78cb45c34f00de878f8.npz",
+      "size_bytes": 42827
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/0706e2a889938ad31833eb8fb8083e1f49fedd37b3910d101550381d324c3355.npz",
+      "size_bytes": 46002
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/07328d24ab8021ce183319c7cc7f2b562afb301b638c76b8a2c90cbceb09ab22.npz",
+      "size_bytes": 19588
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/0742c41b9f9f05e9ae980814aea1889d36fade760189f981bf360a5fdfff0783.npz",
+      "size_bytes": 34939
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/08795770c6b355e164ee5914bd35931e8634360f3e79feff33260d17f540ee4f.npz",
+      "size_bytes": 22578
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/08c2257b8d3c5aa3787ab2e53780e802c08fd40719a59c809730d7d072ecaac2.npz",
+      "size_bytes": 65342
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/090eaf5f2e5fb461578630a358bdc6e1327c0d08b1ae144958d80252ee97def1.npz",
+      "size_bytes": 19224
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/097239473e744e7beaa42286b29d2338bb432817c8c71d1978047ea809a4da43.npz",
+      "size_bytes": 20102
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/09948cf00ae3426b547498a256f15ed1d9be353e5aeba598067e37b6755ede0b.npz",
+      "size_bytes": 64089
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/09bbecbad0939295ec32f29e287055e970f4d7366aeb4ad27309b1c426a4f957.npz",
+      "size_bytes": 60048
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/0a8f984ffedb571e8f46b0aed492dd7a1341986104a1e250ca486794c69a0949.npz",
+      "size_bytes": 65949
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/0aa0f7509fc46293caf9868658833c85a07b702ee54b78b057ef16e589723a26.npz",
+      "size_bytes": 20167
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/0aad8b221246754c4ab90d341aa13838b191b029036dfc54f5455c38a82bec31.npz",
+      "size_bytes": 64274
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/0ad52381f9e553e20d3d1e06caa039dc378f0dfa2667824e861ec06337182230.npz",
+      "size_bytes": 56146
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/0b02af14f27aa3581b1d654595a01c701e9288c759dcf604dca108b05d616c9c.npz",
+      "size_bytes": 62906
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/0b589dad8aa2e19d6bf5c249abf36341497a5727ab5ee07b61f15b1c89451e27.npz",
+      "size_bytes": 41831
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/0bd500174deb788863da44005cdfc2ab6eb220a37f6ac0ef866298cd8057fa07.npz",
+      "size_bytes": 40288
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/0c39672b738b11620802e16399baca351ff37dca53e84cba980836b05ad9125e.npz",
+      "size_bytes": 64778
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/0c3f6b2bf705ca8a0284780fc92d25619bbdbbd8f052c2a5ccb50b6eeb81b97b.npz",
+      "size_bytes": 64907
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/0c75c5021a7150e504dd4731cfec176b101abbc8ea1c3fdf9b53d83d501012b6.npz",
+      "size_bytes": 18398
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/0cdc5c9cfa1d9bc5ffba721c80a917da1ae23714081ba0501733594da3cdeb48.npz",
+      "size_bytes": 64107
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/0f2a1039b6d99549490792a8c604321ad0686cc49faa21909a63e3a60ceccd7a.npz",
+      "size_bytes": 64938
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/0f74929852c7166d64492039d044e78d02fa9e18b67c0090abdcc600b7c83669.npz",
+      "size_bytes": 61799
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/0f7d68ad38ae1c305b68cae8bd3fa05bd3304829835d12c71586f0e361ec3f20.npz",
+      "size_bytes": 19052
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/0f9feacf516df87091ee1f1624a2f98b4d7645c306514d45dd351498eb433b8c.npz",
+      "size_bytes": 64462
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/114ee9aca95e32f150aa9ef0205432d5ad799d3ad5d301e86fcff1f596708dc8.npz",
+      "size_bytes": 18676
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/12117e9a7ab81fb229d03a284be0036180157207837d1113d50d2b5ee95ab3c0.npz",
+      "size_bytes": 41120
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/12fae32da208aa58eb1cee866e352dc2735ea5d5030214349e6b8bb7777c9408.npz",
+      "size_bytes": 61605
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/13090eecb086976f3f3a5d65ff1c8908c4444b997bbec4ddfbd4ce56547904c1.npz",
+      "size_bytes": 40877
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/1361fcdbea63743beb03c76ad9c997c815e2658cc5e7ff140456eed705221921.npz",
+      "size_bytes": 20040
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/137ee6ed384d4dcf8b1a13a59601cf29761c833cd86287e315c225e513db232b.npz",
+      "size_bytes": 19252
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/13a016a3160395292ee8329fa47a76899d37dc507cbf68dd3042616007dd29ed.npz",
+      "size_bytes": 20254
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/14aa7f08fb4774abaf36ba3008355fab853e0daca5b70ccfc9b57087cf7dc7ce.npz",
+      "size_bytes": 18690
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/15a6525240e4fb5bc723a7c946669d972cca397afc0d5d429b51ee41a1d7dac2.npz",
+      "size_bytes": 18848
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/15f7f4ca434b4d8cff0eb9c448a75c1c5ff7a5e5a490e6a399a56af49012f252.npz",
+      "size_bytes": 60838
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/1658179cf3031915caafdeee48a62b7238bf5dcea8ddc811e2ac3c13388fa372.npz",
+      "size_bytes": 18541
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/16677f9f5757670eb4a6a4508f3b6b8308be6cca91d6604a91c97277b446e08e.npz",
+      "size_bytes": 63247
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/169901167bd74d501fd478379a8f97479487696fcd780d866210c554074fd229.npz",
+      "size_bytes": 52843
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/16a95671ee12a7949201ddfc76d603f33ae57ddf9db84024ebe393fa8065a176.npz",
+      "size_bytes": 19014
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/174013d68d65dccd0819cf0fe74b5b53ee36abb3a7187bc239e0a1aa3fdc3dde.npz",
+      "size_bytes": 19638
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/17653aa9c95c18dfa5ac806151b6721f25c4192a520307ad00d22708216247a2.npz",
+      "size_bytes": 18404
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/178431b8ac72eb3432c026f61fc67f8090bb3fe9e71cc5f2e4556aef55414757.npz",
+      "size_bytes": 64422
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/17c5c4f83b27525bce5496a769bd2344c41538c0a8ca1bccda25c967f96959e6.npz",
+      "size_bytes": 45602
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/18b4b9da15022429a0f3524cbb49dfddc5561d8a4146ad6787ae82beb854b2b3.npz",
+      "size_bytes": 21363
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/18fafd0c111d07f9f7a39be95f769eda1ed5ef101838e22b4e0892961ffc87c7.npz",
+      "size_bytes": 18652
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/195cba6c84dee5e4dacc6edbffd269340163ba6c7805556160495626b0b2171e.npz",
+      "size_bytes": 43757
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/1a814fa64cc55cb26e23fb8eb1bf70113896bc61f4c4e4ca657f5805731f1de7.npz",
+      "size_bytes": 40953
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/1b20a1da9bd0e5250b44472f85f603496b0ae18abeae81fd397503bb86ab38d1.npz",
+      "size_bytes": 46328
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/1b87429f8a8b6c884929bd23b3f236cb8aa991ffc301bfcc244c6455b6c60bc5.npz",
+      "size_bytes": 64230
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/1bad713fdcdf933cf8204e4bb708c8afcc27c53751fbb128abc1139d89238bb6.npz",
+      "size_bytes": 19383
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/1ccc30b019209fd6ac1ce4769ffd7815279b4c48b1b896a687d7e40793bba9d7.npz",
+      "size_bytes": 62673
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/1d1cddccbe0f3d7147acf6ce20d6fa2ef0cc6d83478af9aac662202c2ce84125.npz",
+      "size_bytes": 24634
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/1e9a5e984d1a2fbc281e3baa39bc5e6cbce177dc81128891b215ba26d2f8e2c6.npz",
+      "size_bytes": 20614
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/1eb4587359375560ee1eef03c095d34b8040bacc6055e11ba8291d5257a9cdcc.npz",
+      "size_bytes": 41975
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/1f456c3e975f3901bcc220c3f8f6d57ff178d35da482a3ad8d47df3f5754b551.npz",
+      "size_bytes": 64174
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/207a8a780a3647dacc00bb1b0166e6c27097363abe56ff6e924357fe4b713344.npz",
+      "size_bytes": 40432
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/20fb1a58412735f78bced60f73a8c0d033350cb7ef31869a326e817cb7bf7433.npz",
+      "size_bytes": 38952
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/2182556db42bd6f3147675f46cd61152f50091970df02c83bc4e48cc8f18fc3d.npz",
+      "size_bytes": 64318
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/2289b8830b8972241764780315245a9e30dbd063b5ff0d09344549046bad8ef2.npz",
+      "size_bytes": 45126
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/2298946894c277391bcb2c66a6bc0a549850c4470a88e8456f28d2764529fbdd.npz",
+      "size_bytes": 64170
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/230dad7a73b64d926781f0406cd0bdbe9ad734b31cde4d5b71943629a07417bf.npz",
+      "size_bytes": 64683
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/24168f3db32fd8fda7ec178e88d276ce4fbf20a2b3b77839a5f671153b0750a6.npz",
+      "size_bytes": 39423
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/24981b0b008bc881f9006a3343abb88f600a751fcb0987de40f529703343e00e.npz",
+      "size_bytes": 19674
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/24f4954beea97e240b98af1e21c4d83557d9fa343714386044621c57f9e01fb4.npz",
+      "size_bytes": 64287
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/25549c3b738fdebd0b4ae741f149eb2c458b88c51f855f1085d647df2c295c33.npz",
+      "size_bytes": 47033
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/25ae38578249c65075184534b588de095800c187d513893539c4ff7a71a1ebd0.npz",
+      "size_bytes": 31391
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/26bfb2c448736c476a67f583427d7840801c5363e40a125f7d8f917ed8e3ee9d.npz",
+      "size_bytes": 64458
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/285cbb0cb1886cb2cf6a7c67b93cb61173b6c8819ef35dbfcf48266c3a70bf1f.npz",
+      "size_bytes": 19153
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/293506e8b5d98cb8ea835768048834e200c0c738d26fc876b7bcc22329ee6086.npz",
+      "size_bytes": 24069
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/2958ee4ac622ed8fb667199a54dfbd9583e2edbb2987a6ba0ffa220e7a3bc1db.npz",
+      "size_bytes": 43908
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/29b5cc005d2ef82f82b0bcb378cf47605860ea38c27e111ea4b153d588134203.npz",
+      "size_bytes": 22645
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/2a8d0fd0ee7cccb48b953ce679c2d3adfc1e12121c1ec59db685a66d8311e548.npz",
+      "size_bytes": 19781
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/2ad2ff1abc0d5c83a2ca9dc7c98ef9f66e9e95479162d4599247736e7f67e4a7.npz",
+      "size_bytes": 41444
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/2bd017be79070c53b8ef1ec9e0d2d8be536a422de8bb5befaf44cc7fb03ff5c0.npz",
+      "size_bytes": 21514
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/2c7e190a21a78dc367dbfd051dd6aafcd318a1f4dd8210093eaa1f31027dd454.npz",
+      "size_bytes": 54653
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/2cf4cd4b95525bbd069038c3372ab1f687060e0ebd4ee30d0da0be6718f53129.npz",
+      "size_bytes": 64212
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/2d0b03a1cf9f7c3f75a5d66661e40d43d9f84a59227b9f54b35cf1a1ad29f7a3.npz",
+      "size_bytes": 18604
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/2f1a44e692c30ac1f256d6d709afd98cb5f7cff06f53c6f27b7f25ce2b640edf.npz",
+      "size_bytes": 18755
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/2fe5eaa114c12030f48e1c8949f6fd104c0019adff06094034ec8c2bb2074c43.npz",
+      "size_bytes": 26188
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/31535d50d642c9056fc29ac5be8fd27db4072c8ca80cc7593a658f9327b5814d.npz",
+      "size_bytes": 64468
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/3202c7f66a05222948f490cdd8b19071cd8869d0b5b91ceadeab8a2dcddd0675.npz",
+      "size_bytes": 64581
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/336ab4afcb7767251bea9633d9d6e6164692de23d825351ff878d6d678ed26e3.npz",
+      "size_bytes": 65169
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/338313998e89d42b7f9ee9adc91fcd5c4805c3f1e77ec8d7a3e2937f30cb94d3.npz",
+      "size_bytes": 64196
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/33af161aec8a2b9234acbe8765d3a3109d57549e74a3b470170d709104627c2b.npz",
+      "size_bytes": 41887
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/34618909d1d105ac54313a99d105200d1257641a3c12ccd2e7a19cb004c8c6a1.npz",
+      "size_bytes": 40564
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/34b6064ed09d61e1601adb0ece9d4996c66d03834bdb830e482b581980cb2fe7.npz",
+      "size_bytes": 18517
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/35168f2e9d29341748190fe31d0fce1fc107757d4d01ed79f8f0c05fff894630.npz",
+      "size_bytes": 40026
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/357ce5a5b0b67f9904e6cdf8b983452431511ee42e617c4897bff98021db31dd.npz",
+      "size_bytes": 19436
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/35f1b2bca790b89a8077de1b31a5b720d3ae1da6db96632d54f2b3bb3f1801cf.npz",
+      "size_bytes": 61805
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/3693c0f8309a027cce66b6684b6bd8b30500f134b3acaedfd68077a3c9026d31.npz",
+      "size_bytes": 64749
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/385910d01a79ab8eb69ed4cf54aeae649b3a117f0057fb2bc82529001d421f83.npz",
+      "size_bytes": 18332
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/3a0d231d4f3e2bfbd2fa18230e84d516dc5b4065871e0c485b000868f0fcd3d1.npz",
+      "size_bytes": 64386
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/3c1467dc076c0b12c674665a1e9633f485e6f9d020bcdbad973a994ce57c0755.npz",
+      "size_bytes": 65061
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/3c4b049936f4ec9938a79769fcfb97f4a004b4b7615a922801c0630b4152b52f.npz",
+      "size_bytes": 36722
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/3cd39b221491bb8e3176873c503c5f57d65395964fdb29f489b1f347072a544f.npz",
+      "size_bytes": 18860
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/3d80eafd2987dce2b7b70ccaaf4ee31593ed2910d657c3d98ffc816498af1b3f.npz",
+      "size_bytes": 64836
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/41194f4b11bb85bd2ba7386f6ae5bfbdc4f40ae7c71685a30d5b105ce02f1ffa.npz",
+      "size_bytes": 64623
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/42a68e8a994dacccbd876e04d4f1f747c5288e3bebe5904a3b26268db137916d.npz",
+      "size_bytes": 42773
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/42dac1d987dd891512c19516dac7801092116ae155ff32312bd62c638c414404.npz",
+      "size_bytes": 42208
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/43ef812236570cb57f9ca1b9b0d524f57362231357cd554862117564f5d2efa1.npz",
+      "size_bytes": 26441
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/43fefe10be14217c935c8e79054595a3b5061ac8a129a05a4fc7511fe32ef38d.npz",
+      "size_bytes": 40745
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/449a25306e197d5c077b9b6acfffff2dcba1f98d4b3888bce47a836cef328ea6.npz",
+      "size_bytes": 64886
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/45089d4206f37d66cdb328934b7b8f3483322bcbaee45be559ae1b8015f1c240.npz",
+      "size_bytes": 65204
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/4621480b5b73c3ec33b99a9f3a21e22f726ac859963ead0476aae030573b4f1e.npz",
+      "size_bytes": 63646
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/46506a46ffb7b2a7134876a4b57ae7a17aefe689dd8c8d1bfc33d6452d82fea3.npz",
+      "size_bytes": 63933
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/47d2ae8dc2857a4db6ae5dd11880ca93dc2aad94012074b7e7692db8402af2ca.npz",
+      "size_bytes": 61322
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/483dbedffd9ebc97372381d5db1a4bfd32509e17ea7f1db81e539f38036f2718.npz",
+      "size_bytes": 19998
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/48465fc09749e456b4f131759c2b41912ef1839e96972a9df2451add719a52de.npz",
+      "size_bytes": 64654
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/4976de09c494f7cc9fc8e5950195123f75fbbca9ffeab801599f808120390ebc.npz",
+      "size_bytes": 45050
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/4a07340128fba1780e135b084b006b996848071d3989f81656ab2ae431a72fb5.npz",
+      "size_bytes": 18818
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/4a3febb232e807c18ce1b3dae63f9cc2e4983fa6ac2cf87984ec631eda603eb1.npz",
+      "size_bytes": 64649
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/4a5f4b082b0a655cfd10113d134dbb24152a282b60c289e204892bcf0df9a2b3.npz",
+      "size_bytes": 35268
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/4b2e7f0498e2081e116c88942d1710bb08dec8c6aa02522f12ffbb721f92e9fa.npz",
+      "size_bytes": 19302
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/512b70fd3b413510d397a6fa5308f414aac64c7a671e01e27ba782c589e05637.npz",
+      "size_bytes": 63804
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/521dca883ce4b49df38dbd06b37a4d9aeaac81608918f814284df2811fa93d71.npz",
+      "size_bytes": 20997
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/523a01045692434dad22f51b4179606474db08b67563eeb8f128e93810b5f44c.npz",
+      "size_bytes": 44945
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/52e51076fa53356fa87976ae46839a4176ec5fa0c33c9339aa969a9c8bcb6ed1.npz",
+      "size_bytes": 43234
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/53411d3b120a52494e10d600367455a3a19c99e82a1b75f8dbbf79612f2e6e2d.npz",
+      "size_bytes": 48667
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/552700d1213132f20fd5469909534baf0ef93fb984d1925bf579f70092920bc6.npz",
+      "size_bytes": 43593
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/559ef03ad6afb5f3fab03107cc390eb56ed2b398514b276a0dc04a18a25c1b3c.npz",
+      "size_bytes": 41564
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/5c546318db2d13375dbce20e9f58545410343c246936523d8462d48441343d01.npz",
+      "size_bytes": 41279
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/5d69cebcfc88fbf19ff778e250579848a7ad03e2f3fe5d1e6b1b1e9bc66590c8.npz",
+      "size_bytes": 64054
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/5f453cd8515a55cee26ca52a8cb5e736ce22a8e4dfb41d4e49f174695996388f.npz",
+      "size_bytes": 35263
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/63f62455c73113a185ae41da29c73e870bc44d2885c52bf7df11ac96cb3ad923.npz",
+      "size_bytes": 64385
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/6d8b904f3a79595758a2b1c814a305ab0598e2a8fb1016d05d220f990718b066.npz",
+      "size_bytes": 62223
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/6ed93966ff975329ee32ce44df0d80491b6c880114ddee440f15bfa0bf69a851.npz",
+      "size_bytes": 36167
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/70ef688aa78add09e9dc3c5dc76a77148d78d144e713710ae6bacec76e9605fc.npz",
+      "size_bytes": 40430
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/7b2c32c62e1452910ce7e1dcd1d8e177d62d5f814a0aa6bdc44c16a4259f210c.npz",
+      "size_bytes": 18597
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/7be6309ee4fefbd8587380ac81c02de0d2e21a35bd52491a293dd501184fe73a.npz",
+      "size_bytes": 18921
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/7e0196f32202823e7cf575458f540e83b9c38ac3d5ffb70d9c479d75b75176b7.npz",
+      "size_bytes": 61246
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/823c253a9b4602e64d2fd9879fbc73ace9b9ee47d38d43ed51e2f2cfaeb1cd28.npz",
+      "size_bytes": 64595
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/834c52b192e25d389d29564d07e3bd9dd31a6c3d7cd524a661d753838957e7d8.npz",
+      "size_bytes": 23146
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/83f2995e6289b0aabc08b0962e7c35d65d61ae50ac6d4f645ac261906500f01a.npz",
+      "size_bytes": 64111
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/85a3556462cb3f59247ee8862b56f6254ad30e806837f1d1de7eb4d0f7f3b035.npz",
+      "size_bytes": 45126
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/85f67975b8449e5da88c44a923c68e39ec8aebdf2a4725c43ef4e872d0bc92de.npz",
+      "size_bytes": 40469
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/8861f9bee2b2bb59c34499f6b4c86c6581e5209360053d867350e00234289819.npz",
+      "size_bytes": 64298
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/8bf49978d9245d70a3987ea2004be648e52441c9b8743c7125dd7c9dff94536f.npz",
+      "size_bytes": 41321
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/a1acba12f6bb6a99d0bf93385cc81e368f0f50482cd024ef079553935ef781bf.npz",
+      "size_bytes": 41640
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/ad2d5dc55d5f5f37089e66e2ecd33bd022a1f70aec6867229726077672d9a0e8.npz",
+      "size_bytes": 23236
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/b36206f4501574985cef00eace388b8bd26943e1294c8b60976a4bb8989b6d42.npz",
+      "size_bytes": 19531
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/b7a347b448027fad3115fb494c03e652cf16c1cab8f8e9d9292ec0eea7f99405.npz",
+      "size_bytes": 40647
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/c33e722a9b8c94999d3c2925eb1d6599984d67a9f4a4786a1a702d39df15a28b.npz",
+      "size_bytes": 40448
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/cac58199cbf22df8c5f18caece6e0dfe6179f41ad8b8ec7a73fbea5da37090d0.npz",
+      "size_bytes": 40848
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/d0da40f92431a9eb41da31b279fad038771ef65363d4119695b9d5b05e9473ca.npz",
+      "size_bytes": 28888
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/d384e5054fcf87dae1b465ffd7d6eea57b025d3d25fa94fe9f4a1be4b33f9870.npz",
+      "size_bytes": 41039
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/d4c167710d59c8af91ea419d236053f7fa020a56819156896c6f85bd532eabde.npz",
+      "size_bytes": 29230
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/dd24d086a547385acaf26b96c38db1d979f01e41d8dee051c47c42e4f99ec806.npz",
+      "size_bytes": 41548
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/de7707e957332315b22dc5306f9bc259ff28da40e8c7570e7ac0736207626747.npz",
+      "size_bytes": 41046
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/e58dd74c73d6785ec8eb3cc9766c6782b59ace426ece3d731281f7b2677aee6e.npz",
+      "size_bytes": 20061
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/e938152f4eccbe3ee8afe5262701f0c7265bc977638592e649d6709ddba690c6.npz",
+      "size_bytes": 18677
+    },
+    {
+      "path": "outputs/phase2CM/paired_replay/timeseries/CM6/f670a0c1e0c700e4746b325f5b64c23d0def27946f95856e9934ce39ac909454.npz",
+      "size_bytes": 44501
+    },
+    {
+      "path": "outputs/phase2CM/penetration_gate_audit.json",
+      "size_bytes": 3053714
+    },
+    {
+      "path": "outputs/phase2CM/penetration_gate_original_release.jsonl",
+      "size_bytes": 1302890
+    },
+    {
+      "path": "outputs/phase2CM/penetration_gate_original_release.jsonl.lock",
+      "size_bytes": 1
+    },
+    {
+      "path": "outputs/phase2CM/release_state_equivalence.json",
+      "size_bytes": 233252
+    },
+    {
+      "path": "scripts/audit_phase2cm_contact_model.py",
+      "size_bytes": 314
+    },
+    {
+      "path": "scripts/run_phase2cm_primary.py",
+      "size_bytes": 352
+    },
+    {
+      "path": "seqgrasp/experiments/phase2cm.py",
+      "size_bytes": 57074
+    },
+    {
+      "path": "seqgrasp/phase2cm_config.py",
+      "size_bytes": 2428
+    },
+    {
+      "path": "tests/test_phase2cm_contact_model.py",
+      "size_bytes": 7095
+    }
+  ],
+  "manifest_path": "outputs/phase2CM/artifact_manifest.json"
+}

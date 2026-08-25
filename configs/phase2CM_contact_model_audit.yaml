@@ -1,0 +1,20 @@
+experiment_id: phase2CM_contact_model_audit
+output_dir: outputs/phase2CM
+source_scene_filename: scene_two_object_half_scale.yaml
+source_metric_method_id: phase2h_existing_strict_gate_prefix_v3
+
+# Engineering audit sample only. Selection is by SHA-256 of trial ID and is
+# independent of every baseline or counterfactual outcome.
+runtime_contact_audit_trials: 3
+
+# The target and replay duration are fixed by the Phase 2CM protocol.
+paired_release_state_target: 200
+post_release_steps: 500
+bootstrap_resamples: 10000
+bootstrap_seed: 20261011
+
+# Only the configured fingertip geom condim field changes between variants.
+variants:
+  CM3: 3
+  CM4: 4
+  CM6: 6

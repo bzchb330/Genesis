@@ -1,0 +1,284 @@
+{
+  "example_wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy-22.5",
+  "geoms": [
+    {
+      "body_id": 6,
+      "body_name": "ff_tip",
+      "conaffinity": 1,
+      "condim": 3,
+      "contype": 1,
+      "friction": [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      "geom_id": 12,
+      "geom_name": "ff_tip_collision",
+      "geom_size": [
+        0.012,
+        0.01,
+        0.0
+      ],
+      "geom_type": "capsule",
+      "priority": 0,
+      "role": "index_fingertip",
+      "solimp": [
+        0.9,
+        0.95,
+        0.001,
+        0.5,
+        2.0
+      ],
+      "solmix": 1.0,
+      "solref": [
+        0.02,
+        1.0
+      ]
+    },
+    {
+      "body_id": 11,
+      "body_name": "mf_tip",
+      "conaffinity": 1,
+      "condim": 3,
+      "contype": 1,
+      "friction": [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      "geom_id": 22,
+      "geom_name": "mf_tip_collision",
+      "geom_size": [
+        0.012,
+        0.01,
+        0.0
+      ],
+      "geom_type": "capsule",
+      "priority": 0,
+      "role": "middle_fingertip",
+      "solimp": [
+        0.9,
+        0.95,
+        0.001,
+        0.5,
+        2.0
+      ],
+      "solmix": 1.0,
+      "solref": [
+        0.02,
+        1.0
+      ]
+    },
+    {
+      "body_id": 16,
+      "body_name": "rf_tip",
+      "conaffinity": 1,
+      "condim": 3,
+      "contype": 1,
+      "friction": [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      "geom_id": 32,
+      "geom_name": "rf_tip_collision",
+      "geom_size": [
+        0.012,
+        0.01,
+        0.0
+      ],
+      "geom_type": "capsule",
+      "priority": 0,
+      "role": "ring_fingertip",
+      "solimp": [
+        0.9,
+        0.95,
+        0.001,
+        0.5,
+        2.0
+      ],
+      "solmix": 1.0,
+      "solref": [
+        0.02,
+        1.0
+      ]
+    },
+    {
+      "body_id": 21,
+      "body_name": "th_tip",
+      "conaffinity": 1,
+      "condim": 3,
+      "contype": 1,
+      "friction": [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      "geom_id": 42,
+      "geom_name": "th_tip_collision",
+      "geom_size": [
+        0.012,
+        0.008,
+        0.0
+      ],
+      "geom_type": "capsule",
+      "priority": 0,
+      "role": "thumb_fingertip",
+      "solimp": [
+        0.9,
+        0.95,
+        0.001,
+        0.5,
+        2.0
+      ],
+      "solmix": 1.0,
+      "solref": [
+        0.02,
+        1.0
+      ]
+    },
+    {
+      "body_id": 1,
+      "body_name": "palm",
+      "conaffinity": 0,
+      "condim": 3,
+      "contype": 0,
+      "friction": [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      "geom_id": 1,
+      "geom_name": null,
+      "geom_size": [
+        0.02096313234957383,
+        0.06375550839492264,
+        0.07001490886509427
+      ],
+      "geom_type": "mesh",
+      "priority": 0,
+      "role": "palm",
+      "solimp": [
+        0.9,
+        0.95,
+        0.001,
+        0.5,
+        2.0
+      ],
+      "solmix": 1.0,
+      "solref": [
+        0.02,
+        1.0
+      ]
+    },
+    {
+      "body_id": 1,
+      "body_name": "palm",
+      "conaffinity": 1,
+      "condim": 3,
+      "contype": 1,
+      "friction": [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      "geom_id": 2,
+      "geom_name": null,
+      "geom_size": [
+        0.0204,
+        0.0565,
+        0.0475
+      ],
+      "geom_type": "box",
+      "priority": 0,
+      "role": "palm",
+      "solimp": [
+        0.9,
+        0.95,
+        0.001,
+        0.5,
+        2.0
+      ],
+      "solmix": 1.0,
+      "solref": [
+        0.02,
+        1.0
+      ]
+    },
+    {
+      "body_id": 23,
+      "body_name": "object_b",
+      "conaffinity": 1,
+      "condim": 3,
+      "contype": 1,
+      "friction": [
+        0.8,
+        0.01,
+        0.001
+      ],
+      "geom_id": 44,
+      "geom_name": "object_b_geom",
+      "geom_size": [
+        0.0125,
+        0.02,
+        0.0
+      ],
+      "geom_type": "cylinder",
+      "priority": 0,
+      "role": "object_B",
+      "solimp": [
+        0.9,
+        0.95,
+        0.001,
+        0.5,
+        2.0
+      ],
+      "solmix": 1.0,
+      "solref": [
+        0.02,
+        1.0
+      ]
+    },
+    {
+      "body_id": 0,
+      "body_name": "world",
+      "conaffinity": 1,
+      "condim": 3,
+      "contype": 1,
+      "friction": [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      "geom_id": 0,
+      "geom_name": "table",
+      "geom_size": [
+        0.5,
+        0.5,
+        0.02
+      ],
+      "geom_type": "box",
+      "priority": 0,
+      "role": "table",
+      "solimp": [
+        0.9,
+        0.95,
+        0.001,
+        0.5,
+        2.0
+      ],
+      "solmix": 1.0,
+      "solref": [
+        0.02,
+        1.0
+      ]
+    }
+  ],
+  "model_counts": {
+    "nbody": 24,
+    "ngeom": 45,
+    "njnt": 18,
+    "nu": 16
+  },
+  "scene": "object_b"
+}

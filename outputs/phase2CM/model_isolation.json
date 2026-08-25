@@ -1,0 +1,1189 @@
+{
+  "checks": [
+    {
+      "equal": true,
+      "field": "nbody",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "njnt",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "nu",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "ngeom",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "nq",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "nv",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "na",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "body_pos",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "body_quat",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "body_ipos",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "body_iquat",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "body_mass",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "body_inertia",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "body_gravcomp",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "jnt_type",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "jnt_bodyid",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "jnt_qposadr",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "jnt_dofadr",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "jnt_axis",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "jnt_pos",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "jnt_range",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "jnt_limited",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "jnt_solref",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "jnt_solimp",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "jnt_stiffness",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "jnt_margin",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "actuator_trntype",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "actuator_dyntype",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "actuator_gaintype",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "actuator_biastype",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "actuator_trnid",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "actuator_dynprm",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "actuator_gainprm",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "actuator_biasprm",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "actuator_ctrlrange",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "actuator_forcerange",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "actuator_actrange",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "actuator_gear",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "actuator_cranklength",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "actuator_ctrllimited",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "actuator_forcelimited",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "actuator_actlimited",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "geom_type",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "geom_bodyid",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "geom_contype",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "geom_conaffinity",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "geom_pos",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "geom_quat",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "geom_size",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "geom_friction",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "geom_solref",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "geom_solimp",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "geom_priority",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "geom_solmix",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "geom_margin",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "geom_gap",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "opt.timestep",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "opt.impratio",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "opt.tolerance",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "opt.ls_tolerance",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "opt.noslip_tolerance",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "opt.gravity",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "opt.wind",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "opt.magnetic",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "opt.density",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "opt.viscosity",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "opt.o_margin",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "opt.integrator",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "opt.cone",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "opt.jacobian",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "opt.solver",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "opt.iterations",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "opt.ls_iterations",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "opt.noslip_iterations",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "opt.disableflags",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "opt.enableflags",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "opt.disableactuator",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "geom_condim_expected_only",
+      "variant": "CM3"
+    },
+    {
+      "equal": true,
+      "field": "nbody",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "njnt",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "nu",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "ngeom",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "nq",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "nv",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "na",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "body_pos",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "body_quat",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "body_ipos",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "body_iquat",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "body_mass",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "body_inertia",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "body_gravcomp",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "jnt_type",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "jnt_bodyid",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "jnt_qposadr",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "jnt_dofadr",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "jnt_axis",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "jnt_pos",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "jnt_range",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "jnt_limited",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "jnt_solref",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "jnt_solimp",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "jnt_stiffness",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "jnt_margin",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "actuator_trntype",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "actuator_dyntype",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "actuator_gaintype",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "actuator_biastype",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "actuator_trnid",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "actuator_dynprm",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "actuator_gainprm",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "actuator_biasprm",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "actuator_ctrlrange",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "actuator_forcerange",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "actuator_actrange",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "actuator_gear",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "actuator_cranklength",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "actuator_ctrllimited",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "actuator_forcelimited",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "actuator_actlimited",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "geom_type",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "geom_bodyid",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "geom_contype",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "geom_conaffinity",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "geom_pos",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "geom_quat",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "geom_size",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "geom_friction",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "geom_solref",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "geom_solimp",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "geom_priority",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "geom_solmix",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "geom_margin",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "geom_gap",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "opt.timestep",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "opt.impratio",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "opt.tolerance",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "opt.ls_tolerance",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "opt.noslip_tolerance",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "opt.gravity",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "opt.wind",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "opt.magnetic",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "opt.density",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "opt.viscosity",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "opt.o_margin",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "opt.integrator",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "opt.cone",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "opt.jacobian",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "opt.solver",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "opt.iterations",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "opt.ls_iterations",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "opt.noslip_iterations",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "opt.disableflags",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "opt.enableflags",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "opt.disableactuator",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "geom_condim_expected_only",
+      "variant": "CM4"
+    },
+    {
+      "equal": true,
+      "field": "nbody",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "njnt",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "nu",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "ngeom",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "nq",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "nv",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "na",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "body_pos",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "body_quat",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "body_ipos",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "body_iquat",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "body_mass",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "body_inertia",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "body_gravcomp",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "jnt_type",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "jnt_bodyid",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "jnt_qposadr",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "jnt_dofadr",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "jnt_axis",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "jnt_pos",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "jnt_range",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "jnt_limited",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "jnt_solref",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "jnt_solimp",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "jnt_stiffness",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "jnt_margin",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "actuator_trntype",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "actuator_dyntype",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "actuator_gaintype",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "actuator_biastype",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "actuator_trnid",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "actuator_dynprm",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "actuator_gainprm",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "actuator_biasprm",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "actuator_ctrlrange",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "actuator_forcerange",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "actuator_actrange",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "actuator_gear",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "actuator_cranklength",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "actuator_ctrllimited",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "actuator_forcelimited",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "actuator_actlimited",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "geom_type",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "geom_bodyid",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "geom_contype",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "geom_conaffinity",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "geom_pos",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "geom_quat",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "geom_size",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "geom_friction",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "geom_solref",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "geom_solimp",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "geom_priority",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "geom_solmix",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "geom_margin",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "geom_gap",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "opt.timestep",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "opt.impratio",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "opt.tolerance",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "opt.ls_tolerance",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "opt.noslip_tolerance",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "opt.gravity",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "opt.wind",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "opt.magnetic",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "opt.density",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "opt.viscosity",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "opt.o_margin",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "opt.integrator",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "opt.cone",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "opt.jacobian",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "opt.solver",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "opt.iterations",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "opt.ls_iterations",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "opt.noslip_iterations",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "opt.disableflags",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "opt.enableflags",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "opt.disableactuator",
+      "variant": "CM6"
+    },
+    {
+      "equal": true,
+      "field": "geom_condim_expected_only",
+      "variant": "CM6"
+    }
+  ],
+  "failures": [],
+  "fingertip_geom_ids": [
+    12,
+    22,
+    32,
+    42
+  ],
+  "intended_changed_field": "geom_condim on configured fingertip collision geoms only",
+  "reference_variant": "CM3",
+  "status": "PASS",
+  "variant_condim": {
+    "CM3": 3,
+    "CM4": 4,
+    "CM6": 6
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "fingertips": [
+    {
+      "collision_geom_count": 1,
+      "finger": "index",
+      "geoms": [
+        {
+          "id": 12,
+          "name": "ff_tip_collision",
+          "size": [
+            0.012,
+            0.01,
+            0.0
+          ],
+          "type": "capsule"
+        }
+      ],
+      "representation": "single primitive",
+      "rigid_contact_limitation": "Rigid capsule contact is resolved at MuJoCo contact points; it is not a deformable distributed fingertip patch or taxel array."
+    },
+    {
+      "collision_geom_count": 1,
+      "finger": "middle",
+      "geoms": [
+        {
+          "id": 22,
+          "name": "mf_tip_collision",
+          "size": [
+            0.012,
+            0.01,
+            0.0
+          ],
+          "type": "capsule"
+        }
+      ],
+      "representation": "single primitive",
+      "rigid_contact_limitation": "Rigid capsule contact is resolved at MuJoCo contact points; it is not a deformable distributed fingertip patch or taxel array."
+    },
+    {
+      "collision_geom_count": 1,
+      "finger": "ring",
+      "geoms": [
+        {
+          "id": 32,
+          "name": "rf_tip_collision",
+          "size": [
+            0.012,
+            0.01,
+            0.0
+          ],
+          "type": "capsule"
+        }
+      ],
+      "representation": "single primitive",
+      "rigid_contact_limitation": "Rigid capsule contact is resolved at MuJoCo contact points; it is not a deformable distributed fingertip patch or taxel array."
+    },
+    {
+      "collision_geom_count": 1,
+      "finger": "thumb",
+      "geoms": [
+        {
+          "id": 42,
+          "name": "th_tip_collision",
+          "size": [
+            0.012,
+            0.008,
+            0.0
+          ],
+          "type": "capsule"
+        }
+      ],
+      "representation": "single primitive",
+      "rigid_contact_limitation": "Rigid capsule contact is resolved at MuJoCo contact points; it is not a deformable distributed fingertip patch or taxel array."
+    }
+  ]
+}

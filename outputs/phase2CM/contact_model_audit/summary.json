@@ -1,0 +1,49 @@
+{
+  "compiled_B_friction": [
+    0.8,
+    0.01,
+    0.001
+  ],
+  "compiled_fingertip_friction": [
+    1.0,
+    0.005,
+    0.0001
+  ],
+  "compiled_index_condim": 3,
+  "compiled_thumb_condim": 3,
+  "eligible_release_state_count": 1521,
+  "runtime_contact_dims": {
+    "index": [
+      3
+    ],
+    "thumb": [
+      3
+    ]
+  },
+  "runtime_record_count": 10796,
+  "sampled_replays": [
+    {
+      "record_count": 4338,
+      "replay_failure_mechanism": "B_ROTATED_OUT",
+      "trial_id": "phase2W-static-wrist-B-only:75192960149548b7d10b6fd5f541f1a7d5b862ddadb98e773d6aee9906e13b79"
+    },
+    {
+      "record_count": 3147,
+      "replay_failure_mechanism": "CONTACT_LOST_IMMEDIATELY_AFTER_RELEASE",
+      "trial_id": "phase2W-static-wrist-B-only:089e72238b466dec279880ff4617a00572548ccdbf610caa45cbbd430ccc1402"
+    },
+    {
+      "record_count": 3311,
+      "replay_failure_mechanism": "B_ROTATED_OUT",
+      "trial_id": "phase2W-static-wrist-B-only:30055edcd8911369b589f360fe236e2301b7f3b2bf08a378fa9db351fdaddbf0"
+    }
+  ],
+  "sampled_trial_ids": [
+    "phase2W-static-wrist-B-only:75192960149548b7d10b6fd5f541f1a7d5b862ddadb98e773d6aee9906e13b79",
+    "phase2W-static-wrist-B-only:089e72238b466dec279880ff4617a00572548ccdbf610caa45cbbd430ccc1402",
+    "phase2W-static-wrist-B-only:30055edcd8911369b589f360fe236e2301b7f3b2bf08a378fa9db351fdaddbf0"
+  ],
+  "source_candidate_results": "outputs/phase2W/b_only_dynamic/6ba4c9a0df4d/candidate_results.jsonl",
+  "source_metric_summary": "outputs/phase2H/trial_metrics/192c7a444892_phase2h_existing_strict_gate_prefix_v3/summary.json",
+  "source_sha256": "192c7a44489269bf24f2802332f67def5b4ca6a6e435a408dc516db6d1fdc4a0"
+}

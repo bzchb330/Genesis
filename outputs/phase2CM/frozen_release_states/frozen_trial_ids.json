@@ -1,0 +1,1638 @@
+{
+  "eligibility": {
+    "index_contacts_B_at_release": true,
+    "middle_assists_B": false,
+    "numerically_valid": true,
+    "ring_assists_B": false,
+    "thumb_contacts_B_at_release": true
+  },
+  "eligible_count": 1521,
+  "experiment_id": "phase2CM_contact_model_audit",
+  "frozen_count": 200,
+  "selection": "round-robin over sorted wrist IDs; SHA-256(source trial ID) order within each wrist",
+  "selection_excludes": [
+    "Phase 2H survival",
+    "Phase 2H failure",
+    "visual appearance",
+    "rotation",
+    "slip",
+    "CM outcome"
+  ],
+  "source_sha256": "192c7a44489269bf24f2802332f67def5b4ca6a6e435a408dc516db6d1fdc4a0",
+  "state_version": "phase2cm_release_state_v1",
+  "target_count": 200,
+  "trials": [
+    {
+      "release_step": 1133,
+      "selection_index": 0,
+      "state_path": "outputs/phase2CM/frozen_release_states/33af161aec8a2b9234acbe8765d3a3109d57549e74a3b470170d709104627c2b.npz",
+      "trial_id": "phase2W-static-wrist-B-only:4fba9ff125b8409fcd9c312385c09d5a34fa1ecb1698316e99177eb87286eba8",
+      "trial_id_sha256": "33af161aec8a2b9234acbe8765d3a3109d57549e74a3b470170d709104627c2b",
+      "wrist_pose_id": "coarse_r+90_p-45_y+0"
+    },
+    {
+      "release_step": 999,
+      "selection_index": 1,
+      "state_path": "outputs/phase2CM/frozen_release_states/064eb6075a6b4a0ea662390c7d3e1444af0d6d98cdbcecb3aeec500217c5bd9c.npz",
+      "trial_id": "phase2W-static-wrist-B-only:b51397705f31a080b85845f75a2b9bcad307216d4c77881f4d86ec72ddb1350e",
+      "trial_id_sha256": "064eb6075a6b4a0ea662390c7d3e1444af0d6d98cdbcecb3aeec500217c5bd9c",
+      "wrist_pose_id": "coarse_r+90_p-45_y+90"
+    },
+    {
+      "release_step": 1217,
+      "selection_index": 2,
+      "state_path": "outputs/phase2CM/frozen_release_states/01028cc313fbfd3ee3b46d06fd2be16d4174170a29297255cb24e26d11bcf617.npz",
+      "trial_id": "phase2W-static-wrist-B-only:e49b3ff6b6bd2ee5298cead7d03e19e2941a4eaafdf5effd0801be9e56899581",
+      "trial_id_sha256": "01028cc313fbfd3ee3b46d06fd2be16d4174170a29297255cb24e26d11bcf617",
+      "wrist_pose_id": "coarse_r+90_p-45_y-45"
+    },
+    {
+      "release_step": 1252,
+      "selection_index": 3,
+      "state_path": "outputs/phase2CM/frozen_release_states/00da167669541dcc991ceb79dcd125baeddf02ed7045a79ad3764ce5ca1bf69c.npz",
+      "trial_id": "phase2W-static-wrist-B-only:beecb9c57e510d517cb6fc2ae897506d074b15dc60d0fc8f72d8c87f10b69bf7",
+      "trial_id_sha256": "00da167669541dcc991ceb79dcd125baeddf02ed7045a79ad3764ce5ca1bf69c",
+      "wrist_pose_id": "coarse_r+90_p-45_y-90"
+    },
+    {
+      "release_step": 1205,
+      "selection_index": 4,
+      "state_path": "outputs/phase2CM/frozen_release_states/003a887ef798209b5977a76997b086abfdb7c48d28c85656650e1008846cda84.npz",
+      "trial_id": "phase2W-static-wrist-B-only:089e72238b466dec279880ff4617a00572548ccdbf610caa45cbbd430ccc1402",
+      "trial_id_sha256": "003a887ef798209b5977a76997b086abfdb7c48d28c85656650e1008846cda84",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1235,
+      "selection_index": 5,
+      "state_path": "outputs/phase2CM/frozen_release_states/00b6771d10542c28233a1ba0ac062f882b56098ad1dd24a9391e8aadedf7b0b7.npz",
+      "trial_id": "phase2W-static-wrist-B-only:cca7d2080a2411c4a478b8c7d8eb7f2792f9999c28b89805bb499998d37f652d",
+      "trial_id_sha256": "00b6771d10542c28233a1ba0ac062f882b56098ad1dd24a9391e8aadedf7b0b7",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1274,
+      "selection_index": 6,
+      "state_path": "outputs/phase2CM/frozen_release_states/0018a96938210bfdd60d22fc6180295c1a7b1a1ead6b0313cbf78feaf5266eca.npz",
+      "trial_id": "phase2W-static-wrist-B-only:75192960149548b7d10b6fd5f541f1a7d5b862ddadb98e773d6aee9906e13b79",
+      "trial_id_sha256": "0018a96938210bfdd60d22fc6180295c1a7b1a1ead6b0313cbf78feaf5266eca",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy-22.5"
+    },
+    {
+      "release_step": 1094,
+      "selection_index": 7,
+      "state_path": "outputs/phase2CM/frozen_release_states/04dcf59709328be1364abfd4b40cee096ae1316c4bc7b158598975709163dee3.npz",
+      "trial_id": "phase2W-static-wrist-B-only:e8d37530ab65afc8e2e7aaa99c76eecf3fc4b1160388ef9a8a9955740ab5d196",
+      "trial_id_sha256": "04dcf59709328be1364abfd4b40cee096ae1316c4bc7b158598975709163dee3",
+      "wrist_pose_id": "refined_coarse_r+90_p-45_y+45_dr+0_dp+0_dy+22.5"
+    },
+    {
+      "release_step": 1002,
+      "selection_index": 8,
+      "state_path": "outputs/phase2CM/frozen_release_states/00bdd0eecba1b55e5364bd76cbb01c8dda6846dad2f5ae507ab4ac3b1d7b27cd.npz",
+      "trial_id": "phase2W-static-wrist-B-only:5c35044bb072d0f11c13b11ec090de2474de03a535e208a33980fe2100cdac70",
+      "trial_id_sha256": "00bdd0eecba1b55e5364bd76cbb01c8dda6846dad2f5ae507ab4ac3b1d7b27cd",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1072,
+      "selection_index": 9,
+      "state_path": "outputs/phase2CM/frozen_release_states/01582ccc960371b2141771b991f9ab00c72905ba6cfde5e9871336bf28027e19.npz",
+      "trial_id": "phase2W-static-wrist-B-only:80c27024f38df6dd949c2b4f8e52ea32e796a05de4c21963e34e1f8534787a41",
+      "trial_id_sha256": "01582ccc960371b2141771b991f9ab00c72905ba6cfde5e9871336bf28027e19",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1353,
+      "selection_index": 10,
+      "state_path": "outputs/phase2CM/frozen_release_states/35168f2e9d29341748190fe31d0fce1fc107757d4d01ed79f8f0c05fff894630.npz",
+      "trial_id": "phase2W-static-wrist-B-only:5c5a1dde4728b62a476ffba0b1a7441bcb83079cdd729a30c31e1a24bf6adf52",
+      "trial_id_sha256": "35168f2e9d29341748190fe31d0fce1fc107757d4d01ed79f8f0c05fff894630",
+      "wrist_pose_id": "coarse_r+90_p-45_y+0"
+    },
+    {
+      "release_step": 1261,
+      "selection_index": 11,
+      "state_path": "outputs/phase2CM/frozen_release_states/0b589dad8aa2e19d6bf5c249abf36341497a5727ab5ee07b61f15b1c89451e27.npz",
+      "trial_id": "phase2W-static-wrist-B-only:4e82251575be81c848a55613be70bd5e4373cadd7f02f5dd58a2024120b0efb7",
+      "trial_id_sha256": "0b589dad8aa2e19d6bf5c249abf36341497a5727ab5ee07b61f15b1c89451e27",
+      "wrist_pose_id": "coarse_r+90_p-45_y+90"
+    },
+    {
+      "release_step": 1062,
+      "selection_index": 12,
+      "state_path": "outputs/phase2CM/frozen_release_states/1eb4587359375560ee1eef03c095d34b8040bacc6055e11ba8291d5257a9cdcc.npz",
+      "trial_id": "phase2W-static-wrist-B-only:1d93c1344c2f551d8811d24ba39e7984a3abeddbef58208c51dc6618ba22e69d",
+      "trial_id_sha256": "1eb4587359375560ee1eef03c095d34b8040bacc6055e11ba8291d5257a9cdcc",
+      "wrist_pose_id": "coarse_r+90_p-45_y-45"
+    },
+    {
+      "release_step": 1107,
+      "selection_index": 13,
+      "state_path": "outputs/phase2CM/frozen_release_states/01586fd583eb96f965ff20e7abaf7cf667f8cab5d549b97afcf78a8591b50fb7.npz",
+      "trial_id": "phase2W-static-wrist-B-only:fcca24f5a83831b03d8de80322a7647f08d1bb10e26b5e8332cd9857325f8a11",
+      "trial_id_sha256": "01586fd583eb96f965ff20e7abaf7cf667f8cab5d549b97afcf78a8591b50fb7",
+      "wrist_pose_id": "coarse_r+90_p-45_y-90"
+    },
+    {
+      "release_step": 1280,
+      "selection_index": 14,
+      "state_path": "outputs/phase2CM/frozen_release_states/0109f8b238de2936d0d906e3b1f1cf09fa87f7d40f14214136ef089db12213c6.npz",
+      "trial_id": "phase2W-static-wrist-B-only:a49cd2c5a587ce0dd0a029000ff4b75fce3cac73fbf9e6415544148df00f0c38",
+      "trial_id_sha256": "0109f8b238de2936d0d906e3b1f1cf09fa87f7d40f14214136ef089db12213c6",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1351,
+      "selection_index": 15,
+      "state_path": "outputs/phase2CM/frozen_release_states/01d69a03edb1cb93f46bf589f1bf7aead97f65400bec65c4e80a0c18be76e359.npz",
+      "trial_id": "phase2W-static-wrist-B-only:b8439195f30aab41d26c6c210effa315e1b58d2d12f7db7553878af8c99e0b7d",
+      "trial_id_sha256": "01d69a03edb1cb93f46bf589f1bf7aead97f65400bec65c4e80a0c18be76e359",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1059,
+      "selection_index": 16,
+      "state_path": "outputs/phase2CM/frozen_release_states/005a6cea3647ed47e1c4ad880238367e8053015f2a71fc3ddcff2de62b093484.npz",
+      "trial_id": "phase2W-static-wrist-B-only:30055edcd8911369b589f360fe236e2301b7f3b2bf08a378fa9db351fdaddbf0",
+      "trial_id_sha256": "005a6cea3647ed47e1c4ad880238367e8053015f2a71fc3ddcff2de62b093484",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy-22.5"
+    },
+    {
+      "release_step": 1191,
+      "selection_index": 17,
+      "state_path": "outputs/phase2CM/frozen_release_states/0550aed4637bb395cd9cfc2ea34f0beacdf4fd6a488308cc3fbb010cf9ef3d1d.npz",
+      "trial_id": "phase2W-static-wrist-B-only:cc3f929d7d8f5ba3093b43ba42c60c8a6accce67a2976ccbe89c74202efeb45d",
+      "trial_id_sha256": "0550aed4637bb395cd9cfc2ea34f0beacdf4fd6a488308cc3fbb010cf9ef3d1d",
+      "wrist_pose_id": "refined_coarse_r+90_p-45_y+45_dr+0_dp+0_dy+22.5"
+    },
+    {
+      "release_step": 1162,
+      "selection_index": 18,
+      "state_path": "outputs/phase2CM/frozen_release_states/02359415831038a9097ff79f733acc0eaed4d13433afb3619fc37405c308866c.npz",
+      "trial_id": "phase2W-static-wrist-B-only:8d39c67007559c08056c1dee30b3707eaf55f5f653ae2488dc0ef49e643789a5",
+      "trial_id_sha256": "02359415831038a9097ff79f733acc0eaed4d13433afb3619fc37405c308866c",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1223,
+      "selection_index": 19,
+      "state_path": "outputs/phase2CM/frozen_release_states/01ecf22a59ec5dd8523da08a2d2b76d3d2773311f59b1c7af89f39cc3573fce6.npz",
+      "trial_id": "phase2W-static-wrist-B-only:a472f48997df371c782b5f768884fa7d396a15b90a38e8c17ac092958f262366",
+      "trial_id_sha256": "01ecf22a59ec5dd8523da08a2d2b76d3d2773311f59b1c7af89f39cc3573fce6",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1359,
+      "selection_index": 20,
+      "state_path": "outputs/phase2CM/frozen_release_states/70ef688aa78add09e9dc3c5dc76a77148d78d144e713710ae6bacec76e9605fc.npz",
+      "trial_id": "phase2W-static-wrist-B-only:1a48f16e61cc1eafd13caa48e8154ee65a4b9df65f70ed2f1d0a2489c6ed4cb5",
+      "trial_id_sha256": "70ef688aa78add09e9dc3c5dc76a77148d78d144e713710ae6bacec76e9605fc",
+      "wrist_pose_id": "coarse_r+90_p-45_y+0"
+    },
+    {
+      "release_step": 1161,
+      "selection_index": 21,
+      "state_path": "outputs/phase2CM/frozen_release_states/17c5c4f83b27525bce5496a769bd2344c41538c0a8ca1bccda25c967f96959e6.npz",
+      "trial_id": "phase2W-static-wrist-B-only:1164a9823aecdca754e183868bd8f138b8b8f86785fd5b33395bb240f1f24003",
+      "trial_id_sha256": "17c5c4f83b27525bce5496a769bd2344c41538c0a8ca1bccda25c967f96959e6",
+      "wrist_pose_id": "coarse_r+90_p-45_y+90"
+    },
+    {
+      "release_step": 1203,
+      "selection_index": 22,
+      "state_path": "outputs/phase2CM/frozen_release_states/207a8a780a3647dacc00bb1b0166e6c27097363abe56ff6e924357fe4b713344.npz",
+      "trial_id": "phase2W-static-wrist-B-only:bb5f9ec44f53c715138e55dcbb022164c97742cc47b247091874f8d87003f221",
+      "trial_id_sha256": "207a8a780a3647dacc00bb1b0166e6c27097363abe56ff6e924357fe4b713344",
+      "wrist_pose_id": "coarse_r+90_p-45_y-45"
+    },
+    {
+      "release_step": 1322,
+      "selection_index": 23,
+      "state_path": "outputs/phase2CM/frozen_release_states/01860decbd8c905927982be908254f6d8f066478c9b9ca105eb8114ef19062f4.npz",
+      "trial_id": "phase2W-static-wrist-B-only:3529310ecccb1f422632a59fcc4fa75ba9488ddbbf44040492777b7cba500357",
+      "trial_id_sha256": "01860decbd8c905927982be908254f6d8f066478c9b9ca105eb8114ef19062f4",
+      "wrist_pose_id": "coarse_r+90_p-45_y-90"
+    },
+    {
+      "release_step": 1252,
+      "selection_index": 24,
+      "state_path": "outputs/phase2CM/frozen_release_states/015a2e2bdad76f461a4767ae4fd13de2c5fb7b46bc2dc17572b470e1266c89b8.npz",
+      "trial_id": "phase2W-static-wrist-B-only:adbff7f5469b060ef37a7f05617e7c54fd03b5e74d57d79e8ad22992d6cb9e3e",
+      "trial_id_sha256": "015a2e2bdad76f461a4767ae4fd13de2c5fb7b46bc2dc17572b470e1266c89b8",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1164,
+      "selection_index": 25,
+      "state_path": "outputs/phase2CM/frozen_release_states/020d40792e27803ba513aab96e410dd2957612259731db784d9dd1b5e0c5b570.npz",
+      "trial_id": "phase2W-static-wrist-B-only:0a25bc5b25d8ce30c2a5afb66a8fb2cf4333eb1e0fe0c124433f1deb857b5a62",
+      "trial_id_sha256": "020d40792e27803ba513aab96e410dd2957612259731db784d9dd1b5e0c5b570",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1110,
+      "selection_index": 26,
+      "state_path": "outputs/phase2CM/frozen_release_states/00b5aeb09b5eb8b28c26270edfa4f0c4f6cec74a9a94a248ae143dd0170c6106.npz",
+      "trial_id": "phase2W-static-wrist-B-only:c5f2087fffeea6fc60ad83518fa8483ffaa058b3183bfd9a8176a634406e89ea",
+      "trial_id_sha256": "00b5aeb09b5eb8b28c26270edfa4f0c4f6cec74a9a94a248ae143dd0170c6106",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy-22.5"
+    },
+    {
+      "release_step": 1101,
+      "selection_index": 27,
+      "state_path": "outputs/phase2CM/frozen_release_states/08795770c6b355e164ee5914bd35931e8634360f3e79feff33260d17f540ee4f.npz",
+      "trial_id": "phase2W-static-wrist-B-only:efed360d98484effaf56332d9b536981972f6f1d754d4aa4f3f1d9ff169af490",
+      "trial_id_sha256": "08795770c6b355e164ee5914bd35931e8634360f3e79feff33260d17f540ee4f",
+      "wrist_pose_id": "refined_coarse_r+90_p-45_y+45_dr+0_dp+0_dy+22.5"
+    },
+    {
+      "release_step": 1094,
+      "selection_index": 28,
+      "state_path": "outputs/phase2CM/frozen_release_states/04d6832002423caeaa66c85382dcb9514601f5cf48fbed13c00687bcdf6c98a9.npz",
+      "trial_id": "phase2W-static-wrist-B-only:8f0444dc07c767ec9d51ae939ecbbdd1570529bf31f77d1bc6fdb589badbe04d",
+      "trial_id_sha256": "04d6832002423caeaa66c85382dcb9514601f5cf48fbed13c00687bcdf6c98a9",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1353,
+      "selection_index": 29,
+      "state_path": "outputs/phase2CM/frozen_release_states/04b89fa053ed105d412ee3fbcac02264168590c51675be84bbcd028becadceaf.npz",
+      "trial_id": "phase2W-static-wrist-B-only:2a632cfba92f54949189eb23af48e6b01611cebb36ac23fdb3eec904da6063a2",
+      "trial_id_sha256": "04b89fa053ed105d412ee3fbcac02264168590c51675be84bbcd028becadceaf",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1248,
+      "selection_index": 30,
+      "state_path": "outputs/phase2CM/frozen_release_states/85f67975b8449e5da88c44a923c68e39ec8aebdf2a4725c43ef4e872d0bc92de.npz",
+      "trial_id": "phase2W-static-wrist-B-only:ef22d4d6539f5c7667c27b2194dfcb4ae1592c55c284e3d5212b335c6f0b934d",
+      "trial_id_sha256": "85f67975b8449e5da88c44a923c68e39ec8aebdf2a4725c43ef4e872d0bc92de",
+      "wrist_pose_id": "coarse_r+90_p-45_y+0"
+    },
+    {
+      "release_step": 1189,
+      "selection_index": 31,
+      "state_path": "outputs/phase2CM/frozen_release_states/1b20a1da9bd0e5250b44472f85f603496b0ae18abeae81fd397503bb86ab38d1.npz",
+      "trial_id": "phase2W-static-wrist-B-only:cb8ae91943410ff754525749e07a13dbf8fe0680733e0a984d45b5bfecabd041",
+      "trial_id_sha256": "1b20a1da9bd0e5250b44472f85f603496b0ae18abeae81fd397503bb86ab38d1",
+      "wrist_pose_id": "coarse_r+90_p-45_y+90"
+    },
+    {
+      "release_step": 1052,
+      "selection_index": 32,
+      "state_path": "outputs/phase2CM/frozen_release_states/3c4b049936f4ec9938a79769fcfb97f4a004b4b7615a922801c0630b4152b52f.npz",
+      "trial_id": "phase2W-static-wrist-B-only:c47d2653ed9ddd16e8a514a456fea7657291fe7231de34d3a812e1431608e4d1",
+      "trial_id_sha256": "3c4b049936f4ec9938a79769fcfb97f4a004b4b7615a922801c0630b4152b52f",
+      "wrist_pose_id": "coarse_r+90_p-45_y-45"
+    },
+    {
+      "release_step": 1052,
+      "selection_index": 33,
+      "state_path": "outputs/phase2CM/frozen_release_states/04c7eecba93ab1abf8d5e25af2bc8106f5a85157f032c3b40add1d5929671f76.npz",
+      "trial_id": "phase2W-static-wrist-B-only:cb457b1d2d626e34587b31d35e2dfee8115f351fd04c0c166fc2034b38ed676a",
+      "trial_id_sha256": "04c7eecba93ab1abf8d5e25af2bc8106f5a85157f032c3b40add1d5929671f76",
+      "wrist_pose_id": "coarse_r+90_p-45_y-90"
+    },
+    {
+      "release_step": 1202,
+      "selection_index": 34,
+      "state_path": "outputs/phase2CM/frozen_release_states/01b44e645392580c9e217423271c7422d5bea7334e6169d85f0ba63fe0b95682.npz",
+      "trial_id": "phase2W-static-wrist-B-only:8eb0b54809448a79895ca728e70534c2a262393f2018ca04211d10cb762bf952",
+      "trial_id_sha256": "01b44e645392580c9e217423271c7422d5bea7334e6169d85f0ba63fe0b95682",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1206,
+      "selection_index": 35,
+      "state_path": "outputs/phase2CM/frozen_release_states/031d007baed95a046eafaa6e2fed981edffa641fd94c407ebe6e033e2f5fa6e7.npz",
+      "trial_id": "phase2W-static-wrist-B-only:1abdda63d1b785c1c6a4d572d98ddf0456eb6c90d9d0e301d6660b24567643eb",
+      "trial_id_sha256": "031d007baed95a046eafaa6e2fed981edffa641fd94c407ebe6e033e2f5fa6e7",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1001,
+      "selection_index": 36,
+      "state_path": "outputs/phase2CM/frozen_release_states/00fbc6cf4cdc6198b927773926cd7056128aa0d47309d036806e1f267d635fa3.npz",
+      "trial_id": "phase2W-static-wrist-B-only:14e7f2616ab9089ec0cba4f516db00c2200f709a8927baeeb21f8792f530b340",
+      "trial_id_sha256": "00fbc6cf4cdc6198b927773926cd7056128aa0d47309d036806e1f267d635fa3",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy-22.5"
+    },
+    {
+      "release_step": 1247,
+      "selection_index": 37,
+      "state_path": "outputs/phase2CM/frozen_release_states/097239473e744e7beaa42286b29d2338bb432817c8c71d1978047ea809a4da43.npz",
+      "trial_id": "phase2W-static-wrist-B-only:088c4ed82f8aee2c423365d6c6af4dfa2e29189c2efc13da7a16df8a2d9af535",
+      "trial_id_sha256": "097239473e744e7beaa42286b29d2338bb432817c8c71d1978047ea809a4da43",
+      "wrist_pose_id": "refined_coarse_r+90_p-45_y+45_dr+0_dp+0_dy+22.5"
+    },
+    {
+      "release_step": 1115,
+      "selection_index": 38,
+      "state_path": "outputs/phase2CM/frozen_release_states/09948cf00ae3426b547498a256f15ed1d9be353e5aeba598067e37b6755ede0b.npz",
+      "trial_id": "phase2W-static-wrist-B-only:cb4e939c4b5acbaec8618e54e57cb4f1a4a2985b6df9168cf183780f34d7d51a",
+      "trial_id_sha256": "09948cf00ae3426b547498a256f15ed1d9be353e5aeba598067e37b6755ede0b",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1312,
+      "selection_index": 39,
+      "state_path": "outputs/phase2CM/frozen_release_states/04ef2736fb46879d9395bcd79c3ccdebd3b804382a05e76c2ce1f719195003c9.npz",
+      "trial_id": "phase2W-static-wrist-B-only:095f3202d30b37f539eeac6c8f3696974681f8a6654a7ff7ff502910c390c69c",
+      "trial_id_sha256": "04ef2736fb46879d9395bcd79c3ccdebd3b804382a05e76c2ce1f719195003c9",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1351,
+      "selection_index": 40,
+      "state_path": "outputs/phase2CM/frozen_release_states/8bf49978d9245d70a3987ea2004be648e52441c9b8743c7125dd7c9dff94536f.npz",
+      "trial_id": "phase2W-static-wrist-B-only:662935bfdfa4aac747ae3d3bdfaac5527537cf9fffacff7bdb424f56d4eef9a1",
+      "trial_id_sha256": "8bf49978d9245d70a3987ea2004be648e52441c9b8743c7125dd7c9dff94536f",
+      "wrist_pose_id": "coarse_r+90_p-45_y+0"
+    },
+    {
+      "release_step": 1151,
+      "selection_index": 41,
+      "state_path": "outputs/phase2CM/frozen_release_states/2298946894c277391bcb2c66a6bc0a549850c4470a88e8456f28d2764529fbdd.npz",
+      "trial_id": "phase2W-static-wrist-B-only:db02134066ecc5b0458a6f11a97c4e7cd2921686a87ae962ce7d4baf4b4b82c2",
+      "trial_id_sha256": "2298946894c277391bcb2c66a6bc0a549850c4470a88e8456f28d2764529fbdd",
+      "wrist_pose_id": "coarse_r+90_p-45_y+90"
+    },
+    {
+      "release_step": 1074,
+      "selection_index": 42,
+      "state_path": "outputs/phase2CM/frozen_release_states/42a68e8a994dacccbd876e04d4f1f747c5288e3bebe5904a3b26268db137916d.npz",
+      "trial_id": "phase2W-static-wrist-B-only:78dae167708ad802a7f276ceb15146185af12d387ecce0d9538dfadcfcc34a52",
+      "trial_id_sha256": "42a68e8a994dacccbd876e04d4f1f747c5288e3bebe5904a3b26268db137916d",
+      "wrist_pose_id": "coarse_r+90_p-45_y-45"
+    },
+    {
+      "release_step": 1041,
+      "selection_index": 43,
+      "state_path": "outputs/phase2CM/frozen_release_states/07328d24ab8021ce183319c7cc7f2b562afb301b638c76b8a2c90cbceb09ab22.npz",
+      "trial_id": "phase2W-static-wrist-B-only:6832ab899682171cb99392e0fd9ec0ea7ce10cf6ba7e37e2c35c593d366f3197",
+      "trial_id_sha256": "07328d24ab8021ce183319c7cc7f2b562afb301b638c76b8a2c90cbceb09ab22",
+      "wrist_pose_id": "coarse_r+90_p-45_y-90"
+    },
+    {
+      "release_step": 1335,
+      "selection_index": 44,
+      "state_path": "outputs/phase2CM/frozen_release_states/02bb7527391d3fc2b2ee14460b561ead155bb05b9c17bd8f8e2e5509bca63e0c.npz",
+      "trial_id": "phase2W-static-wrist-B-only:bffe05fc452431cf7b631ff9a7b9f444e3c9d21985864f50dcc4eb9de54f9068",
+      "trial_id_sha256": "02bb7527391d3fc2b2ee14460b561ead155bb05b9c17bd8f8e2e5509bca63e0c",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1106,
+      "selection_index": 45,
+      "state_path": "outputs/phase2CM/frozen_release_states/06632d360278429c3993ec6299d07deb0d2b2e1d71d4de20652c8f4ceed1b1e0.npz",
+      "trial_id": "phase2W-static-wrist-B-only:d8d8d4e6de9b65c1d84eedf12a4673a00b543691dd38a4c2afd7e3983e527ff3",
+      "trial_id_sha256": "06632d360278429c3993ec6299d07deb0d2b2e1d71d4de20652c8f4ceed1b1e0",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1333,
+      "selection_index": 46,
+      "state_path": "outputs/phase2CM/frozen_release_states/010cf117b831c09498bfcb5c6ee8f5d5c1928c5e2d51f41bd50288489d46bace.npz",
+      "trial_id": "phase2W-static-wrist-B-only:72de480db38aafddb75b1552a5e66bbec14768e76d9bc3810f8d52e5c5aed77c",
+      "trial_id_sha256": "010cf117b831c09498bfcb5c6ee8f5d5c1928c5e2d51f41bd50288489d46bace",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy-22.5"
+    },
+    {
+      "release_step": 1148,
+      "selection_index": 47,
+      "state_path": "outputs/phase2CM/frozen_release_states/0f74929852c7166d64492039d044e78d02fa9e18b67c0090abdcc600b7c83669.npz",
+      "trial_id": "phase2W-static-wrist-B-only:6a1e401421af91d719ebe7d929be48c6982356662f13fc9198f542e41d6b286b",
+      "trial_id_sha256": "0f74929852c7166d64492039d044e78d02fa9e18b67c0090abdcc600b7c83669",
+      "wrist_pose_id": "refined_coarse_r+90_p-45_y+45_dr+0_dp+0_dy+22.5"
+    },
+    {
+      "release_step": 1219,
+      "selection_index": 48,
+      "state_path": "outputs/phase2CM/frozen_release_states/0c39672b738b11620802e16399baca351ff37dca53e84cba980836b05ad9125e.npz",
+      "trial_id": "phase2W-static-wrist-B-only:923891e91815f2a26a64d690b9626d07d61821ef5080249a3cff4d14926fd93e",
+      "trial_id_sha256": "0c39672b738b11620802e16399baca351ff37dca53e84cba980836b05ad9125e",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1231,
+      "selection_index": 49,
+      "state_path": "outputs/phase2CM/frozen_release_states/06bb7cebbc763fafdc3270dfd94e5fddf1eb4d9f657ab78cb45c34f00de878f8.npz",
+      "trial_id": "phase2W-static-wrist-B-only:902fc6ca3a046e2131ff1324b03d612b105c9101f779df84decad2af5ee72d13",
+      "trial_id_sha256": "06bb7cebbc763fafdc3270dfd94e5fddf1eb4d9f657ab78cb45c34f00de878f8",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1010,
+      "selection_index": 50,
+      "state_path": "outputs/phase2CM/frozen_release_states/a1acba12f6bb6a99d0bf93385cc81e368f0f50482cd024ef079553935ef781bf.npz",
+      "trial_id": "phase2W-static-wrist-B-only:676212d362097f3d89c16bf36576ed0f5ed5be58cb716ab990d4d7690fd67537",
+      "trial_id_sha256": "a1acba12f6bb6a99d0bf93385cc81e368f0f50482cd024ef079553935ef781bf",
+      "wrist_pose_id": "coarse_r+90_p-45_y+0"
+    },
+    {
+      "release_step": 1170,
+      "selection_index": 51,
+      "state_path": "outputs/phase2CM/frozen_release_states/24f4954beea97e240b98af1e21c4d83557d9fa343714386044621c57f9e01fb4.npz",
+      "trial_id": "phase2W-static-wrist-B-only:36764c90f91361186174338ee69b3a8c6fd61440f2d8f01c6d68b9637609d35f",
+      "trial_id_sha256": "24f4954beea97e240b98af1e21c4d83557d9fa343714386044621c57f9e01fb4",
+      "wrist_pose_id": "coarse_r+90_p-45_y+90"
+    },
+    {
+      "release_step": 1184,
+      "selection_index": 52,
+      "state_path": "outputs/phase2CM/frozen_release_states/4a5f4b082b0a655cfd10113d134dbb24152a282b60c289e204892bcf0df9a2b3.npz",
+      "trial_id": "phase2W-static-wrist-B-only:ace9511159281ff6cc96775162534e346437a5bc20096ebb1ef4540dbca9ca1f",
+      "trial_id_sha256": "4a5f4b082b0a655cfd10113d134dbb24152a282b60c289e204892bcf0df9a2b3",
+      "wrist_pose_id": "coarse_r+90_p-45_y-45"
+    },
+    {
+      "release_step": 1143,
+      "selection_index": 53,
+      "state_path": "outputs/phase2CM/frozen_release_states/18b4b9da15022429a0f3524cbb49dfddc5561d8a4146ad6787ae82beb854b2b3.npz",
+      "trial_id": "phase2W-static-wrist-B-only:47027c428073d8dce652b9e4f1916e7484bf3b6e22344ac49cb7633f7e851543",
+      "trial_id_sha256": "18b4b9da15022429a0f3524cbb49dfddc5561d8a4146ad6787ae82beb854b2b3",
+      "wrist_pose_id": "coarse_r+90_p-45_y-90"
+    },
+    {
+      "release_step": 973,
+      "selection_index": 54,
+      "state_path": "outputs/phase2CM/frozen_release_states/036510bcea008a7c7f801a8e93cf81720fb40c1fa30f7aa89428c97b0cd78baa.npz",
+      "trial_id": "phase2W-static-wrist-B-only:272f519260babfd28381c3733852efc2f67d8feba56aa50bb309ab26869f1cec",
+      "trial_id_sha256": "036510bcea008a7c7f801a8e93cf81720fb40c1fa30f7aa89428c97b0cd78baa",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1358,
+      "selection_index": 55,
+      "state_path": "outputs/phase2CM/frozen_release_states/08c2257b8d3c5aa3787ab2e53780e802c08fd40719a59c809730d7d072ecaac2.npz",
+      "trial_id": "phase2W-static-wrist-B-only:721cd353a0951bf611c90a54df5a78601707c898c810f4492e39dd323850577d",
+      "trial_id_sha256": "08c2257b8d3c5aa3787ab2e53780e802c08fd40719a59c809730d7d072ecaac2",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1106,
+      "selection_index": 56,
+      "state_path": "outputs/phase2CM/frozen_release_states/014acf4457d52e796762abe207e4c5f7534536eb484a6c1ec04988fb6d4f152b.npz",
+      "trial_id": "phase2W-static-wrist-B-only:a6908d5dc967fd0023c9fd230d24b5dda358b7a0c661af8afa4d86afdde8bc28",
+      "trial_id_sha256": "014acf4457d52e796762abe207e4c5f7534536eb484a6c1ec04988fb6d4f152b",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy-22.5"
+    },
+    {
+      "release_step": 1191,
+      "selection_index": 57,
+      "state_path": "outputs/phase2CM/frozen_release_states/1d1cddccbe0f3d7147acf6ce20d6fa2ef0cc6d83478af9aac662202c2ce84125.npz",
+      "trial_id": "phase2W-static-wrist-B-only:3a112b4299f8f6d999fef5ba172adcd1862d8588f393c517b818cdad017e71cd",
+      "trial_id_sha256": "1d1cddccbe0f3d7147acf6ce20d6fa2ef0cc6d83478af9aac662202c2ce84125",
+      "wrist_pose_id": "refined_coarse_r+90_p-45_y+45_dr+0_dp+0_dy+22.5"
+    },
+    {
+      "release_step": 1342,
+      "selection_index": 58,
+      "state_path": "outputs/phase2CM/frozen_release_states/1f456c3e975f3901bcc220c3f8f6d57ff178d35da482a3ad8d47df3f5754b551.npz",
+      "trial_id": "phase2W-static-wrist-B-only:545a564945fb37cefd5cbbd755d21eb46896c179ab611cf7c27b777932a7b214",
+      "trial_id_sha256": "1f456c3e975f3901bcc220c3f8f6d57ff178d35da482a3ad8d47df3f5754b551",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1210,
+      "selection_index": 59,
+      "state_path": "outputs/phase2CM/frozen_release_states/0706e2a889938ad31833eb8fb8083e1f49fedd37b3910d101550381d324c3355.npz",
+      "trial_id": "phase2W-static-wrist-B-only:9d9a1bbf609c7841ff50266b27e488a54cb8f0f84d10f7a988c774357d42f5f5",
+      "trial_id_sha256": "0706e2a889938ad31833eb8fb8083e1f49fedd37b3910d101550381d324c3355",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1201,
+      "selection_index": 60,
+      "state_path": "outputs/phase2CM/frozen_release_states/b7a347b448027fad3115fb494c03e652cf16c1cab8f8e9d9292ec0eea7f99405.npz",
+      "trial_id": "phase2W-static-wrist-B-only:e70f8be1944de32d1ba8f8978fff3884a9533f9158ff78c47b044734ccf2edc0",
+      "trial_id_sha256": "b7a347b448027fad3115fb494c03e652cf16c1cab8f8e9d9292ec0eea7f99405",
+      "wrist_pose_id": "coarse_r+90_p-45_y+0"
+    },
+    {
+      "release_step": 1131,
+      "selection_index": 61,
+      "state_path": "outputs/phase2CM/frozen_release_states/293506e8b5d98cb8ea835768048834e200c0c738d26fc876b7bcc22329ee6086.npz",
+      "trial_id": "phase2W-static-wrist-B-only:2e2dbe8b1fa5e9e0b5e29a8de354d0077a74880ff8bded1e5038225a024d2a81",
+      "trial_id_sha256": "293506e8b5d98cb8ea835768048834e200c0c738d26fc876b7bcc22329ee6086",
+      "wrist_pose_id": "coarse_r+90_p-45_y+90"
+    },
+    {
+      "release_step": 1135,
+      "selection_index": 62,
+      "state_path": "outputs/phase2CM/frozen_release_states/521dca883ce4b49df38dbd06b37a4d9aeaac81608918f814284df2811fa93d71.npz",
+      "trial_id": "phase2W-static-wrist-B-only:0d29eea30ef8afa677ee983fbb6129cb3afdbf7cce78642ed763df29d05eafa6",
+      "trial_id_sha256": "521dca883ce4b49df38dbd06b37a4d9aeaac81608918f814284df2811fa93d71",
+      "wrist_pose_id": "coarse_r+90_p-45_y-45"
+    },
+    {
+      "release_step": 1184,
+      "selection_index": 63,
+      "state_path": "outputs/phase2CM/frozen_release_states/1b87429f8a8b6c884929bd23b3f236cb8aa991ffc301bfcc244c6455b6c60bc5.npz",
+      "trial_id": "phase2W-static-wrist-B-only:d89dc77f840942c0c54b316dce4f51deb28f75ed66efc9746128ca3aef6291e6",
+      "trial_id_sha256": "1b87429f8a8b6c884929bd23b3f236cb8aa991ffc301bfcc244c6455b6c60bc5",
+      "wrist_pose_id": "coarse_r+90_p-45_y-90"
+    },
+    {
+      "release_step": 1113,
+      "selection_index": 64,
+      "state_path": "outputs/phase2CM/frozen_release_states/036fd992d44177c99d707a7c213b339c4a87bbb5a71131fa8c0e25d8d0a71521.npz",
+      "trial_id": "phase2W-static-wrist-B-only:9392d67f08ace142f69c2553100c6325e2f095e806133aaef41e16e558462763",
+      "trial_id_sha256": "036fd992d44177c99d707a7c213b339c4a87bbb5a71131fa8c0e25d8d0a71521",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1089,
+      "selection_index": 65,
+      "state_path": "outputs/phase2CM/frozen_release_states/0a8f984ffedb571e8f46b0aed492dd7a1341986104a1e250ca486794c69a0949.npz",
+      "trial_id": "phase2W-static-wrist-B-only:e8795fd5045c3988719b95ddebf5843cc50d91c0dd0aad2b43e2452903aab4da",
+      "trial_id_sha256": "0a8f984ffedb571e8f46b0aed492dd7a1341986104a1e250ca486794c69a0949",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1138,
+      "selection_index": 66,
+      "state_path": "outputs/phase2CM/frozen_release_states/017a7dfe4dc29d447e8b35325266d6e3c35f985099e54b4ed93854d9eff76b5c.npz",
+      "trial_id": "phase2W-static-wrist-B-only:daeed9b307001615ca4c33f7dc6c727eee45920e85aec6dd59d2a0058128cfef",
+      "trial_id_sha256": "017a7dfe4dc29d447e8b35325266d6e3c35f985099e54b4ed93854d9eff76b5c",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy-22.5"
+    },
+    {
+      "release_step": 1142,
+      "selection_index": 67,
+      "state_path": "outputs/phase2CM/frozen_release_states/2182556db42bd6f3147675f46cd61152f50091970df02c83bc4e48cc8f18fc3d.npz",
+      "trial_id": "phase2W-static-wrist-B-only:903dd09bf321c488594540e2abf18602a090547c427166725b4757a4e070abb2",
+      "trial_id_sha256": "2182556db42bd6f3147675f46cd61152f50091970df02c83bc4e48cc8f18fc3d",
+      "wrist_pose_id": "refined_coarse_r+90_p-45_y+45_dr+0_dp+0_dy+22.5"
+    },
+    {
+      "release_step": 1085,
+      "selection_index": 68,
+      "state_path": "outputs/phase2CM/frozen_release_states/2289b8830b8972241764780315245a9e30dbd063b5ff0d09344549046bad8ef2.npz",
+      "trial_id": "phase2W-static-wrist-B-only:7eb071f40b939deb769ebee82553298fe00b14037d7d777d6d87245b46fa0dfd",
+      "trial_id_sha256": "2289b8830b8972241764780315245a9e30dbd063b5ff0d09344549046bad8ef2",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1125,
+      "selection_index": 69,
+      "state_path": "outputs/phase2CM/frozen_release_states/090eaf5f2e5fb461578630a358bdc6e1327c0d08b1ae144958d80252ee97def1.npz",
+      "trial_id": "phase2W-static-wrist-B-only:c14bc617a1f23f9467ff2aac1b4ca054adfa51db07bb365fd48b84a3e495a790",
+      "trial_id_sha256": "090eaf5f2e5fb461578630a358bdc6e1327c0d08b1ae144958d80252ee97def1",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1068,
+      "selection_index": 70,
+      "state_path": "outputs/phase2CM/frozen_release_states/c33e722a9b8c94999d3c2925eb1d6599984d67a9f4a4786a1a702d39df15a28b.npz",
+      "trial_id": "phase2W-static-wrist-B-only:99dea2239be6be43e6c9a55ba3430bd2f3b6469af4056e05b842c28dc91b85d7",
+      "trial_id_sha256": "c33e722a9b8c94999d3c2925eb1d6599984d67a9f4a4786a1a702d39df15a28b",
+      "wrist_pose_id": "coarse_r+90_p-45_y+0"
+    },
+    {
+      "release_step": 1230,
+      "selection_index": 71,
+      "state_path": "outputs/phase2CM/frozen_release_states/3a0d231d4f3e2bfbd2fa18230e84d516dc5b4065871e0c485b000868f0fcd3d1.npz",
+      "trial_id": "phase2W-static-wrist-B-only:7880c741d3dea9ba3939c5f3a28b4d5231b53436c30f29cffd72dba113689faf",
+      "trial_id_sha256": "3a0d231d4f3e2bfbd2fa18230e84d516dc5b4065871e0c485b000868f0fcd3d1",
+      "wrist_pose_id": "coarse_r+90_p-45_y+90"
+    },
+    {
+      "release_step": 1128,
+      "selection_index": 72,
+      "state_path": "outputs/phase2CM/frozen_release_states/5c546318db2d13375dbce20e9f58545410343c246936523d8462d48441343d01.npz",
+      "trial_id": "phase2W-static-wrist-B-only:8f90013b8af199a1e822e7c812ab147e91d9772268a90fcec085133a6e3521ff",
+      "trial_id_sha256": "5c546318db2d13375dbce20e9f58545410343c246936523d8462d48441343d01",
+      "wrist_pose_id": "coarse_r+90_p-45_y-45"
+    },
+    {
+      "release_step": 1175,
+      "selection_index": 73,
+      "state_path": "outputs/phase2CM/frozen_release_states/20fb1a58412735f78bced60f73a8c0d033350cb7ef31869a326e817cb7bf7433.npz",
+      "trial_id": "phase2W-static-wrist-B-only:c41bc61ae61953d46b0e4ca92b99556c653389c36e031b57aab44d75d7d61737",
+      "trial_id_sha256": "20fb1a58412735f78bced60f73a8c0d033350cb7ef31869a326e817cb7bf7433",
+      "wrist_pose_id": "coarse_r+90_p-45_y-90"
+    },
+    {
+      "release_step": 1027,
+      "selection_index": 74,
+      "state_path": "outputs/phase2CM/frozen_release_states/0559191972b669a1e3279f4ac534b8f8588e42987982b09cb03d2f5dc00f688d.npz",
+      "trial_id": "phase2W-static-wrist-B-only:0e73f5beaaa22e2e39358cc1dd55e972b73a3e97ed83d52f1d3b5452e202f7b4",
+      "trial_id_sha256": "0559191972b669a1e3279f4ac534b8f8588e42987982b09cb03d2f5dc00f688d",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1264,
+      "selection_index": 75,
+      "state_path": "outputs/phase2CM/frozen_release_states/0c75c5021a7150e504dd4731cfec176b101abbc8ea1c3fdf9b53d83d501012b6.npz",
+      "trial_id": "phase2W-static-wrist-B-only:221fd5c13347966b21026c4021a7cde89febbffc183714cb9c63ac23924a02bd",
+      "trial_id_sha256": "0c75c5021a7150e504dd4731cfec176b101abbc8ea1c3fdf9b53d83d501012b6",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 955,
+      "selection_index": 76,
+      "state_path": "outputs/phase2CM/frozen_release_states/0189729bdbbea5710cebc4c9c9c3177c8e5bc5f1cea61de2adba0ede33f79364.npz",
+      "trial_id": "phase2W-static-wrist-B-only:3ec72eea8fdd35c7ed3374645e64dfa93e61c86fb341cdc350da21a05a660735",
+      "trial_id_sha256": "0189729bdbbea5710cebc4c9c9c3177c8e5bc5f1cea61de2adba0ede33f79364",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy-22.5"
+    },
+    {
+      "release_step": 1223,
+      "selection_index": 77,
+      "state_path": "outputs/phase2CM/frozen_release_states/26bfb2c448736c476a67f583427d7840801c5363e40a125f7d8f917ed8e3ee9d.npz",
+      "trial_id": "phase2W-static-wrist-B-only:7a9bb5e55125e5f3bd187b01c979403d0e6090f908f18c84e7432873a3710ffd",
+      "trial_id_sha256": "26bfb2c448736c476a67f583427d7840801c5363e40a125f7d8f917ed8e3ee9d",
+      "wrist_pose_id": "refined_coarse_r+90_p-45_y+45_dr+0_dp+0_dy+22.5"
+    },
+    {
+      "release_step": 993,
+      "selection_index": 78,
+      "state_path": "outputs/phase2CM/frozen_release_states/230dad7a73b64d926781f0406cd0bdbe9ad734b31cde4d5b71943629a07417bf.npz",
+      "trial_id": "phase2W-static-wrist-B-only:8d7808257867ff166644d12fddb24ecafa234fda329ea613aac06823e732e148",
+      "trial_id_sha256": "230dad7a73b64d926781f0406cd0bdbe9ad734b31cde4d5b71943629a07417bf",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1194,
+      "selection_index": 79,
+      "state_path": "outputs/phase2CM/frozen_release_states/0aa0f7509fc46293caf9868658833c85a07b702ee54b78b057ef16e589723a26.npz",
+      "trial_id": "phase2W-static-wrist-B-only:58aa0ac77fd39305f86cc02a049220271816c171d7d14a7ad00a3503ad12e7c1",
+      "trial_id_sha256": "0aa0f7509fc46293caf9868658833c85a07b702ee54b78b057ef16e589723a26",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1205,
+      "selection_index": 80,
+      "state_path": "outputs/phase2CM/frozen_release_states/cac58199cbf22df8c5f18caece6e0dfe6179f41ad8b8ec7a73fbea5da37090d0.npz",
+      "trial_id": "phase2W-static-wrist-B-only:bca249e463a6d52b13289f0732cd32e8620f1d2e9bd0b308973c846b2b46e5aa",
+      "trial_id_sha256": "cac58199cbf22df8c5f18caece6e0dfe6179f41ad8b8ec7a73fbea5da37090d0",
+      "wrist_pose_id": "coarse_r+90_p-45_y+0"
+    },
+    {
+      "release_step": 1255,
+      "selection_index": 81,
+      "state_path": "outputs/phase2CM/frozen_release_states/47d2ae8dc2857a4db6ae5dd11880ca93dc2aad94012074b7e7692db8402af2ca.npz",
+      "trial_id": "phase2W-static-wrist-B-only:ce31f8bb67a57fc0ee638ca86816dbf44da2bb36820fe948a90463226c362ba6",
+      "trial_id_sha256": "47d2ae8dc2857a4db6ae5dd11880ca93dc2aad94012074b7e7692db8402af2ca",
+      "wrist_pose_id": "coarse_r+90_p-45_y+90"
+    },
+    {
+      "release_step": 1200,
+      "selection_index": 82,
+      "state_path": "outputs/phase2CM/frozen_release_states/5f453cd8515a55cee26ca52a8cb5e736ce22a8e4dfb41d4e49f174695996388f.npz",
+      "trial_id": "phase2W-static-wrist-B-only:e3807e38c3e58aaee8bd60e5215899aad52170fcdf49115272ae476172b19e30",
+      "trial_id_sha256": "5f453cd8515a55cee26ca52a8cb5e736ce22a8e4dfb41d4e49f174695996388f",
+      "wrist_pose_id": "coarse_r+90_p-45_y-45"
+    },
+    {
+      "release_step": 1115,
+      "selection_index": 83,
+      "state_path": "outputs/phase2CM/frozen_release_states/25549c3b738fdebd0b4ae741f149eb2c458b88c51f855f1085d647df2c295c33.npz",
+      "trial_id": "phase2W-static-wrist-B-only:3d4007e1e4131e2547be90d33df9ec93300614710b83bc3d60fcd3579e38c2dc",
+      "trial_id_sha256": "25549c3b738fdebd0b4ae741f149eb2c458b88c51f855f1085d647df2c295c33",
+      "wrist_pose_id": "coarse_r+90_p-45_y-90"
+    },
+    {
+      "release_step": 1256,
+      "selection_index": 84,
+      "state_path": "outputs/phase2CM/frozen_release_states/0742c41b9f9f05e9ae980814aea1889d36fade760189f981bf360a5fdfff0783.npz",
+      "trial_id": "phase2W-static-wrist-B-only:61ecbc2552de324d62cff4ae7f4052f9bc6b4c6e13c6bc7a34795a3d43494690",
+      "trial_id_sha256": "0742c41b9f9f05e9ae980814aea1889d36fade760189f981bf360a5fdfff0783",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1340,
+      "selection_index": 85,
+      "state_path": "outputs/phase2CM/frozen_release_states/12fae32da208aa58eb1cee866e352dc2735ea5d5030214349e6b8bb7777c9408.npz",
+      "trial_id": "phase2W-static-wrist-B-only:eec622d33518d455d1049ee114328639b3c11fa7598b0d2169a22914be35b74a",
+      "trial_id_sha256": "12fae32da208aa58eb1cee866e352dc2735ea5d5030214349e6b8bb7777c9408",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1237,
+      "selection_index": 86,
+      "state_path": "outputs/phase2CM/frozen_release_states/02614804b9995706e8158ea074c8aac34e6957b30453d9775954c92dbe3c8293.npz",
+      "trial_id": "phase2W-static-wrist-B-only:52ae1c1f7a6368317336184f2d099d9a85380666477a0b3cce6286dffe0c2cea",
+      "trial_id_sha256": "02614804b9995706e8158ea074c8aac34e6957b30453d9775954c92dbe3c8293",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy-22.5"
+    },
+    {
+      "release_step": 1166,
+      "selection_index": 87,
+      "state_path": "outputs/phase2CM/frozen_release_states/2958ee4ac622ed8fb667199a54dfbd9583e2edbb2987a6ba0ffa220e7a3bc1db.npz",
+      "trial_id": "phase2W-static-wrist-B-only:225f8d573be3f8ebb5f1f3780c349a9b0e2111f9e14a9f96e5e00f4fd2fcf20e",
+      "trial_id_sha256": "2958ee4ac622ed8fb667199a54dfbd9583e2edbb2987a6ba0ffa220e7a3bc1db",
+      "wrist_pose_id": "refined_coarse_r+90_p-45_y+45_dr+0_dp+0_dy+22.5"
+    },
+    {
+      "release_step": 1141,
+      "selection_index": 88,
+      "state_path": "outputs/phase2CM/frozen_release_states/25ae38578249c65075184534b588de095800c187d513893539c4ff7a71a1ebd0.npz",
+      "trial_id": "phase2W-static-wrist-B-only:d9c966d78d83663ed517a4f75cefc50a4052724f9c1b255e27fad63bda97f4ae",
+      "trial_id_sha256": "25ae38578249c65075184534b588de095800c187d513893539c4ff7a71a1ebd0",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1097,
+      "selection_index": 89,
+      "state_path": "outputs/phase2CM/frozen_release_states/0c3f6b2bf705ca8a0284780fc92d25619bbdbbd8f052c2a5ccb50b6eeb81b97b.npz",
+      "trial_id": "phase2W-static-wrist-B-only:d991cc532259fc1883c0331d279cf5a27d0e8de47c2ccad5689ebbd0c3270c8a",
+      "trial_id_sha256": "0c3f6b2bf705ca8a0284780fc92d25619bbdbbd8f052c2a5ccb50b6eeb81b97b",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1133,
+      "selection_index": 90,
+      "state_path": "outputs/phase2CM/frozen_release_states/d384e5054fcf87dae1b465ffd7d6eea57b025d3d25fa94fe9f4a1be4b33f9870.npz",
+      "trial_id": "phase2W-static-wrist-B-only:3f6791c1a8011537e8ff58d02d7f683a1e34a8c7d7d374f237c0022eac6c0ccc",
+      "trial_id_sha256": "d384e5054fcf87dae1b465ffd7d6eea57b025d3d25fa94fe9f4a1be4b33f9870",
+      "wrist_pose_id": "coarse_r+90_p-45_y+0"
+    },
+    {
+      "release_step": 1099,
+      "selection_index": 91,
+      "state_path": "outputs/phase2CM/frozen_release_states/4a3febb232e807c18ce1b3dae63f9cc2e4983fa6ac2cf87984ec631eda603eb1.npz",
+      "trial_id": "phase2W-static-wrist-B-only:ab9739ddfa2058a13560be4f62e821da4ca9b62f1e85d08cf8017eefcff63f08",
+      "trial_id_sha256": "4a3febb232e807c18ce1b3dae63f9cc2e4983fa6ac2cf87984ec631eda603eb1",
+      "wrist_pose_id": "coarse_r+90_p-45_y+90"
+    },
+    {
+      "release_step": 1299,
+      "selection_index": 92,
+      "state_path": "outputs/phase2CM/frozen_release_states/6ed93966ff975329ee32ce44df0d80491b6c880114ddee440f15bfa0bf69a851.npz",
+      "trial_id": "phase2W-static-wrist-B-only:154d4d2eafcf2376e045a8685f47f79ba0f8d90a7df5de5632acb7e65978f2b1",
+      "trial_id_sha256": "6ed93966ff975329ee32ce44df0d80491b6c880114ddee440f15bfa0bf69a851",
+      "wrist_pose_id": "coarse_r+90_p-45_y-45"
+    },
+    {
+      "release_step": 1019,
+      "selection_index": 93,
+      "state_path": "outputs/phase2CM/frozen_release_states/2ad2ff1abc0d5c83a2ca9dc7c98ef9f66e9e95479162d4599247736e7f67e4a7.npz",
+      "trial_id": "phase2W-static-wrist-B-only:cf34cf736ffd909ad7d2be012b2f515e3dc6319df0d43f29e61b181e838b451b",
+      "trial_id_sha256": "2ad2ff1abc0d5c83a2ca9dc7c98ef9f66e9e95479162d4599247736e7f67e4a7",
+      "wrist_pose_id": "coarse_r+90_p-45_y-90"
+    },
+    {
+      "release_step": 1198,
+      "selection_index": 94,
+      "state_path": "outputs/phase2CM/frozen_release_states/09bbecbad0939295ec32f29e287055e970f4d7366aeb4ad27309b1c426a4f957.npz",
+      "trial_id": "phase2W-static-wrist-B-only:b78ec04c1182caa27788f330d8f8047338e00d6bd3049c197112c9127d44ad54",
+      "trial_id_sha256": "09bbecbad0939295ec32f29e287055e970f4d7366aeb4ad27309b1c426a4f957",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1114,
+      "selection_index": 95,
+      "state_path": "outputs/phase2CM/frozen_release_states/137ee6ed384d4dcf8b1a13a59601cf29761c833cd86287e315c225e513db232b.npz",
+      "trial_id": "phase2W-static-wrist-B-only:4ee22e0ef8e77f2e0d9c7c6743f9a7831c9b4199bc703b26323636259513a58a",
+      "trial_id_sha256": "137ee6ed384d4dcf8b1a13a59601cf29761c833cd86287e315c225e513db232b",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1323,
+      "selection_index": 96,
+      "state_path": "outputs/phase2CM/frozen_release_states/02a467e5a9740db58626eabf6084a12cb00037618f4f3538c54b9fc6c819fb38.npz",
+      "trial_id": "phase2W-static-wrist-B-only:b7d2786f37ae741bd5f71c9c91d9e55640e6c9bd18fd5435263d6d132de2f219",
+      "trial_id_sha256": "02a467e5a9740db58626eabf6084a12cb00037618f4f3538c54b9fc6c819fb38",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy-22.5"
+    },
+    {
+      "release_step": 1286,
+      "selection_index": 97,
+      "state_path": "outputs/phase2CM/frozen_release_states/29b5cc005d2ef82f82b0bcb378cf47605860ea38c27e111ea4b153d588134203.npz",
+      "trial_id": "phase2W-static-wrist-B-only:7b232c35e4c7918b1148696b5f2b2e8230ff42d36e33949a2e791c761deba926",
+      "trial_id_sha256": "29b5cc005d2ef82f82b0bcb378cf47605860ea38c27e111ea4b153d588134203",
+      "wrist_pose_id": "refined_coarse_r+90_p-45_y+45_dr+0_dp+0_dy+22.5"
+    },
+    {
+      "release_step": 1356,
+      "selection_index": 98,
+      "state_path": "outputs/phase2CM/frozen_release_states/285cbb0cb1886cb2cf6a7c67b93cb61173b6c8819ef35dbfcf48266c3a70bf1f.npz",
+      "trial_id": "phase2W-static-wrist-B-only:0ac6e757e4b80304ac1a17f50782f02d466a1368ed07c470b6d16aeea72630e9",
+      "trial_id_sha256": "285cbb0cb1886cb2cf6a7c67b93cb61173b6c8819ef35dbfcf48266c3a70bf1f",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1143,
+      "selection_index": 99,
+      "state_path": "outputs/phase2CM/frozen_release_states/0f2a1039b6d99549490792a8c604321ad0686cc49faa21909a63e3a60ceccd7a.npz",
+      "trial_id": "phase2W-static-wrist-B-only:be282428093df5d1401d865600dda0a5aa23d5fcbdb6a376b96633e3d0610123",
+      "trial_id_sha256": "0f2a1039b6d99549490792a8c604321ad0686cc49faa21909a63e3a60ceccd7a",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1264,
+      "selection_index": 100,
+      "state_path": "outputs/phase2CM/frozen_release_states/e938152f4eccbe3ee8afe5262701f0c7265bc977638592e649d6709ddba690c6.npz",
+      "trial_id": "phase2W-static-wrist-B-only:dc8eb0c37621bb24701daf86aeb04194be038696557649f124dbb27cfc57070d",
+      "trial_id_sha256": "e938152f4eccbe3ee8afe5262701f0c7265bc977638592e649d6709ddba690c6",
+      "wrist_pose_id": "coarse_r+90_p-45_y+0"
+    },
+    {
+      "release_step": 1248,
+      "selection_index": 101,
+      "state_path": "outputs/phase2CM/frozen_release_states/552700d1213132f20fd5469909534baf0ef93fb984d1925bf579f70092920bc6.npz",
+      "trial_id": "phase2W-static-wrist-B-only:d116108427f1b2ea5e90dfc097ec8b19e6e85a2325789c0805ccd328522fafd9",
+      "trial_id_sha256": "552700d1213132f20fd5469909534baf0ef93fb984d1925bf579f70092920bc6",
+      "wrist_pose_id": "coarse_r+90_p-45_y+90"
+    },
+    {
+      "release_step": 1129,
+      "selection_index": 102,
+      "state_path": "outputs/phase2CM/frozen_release_states/ad2d5dc55d5f5f37089e66e2ecd33bd022a1f70aec6867229726077672d9a0e8.npz",
+      "trial_id": "phase2W-static-wrist-B-only:8f3fcd0cc79219f4166be7ced6e463bdc4ab3d6ac67da015fda4aa960328c31d",
+      "trial_id_sha256": "ad2d5dc55d5f5f37089e66e2ecd33bd022a1f70aec6867229726077672d9a0e8",
+      "wrist_pose_id": "coarse_r+90_p-45_y-45"
+    },
+    {
+      "release_step": 987,
+      "selection_index": 103,
+      "state_path": "outputs/phase2CM/frozen_release_states/2c7e190a21a78dc367dbfd051dd6aafcd318a1f4dd8210093eaa1f31027dd454.npz",
+      "trial_id": "phase2W-static-wrist-B-only:77e4bcc23b77db057fe77a0d68247262e76d75aa8ea36682cbe4e9a301bc3aaf",
+      "trial_id_sha256": "2c7e190a21a78dc367dbfd051dd6aafcd318a1f4dd8210093eaa1f31027dd454",
+      "wrist_pose_id": "coarse_r+90_p-45_y-90"
+    },
+    {
+      "release_step": 1274,
+      "selection_index": 104,
+      "state_path": "outputs/phase2CM/frozen_release_states/0aad8b221246754c4ab90d341aa13838b191b029036dfc54f5455c38a82bec31.npz",
+      "trial_id": "phase2W-static-wrist-B-only:b9280e0a7c4fba82f85fb9576e317d190c550ff246bc452f99457a65ef68c2d0",
+      "trial_id_sha256": "0aad8b221246754c4ab90d341aa13838b191b029036dfc54f5455c38a82bec31",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1322,
+      "selection_index": 105,
+      "state_path": "outputs/phase2CM/frozen_release_states/1658179cf3031915caafdeee48a62b7238bf5dcea8ddc811e2ac3c13388fa372.npz",
+      "trial_id": "phase2W-static-wrist-B-only:8f597db4f1600b811c1331d66944300b1f1aa6c155c34a18079a138fc8ae5b34",
+      "trial_id_sha256": "1658179cf3031915caafdeee48a62b7238bf5dcea8ddc811e2ac3c13388fa372",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1181,
+      "selection_index": 106,
+      "state_path": "outputs/phase2CM/frozen_release_states/032e8e2a8e0d86b816ce6ad81a72fdea445c8f841dced559a2f48b23e8edf3b5.npz",
+      "trial_id": "phase2W-static-wrist-B-only:cb50c6006d98ea2a88855bab07e241ab14da9b20f454364161a90101040ad3b4",
+      "trial_id_sha256": "032e8e2a8e0d86b816ce6ad81a72fdea445c8f841dced559a2f48b23e8edf3b5",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy-22.5"
+    },
+    {
+      "release_step": 1073,
+      "selection_index": 107,
+      "state_path": "outputs/phase2CM/frozen_release_states/2cf4cd4b95525bbd069038c3372ab1f687060e0ebd4ee30d0da0be6718f53129.npz",
+      "trial_id": "phase2W-static-wrist-B-only:f750af9b705746714568cd6a0ee2eae665e58aa1de0d855ee24150379b6015b9",
+      "trial_id_sha256": "2cf4cd4b95525bbd069038c3372ab1f687060e0ebd4ee30d0da0be6718f53129",
+      "wrist_pose_id": "refined_coarse_r+90_p-45_y+45_dr+0_dp+0_dy+22.5"
+    },
+    {
+      "release_step": 1266,
+      "selection_index": 108,
+      "state_path": "outputs/phase2CM/frozen_release_states/2fe5eaa114c12030f48e1c8949f6fd104c0019adff06094034ec8c2bb2074c43.npz",
+      "trial_id": "phase2W-static-wrist-B-only:35d472a1881e2c3821cb55ed519727240e8bce2ac28fad0552907066ff820f39",
+      "trial_id_sha256": "2fe5eaa114c12030f48e1c8949f6fd104c0019adff06094034ec8c2bb2074c43",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1211,
+      "selection_index": 109,
+      "state_path": "outputs/phase2CM/frozen_release_states/0f9feacf516df87091ee1f1624a2f98b4d7645c306514d45dd351498eb433b8c.npz",
+      "trial_id": "phase2W-static-wrist-B-only:af36f893f5b7c3e6a4184f6bbd4615e079a52567479528b897c21df9ffe194ca",
+      "trial_id_sha256": "0f9feacf516df87091ee1f1624a2f98b4d7645c306514d45dd351498eb433b8c",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1242,
+      "selection_index": 110,
+      "state_path": "outputs/phase2CM/frozen_release_states/5d69cebcfc88fbf19ff778e250579848a7ad03e2f3fe5d1e6b1b1e9bc66590c8.npz",
+      "trial_id": "phase2W-static-wrist-B-only:129fd82105ae87d8075ed8746630529591701e0bce3903d45452d71dd18033f8",
+      "trial_id_sha256": "5d69cebcfc88fbf19ff778e250579848a7ad03e2f3fe5d1e6b1b1e9bc66590c8",
+      "wrist_pose_id": "coarse_r+90_p-45_y+90"
+    },
+    {
+      "release_step": 1312,
+      "selection_index": 111,
+      "state_path": "outputs/phase2CM/frozen_release_states/b36206f4501574985cef00eace388b8bd26943e1294c8b60976a4bb8989b6d42.npz",
+      "trial_id": "phase2W-static-wrist-B-only:a831d7ea0af70fcb64fc656b88fbc3b957cb047c9814370a71999d7d6deac607",
+      "trial_id_sha256": "b36206f4501574985cef00eace388b8bd26943e1294c8b60976a4bb8989b6d42",
+      "wrist_pose_id": "coarse_r+90_p-45_y-45"
+    },
+    {
+      "release_step": 1226,
+      "selection_index": 112,
+      "state_path": "outputs/phase2CM/frozen_release_states/31535d50d642c9056fc29ac5be8fd27db4072c8ca80cc7593a658f9327b5814d.npz",
+      "trial_id": "phase2W-static-wrist-B-only:6bfdcfeb4071097befd0a4d4346ce3860ba08100676ddbd4fc2ba7fa845c0cef",
+      "trial_id_sha256": "31535d50d642c9056fc29ac5be8fd27db4072c8ca80cc7593a658f9327b5814d",
+      "wrist_pose_id": "coarse_r+90_p-45_y-90"
+    },
+    {
+      "release_step": 1334,
+      "selection_index": 113,
+      "state_path": "outputs/phase2CM/frozen_release_states/0ad52381f9e553e20d3d1e06caa039dc378f0dfa2667824e861ec06337182230.npz",
+      "trial_id": "phase2W-static-wrist-B-only:16b3b277f7d27a5d1d4605fafc0e066ccecc4b7a974ed26e4e7d17b359f35b85",
+      "trial_id_sha256": "0ad52381f9e553e20d3d1e06caa039dc378f0dfa2667824e861ec06337182230",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1187,
+      "selection_index": 114,
+      "state_path": "outputs/phase2CM/frozen_release_states/16677f9f5757670eb4a6a4508f3b6b8308be6cca91d6604a91c97277b446e08e.npz",
+      "trial_id": "phase2W-static-wrist-B-only:c591952559f565bc6851a1dd79b70f0ed1d86e94e9bbf7cdc2340c33e7501843",
+      "trial_id_sha256": "16677f9f5757670eb4a6a4508f3b6b8308be6cca91d6604a91c97277b446e08e",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1186,
+      "selection_index": 115,
+      "state_path": "outputs/phase2CM/frozen_release_states/03782034e63438a36f3580bf256142c639775dcef009850e562917f176c80fe7.npz",
+      "trial_id": "phase2W-static-wrist-B-only:d63e69be8ee2784016ab137d6cd0004045a0df7a58bf4323d7418e893e8ae7d5",
+      "trial_id_sha256": "03782034e63438a36f3580bf256142c639775dcef009850e562917f176c80fe7",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy-22.5"
+    },
+    {
+      "release_step": 1053,
+      "selection_index": 116,
+      "state_path": "outputs/phase2CM/frozen_release_states/336ab4afcb7767251bea9633d9d6e6164692de23d825351ff878d6d678ed26e3.npz",
+      "trial_id": "phase2W-static-wrist-B-only:969d081488d2ca650710baa81057b53f9daed3fdbb22533a41941b3bf7f7a048",
+      "trial_id_sha256": "336ab4afcb7767251bea9633d9d6e6164692de23d825351ff878d6d678ed26e3",
+      "wrist_pose_id": "refined_coarse_r+90_p-45_y+45_dr+0_dp+0_dy+22.5"
+    },
+    {
+      "release_step": 1060,
+      "selection_index": 117,
+      "state_path": "outputs/phase2CM/frozen_release_states/3202c7f66a05222948f490cdd8b19071cd8869d0b5b91ceadeab8a2dcddd0675.npz",
+      "trial_id": "phase2W-static-wrist-B-only:8cf76179b05c8e6ff31ee55379b2a267eeb411bc67b3b560dae97b90c5587fe9",
+      "trial_id_sha256": "3202c7f66a05222948f490cdd8b19071cd8869d0b5b91ceadeab8a2dcddd0675",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1123,
+      "selection_index": 118,
+      "state_path": "outputs/phase2CM/frozen_release_states/13090eecb086976f3f3a5d65ff1c8908c4444b997bbec4ddfbd4ce56547904c1.npz",
+      "trial_id": "phase2W-static-wrist-B-only:27deac802165041aad41701d070cdee6d0481a10b956a7d391b66830950f850c",
+      "trial_id_sha256": "13090eecb086976f3f3a5d65ff1c8908c4444b997bbec4ddfbd4ce56547904c1",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1129,
+      "selection_index": 119,
+      "state_path": "outputs/phase2CM/frozen_release_states/63f62455c73113a185ae41da29c73e870bc44d2885c52bf7df11ac96cb3ad923.npz",
+      "trial_id": "phase2W-static-wrist-B-only:6827bd451d1d15393d6475f092d228df9fc073f94be0a8621297e3c6bb18aaf4",
+      "trial_id_sha256": "63f62455c73113a185ae41da29c73e870bc44d2885c52bf7df11ac96cb3ad923",
+      "wrist_pose_id": "coarse_r+90_p-45_y+90"
+    },
+    {
+      "release_step": 1167,
+      "selection_index": 120,
+      "state_path": "outputs/phase2CM/frozen_release_states/d0da40f92431a9eb41da31b279fad038771ef65363d4119695b9d5b05e9473ca.npz",
+      "trial_id": "phase2W-static-wrist-B-only:523c7e404d9ea51411ee4a8813f1cecb8a656aff327b94c54a192e0ab0f0d4c2",
+      "trial_id_sha256": "d0da40f92431a9eb41da31b279fad038771ef65363d4119695b9d5b05e9473ca",
+      "wrist_pose_id": "coarse_r+90_p-45_y-45"
+    },
+    {
+      "release_step": 1287,
+      "selection_index": 121,
+      "state_path": "outputs/phase2CM/frozen_release_states/34618909d1d105ac54313a99d105200d1257641a3c12ccd2e7a19cb004c8c6a1.npz",
+      "trial_id": "phase2W-static-wrist-B-only:c64c4c607dc7add2a4292a45dae7c50adf1f0236da8c51156a27699222d7b159",
+      "trial_id_sha256": "34618909d1d105ac54313a99d105200d1257641a3c12ccd2e7a19cb004c8c6a1",
+      "wrist_pose_id": "coarse_r+90_p-45_y-90"
+    },
+    {
+      "release_step": 1212,
+      "selection_index": 122,
+      "state_path": "outputs/phase2CM/frozen_release_states/0b02af14f27aa3581b1d654595a01c701e9288c759dcf604dca108b05d616c9c.npz",
+      "trial_id": "phase2W-static-wrist-B-only:bfe74dc81fd9412c02ba42e5f39053cf8f923fc49f1946726b24d59c9f8551bb",
+      "trial_id_sha256": "0b02af14f27aa3581b1d654595a01c701e9288c759dcf604dca108b05d616c9c",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1171,
+      "selection_index": 123,
+      "state_path": "outputs/phase2CM/frozen_release_states/18fafd0c111d07f9f7a39be95f769eda1ed5ef101838e22b4e0892961ffc87c7.npz",
+      "trial_id": "phase2W-static-wrist-B-only:69b27968e775a098f0f610e2774c4a0a40a5a8f6750c68b41efb30f8352db6a6",
+      "trial_id_sha256": "18fafd0c111d07f9f7a39be95f769eda1ed5ef101838e22b4e0892961ffc87c7",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1175,
+      "selection_index": 124,
+      "state_path": "outputs/phase2CM/frozen_release_states/03ae58beee1702ee57449b04236e8dd64ef2391482eb8ec458f991949b955858.npz",
+      "trial_id": "phase2W-static-wrist-B-only:8ef8c89ceb70c4d4be0c52cbc1c674495efa5a97fdab333cbce617d4d8ef7088",
+      "trial_id_sha256": "03ae58beee1702ee57449b04236e8dd64ef2391482eb8ec458f991949b955858",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy-22.5"
+    },
+    {
+      "release_step": 1117,
+      "selection_index": 125,
+      "state_path": "outputs/phase2CM/frozen_release_states/338313998e89d42b7f9ee9adc91fcd5c4805c3f1e77ec8d7a3e2937f30cb94d3.npz",
+      "trial_id": "phase2W-static-wrist-B-only:780fa4dbc25258e25518b79964ac03642766f7ebbedc8642e79ef7d3d1e1c145",
+      "trial_id_sha256": "338313998e89d42b7f9ee9adc91fcd5c4805c3f1e77ec8d7a3e2937f30cb94d3",
+      "wrist_pose_id": "refined_coarse_r+90_p-45_y+45_dr+0_dp+0_dy+22.5"
+    },
+    {
+      "release_step": 1088,
+      "selection_index": 126,
+      "state_path": "outputs/phase2CM/frozen_release_states/35f1b2bca790b89a8077de1b31a5b720d3ae1da6db96632d54f2b3bb3f1801cf.npz",
+      "trial_id": "phase2W-static-wrist-B-only:168dfd3b63e3a9efdaaaf0f4ae74d9d3964d79690491e873289a4eb9ccca384d",
+      "trial_id_sha256": "35f1b2bca790b89a8077de1b31a5b720d3ae1da6db96632d54f2b3bb3f1801cf",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1073,
+      "selection_index": 127,
+      "state_path": "outputs/phase2CM/frozen_release_states/1361fcdbea63743beb03c76ad9c997c815e2658cc5e7ff140456eed705221921.npz",
+      "trial_id": "phase2W-static-wrist-B-only:38eda03fe9298d241aac4e0807e1083da2fb5fd1315681faafb455f7cfb3e5dd",
+      "trial_id_sha256": "1361fcdbea63743beb03c76ad9c997c815e2658cc5e7ff140456eed705221921",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1215,
+      "selection_index": 128,
+      "state_path": "outputs/phase2CM/frozen_release_states/6d8b904f3a79595758a2b1c814a305ab0598e2a8fb1016d05d220f990718b066.npz",
+      "trial_id": "phase2W-static-wrist-B-only:9a0114ca9bc9b5d2e834160fe13fffcc38409374ccc60ce44358bcf7e54b466f",
+      "trial_id_sha256": "6d8b904f3a79595758a2b1c814a305ab0598e2a8fb1016d05d220f990718b066",
+      "wrist_pose_id": "coarse_r+90_p-45_y+90"
+    },
+    {
+      "release_step": 1036,
+      "selection_index": 129,
+      "state_path": "outputs/phase2CM/frozen_release_states/d4c167710d59c8af91ea419d236053f7fa020a56819156896c6f85bd532eabde.npz",
+      "trial_id": "phase2W-static-wrist-B-only:e3c469a72fc6af4d61569c46af4631129457b690510561d5c3710f755eb98d02",
+      "trial_id_sha256": "d4c167710d59c8af91ea419d236053f7fa020a56819156896c6f85bd532eabde",
+      "wrist_pose_id": "coarse_r+90_p-45_y-45"
+    },
+    {
+      "release_step": 1235,
+      "selection_index": 130,
+      "state_path": "outputs/phase2CM/frozen_release_states/357ce5a5b0b67f9904e6cdf8b983452431511ee42e617c4897bff98021db31dd.npz",
+      "trial_id": "phase2W-static-wrist-B-only:086a7f472deb294f3b50a7d733f83709b5d536fb54e5553847e114f5f72928de",
+      "trial_id_sha256": "357ce5a5b0b67f9904e6cdf8b983452431511ee42e617c4897bff98021db31dd",
+      "wrist_pose_id": "coarse_r+90_p-45_y-90"
+    },
+    {
+      "release_step": 1197,
+      "selection_index": 131,
+      "state_path": "outputs/phase2CM/frozen_release_states/0bd500174deb788863da44005cdfc2ab6eb220a37f6ac0ef866298cd8057fa07.npz",
+      "trial_id": "phase2W-static-wrist-B-only:899878f316ce4265defc509c4bf8716916085abccbf4cc5fac84e533af87e79c",
+      "trial_id_sha256": "0bd500174deb788863da44005cdfc2ab6eb220a37f6ac0ef866298cd8057fa07",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1296,
+      "selection_index": 132,
+      "state_path": "outputs/phase2CM/frozen_release_states/1ccc30b019209fd6ac1ce4769ffd7815279b4c48b1b896a687d7e40793bba9d7.npz",
+      "trial_id": "phase2W-static-wrist-B-only:a4f1dc24e70827cfc0e86c09e642f359eb4134e42cca574269642325470ea3da",
+      "trial_id_sha256": "1ccc30b019209fd6ac1ce4769ffd7815279b4c48b1b896a687d7e40793bba9d7",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1364,
+      "selection_index": 133,
+      "state_path": "outputs/phase2CM/frozen_release_states/03b0ffe6000a8610e93490c02af1e421221b65cb2f2cd220f3e70e882415f7c0.npz",
+      "trial_id": "phase2W-static-wrist-B-only:dcd3a1ecd32365ba8f318c06282907f1ff9896d9dcea67220937dc0b88277244",
+      "trial_id_sha256": "03b0ffe6000a8610e93490c02af1e421221b65cb2f2cd220f3e70e882415f7c0",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy-22.5"
+    },
+    {
+      "release_step": 1066,
+      "selection_index": 134,
+      "state_path": "outputs/phase2CM/frozen_release_states/34b6064ed09d61e1601adb0ece9d4996c66d03834bdb830e482b581980cb2fe7.npz",
+      "trial_id": "phase2W-static-wrist-B-only:38558ba32d53070e10573b26c6b9a32b1e52ea8527ff002c6f11f81757d13558",
+      "trial_id_sha256": "34b6064ed09d61e1601adb0ece9d4996c66d03834bdb830e482b581980cb2fe7",
+      "wrist_pose_id": "refined_coarse_r+90_p-45_y+45_dr+0_dp+0_dy+22.5"
+    },
+    {
+      "release_step": 1185,
+      "selection_index": 135,
+      "state_path": "outputs/phase2CM/frozen_release_states/3c1467dc076c0b12c674665a1e9633f485e6f9d020bcdbad973a994ce57c0755.npz",
+      "trial_id": "phase2W-static-wrist-B-only:f181b529fbd4d72e3ec795a5c10a5bbe951e060610e534c26f44706acaafcefb",
+      "trial_id_sha256": "3c1467dc076c0b12c674665a1e9633f485e6f9d020bcdbad973a994ce57c0755",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1312,
+      "selection_index": 136,
+      "state_path": "outputs/phase2CM/frozen_release_states/13a016a3160395292ee8329fa47a76899d37dc507cbf68dd3042616007dd29ed.npz",
+      "trial_id": "phase2W-static-wrist-B-only:30fb0b18c301799438d5fc862d9e4ac0345863a215ed895938bcd381f1ce6262",
+      "trial_id_sha256": "13a016a3160395292ee8329fa47a76899d37dc507cbf68dd3042616007dd29ed",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1214,
+      "selection_index": 137,
+      "state_path": "outputs/phase2CM/frozen_release_states/7b2c32c62e1452910ce7e1dcd1d8e177d62d5f814a0aa6bdc44c16a4259f210c.npz",
+      "trial_id": "phase2W-static-wrist-B-only:e198b59a79bab2b2738b3f381c06b397ea4ac53865615d87bb6df16c645efae2",
+      "trial_id_sha256": "7b2c32c62e1452910ce7e1dcd1d8e177d62d5f814a0aa6bdc44c16a4259f210c",
+      "wrist_pose_id": "coarse_r+90_p-45_y+90"
+    },
+    {
+      "release_step": 1092,
+      "selection_index": 138,
+      "state_path": "outputs/phase2CM/frozen_release_states/dd24d086a547385acaf26b96c38db1d979f01e41d8dee051c47c42e4f99ec806.npz",
+      "trial_id": "phase2W-static-wrist-B-only:a101b3ce7b7739f7ad435a3b890a6174276537d8e2ffbfe512ecf886cf13e92a",
+      "trial_id_sha256": "dd24d086a547385acaf26b96c38db1d979f01e41d8dee051c47c42e4f99ec806",
+      "wrist_pose_id": "coarse_r+90_p-45_y-45"
+    },
+    {
+      "release_step": 1247,
+      "selection_index": 139,
+      "state_path": "outputs/phase2CM/frozen_release_states/385910d01a79ab8eb69ed4cf54aeae649b3a117f0057fb2bc82529001d421f83.npz",
+      "trial_id": "phase2W-static-wrist-B-only:ff3cb3070b3a8fff1673870482177c17bbfa1037d44a25dec9428eaa301d9b09",
+      "trial_id_sha256": "385910d01a79ab8eb69ed4cf54aeae649b3a117f0057fb2bc82529001d421f83",
+      "wrist_pose_id": "coarse_r+90_p-45_y-90"
+    },
+    {
+      "release_step": 1058,
+      "selection_index": 140,
+      "state_path": "outputs/phase2CM/frozen_release_states/0cdc5c9cfa1d9bc5ffba721c80a917da1ae23714081ba0501733594da3cdeb48.npz",
+      "trial_id": "phase2W-static-wrist-B-only:b4a4e51e9dfd083de44719ecededfb06c73fd771a27faf17db1cff9e3e51f929",
+      "trial_id_sha256": "0cdc5c9cfa1d9bc5ffba721c80a917da1ae23714081ba0501733594da3cdeb48",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1279,
+      "selection_index": 141,
+      "state_path": "outputs/phase2CM/frozen_release_states/1e9a5e984d1a2fbc281e3baa39bc5e6cbce177dc81128891b215ba26d2f8e2c6.npz",
+      "trial_id": "phase2W-static-wrist-B-only:86e52c74992c35cdda5d90335057af8cd6a115248c4d965cb5ccf42ea261a27f",
+      "trial_id_sha256": "1e9a5e984d1a2fbc281e3baa39bc5e6cbce177dc81128891b215ba26d2f8e2c6",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1076,
+      "selection_index": 142,
+      "state_path": "outputs/phase2CM/frozen_release_states/042c0d069fe47b4e59691d8a8613f5e73058ce3a25349d1d2dcfc742f6197aba.npz",
+      "trial_id": "phase2W-static-wrist-B-only:824cf0eaae3e0546a49ac72b1603a0eb34073c91360292bb36d2991b4ad40ef8",
+      "trial_id_sha256": "042c0d069fe47b4e59691d8a8613f5e73058ce3a25349d1d2dcfc742f6197aba",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy-22.5"
+    },
+    {
+      "release_step": 1179,
+      "selection_index": 143,
+      "state_path": "outputs/phase2CM/frozen_release_states/3693c0f8309a027cce66b6684b6bd8b30500f134b3acaedfd68077a3c9026d31.npz",
+      "trial_id": "phase2W-static-wrist-B-only:ea849cbc792c6e8300a002ac3466a561bb64518b051c58bc07c870e5fbf9694e",
+      "trial_id_sha256": "3693c0f8309a027cce66b6684b6bd8b30500f134b3acaedfd68077a3c9026d31",
+      "wrist_pose_id": "refined_coarse_r+90_p-45_y+45_dr+0_dp+0_dy+22.5"
+    },
+    {
+      "release_step": 1143,
+      "selection_index": 144,
+      "state_path": "outputs/phase2CM/frozen_release_states/45089d4206f37d66cdb328934b7b8f3483322bcbaee45be559ae1b8015f1c240.npz",
+      "trial_id": "phase2W-static-wrist-B-only:b3fdae69c3c91a1971e5cf847fe4e61920067c3d631695de6926b9f95b433163",
+      "trial_id_sha256": "45089d4206f37d66cdb328934b7b8f3483322bcbaee45be559ae1b8015f1c240",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1067,
+      "selection_index": 145,
+      "state_path": "outputs/phase2CM/frozen_release_states/15a6525240e4fb5bc723a7c946669d972cca397afc0d5d429b51ee41a1d7dac2.npz",
+      "trial_id": "phase2W-static-wrist-B-only:672538bf220eb4b9b4ee9cdec424d8bb6fa161dd26d842985e7813d0d086a1e1",
+      "trial_id_sha256": "15a6525240e4fb5bc723a7c946669d972cca397afc0d5d429b51ee41a1d7dac2",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1131,
+      "selection_index": 146,
+      "state_path": "outputs/phase2CM/frozen_release_states/7be6309ee4fefbd8587380ac81c02de0d2e21a35bd52491a293dd501184fe73a.npz",
+      "trial_id": "phase2W-static-wrist-B-only:c19beddb9fbf5b29383eb7f6d01e1b6bea801d6a76b5a03fd247068f9e1738f9",
+      "trial_id_sha256": "7be6309ee4fefbd8587380ac81c02de0d2e21a35bd52491a293dd501184fe73a",
+      "wrist_pose_id": "coarse_r+90_p-45_y+90"
+    },
+    {
+      "release_step": 1267,
+      "selection_index": 147,
+      "state_path": "outputs/phase2CM/frozen_release_states/de7707e957332315b22dc5306f9bc259ff28da40e8c7570e7ac0736207626747.npz",
+      "trial_id": "phase2W-static-wrist-B-only:de4ee0eb9cd66c75b0e249ff4df537ce062d1bef1f105e81aaf76dde830d6e3f",
+      "trial_id_sha256": "de7707e957332315b22dc5306f9bc259ff28da40e8c7570e7ac0736207626747",
+      "wrist_pose_id": "coarse_r+90_p-45_y-45"
+    },
+    {
+      "release_step": 1181,
+      "selection_index": 148,
+      "state_path": "outputs/phase2CM/frozen_release_states/3cd39b221491bb8e3176873c503c5f57d65395964fdb29f489b1f347072a544f.npz",
+      "trial_id": "phase2W-static-wrist-B-only:2deb134a5e18bb2fb5ebe02b412e127d92dff0d1c4b4a66a26ed38d4d40e83e1",
+      "trial_id_sha256": "3cd39b221491bb8e3176873c503c5f57d65395964fdb29f489b1f347072a544f",
+      "wrist_pose_id": "coarse_r+90_p-45_y-90"
+    },
+    {
+      "release_step": 1195,
+      "selection_index": 149,
+      "state_path": "outputs/phase2CM/frozen_release_states/0f7d68ad38ae1c305b68cae8bd3fa05bd3304829835d12c71586f0e361ec3f20.npz",
+      "trial_id": "phase2W-static-wrist-B-only:f110462e7cec58154189338c615ae95efef8bb3ed5b6cdfe5f1adf8c232c7558",
+      "trial_id_sha256": "0f7d68ad38ae1c305b68cae8bd3fa05bd3304829835d12c71586f0e361ec3f20",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1182,
+      "selection_index": 150,
+      "state_path": "outputs/phase2CM/frozen_release_states/24168f3db32fd8fda7ec178e88d276ce4fbf20a2b3b77839a5f671153b0750a6.npz",
+      "trial_id": "phase2W-static-wrist-B-only:2e6ec40a4923addd4d97a9360ee627d6793a9650048b49aba5b5ee09fb90bf48",
+      "trial_id_sha256": "24168f3db32fd8fda7ec178e88d276ce4fbf20a2b3b77839a5f671153b0750a6",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1051,
+      "selection_index": 151,
+      "state_path": "outputs/phase2CM/frozen_release_states/0455dec2e24a29fd915bebab33455df565c0d7278cf62ac05e0c532a33286c69.npz",
+      "trial_id": "phase2W-static-wrist-B-only:729c401ad8aab79ffb7c689b88ef5c6c48470d238b73165af452790f0e6390a7",
+      "trial_id_sha256": "0455dec2e24a29fd915bebab33455df565c0d7278cf62ac05e0c532a33286c69",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy-22.5"
+    },
+    {
+      "release_step": 1029,
+      "selection_index": 152,
+      "state_path": "outputs/phase2CM/frozen_release_states/41194f4b11bb85bd2ba7386f6ae5bfbdc4f40ae7c71685a30d5b105ce02f1ffa.npz",
+      "trial_id": "phase2W-static-wrist-B-only:9bc1d988ab06f5d23d75456a832187c1aa10f432f4f3df81dda7f16cae29a94b",
+      "trial_id_sha256": "41194f4b11bb85bd2ba7386f6ae5bfbdc4f40ae7c71685a30d5b105ce02f1ffa",
+      "wrist_pose_id": "refined_coarse_r+90_p-45_y+45_dr+0_dp+0_dy+22.5"
+    },
+    {
+      "release_step": 1113,
+      "selection_index": 153,
+      "state_path": "outputs/phase2CM/frozen_release_states/483dbedffd9ebc97372381d5db1a4bfd32509e17ea7f1db81e539f38036f2718.npz",
+      "trial_id": "phase2W-static-wrist-B-only:5ff259d8bb6bbcb5e5cc27cb5aa56f183e3fbb703aef86e757257e9eee510c3b",
+      "trial_id_sha256": "483dbedffd9ebc97372381d5db1a4bfd32509e17ea7f1db81e539f38036f2718",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1298,
+      "selection_index": 154,
+      "state_path": "outputs/phase2CM/frozen_release_states/15f7f4ca434b4d8cff0eb9c448a75c1c5ff7a5e5a490e6a399a56af49012f252.npz",
+      "trial_id": "phase2W-static-wrist-B-only:9b87959ab0c614df7f847e03e2494281c2b5ff58cda25dbc04690584920c328d",
+      "trial_id_sha256": "15f7f4ca434b4d8cff0eb9c448a75c1c5ff7a5e5a490e6a399a56af49012f252",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1325,
+      "selection_index": 155,
+      "state_path": "outputs/phase2CM/frozen_release_states/7e0196f32202823e7cf575458f540e83b9c38ac3d5ffb70d9c479d75b75176b7.npz",
+      "trial_id": "phase2W-static-wrist-B-only:02c15cb0cff6b1df7ad96c6cad3e833ee3702b2b9d6a61e7ddb2714fc4b7207c",
+      "trial_id_sha256": "7e0196f32202823e7cf575458f540e83b9c38ac3d5ffb70d9c479d75b75176b7",
+      "wrist_pose_id": "coarse_r+90_p-45_y+90"
+    },
+    {
+      "release_step": 1192,
+      "selection_index": 156,
+      "state_path": "outputs/phase2CM/frozen_release_states/e58dd74c73d6785ec8eb3cc9766c6782b59ace426ece3d731281f7b2677aee6e.npz",
+      "trial_id": "phase2W-static-wrist-B-only:a64c21f872d17f388fc58d3d57337423da5ff2700445774175a7505c32e68c4d",
+      "trial_id_sha256": "e58dd74c73d6785ec8eb3cc9766c6782b59ace426ece3d731281f7b2677aee6e",
+      "wrist_pose_id": "coarse_r+90_p-45_y-45"
+    },
+    {
+      "release_step": 1126,
+      "selection_index": 157,
+      "state_path": "outputs/phase2CM/frozen_release_states/3d80eafd2987dce2b7b70ccaaf4ee31593ed2910d657c3d98ffc816498af1b3f.npz",
+      "trial_id": "phase2W-static-wrist-B-only:3095125ebf04fea81c67947db0e483871621ca3fc943e5d62e61c781ec1b64ac",
+      "trial_id_sha256": "3d80eafd2987dce2b7b70ccaaf4ee31593ed2910d657c3d98ffc816498af1b3f",
+      "wrist_pose_id": "coarse_r+90_p-45_y-90"
+    },
+    {
+      "release_step": 1219,
+      "selection_index": 158,
+      "state_path": "outputs/phase2CM/frozen_release_states/114ee9aca95e32f150aa9ef0205432d5ad799d3ad5d301e86fcff1f596708dc8.npz",
+      "trial_id": "phase2W-static-wrist-B-only:482b8643b2ccbd9bc5a3f242b154bed60ab5bbd621fe8ea1a87ddb7121b41b56",
+      "trial_id_sha256": "114ee9aca95e32f150aa9ef0205432d5ad799d3ad5d301e86fcff1f596708dc8",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1142,
+      "selection_index": 159,
+      "state_path": "outputs/phase2CM/frozen_release_states/24981b0b008bc881f9006a3343abb88f600a751fcb0987de40f529703343e00e.npz",
+      "trial_id": "phase2W-static-wrist-B-only:b706f0d730414d9afa858a20b79f2586a71f1c7c28cd6c7c3ffcfc1575afb8b5",
+      "trial_id_sha256": "24981b0b008bc881f9006a3343abb88f600a751fcb0987de40f529703343e00e",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1293,
+      "selection_index": 160,
+      "state_path": "outputs/phase2CM/frozen_release_states/0490eae555783b291057034831a22310c6e2f97e060ec4068c2fb9c0e726fcbc.npz",
+      "trial_id": "phase2W-static-wrist-B-only:145e28a4e8c1ef927bd148e3c24db53a9e8200a7dc460cef62c8accceaaea945",
+      "trial_id_sha256": "0490eae555783b291057034831a22310c6e2f97e060ec4068c2fb9c0e726fcbc",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy-22.5"
+    },
+    {
+      "release_step": 995,
+      "selection_index": 161,
+      "state_path": "outputs/phase2CM/frozen_release_states/42dac1d987dd891512c19516dac7801092116ae155ff32312bd62c638c414404.npz",
+      "trial_id": "phase2W-static-wrist-B-only:b987852ffe4787d0bab97a1f042e6c8d2b45444493b7da9ff65796e1812546ac",
+      "trial_id_sha256": "42dac1d987dd891512c19516dac7801092116ae155ff32312bd62c638c414404",
+      "wrist_pose_id": "refined_coarse_r+90_p-45_y+45_dr+0_dp+0_dy+22.5"
+    },
+    {
+      "release_step": 1241,
+      "selection_index": 162,
+      "state_path": "outputs/phase2CM/frozen_release_states/48465fc09749e456b4f131759c2b41912ef1839e96972a9df2451add719a52de.npz",
+      "trial_id": "phase2W-static-wrist-B-only:538ec4209751efaa37c31ef3124c4cc99c8022ea407019b0ad75c10db3cd6f4e",
+      "trial_id_sha256": "48465fc09749e456b4f131759c2b41912ef1839e96972a9df2451add719a52de",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 964,
+      "selection_index": 163,
+      "state_path": "outputs/phase2CM/frozen_release_states/169901167bd74d501fd478379a8f97479487696fcd780d866210c554074fd229.npz",
+      "trial_id": "phase2W-static-wrist-B-only:29b91eff60de43eaf4b625013a3a7cafc6d1cbff4163e56be584bb0ac6a2877f",
+      "trial_id_sha256": "169901167bd74d501fd478379a8f97479487696fcd780d866210c554074fd229",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1291,
+      "selection_index": 164,
+      "state_path": "outputs/phase2CM/frozen_release_states/823c253a9b4602e64d2fd9879fbc73ace9b9ee47d38d43ed51e2f2cfaeb1cd28.npz",
+      "trial_id": "phase2W-static-wrist-B-only:e80493814d1c3016bad34214c25c5e9edf1aff65199daad99b70c6b2ff621b84",
+      "trial_id_sha256": "823c253a9b4602e64d2fd9879fbc73ace9b9ee47d38d43ed51e2f2cfaeb1cd28",
+      "wrist_pose_id": "coarse_r+90_p-45_y+90"
+    },
+    {
+      "release_step": 1265,
+      "selection_index": 165,
+      "state_path": "outputs/phase2CM/frozen_release_states/f670a0c1e0c700e4746b325f5b64c23d0def27946f95856e9934ce39ac909454.npz",
+      "trial_id": "phase2W-static-wrist-B-only:ef71e3ee2b6c49f0fe422cb14d54ebacd0ad557b1c9765c6648b3bc5f0f64ae2",
+      "trial_id_sha256": "f670a0c1e0c700e4746b325f5b64c23d0def27946f95856e9934ce39ac909454",
+      "wrist_pose_id": "coarse_r+90_p-45_y-45"
+    },
+    {
+      "release_step": 1221,
+      "selection_index": 166,
+      "state_path": "outputs/phase2CM/frozen_release_states/46506a46ffb7b2a7134876a4b57ae7a17aefe689dd8c8d1bfc33d6452d82fea3.npz",
+      "trial_id": "phase2W-static-wrist-B-only:8bbaec203afe6ab08031420e8f45dd5d24797894c4f0683c868f72232f46375a",
+      "trial_id_sha256": "46506a46ffb7b2a7134876a4b57ae7a17aefe689dd8c8d1bfc33d6452d82fea3",
+      "wrist_pose_id": "coarse_r+90_p-45_y-90"
+    },
+    {
+      "release_step": 1251,
+      "selection_index": 167,
+      "state_path": "outputs/phase2CM/frozen_release_states/12117e9a7ab81fb229d03a284be0036180157207837d1113d50d2b5ee95ab3c0.npz",
+      "trial_id": "phase2W-static-wrist-B-only:e28e873dcbe676e0f5ae770e23a5777190f1e027dec84d3f595e89fbdb658e95",
+      "trial_id_sha256": "12117e9a7ab81fb229d03a284be0036180157207837d1113d50d2b5ee95ab3c0",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1270,
+      "selection_index": 168,
+      "state_path": "outputs/phase2CM/frozen_release_states/2a8d0fd0ee7cccb48b953ce679c2d3adfc1e12121c1ec59db685a66d8311e548.npz",
+      "trial_id": "phase2W-static-wrist-B-only:b0086adcccbc45984cda2ba1e61a94d156a02fa2e8bae0c16e834f8280f2e1dc",
+      "trial_id_sha256": "2a8d0fd0ee7cccb48b953ce679c2d3adfc1e12121c1ec59db685a66d8311e548",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1100,
+      "selection_index": 169,
+      "state_path": "outputs/phase2CM/frozen_release_states/04b8db21ca5e1fe8dbfdfbec0ba295c390fd78d46cd62a1edfff28da23fa317b.npz",
+      "trial_id": "phase2W-static-wrist-B-only:3a733654fe62a4ce4234ebf5927a9152c4ae2bbda050f92604455861f0fd1295",
+      "trial_id_sha256": "04b8db21ca5e1fe8dbfdfbec0ba295c390fd78d46cd62a1edfff28da23fa317b",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy-22.5"
+    },
+    {
+      "release_step": 1176,
+      "selection_index": 170,
+      "state_path": "outputs/phase2CM/frozen_release_states/43ef812236570cb57f9ca1b9b0d524f57362231357cd554862117564f5d2efa1.npz",
+      "trial_id": "phase2W-static-wrist-B-only:bb2162faf0d2bb0eb40439a76c19ef14a5c49b4f5696293ae4e983b535d6031d",
+      "trial_id_sha256": "43ef812236570cb57f9ca1b9b0d524f57362231357cd554862117564f5d2efa1",
+      "wrist_pose_id": "refined_coarse_r+90_p-45_y+45_dr+0_dp+0_dy+22.5"
+    },
+    {
+      "release_step": 1177,
+      "selection_index": 171,
+      "state_path": "outputs/phase2CM/frozen_release_states/4976de09c494f7cc9fc8e5950195123f75fbbca9ffeab801599f808120390ebc.npz",
+      "trial_id": "phase2W-static-wrist-B-only:5e525ce6f981c1550d934836ae9f22b7062bca48cf22f8010f3f6d4a1edf86d1",
+      "trial_id_sha256": "4976de09c494f7cc9fc8e5950195123f75fbbca9ffeab801599f808120390ebc",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1236,
+      "selection_index": 172,
+      "state_path": "outputs/phase2CM/frozen_release_states/16a95671ee12a7949201ddfc76d603f33ae57ddf9db84024ebe393fa8065a176.npz",
+      "trial_id": "phase2W-static-wrist-B-only:9a2e83f56afcd52ea434541772c48c451ecf2582c359c733fe3634c153dba12b",
+      "trial_id_sha256": "16a95671ee12a7949201ddfc76d603f33ae57ddf9db84024ebe393fa8065a176",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 997,
+      "selection_index": 173,
+      "state_path": "outputs/phase2CM/frozen_release_states/834c52b192e25d389d29564d07e3bd9dd31a6c3d7cd524a661d753838957e7d8.npz",
+      "trial_id": "phase2W-static-wrist-B-only:19c7a806b1312888926526f2149e6e55f960910c1b1d6f88b06b0a5e4524ef2c",
+      "trial_id_sha256": "834c52b192e25d389d29564d07e3bd9dd31a6c3d7cd524a661d753838957e7d8",
+      "wrist_pose_id": "coarse_r+90_p-45_y+90"
+    },
+    {
+      "release_step": 1108,
+      "selection_index": 174,
+      "state_path": "outputs/phase2CM/frozen_release_states/4b2e7f0498e2081e116c88942d1710bb08dec8c6aa02522f12ffbb721f92e9fa.npz",
+      "trial_id": "phase2W-static-wrist-B-only:2066b4257fa7b98613e6d316581ebb68a670b0e313c3f2a0c60b4146d3a38e4a",
+      "trial_id_sha256": "4b2e7f0498e2081e116c88942d1710bb08dec8c6aa02522f12ffbb721f92e9fa",
+      "wrist_pose_id": "coarse_r+90_p-45_y-90"
+    },
+    {
+      "release_step": 1059,
+      "selection_index": 175,
+      "state_path": "outputs/phase2CM/frozen_release_states/14aa7f08fb4774abaf36ba3008355fab853e0daca5b70ccfc9b57087cf7dc7ce.npz",
+      "trial_id": "phase2W-static-wrist-B-only:aed3396fbc593d7c2202024a50bc354d047d0a8a02b6099e22ec55c4803e74d7",
+      "trial_id_sha256": "14aa7f08fb4774abaf36ba3008355fab853e0daca5b70ccfc9b57087cf7dc7ce",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1225,
+      "selection_index": 176,
+      "state_path": "outputs/phase2CM/frozen_release_states/2bd017be79070c53b8ef1ec9e0d2d8be536a422de8bb5befaf44cc7fb03ff5c0.npz",
+      "trial_id": "phase2W-static-wrist-B-only:d886f11d297ad3048200906cac8ceb2372b5ea01a3aea53255013ccdf5612aef",
+      "trial_id_sha256": "2bd017be79070c53b8ef1ec9e0d2d8be536a422de8bb5befaf44cc7fb03ff5c0",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1121,
+      "selection_index": 177,
+      "state_path": "outputs/phase2CM/frozen_release_states/05399c466cba0ca2317adf844ac09c6efcc22adb0cf094dbc4827dcc9b494aae.npz",
+      "trial_id": "phase2W-static-wrist-B-only:ee05e2554cf6de689b05f98ac56776cee375dd3285fd1dd34c5005627fb7be17",
+      "trial_id_sha256": "05399c466cba0ca2317adf844ac09c6efcc22adb0cf094dbc4827dcc9b494aae",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy-22.5"
+    },
+    {
+      "release_step": 1205,
+      "selection_index": 178,
+      "state_path": "outputs/phase2CM/frozen_release_states/43fefe10be14217c935c8e79054595a3b5061ac8a129a05a4fc7511fe32ef38d.npz",
+      "trial_id": "phase2W-static-wrist-B-only:f14c7fd46a15dfdfbdeaa1f2b1b58a202aa803ea8da0e6997a0b39b3a07c5798",
+      "trial_id_sha256": "43fefe10be14217c935c8e79054595a3b5061ac8a129a05a4fc7511fe32ef38d",
+      "wrist_pose_id": "refined_coarse_r+90_p-45_y+45_dr+0_dp+0_dy+22.5"
+    },
+    {
+      "release_step": 1063,
+      "selection_index": 179,
+      "state_path": "outputs/phase2CM/frozen_release_states/4a07340128fba1780e135b084b006b996848071d3989f81656ab2ae431a72fb5.npz",
+      "trial_id": "phase2W-static-wrist-B-only:abdb12a3e22697ea9dfdbb0b2a20b14b59951f5548fada9b3fa467b82ff337e9",
+      "trial_id_sha256": "4a07340128fba1780e135b084b006b996848071d3989f81656ab2ae431a72fb5",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1066,
+      "selection_index": 180,
+      "state_path": "outputs/phase2CM/frozen_release_states/195cba6c84dee5e4dacc6edbffd269340163ba6c7805556160495626b0b2171e.npz",
+      "trial_id": "phase2W-static-wrist-B-only:c5939464d2b4a36dd7b0aed0245a01d17451cc7fff2bf7b135937cb6fdcce7eb",
+      "trial_id_sha256": "195cba6c84dee5e4dacc6edbffd269340163ba6c7805556160495626b0b2171e",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1076,
+      "selection_index": 181,
+      "state_path": "outputs/phase2CM/frozen_release_states/83f2995e6289b0aabc08b0962e7c35d65d61ae50ac6d4f645ac261906500f01a.npz",
+      "trial_id": "phase2W-static-wrist-B-only:1fe066f331176ed8f977e58e8e3cfa5c2b6f24671f9dea8a99151643df87df64",
+      "trial_id_sha256": "83f2995e6289b0aabc08b0962e7c35d65d61ae50ac6d4f645ac261906500f01a",
+      "wrist_pose_id": "coarse_r+90_p-45_y+90"
+    },
+    {
+      "release_step": 1157,
+      "selection_index": 182,
+      "state_path": "outputs/phase2CM/frozen_release_states/523a01045692434dad22f51b4179606474db08b67563eeb8f128e93810b5f44c.npz",
+      "trial_id": "phase2W-static-wrist-B-only:61fbd3ef6fcd64c7693b841b2bb4bfb38247136805c837f851a0808603882019",
+      "trial_id_sha256": "523a01045692434dad22f51b4179606474db08b67563eeb8f128e93810b5f44c",
+      "wrist_pose_id": "coarse_r+90_p-45_y-90"
+    },
+    {
+      "release_step": 1233,
+      "selection_index": 183,
+      "state_path": "outputs/phase2CM/frozen_release_states/174013d68d65dccd0819cf0fe74b5b53ee36abb3a7187bc239e0a1aa3fdc3dde.npz",
+      "trial_id": "phase2W-static-wrist-B-only:1cdec7725ba3f2209839783c9c7fc6eabaac6ebb3b8ba4728308b33ca29a1644",
+      "trial_id_sha256": "174013d68d65dccd0819cf0fe74b5b53ee36abb3a7187bc239e0a1aa3fdc3dde",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1327,
+      "selection_index": 184,
+      "state_path": "outputs/phase2CM/frozen_release_states/2d0b03a1cf9f7c3f75a5d66661e40d43d9f84a59227b9f54b35cf1a1ad29f7a3.npz",
+      "trial_id": "phase2W-static-wrist-B-only:2964e012fd3fcd5fea0490461e331b89a13782aa84a3fd3cf9f2e1e7291df532",
+      "trial_id_sha256": "2d0b03a1cf9f7c3f75a5d66661e40d43d9f84a59227b9f54b35cf1a1ad29f7a3",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1189,
+      "selection_index": 185,
+      "state_path": "outputs/phase2CM/frozen_release_states/057f3d39a674319cfc3a507bed4f76921ff98a184798e3541e5ff80c7e9cdce9.npz",
+      "trial_id": "phase2W-static-wrist-B-only:5d12a06d51f4c7d8e32fb57bdff1faaae0dafa15f48c3599113f185fb8375d88",
+      "trial_id_sha256": "057f3d39a674319cfc3a507bed4f76921ff98a184798e3541e5ff80c7e9cdce9",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy-22.5"
+    },
+    {
+      "release_step": 1229,
+      "selection_index": 186,
+      "state_path": "outputs/phase2CM/frozen_release_states/449a25306e197d5c077b9b6acfffff2dcba1f98d4b3888bce47a836cef328ea6.npz",
+      "trial_id": "phase2W-static-wrist-B-only:f3d1ef9f5f32f64aa95e1e06dc03ce74587f7679c52b43fdd3ed5df937a71c2d",
+      "trial_id_sha256": "449a25306e197d5c077b9b6acfffff2dcba1f98d4b3888bce47a836cef328ea6",
+      "wrist_pose_id": "refined_coarse_r+90_p-45_y+45_dr+0_dp+0_dy+22.5"
+    },
+    {
+      "release_step": 1078,
+      "selection_index": 187,
+      "state_path": "outputs/phase2CM/frozen_release_states/512b70fd3b413510d397a6fa5308f414aac64c7a671e01e27ba782c589e05637.npz",
+      "trial_id": "phase2W-static-wrist-B-only:e829fc7f3f0a9c065386bf5f83ccbbf3e8382a82636c7e18172b395e333962fb",
+      "trial_id_sha256": "512b70fd3b413510d397a6fa5308f414aac64c7a671e01e27ba782c589e05637",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1107,
+      "selection_index": 188,
+      "state_path": "outputs/phase2CM/frozen_release_states/1a814fa64cc55cb26e23fb8eb1bf70113896bc61f4c4e4ca657f5805731f1de7.npz",
+      "trial_id": "phase2W-static-wrist-B-only:6d3731b05da5efaa55e0275f2362fe70754b532eb4b061a218425e1ceeed63ca",
+      "trial_id_sha256": "1a814fa64cc55cb26e23fb8eb1bf70113896bc61f4c4e4ca657f5805731f1de7",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1116,
+      "selection_index": 189,
+      "state_path": "outputs/phase2CM/frozen_release_states/85a3556462cb3f59247ee8862b56f6254ad30e806837f1d1de7eb4d0f7f3b035.npz",
+      "trial_id": "phase2W-static-wrist-B-only:63e07b6097dfaf64208be66bc8ef9b0ea1f61011cb7ff4b65b3e07867c6e5d92",
+      "trial_id_sha256": "85a3556462cb3f59247ee8862b56f6254ad30e806837f1d1de7eb4d0f7f3b035",
+      "wrist_pose_id": "coarse_r+90_p-45_y+90"
+    },
+    {
+      "release_step": 1378,
+      "selection_index": 190,
+      "state_path": "outputs/phase2CM/frozen_release_states/53411d3b120a52494e10d600367455a3a19c99e82a1b75f8dbbf79612f2e6e2d.npz",
+      "trial_id": "phase2W-static-wrist-B-only:e4136089453993504bec8bc963bf789d6af28338ac327b2697361090fabee13a",
+      "trial_id_sha256": "53411d3b120a52494e10d600367455a3a19c99e82a1b75f8dbbf79612f2e6e2d",
+      "wrist_pose_id": "coarse_r+90_p-45_y-90"
+    },
+    {
+      "release_step": 1175,
+      "selection_index": 191,
+      "state_path": "outputs/phase2CM/frozen_release_states/17653aa9c95c18dfa5ac806151b6721f25c4192a520307ad00d22708216247a2.npz",
+      "trial_id": "phase2W-static-wrist-B-only:3968679ca50e22b69ae2a09e15fa4d42aa6f4b04b27324a7a4743f9b2a54eacb",
+      "trial_id_sha256": "17653aa9c95c18dfa5ac806151b6721f25c4192a520307ad00d22708216247a2",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1154,
+      "selection_index": 192,
+      "state_path": "outputs/phase2CM/frozen_release_states/2f1a44e692c30ac1f256d6d709afd98cb5f7cff06f53c6f27b7f25ce2b640edf.npz",
+      "trial_id": "phase2W-static-wrist-B-only:187c95b809f9e01a06e9bf59f94849a9dae7f48a6f3043cbe141ddc7495316fd",
+      "trial_id_sha256": "2f1a44e692c30ac1f256d6d709afd98cb5f7cff06f53c6f27b7f25ce2b640edf",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1207,
+      "selection_index": 193,
+      "state_path": "outputs/phase2CM/frozen_release_states/065873747a149c016003fe5e014da98f0513605709d764965f23ecc90309197b.npz",
+      "trial_id": "phase2W-static-wrist-B-only:55db138a8f3c196eb3f742cb4b3cdaa643ec07c54c2a450b6099770552f793cf",
+      "trial_id_sha256": "065873747a149c016003fe5e014da98f0513605709d764965f23ecc90309197b",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy-22.5"
+    },
+    {
+      "release_step": 1292,
+      "selection_index": 194,
+      "state_path": "outputs/phase2CM/frozen_release_states/4621480b5b73c3ec33b99a9f3a21e22f726ac859963ead0476aae030573b4f1e.npz",
+      "trial_id": "phase2W-static-wrist-B-only:d6453ac88926fb520baddf974242a8c102799eb456e508b79003b9eb48b3f283",
+      "trial_id_sha256": "4621480b5b73c3ec33b99a9f3a21e22f726ac859963ead0476aae030573b4f1e",
+      "wrist_pose_id": "refined_coarse_r+90_p-45_y+45_dr+0_dp+0_dy+22.5"
+    },
+    {
+      "release_step": 1157,
+      "selection_index": 195,
+      "state_path": "outputs/phase2CM/frozen_release_states/52e51076fa53356fa87976ae46839a4176ec5fa0c33c9339aa969a9c8bcb6ed1.npz",
+      "trial_id": "phase2W-static-wrist-B-only:9c2a26928a4cb5129845d07b5ac0a7c844ac0b04323f879ec73b628549ce5dd3",
+      "trial_id_sha256": "52e51076fa53356fa87976ae46839a4176ec5fa0c33c9339aa969a9c8bcb6ed1",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+0"
+    },
+    {
+      "release_step": 1103,
+      "selection_index": 196,
+      "state_path": "outputs/phase2CM/frozen_release_states/1bad713fdcdf933cf8204e4bb708c8afcc27c53751fbb128abc1139d89238bb6.npz",
+      "trial_id": "phase2W-static-wrist-B-only:1adc0893161dc4d0e39fc159f2482811b99a3d0514d4376ac4b8e2476eb12d71",
+      "trial_id_sha256": "1bad713fdcdf933cf8204e4bb708c8afcc27c53751fbb128abc1139d89238bb6",
+      "wrist_pose_id": "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+22.5"
+    },
+    {
+      "release_step": 1284,
+      "selection_index": 197,
+      "state_path": "outputs/phase2CM/frozen_release_states/8861f9bee2b2bb59c34499f6b4c86c6581e5209360053d867350e00234289819.npz",
+      "trial_id": "phase2W-static-wrist-B-only:a872a0a56189a6db70fa09fb425f226f248c70a8a1f2c17c8fa8361dc8acdebf",
+      "trial_id_sha256": "8861f9bee2b2bb59c34499f6b4c86c6581e5209360053d867350e00234289819",
+      "wrist_pose_id": "coarse_r+90_p-45_y+90"
+    },
+    {
+      "release_step": 1244,
+      "selection_index": 198,
+      "state_path": "outputs/phase2CM/frozen_release_states/559ef03ad6afb5f3fab03107cc390eb56ed2b398514b276a0dc04a18a25c1b3c.npz",
+      "trial_id": "phase2W-static-wrist-B-only:09f5d3ee1b67a8cd923198936fa50888d6b82715815be208db62f02e90a9c573",
+      "trial_id_sha256": "559ef03ad6afb5f3fab03107cc390eb56ed2b398514b276a0dc04a18a25c1b3c",
+      "wrist_pose_id": "coarse_r+90_p-45_y-90"
+    },
+    {
+      "release_step": 1135,
+      "selection_index": 199,
+      "state_path": "outputs/phase2CM/frozen_release_states/178431b8ac72eb3432c026f61fc67f8090bb3fe9e71cc5f2e4556aef55414757.npz",
+      "trial_id": "phase2W-static-wrist-B-only:f9a60ff4cb5264cb8890548ba8a2ff7cd3c151542ef632c72af7e7079059e95c",
+      "trial_id_sha256": "178431b8ac72eb3432c026f61fc67f8090bb3fe9e71cc5f2e4556aef55414757",
+      "wrist_pose_id": "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+0"
+    }
+  ],
+  "wrist_counts": {
+    "coarse_r+90_p-45_y+0": 11,
+    "coarse_r+90_p-45_y+90": 22,
+    "coarse_r+90_p-45_y-45": 18,
+    "coarse_r+90_p-45_y-90": 22,
+    "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+0": 22,
+    "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy+22.5": 21,
+    "refined_coarse_r+0_p+45_y-45_dr-22.5_dp-22.5_dy-22.5": 21,
+    "refined_coarse_r+90_p-45_y+45_dr+0_dp+0_dy+22.5": 21,
+    "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+0": 21,
+    "refined_coarse_r-45_p+45_y+0_dr+22.5_dp-22.5_dy+22.5": 21
+  }
+}
