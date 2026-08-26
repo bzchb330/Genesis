@@ -1,0 +1,39 @@
+seed: 3300
+storage_region:
+  # Diagnostic palm-frame volume, sized from the compiled palm collision envelope.
+  # These are engineering bounds for Phase 3C-0, not publication thresholds.
+  center_m: [0.020, -0.025, 0.075]
+  half_extents_m: [0.050, 0.050, 0.035]
+  entry_margin_m: 0.010
+corridor:
+  samples: 41
+  object_clearance_radius_m: 0.040
+  clearance_epsilon_m: 0.001
+aperture:
+  relaxation_fractions: [0.05, 0.10, 0.15]
+wrist_search:
+  samples_per_axis: 5
+  retention_steps: 75
+diagnostic:
+  # Orientation/position keep all non-acquisition digits clear in the compiled
+  # OPEN_HAND pose; unlike the old Phase 3A placement this does not begin with
+  # incidental middle/ring contact.
+  open_corridor_initial_pos_m: [0.379, -0.058, 0.026]
+  open_corridor_initial_quat_wxyz: [0.7071067811865476, 0.7071067811865476, 0.0, 0.0]
+  matched_offsets_m:
+    - [0.000, 0.000, 0.000]
+    - [-0.003, 0.000, 0.000]
+    - [0.003, 0.000, 0.000]
+    - [0.000, -0.002, 0.000]
+    - [0.000, 0.002, 0.000]
+    - [0.000, 0.000, 0.003]
+  transfer_steps: 450
+  secure_steps: 300
+  release_steps: 300
+  settle_steps: 150
+  # Existing Phase 3A safety reference; it is copied, not redefined here.
+  reference_penetration_m: 0.003
+  # TODO(PI): select final storage-region bounds from empirical stored-object data.
+  # TODO(PI): select final corridor-clearance validity criterion.
+  # TODO(PI): select final aperture-relaxation limits after dynamic evidence.
+  # TODO(PI): select final multi-object retention and success thresholds.
