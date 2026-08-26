@@ -97,16 +97,21 @@ def build_shadow_scene(config: Phase3Config | None = None) -> ShadowScene:
     obj = cfg.object
     body = ET.SubElement(world, "body", name=obj["name"], pos=_vec(obj["initial_pos"]), quat=_vec(obj["initial_quat"]))
     ET.SubElement(body, "freejoint", name=f"{obj['name']}_free")
+    object_attributes = {
+        "name": f"{obj['name']}_geom",
+        "type": obj["shape"],
+        "size": _vec(obj["size"]),
+        "friction": _vec(obj["friction"]),
+        "rgba": _vec(obj["rgba"]),
+        "condim": "6",
+        "priority": "1",
+    }
+    if "density" in obj:
+        object_attributes["density"] = str(obj["density"])
     ET.SubElement(
         body,
         "geom",
-        name=f"{obj['name']}_geom",
-        type=obj["shape"],
-        size=_vec(obj["size"]),
-        friction=_vec(obj["friction"]),
-        rgba=_vec(obj["rgba"]),
-        condim="6",
-        priority="1",
+        **object_attributes,
     )
     fixture_body = ET.SubElement(
         world,

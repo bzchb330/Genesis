@@ -1,0 +1,41 @@
+phase: 3C-0.6
+seed: 3306
+object:
+  name: phase3c06_sphere
+  shape: sphere
+  # D0 and radius are derived at runtime from the official hand XML audit.
+  density_kg_m3: 1000.0
+  friction: [0.5, 0.01, 0.003]
+  rgba: [0.36, 0.72, 0.92, 1.0]
+  fixture_name: phase3c06_sphere_fixture
+matched_states:
+  count: 50
+  maximum_candidates: 2000
+  position_half_width_m: [0.003, 0.002, 0.003]
+experiment:
+  clearing_steps: 40
+  transfer_steps: 260
+  release_ramp_steps: 100
+  survival_checkpoints: [10, 25, 50, 100, 200, 300, 500, 750, 1000]
+  storage_fingers:
+    old_palm_center: [middle, ring, little]
+    middle_ring: [middle, ring]
+    ring_little: [ring, little]
+    ulnar_palmodigital: [ring, little]
+wrist:
+  W0_commands_deg: [[0.0, 0.0]]
+  W1_commands_deg:
+    - [-5.0, -5.0]
+    - [-5.0, 5.0]
+    - [5.0, -5.0]
+    - [5.0, 5.0]
+  W2_magnitude_deg: 10.0
+  W3_magnitude_deg: 20.0
+size_curriculum:
+  scale: [1.0, 1.25, 1.5, 1.75, 2.0]
+diagnostic:
+  contact_force_n: 0.02
+  inherited_reference_penetration_m: 0.003
+  # TODO(PI): freeze a publication criterion for acceptable sphere-contact penetration.
+  # TODO(PI): freeze a publication success-rate threshold for size progression.
+  # TODO(PI): decide whether a later compliant-skin ablation is scientifically warranted.
