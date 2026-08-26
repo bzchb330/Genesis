@@ -19,6 +19,7 @@ wandb/
 *.ckpt
 *.onnx
 *.mp4
+videos/
 *.avi
 *.mov
 *.mkv

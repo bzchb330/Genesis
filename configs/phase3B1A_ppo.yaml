@@ -1,0 +1,60 @@
+status: PHASE 3B-1A PILOT ENGINEERING CONFIGURATION
+seed_namespace: 331000
+training_seeds: [33101, 33102, 33103]
+smoke_seed: 33100
+reset_distribution:
+  position_l1_radius_m: 0.006
+  object_orientation_limit_deg: 5.0
+  wrist_perturbation_limit_deg: 5.0
+  penetration_ceiling_m: 0.003
+  train_count: 300
+  validation_count: 100
+  test_count: 100
+action:
+  dimension: 26
+  actuator_target_dimension: 20
+  stiffness_dimension: 6
+  target_delta_limit_rad_per_control_step: 0.0005
+  target_rate_cap_rad_per_control_step: 0.0005
+  stiffness_scale_minimum: 0.75
+  stiffness_scale_maximum: 1.0
+episode:
+  simulation_steps: 1000
+  control_decimation: 1
+  timestep_s: 0.002
+  physical_duration_s: 2.0
+safety:
+  intended_grip_penetration_ceiling_m: 0.003
+  gross_non_grip_penetration_ceiling_m: 0.003
+  palm_relative_workspace_radius_m: 0.15
+  catastrophic_joint_excursion_rad: 0.02
+  recovered_persistence_steps: 100
+curriculum:
+  labels: [RETAIN, MIGRATE, SUPPORT, UNLOAD, RELEASE, RECOVER]
+  completion_potential: 0.95
+  validation_transition_rates: [0.80, 0.25, 0.20, 0.15, 0.10]
+  status: ENGINEERING PILOT TRANSITION CRITERIA
+reward:
+  potential_range: [0.0, 1.0]
+  stage_completion_bonus: 1.0
+  resource_recovered_bonus: 5.0
+  hard_failure_penalty: -5.0
+  status: PILOT ENGINEERING REWARD SCALING
+ppo:
+  rollout_steps: 1024
+  minibatch_size: 128
+  update_epochs: 4
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_range: 0.2
+  actor_learning_rate: 0.0003
+  critic_learning_rate: 0.001
+  entropy_coefficient: 0.001
+  value_coefficient: 0.5
+  maximum_gradient_norm: 0.5
+  hidden_units: 64
+  smoke_environment_steps: 10000
+  pilot_environment_steps_per_seed: 300000
+  evaluation_interval_steps: 25000
+  validation_episodes: 100
+  test_episodes: 100
