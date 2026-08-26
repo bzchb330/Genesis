@@ -1,0 +1,43 @@
+seed: 3305
+matched_states:
+  count: 50
+  position_half_width_m: [0.004, 0.002, 0.003]
+  orientation_half_width_deg: [3.0, 3.0, 3.0]
+capture:
+  steps: 300
+  contact_force_n: 0.02
+  command_increment: 0.010
+  acquisition_increment: 0.0005
+  storage_subsets:
+    - [middle]
+    - [ring]
+    - [little]
+    - [middle, ring]
+    - [middle, little]
+    - [ring, little]
+    - [middle, ring, little]
+wrist_probes:
+  W0_deg: [0.0]
+  W1_deg: [-5.0, 5.0]
+  W2_deg: [-10.0, 10.0]
+  W1_commands_deg:
+    - [-5.0, -5.0]
+    - [-5.0, 5.0]
+    - [5.0, -5.0]
+    - [5.0, 5.0]
+  # W2 is evaluated only for the same direction after a W1 trial retains A.
+load_share:
+  diagnostic_gates: [0.10, 0.25, 0.50]
+  persistence_steps: [10, 25, 50]
+release:
+  fingers: [thumb, index]
+  ramp_steps: [25, 50, 100, 200]
+  default_gate: 0.10
+  default_persistence_steps: 25
+  post_release_steps: [10, 25, 50, 100, 200, 300, 500, 750, 1000]
+diagnostic:
+  reference_penetration_m: 0.003
+  # TODO(PI): select final alternate-support load-share criterion.
+  # TODO(PI): select final support-persistence duration.
+  # TODO(PI): select final object-stability gate for acquisition-finger release.
+  # TODO(PI): select final coordinated-capture success rate required before B.
