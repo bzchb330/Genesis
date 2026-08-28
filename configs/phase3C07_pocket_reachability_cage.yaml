@@ -1,0 +1,50 @@
+phase: 3C-0.7
+seed: 3307
+object:
+  name: phase3c07_sphere
+  diameter_m: 0.025
+  radius_m: 0.0125
+  density_kg_m3: 1000.0
+  friction: [0.5, 0.01, 0.003]
+  rgba: [0.92, 0.58, 0.20, 1.0]
+  fixture_name: phase3c07_sphere_fixture
+matched_states:
+  count: 50
+  maximum_candidates: 1000
+static_map:
+  x_bounds_m: [-0.045, 0.005]
+  y_bounds_m: [-0.040, -0.002]
+  z_bounds_m: [0.065, 0.135]
+  samples_xyz: [21, 20, 29]
+  incoming_path_samples: 9
+transport:
+  steps: 360
+  waypoints: 12
+  command_increment: 0.0005
+  wrist_increment_deg: 0.1
+  old_target_palm_m: [0.020, -0.025, 0.075]
+  approach_expansion_radius_fraction: 1.0
+wrist:
+  W0_deg: 0.0
+  W1_deg: 5.0
+  W2_deg: 10.0
+  W3_deg: 20.0
+  structured_directions:
+    - [-1.0, -1.0]
+    - [-1.0, 0.0]
+    - [-1.0, 1.0]
+    - [0.0, -1.0]
+    - [0.0, 1.0]
+    - [1.0, -1.0]
+    - [1.0, 0.0]
+    - [1.0, 1.0]
+preshape:
+  contact_force_n: 0.02
+  closure_increment: 0.002
+cage_hold:
+  checkpoints: [10, 25, 50, 100, 200, 300, 500, 750, 1000]
+diagnostic:
+  # TODO(PI): freeze a publication definition for acceptable 25-mm-sphere penetration.
+  # TODO(PI): freeze a publication persistence criterion for PALMODIGITAL_CAGE_FORMED.
+  # TODO(PI): decide whether a forearm/global-hand orientation DOF may be added in a later phase.
+  # TODO(PI): decide whether compliant-skin modeling is warranted after transport/cage evidence.
