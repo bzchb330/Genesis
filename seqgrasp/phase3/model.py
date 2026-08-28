@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Callable
 import xml.etree.ElementTree as ET
 
 import mujoco
@@ -63,7 +64,11 @@ def _name_runtime_collision_geoms(
     return collision, fingertips
 
 
-def build_shadow_scene(config: Phase3Config | None = None) -> ShadowScene:
+def build_shadow_scene(
+    config: Phase3Config | None = None,
+    *,
+    model_transform: Callable[[ET.Element, Phase3Config], None] | None = None,
+) -> ShadowScene:
     cfg = config or load_phase3_config()
     model_path = ROOT / cfg.hand.model_path
     root = ET.parse(model_path).getroot()
@@ -75,6 +80,10 @@ def build_shadow_scene(config: Phase3Config | None = None) -> ShadowScene:
         raise ValueError("configured Shadow forearm body is missing")
     forearm.set("pos", _vec(cfg.hand.mount_pos))
     forearm.set("quat", _vec(cfg.hand.mount_quat))
+    if model_transform is not None:
+        # Transform only the parsed runtime composition. The vendored source
+        # XML remains immutable and historical callers retain identical output.
+        model_transform(root, cfg)
     collision_geoms, fingertip_geoms = _name_runtime_collision_geoms(root, cfg)
 
     option = root.find("option")
