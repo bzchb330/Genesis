@@ -1,0 +1,34 @@
+phase: 3C-0.9
+trajectory_diagnosis:
+  top_count: 5
+  finite_difference_window_samples: 1
+  descriptive_near_minimum_window_samples: 10
+cspace:
+  sphere_radius_m: 0.0125
+  domain_margin_m: 0.015
+  resolutions_m: [0.001, 0.0005]
+  connectivity: 26
+  occupancy_numerical_tolerance_m: 1.0e-9
+contact_accessibility:
+  finite_difference_steps: [0.001, 0.0005, 0.00025]
+  numerical_rank_relative_tolerance: 1.0e-8
+  cyclic_epsilons: [0.02, 0.01, 0.005]
+storage_manifold:
+  # Reduced five-dimensional engineering search, not a scientific optimum.
+  middle_flexion_fractions: [0.0, 0.5, 1.0]
+  ring_flexion_fractions: [0.0, 0.5, 1.0]
+  little_flexion_fractions: [0.0, 0.5, 1.0]
+  wrist2_offsets_deg: [-10.0, 0.0, 10.0]
+  forearm_PS_deg: [-50.0, 0.0, 50.0]
+  center_bounds_palm_m:
+    x: [-0.06, 0.04]
+    y: [-0.065, 0.015]
+    z: [0.04, 0.125]
+  center_spacing_m: 0.005
+  # One grid spacing defines a numerical near-surface neighborhood.
+  near_surface_numerical_tolerance_m: 0.005
+  occupancy_numerical_tolerance_m: 1.0e-9
+  clustering_connectivity: 26
+diagnostic:
+  # TODO(PI): select whether the next dynamics phase targets aperture reconfiguration, contact-mode migration, or a morphology-native storage basin after reviewing Phase 3C-0.9.
+  # TODO(PI): decide whether any morphology-native basin may replace the human-inspired ring/little pocket as the scientific target.

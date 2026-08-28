@@ -1,0 +1,11 @@
+# Phase 3C-0.9 rigid-sphere C-space connectivity audit
+
+The 25-mm sphere was represented exactly by compiled sphere-to-hand geometry distances, which is equivalent to 12.5-mm Minkowski inflation. Table and fixture were excluded. The best-state local domain bounds were `[[-0.045, -0.053100358499273324, 0.07], [0.005000000000000046, -0.005100358499273282, 0.12500000000000006]]` m; each state used the union of its start, all 344 pocket voxels, and a 15-mm detour margin.
+
+- `C08_C07_STATE_00050_F0_STATIC_OPTIMUM`: **CS-A**; 1 mm: free 90602, component 90602, connected pocket voxels 344/344, path 0.00446410162 m, clearance 0.01178636 m; 0.5 mm: free 707383, component 707383, connected pocket voxels 344/344, path 0.00446410162 m, clearance 0.01178636 m.
+- `C08_C07_STATE_00035_F0_STATIC_OPTIMUM`: **CS-A**; 1 mm: free 103991, component 103991, connected pocket voxels 338/344, path 0.0121708439 m, clearance 0.0120823119 m; 0.5 mm: free 809397, component 809397, connected pocket voxels 344/344, path 0.0116226558 m, clearance 0.0123960298 m.
+- `C08_C07_STATE_00050_F0_STATIC_PS_MINUS_5_DEG`: **CS-A**; 1 mm: free 110470, component 110470, connected pocket voxels 344/344, path 0.0118994949 m, clearance 0.012262659 m; 0.5 mm: free 863503, component 863503, connected pocket voxels 344/344, path 0.0122655203 m, clearance 0.0123130869 m.
+- `C08_C07_STATE_00035_F0_STATIC_PS_MINUS_5_DEG`: **CS-A**; 1 mm: free 115938, component 115938, connected pocket voxels 343/344, path 0.0159028947 m, clearance 0.012058934 m; 0.5 mm: free 912648, component 912648, connected pocket voxels 344/344, path 0.0160618133 m, clearance 0.0121655882 m.
+- `C08_C07_STATE_00035_F1_COORDINATED_PS_MINUS_5_DEG`: **CS-A**; 1 mm: free 343060, component 343060, connected pocket voxels 344/344, path 0.0687934032 m, clearance 0.00215888346 m; 0.5 mm: free 2705323, component 2705323, connected pocket voxels 342/344, path 0.0691826727 m, clearance 0.00242603474 m.
+
+All five states are **CS-A** at both 1.0-mm and 0.5-mm resolution. The best-state path is `0.00446410162 m`, with `0.01178636 m` minimum sphere-to-hand clearance and `0.0485727199 m` inferred opening width. Thus the reported 4.23-mm gap is geometrically traversable; blockage is not the upstream cause.
