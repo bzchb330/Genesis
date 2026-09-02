@@ -1,0 +1,52 @@
+phase: 3C-P0
+legacy_name: LEGACY_PHASE3C_CONTACT_PHYSICS
+approved_revised_physics: null
+material:
+  young_modulus_sphere_pa: null
+  poisson_ratio_sphere: null
+  young_modulus_surface_pa: null
+  poisson_ratio_surface: null
+  provenance: MATERIAL ELASTIC CONSTANTS NOT SPECIFIED BY PI
+bench:
+  loads_n: [0.01, 0.02, 0.05, 0.08025787482217676, 0.10, 0.134311598, 0.20, 0.30, 0.50, 1.00]
+  repeats: 2
+  ramp_seconds: 0.4
+  hold_seconds: 4.0
+  # At double dt=0.004 this still gives 1000 steps AFTER the ramp.
+  tail_steps: 200
+  cycle_loads_n: [0.08025787482217676, 0.134311598, 0.30, 0.50]
+  sensitivity_loads_n: [0.08025787482217676, 0.134311598, 0.50, 1.00]
+  timestep_multipliers: [0.5, 1.0, 2.0]
+  diagnostic_iterations: 400
+  diagnostic_tolerance: 1.0e-12
+  numerical_force_epsilon_n: 1.0e-12
+  # Settling descriptors only, not scientific success/publication cutoffs.
+  settling_relative_band: 0.01
+  settling_position_floor_m: 1.0e-8
+  settling_velocity_mps: 1.0e-5
+candidate_options:
+  - name: OPTION_TC10
+    solref: [0.01, 1.0]
+    solimp: [0.9, 0.95, 0.001, 0.5, 2.0]
+    rationale: Halve reference time constant; preserve legacy impedance.
+  - name: OPTION_IMP99
+    solref: [0.02, 1.0]
+    solimp: [0.99, 0.99, 0.001, 0.5, 2.0]
+    rationale: Increase and hold impedance constant; preserve legacy time constant.
+  - name: OPTION_TC10_IMP99
+    solref: [0.01, 1.0]
+    solimp: [0.99, 0.99, 0.001, 0.5, 2.0]
+    rationale: Combine the two independently interpretable changes.
+# All time constants remain above 2*double timestep. Friction never changes.
+# Options are NOT approved production physics and are NOT ranked by task outcomes.
+hand_primitive:
+  status: BLOCKED_UNTIL_CP_A_OR_PI_APPROVAL
+  surfaces: [middle, ring, little]
+  desired_forces_n: [0.01, 0.02, 0.05, 0.08, 0.10, 0.15, 0.20]
+  steps: 1000
+legacy_regression_engineering_gate:
+  label: Inherited 3-mm reference; engineering rejection only, not publication validation
+  max_penetration_m: 0.003
+# TODO(PI): supply justified E/nu and surface/material assumptions for Hertz calibration.
+# TODO(PI): approve a benchmarked numerical-contact option and its scope before hand control.
+# TODO(PI): scientific limits on deformation, force, energy and residual wrench remain unspecified.
