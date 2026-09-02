@@ -1,0 +1,41 @@
+phase: 3C-1.2B
+temporary_support:
+  # Implementation of the requested fixed object, NOT a hand/contact ablation.
+  # The inherited soft weld was found not to satisfy the fixed-sphere premise.
+  solref: [0.004, 1.0]
+  solimp: [0.9999, 0.9999, 0.001, 0.5, 2.0]
+  fixed_pose_numerical_tolerance_m: 0.000001
+  run_namespace: fixed_support
+primitive:
+  surfaces: [little, palm, middle, ring]
+  virtual_offsets: [0.0, 0.01, 0.025, 0.05, 0.10, 0.20, 0.30, 0.40]
+  ramp_steps: 100
+  total_steps: 500
+  tail_steps: 100
+  normal_probe_m: 0.000025
+receiver:
+  source_candidate: ROLE_MRL_05
+  ramp_steps: 200
+  settle_steps: 500
+  release_step: 700
+  post_release_steps: 1000
+  checkpoints: [1, 5, 10, 25, 50, 100, 200, 500, 1000]
+  maximum_deterministic_constructions: 1
+  maximum_releases: 1  # Stop at first validated receiver; no batch of failures.
+numerical:
+  positive_force_n: 1.0e-9
+  force_limit_tolerance: 1.0e-8
+  pseudoinverse_rcond: 1.0e-10
+  inherited_penetration_reference_m: 0.003
+  # This is the existing Phase 3C reference, not a new publication threshold.
+video:
+  fps: 25
+  stride: 5
+  width: 640
+  height: 480
+  azimuth: 135
+  elevation: -18
+  distance_m: 0.34
+# Sweep/ramp/selection are frozen before outcomes. No native hand/contact physics
+# or gain changes; temporary support settings are explicitly declared above.
+# TODO(PI): publication thresholds for force stability and acceptable receiver wrench/overlap remain undecided.
