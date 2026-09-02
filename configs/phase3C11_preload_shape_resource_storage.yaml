@@ -1,0 +1,55 @@
+phase: 3C-1.1
+calibration:
+  principal_approach_mm: [0.00, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.40, 0.50]
+  explicit_extension_approach_mm: [0.75, 1.00]
+  storage_surfaces: [middle, ring, little, palm]
+  comparison_surfaces: [thumb, index]
+  stability_steps: 25
+  selection:
+    rule: pair-specific force measured at the 0.20-mm center of the PI-proposed 0.10-0.30-mm engineering region; fall back to the smallest point in that region with force above numerical zero, then to the smallest explicitly documented extension point only if the entire region is force-inactive
+    preferred_approach_mm: 0.20
+    region_of_interest_mm: [0.10, 0.30]
+    numerical_force_zero_n: 1.0e-9
+preload_closure:
+  maximum_function_evaluations: 180
+  distance_residual_scale_m: 0.001
+  regularization_scale_rad: 0.25
+  maximum_joint_displacement_rad: 0.45
+  gross_overlap_numerical_tolerance_m: 1.0e-6
+  minimum_storage_contacts: 2
+  hold_steps: 1000
+  checkpoints: [10, 25, 50, 100, 200, 500, 1000]
+shapes:
+  density_kg_m3: 1000.0
+  definitions:
+    S0: {shape: sphere, diameter_m: 0.025}
+    S1: {shape: box, side_m: 0.025}
+    S2: {shape: cylinder, diameter_m: 0.025, height_m: 0.020}
+  orientations:
+    S0:
+      - {id: SPHERE, quaternion_wxyz: [1.0, 0.0, 0.0, 0.0]}
+    S1:
+      - {id: CUBE_AXIS_ALIGNED, quaternion_wxyz: [1.0, 0.0, 0.0, 0.0]}
+      - {id: CUBE_PALM_Z_45, quaternion_wxyz: [0.9238795325112867, 0.0, 0.0, 0.3826834323650898]}
+    S2:
+      - {id: CYLINDER_AXIS_PALM_Z, quaternion_wxyz: [1.0, 0.0, 0.0, 0.0]}
+      - {id: CYLINDER_AXIS_PALM_X, quaternion_wxyz: [0.7071067811865476, 0.0, 0.7071067811865476, 0.0]}
+  maximum_dynamic_trials_per_shape: 12
+workspace:
+  samples_per_finger: 512
+  seed: 311031
+  opposition_distance_m: 0.08
+role_search:
+  centers_sampled: 64
+  flexion_fractions: [0.0, 0.5, 1.0]
+  fast_near_surface_m: 0.005
+  promising_candidates_per_role: 6
+  translation_perturbation_m: 0.0005
+  maximum_role_T_dynamic_trials: 6
+  wrench_force_residual_tolerance_n: 0.001
+  wrench_torque_residual_tolerance_nm: 0.00001
+diagnostic:
+  # TODO(PI): decide whether the calibrated rigid-contact preload evidence supports freezing a receiver for Phase 3C-1.2.
+  # TODO(PI): decide whether shape-dependent retention justifies using an easier non-spherical object before returning to the sphere.
+  # TODO(PI): decide whether Shadow morphology warrants thumb-assisted storage instead of the human-inspired MRL allocation.
+  # TODO(PI): no publication threshold for useful workspace, quasi-static force, or sufficient robustness is frozen.
