@@ -1,0 +1,33 @@
+phase: 3C-1.0
+metrics:
+  relative_speed_gates_mps: [0.02, 0.05, 0.10]
+  gate_label: ENGINEERING_DIAGNOSTIC_ONLY
+  positive_support_force_numerical_tolerance: 1.0e-9
+  receiver_qpos_rms_tolerance_rad: 0.05
+B03_validation:
+  candidate_count: 3
+  orientations: [NOMINAL, RECEIVER_BIASED, ESCAPE_BIASED, TANGENTIAL]
+  hold_steps: 1000
+  checkpoints: [10, 25, 50, 100, 200, 500, 1000]
+  maximum_trials: 12
+workspace:
+  samples_per_finger: 512
+  seed: 310031
+  opposition_distance_m: 0.08
+scripted_handoff:
+  maximum_nominal_trials: 1
+  maximum_followup_trials: 3
+  stage_steps:
+    stable_acquisition: 100
+    reorientation: 300
+    receiver_preshape: 350
+    index_unload: 300
+    controlled_transport: 500
+    support_takeover: 300
+  post_handoff_hold_steps: 1000
+  checkpoints: [10, 25, 50, 100, 200, 500, 1000]
+  actuator_increment_rad: 0.0005
+diagnostic:
+  # TODO(PI): no scientific quasi-static speed threshold is frozen; the configured speed gates are engineering sensitivity probes only.
+  # TODO(PI): decide whether B03-A/B evidence is sufficient to freeze B03 as the transport target.
+  # TODO(PI): decide whether a future optimizer may use a successful scripted handoff as its warm start.
