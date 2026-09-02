@@ -1,0 +1,33 @@
+phase: 3C-1.2A
+calibration:
+  command_offsets_mm: [0, 0.025, 0.05, 0.075, 0.10, 0.15, 0.20, 0.30, 0.40, 0.50]
+  normal_probe_m: 0.000025
+  settle_steps: 50
+  tail_steps: 10
+  ik_iterations: 80
+  ik_tolerance_m: 0.00000001
+  damping: 0.00000001
+mechanics:
+  friction_scales: [0, 0.1, 0.25, 0.5, 0.75, 1.0]
+  cone_rays: 64
+  rho_bisections: 10
+  numerical_force_zero_n: 0.000000001
+  projection_tolerance_n: 0.0000001
+orientation:
+  coarse_counts: [5, 3, 3]
+  refinement_starts: 3
+  refinement_iterations: 80
+true_role_t:
+  source_count: 6
+  partners: [ring, little, palm]
+  center_radius_m: 0.015
+  tangent_solver_evaluations: 160
+  command_offset_mm: 0.10
+  maximum_full_audits: 1
+workspace:
+  samples: 512
+  seed: 312031
+  diagnostic_aperture_m: 0.08
+# Numerical settings are engineering diagnostics, not publication thresholds.
+# TODO(PI): define what counts as a materially broader support region or useful acquisition workspace.
+# TODO(PI): approve any proposed Phase 3C-1.2B receiver and direct-hold protocol before dynamics.
