@@ -1,0 +1,25 @@
+phase: 3C-P0.5C
+physics_identifier: PHYSICS_CANDIDATE_IMP99
+nominal_source: outputs/phase3CP05/geometry.json
+settled_source: outputs/phase3CP05R/equilibrium_states/PHYSICS_CANDIDATE_IMP99_confirmed.json
+numerical_diagnostics:
+  label: ENGINEERING_DIAGNOSTIC_ONLY
+  relative_roundoff_tolerance: 1.0e-10
+  absolute_roundoff_tolerance: 1.0e-12
+  force_probe: 0.0001
+  bounded_solver_tolerance: 1.0e-14
+  confirmation_s: 0.5
+  total_confirmation_s: 2.0
+  max_speed_radps: 0.001
+  max_acceleration_radps2: 0.5
+pi_decision:
+  source: Phase 3C-P0.5C user protocol Parts I/J
+  simultaneous_mrl_not_required_for_contact_physics: true
+  candidate: PHYSICS_CANDIDATE_IMP99
+  evidence: existing P0.5R sustained R/L production-2-ms results
+  first_natural_sustained_mrl_recheck: identical state and protocol once under IMP99 and TC10_IMP99; no optimization loop
+  case_B_C_stop: true
+resource_fractions:
+  thumb: 0.9559782183972225
+  index: 1.0
+  opposition: 0.9665998246424643
