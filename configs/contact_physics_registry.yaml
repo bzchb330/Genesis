@@ -1,0 +1,30 @@
+schema_version: 1
+modeling_assumption: Numerical near-rigid nominally rigid object/hand; not a specific real material.
+production_alias: null
+common:
+  sphere_friction: [0.5, 0.01, 0.003]
+  hand_friction: [1.0, 0.005, 0.0001]
+  pair_friction: [0.5, 0.5, 0.01, 0.003, 0.003]
+  condim: 6
+  margin: 0.0
+  gap: 0.0
+  timestep: 0.002
+  solver: Newton
+  integrator: Euler
+  iterations: 100
+  tolerance: 1.0e-8
+  cone: elliptic
+  impratio: 10.0
+versions:
+  LEGACY_PHASE3C_CONTACT_PHYSICS:
+    solref: [0.02, 1.0]
+    solimp: [0.9, 0.95, 0.001, 0.5, 2.0]
+    historical: true
+  PHYSICS_CANDIDATE_IMP99:
+    solref: [0.02, 1.0]
+    solimp: [0.99, 0.99, 0.001, 0.5, 2.0]
+    historical: false
+  PHYSICS_CANDIDATE_TC10_IMP99:
+    solref: [0.01, 1.0]
+    solimp: [0.99, 0.99, 0.001, 0.5, 2.0]
+    historical: false

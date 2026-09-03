@@ -1,0 +1,35 @@
+phase: 3C-P0.5
+candidates: [PHYSICS_CANDIDATE_IMP99, PHYSICS_CANDIDATE_TC10_IMP99]
+timesteps_s: [0.001, 0.002, 0.004]
+regression_loads_n: [0.08025787482217676, 0.134311598, 0.20, 0.50]
+regression_absolute_tolerance_m: 1.0e-10
+impact:
+  heights_m: [0.0005, 0.001, 0.002, 0.005]
+  duration_s: 1.0
+  impulse_window_s: 0.1
+  rapid_event_interval_s: 0.02  # descriptive bin, not publication threshold
+hand:
+  scenario: GEOMETRIC_MRL_CUP_DIAGNOSTIC
+  initial_clearance_m: 0.00004
+  clearance_fit_tolerance_m: 0.000005
+  ramp_s: 1.0
+  hold_s: 2.0
+  tail_s: 0.4
+  virtual_actuator_offset: 0.015
+  fixed_support_solref: [0.008, 1.0]
+  fixed_support_solimp: [0.9999, 0.9999, 0.001, 0.5, 2.0]
+  engineering_stop_label: Low-force diagnostic guard; not a publication success criterion
+  max_total_normal_force_n: 1.0
+  max_single_normal_force_n: 0.5
+  max_penetration_m: 0.001
+  max_fixture_translation_m: 0.000002
+  max_joint_speed_radps: 25.0
+  numerical_positive_force_n: 1.0e-9
+optional_tangential:
+  normal_load_n: 0.08025787482217676
+  initial_vx_mps: 0.01
+  initial_spin_radps: 0.5
+  duration_s: 1.0
+  requires_both_candidates_passing: true
+# PI supplied selection: prefer the softer IMP99 if both are robust and no
+# specific geometric evidence requires TC10_IMP99. Do not choose by task success.
