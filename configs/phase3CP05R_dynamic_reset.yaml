@@ -1,0 +1,50 @@
+phase: 3C-P0.5R
+reset_version: DYNAMIC_EQUILIBRIUM_RESET_V1
+candidates: [PHYSICS_CANDIDATE_IMP99, PHYSICS_CANDIDATE_TC10_IMP99]
+production_dt_s: 0.002
+timesteps_s: [0.001, 0.002, 0.004]
+equilibrium:
+  label: ENGINEERING_DIAGNOSTIC_ONLY
+  max_speed_radps: 0.001
+  max_acceleration_radps2: 0.5
+  confirmation_s: 0.5
+  max_duration_s: 12.0
+  cache_confirmation_s: 0.5
+  sensitivity_multipliers: [0.5, 1.0, 2.0]
+  temporary_damping_allowed: false
+geometry:
+  gap_m: 0.0004
+  gap_fit_tolerance_m: 0.00001
+  sphere_translation_fit_only: true
+control:
+  prehold_s: 0.25
+  ramp_s: 1.0
+  hold_s: 2.0
+  tail_s: 0.5
+  maximum_virtual_offset: 0.015
+  fixed_support_solref: [0.008, 1.0]
+  fixed_support_solimp: [0.9999, 0.9999, 0.001, 0.5, 2.0]
+guards:
+  label: ENGINEERING_DIAGNOSTIC_ONLY
+  warning_total_normal_force_n: 1.0
+  warning_single_normal_force_n: 0.5
+  hard_total_normal_force_n: 3.0
+  hard_single_normal_force_n: 2.0
+  hard_penetration_m: 0.003
+  hard_fixture_translation_m: 0.00001
+  hard_hand_speed_radps: 25.0
+  hard_actuator_utilization: 1.0
+  numerical_positive_force_n: 1.0e-9
+  rationale: >-
+    Soft warnings retain the prior 0.5-N individual / 1-N total levels.
+    The hard 2-N single / 3-N total stops are below the invalid 6-N receiver
+    regime and below simultaneous native actuator saturation, while allowing
+    a transient above the prior isolated 0.647-N peak at 4 ms. The 3-N cap
+    is about 37 sphere weights, not a desired load. The inherited 3-mm
+    gross-overlap guard is a safety stop, not an admissibility criterion.
+    Warnings never become success labels; all loads, durations and overlaps
+    remain visible. Limits are frozen before candidate contact outcomes.
+resource_fractions:
+  thumb: 0.9559782183972225
+  index: 1.0
+  opposition: 0.9665998246424643
